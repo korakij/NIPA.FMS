@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <Version>0.9.1</Version>
+    <FileVersion>0.9.1</FileVersion>
+    <AssemblyVersion>0.9.1</AssemblyVersion>
+    <PackageVersion>0.9.1</PackageVersion>
+    <InformationVersion>0.9.1</InformationVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MNG.Commons\MNG.Commons.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>System</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>System.Data</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>System.Drawing</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>System.Xml</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

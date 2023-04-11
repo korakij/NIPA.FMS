@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SpetroModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Chem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Date" Type="nvarchar" MaxLength="20" />
+          <Property Name="Time" Type="nvarchar" MaxLength="20" />
+          <Property Name="Kanban_NO" Type="nvarchar" MaxLength="20" />
+          <Property Name="Part_NO" Type="int" />
+          <Property Name="Part_Name" Type="nvarchar" MaxLength="20" />
+          <Property Name="Standards" Type="nvarchar" MaxLength="20" />
+          <Property Name="Standards_NO" Type="int" />
+          <Property Name="In" Type="nchar" MaxLength="2" />
+          <Property Name="C" Type="nvarchar" MaxLength="10" />
+          <Property Name="Si" Type="nvarchar" MaxLength="10" />
+          <Property Name="Mn" Type="nvarchar" MaxLength="10" />
+          <Property Name="P" Type="nvarchar" MaxLength="10" />
+          <Property Name="S" Type="nvarchar" MaxLength="10" />
+          <Property Name="Cr" Type="nvarchar" MaxLength="10" />
+          <Property Name="Mo" Type="nvarchar" MaxLength="10" />
+          <Property Name="Ni" Type="nvarchar" MaxLength="10" />
+          <Property Name="Al" Type="nvarchar" MaxLength="10" />
+          <Property Name="Co" Type="nvarchar" MaxLength="10" />
+          <Property Name="Cu" Type="nvarchar" MaxLength="10" />
+          <Property Name="Nb" Type="nvarchar" MaxLength="10" />
+          <Property Name="Ti" Type="nvarchar" MaxLength="10" />
+          <Property Name="V" Type="nvarchar" MaxLength="10" />
+          <Property Name="W" Type="nvarchar" MaxLength="10" />
+          <Property Name="Pb" Type="nvarchar" MaxLength="10" />
+          <Property Name="Sn" Type="nvarchar" MaxLength="10" />
+          <Property Name="Mg" Type="nvarchar" MaxLength="10" />
+          <Property Name="As" Type="nvarchar" MaxLength="10" />
+          <Property Name="Zr" Type="nvarchar" MaxLength="10" />
+          <Property Name="Bi" Type="nvarchar" MaxLength="10" />
+          <Property Name="Ca" Type="nvarchar" MaxLength="10" />
+          <Property Name="Ce" Type="nvarchar" MaxLength="10" />
+          <Property Name="Sb" Type="nvarchar" MaxLength="10" />
+          <Property Name="Te" Type="nvarchar" MaxLength="10" />
+          <Property Name="B" Type="nvarchar" MaxLength="10" />
+          <Property Name="Zn" Type="nvarchar" MaxLength="10" />
+          <Property Name="La" Type="nvarchar" MaxLength="10" />
+          <Property Name="Fe" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityContainer Name="SpetroModel1StoreContainer">
+          <EntitySet Name="Chem" EntityType="Self.Chem" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SpetroModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Chem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Time" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Kanban_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Part_NO" Type="Int32" />
+          <Property Name="Part_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Standards" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Standards_NO" Type="Int32" />
+          <Property Name="In" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="C" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Si" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Mn" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="P" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="S" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Cr" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Mo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Ni" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Al" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Co" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Cu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Nb" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Ti" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="V" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="W" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Pb" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Sn" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Mg" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="As" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Zr" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Bi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Ca" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Ce" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Sb" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Te" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="B" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Zn" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="La" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Fe" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="SpetroEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Chems" EntityType="Self.Chem" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SpetroModel1StoreContainer" CdmEntityContainer="SpetroEntities1">
+          <EntitySetMapping Name="Chems">
+            <EntityTypeMapping TypeName="SpetroModel1.Chem">
+              <MappingFragment StoreEntitySet="Chem">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Kanban_NO" ColumnName="Kanban_NO" />
+                <ScalarProperty Name="Part_NO" ColumnName="Part_NO" />
+                <ScalarProperty Name="Part_Name" ColumnName="Part_Name" />
+                <ScalarProperty Name="Standards" ColumnName="Standards" />
+                <ScalarProperty Name="Standards_NO" ColumnName="Standards_NO" />
+                <ScalarProperty Name="In" ColumnName="In" />
+                <ScalarProperty Name="C" ColumnName="C" />
+                <ScalarProperty Name="Si" ColumnName="Si" />
+                <ScalarProperty Name="Mn" ColumnName="Mn" />
+                <ScalarProperty Name="P" ColumnName="P" />
+                <ScalarProperty Name="S" ColumnName="S" />
+                <ScalarProperty Name="Cr" ColumnName="Cr" />
+                <ScalarProperty Name="Mo" ColumnName="Mo" />
+                <ScalarProperty Name="Ni" ColumnName="Ni" />
+                <ScalarProperty Name="Al" ColumnName="Al" />
+                <ScalarProperty Name="Co" ColumnName="Co" />
+                <ScalarProperty Name="Cu" ColumnName="Cu" />
+                <ScalarProperty Name="Nb" ColumnName="Nb" />
+                <ScalarProperty Name="Ti" ColumnName="Ti" />
+                <ScalarProperty Name="V" ColumnName="V" />
+                <ScalarProperty Name="W" ColumnName="W" />
+                <ScalarProperty Name="Pb" ColumnName="Pb" />
+                <ScalarProperty Name="Sn" ColumnName="Sn" />
+                <ScalarProperty Name="Mg" ColumnName="Mg" />
+                <ScalarProperty Name="As" ColumnName="As" />
+                <ScalarProperty Name="Zr" ColumnName="Zr" />
+                <ScalarProperty Name="Bi" ColumnName="Bi" />
+                <ScalarProperty Name="Ca" ColumnName="Ca" />
+                <ScalarProperty Name="Ce" ColumnName="Ce" />
+                <ScalarProperty Name="Sb" ColumnName="Sb" />
+                <ScalarProperty Name="Te" ColumnName="Te" />
+                <ScalarProperty Name="B" ColumnName="B" />
+                <ScalarProperty Name="Zn" ColumnName="Zn" />
+                <ScalarProperty Name="La" ColumnName="La" />
+                <ScalarProperty Name="Fe" ColumnName="Fe" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

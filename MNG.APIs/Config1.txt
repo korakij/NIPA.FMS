@@ -1,0 +1,5 @@
+API URL = http://localhost:44358
+Path = 
+Refresh Rate = 5000
+Result Path = F:\Mango.Solutions\MNG.FMS\ChemResult\
+Power Meter IP = 192.168.2.9

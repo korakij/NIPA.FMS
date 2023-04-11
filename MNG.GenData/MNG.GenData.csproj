@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ToolCommandName>gendata</ToolCommandName>
+    <PackAsTool>True</PackAsTool>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>gendata</AssemblyName>
+    <Company>Mango Inc.</Company>
+    <Authors>Suthep S.</Authors>
+    <PackageId>mng.gendata</PackageId>
+    <Version>0.9.1</Version>
+    <FileVersion>0.9.1</FileVersion>
+    <AssemblyVersion>0.9.1</AssemblyVersion>
+    <PackageVersion>0.9.1</PackageVersion>
+    <InformationVersion>0.9.1</InformationVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="2.2.3" />
+  </ItemGroup>
+</Project>

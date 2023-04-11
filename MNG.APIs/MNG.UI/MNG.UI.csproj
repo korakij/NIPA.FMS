@@ -1,0 +1,681 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{537A07E6-53A8-442A-B210-0870E736F371}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MNG.UI</RootNamespace>
+    <AssemblyName>MNG.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>\\192.168.2.3\wmw\Installers\MNG_FMS\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>\\192.168.2.3\wmw\Installers\MNG_FMS\</UpdateUrl>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>31</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B3EBB7327DBDB7E421F2B8C3575BB6E2BDF6A919</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MNG.UI_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BarcodeStandard, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BarcodeLib.2.4.0\lib\netstandard2.0\BarcodeStandard.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.9\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="EasyModbus, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EasyModbusTCP.5.5.0\lib\EasyModbus.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelMapper, Version=5.0.0.0, Culture=neutral, PublicKeyToken=6c3f2bec99465df3, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelMapper.5.2.429\lib\net461\ExcelMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.3.3.11, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.3.3\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.5.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.6\lib\net45\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.5.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.6\lib\net45\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.5.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.6\lib\net45\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.5.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.6\lib\net45\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.5.0.2\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.6.0.5\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zen.Barcode.Rendering.Framework.3.1.10729.1\lib\Zen.Barcode.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APIClient.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="CTPEventArg.cs" />
+    <Compile Include="FilterData.cs" />
+    <Compile Include="FormEditing.cs" />
+    <Compile Include="FormEventArgs.cs" />
+    <Compile Include="FormMode.cs" />
+    <Compile Include="FormName.cs" />
+    <Compile Include="frmStartup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStartup.Designer.cs">
+      <DependentUpon>frmStartup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmMeltStd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmMeltStd.Designer.cs">
+      <DependentUpon>frmMeltStd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmTooling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmTooling.Designer.cs">
+      <DependentUpon>frmTooling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmShotBlastStd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmShotBlastStd.Designer.cs">
+      <DependentUpon>frmShotBlastStd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmMoldStd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmMoldStd.Designer.cs">
+      <DependentUpon>frmMoldStd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmPourStd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmPourStd.Designer.cs">
+      <DependentUpon>frmPourStd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmChemInLadle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmChemInLadle.Designer.cs">
+      <DependentUpon>frmChemInLadle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmControlPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmControlPlan.Designer.cs">
+      <DependentUpon>frmControlPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmMaterialType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmMaterialType.Designer.cs">
+      <DependentUpon>frmMaterialType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmChemInFurnace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmChemInFurnace.Designer.cs">
+      <DependentUpon>frmChemInFurnace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmMaterialSpec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmMaterialSpec.Designer.cs">
+      <DependentUpon>frmMaterialSpec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmProduct.Designer.cs">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetting.Designer.cs">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ILookup.cs" />
+    <Compile Include="IDoc.cs" />
+    <Compile Include="LookupButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LookupButton.Designer.cs">
+      <DependentUpon>LookupButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintBarcode.cs" />
+    <Compile Include="Production\Application.cs" />
+    <Compile Include="Production\ColorTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Production\frmCreateCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmCreateCharge.Designer.cs">
+      <DependentUpon>frmCreateCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmVerifyInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmVerifyInput.Designer.cs">
+      <DependentUpon>frmVerifyInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmCreateNewTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmCreateNewTest.Designer.cs">
+      <DependentUpon>frmCreateNewTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmCalculator.Designer.cs">
+      <DependentUpon>frmCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmEditMatCharging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmEditMatCharging.Designer.cs">
+      <DependentUpon>frmEditMatCharging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmInspection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmInspection.Designer.cs">
+      <DependentUpon>frmInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmInspectionProc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmInspectionProc.Designer.cs">
+      <DependentUpon>frmInspectionProc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmInspectionPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmInspectionPanel.Designer.cs">
+      <DependentUpon>frmInspectionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmPouringProc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmPouringProc.Designer.cs">
+      <DependentUpon>frmPouringProc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmMultiMelting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmMultiMelting.Designer.cs">
+      <DependentUpon>frmMultiMelting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmPouring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmPouring.Designer.cs">
+      <DependentUpon>frmPouring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmSingleMelt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmSingleMelt.Designer.cs">
+      <DependentUpon>frmSingleMelt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmTapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmTapping.Designer.cs">
+      <DependentUpon>frmTapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmMaterial.Designer.cs">
+      <DependentUpon>frmMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmMaterialSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmMaterialSummary.Designer.cs">
+      <DependentUpon>frmMaterialSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmLotNoInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmLotNoInfo.Designer.cs">
+      <DependentUpon>frmLotNoInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmLotNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmLotNo.Designer.cs">
+      <DependentUpon>frmLotNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmPouringIntoMold.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmPouringIntoMold.Designer.cs">
+      <DependentUpon>frmPouringIntoMold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmPrintTag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmPrintTag.Designer.cs">
+      <DependentUpon>frmPrintTag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmTestChem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmTestChem.Designer.cs">
+      <DependentUpon>frmTestChem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmTimeRetrieval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmTimeRetrieval.Designer.cs">
+      <DependentUpon>frmTimeRetrieval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\MaterialRatio.cs" />
+    <Compile Include="Production\MaterialSummary.cs" />
+    <Compile Include="Production\MatSummaryEventArgs.cs" />
+    <Compile Include="Production\MeltingEventArgs.cs" />
+    <Compile Include="Production\NotificationEventArgs.cs" />
+    <Compile Include="Production\Process.cs" />
+    <Compile Include="Production\Status.cs" />
+    <Compile Include="Production\TbProcessInd.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Production\StatusTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Production\ToolBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Production\ToolBar.Designer.cs">
+      <DependentUpon>ToolBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\ucTimePicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Production\ucTimePicker.Designer.cs">
+      <DependentUpon>ucTimePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Production\frmSpectrometer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmSpectrometer.Designer.cs">
+      <DependentUpon>frmSpectrometer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Spectrometer.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="StreamManager.cs" />
+    <EmbeddedResource Include="frmStartup.resx">
+      <DependentUpon>frmStartup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmMeltStd.resx">
+      <DependentUpon>frmMeltStd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmTooling.resx">
+      <DependentUpon>frmTooling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmShotBlastStd.resx">
+      <DependentUpon>frmShotBlastStd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmMoldStd.resx">
+      <DependentUpon>frmMoldStd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmPourStd.resx">
+      <DependentUpon>frmPourStd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmChemInLadle.resx">
+      <DependentUpon>frmChemInLadle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmControlPlan.resx">
+      <DependentUpon>frmControlPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmMaterialType.resx">
+      <DependentUpon>frmMaterialType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmChemInFurnace.resx">
+      <DependentUpon>frmChemInFurnace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmMaterialSpec.resx">
+      <DependentUpon>frmMaterialSpec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmProduct.resx">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookupButton.resx">
+      <DependentUpon>LookupButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmCreateCharge.resx">
+      <DependentUpon>frmCreateCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmVerifyInput.resx">
+      <DependentUpon>frmVerifyInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmCreateNewTest.resx">
+      <DependentUpon>frmCreateNewTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmCalculator.resx">
+      <DependentUpon>frmCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmEditMatCharging.resx">
+      <DependentUpon>frmEditMatCharging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmInspection.resx">
+      <DependentUpon>frmInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmInspectionProc.resx">
+      <DependentUpon>frmInspectionProc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmInspectionPanel.resx">
+      <DependentUpon>frmInspectionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmPouringProc.resx">
+      <DependentUpon>frmPouringProc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmMultiMelting.resx">
+      <DependentUpon>frmMultiMelting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmPouring.resx">
+      <DependentUpon>frmPouring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmSingleMelt.resx">
+      <DependentUpon>frmSingleMelt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmTapping.resx">
+      <DependentUpon>frmTapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmLotNo.resx">
+      <DependentUpon>frmLotNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmMaterial.resx">
+      <DependentUpon>frmMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmMaterialSummary.resx">
+      <DependentUpon>frmMaterialSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmLotNoInfo.resx">
+      <DependentUpon>frmLotNoInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmPouringIntoMold.resx">
+      <DependentUpon>frmPouringIntoMold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmPrintTag.resx">
+      <DependentUpon>frmPrintTag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmTestChem.resx">
+      <DependentUpon>frmTestChem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmTimeRetrieval.resx">
+      <DependentUpon>frmTimeRetrieval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\ToolBar.resx">
+      <DependentUpon>ToolBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\ucTimePicker.resx">
+      <DependentUpon>ucTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Production\frmSpectrometer.resx">
+      <DependentUpon>frmSpectrometer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="MNG.UI_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\Charging.datasource" />
+    <None Include="Properties\DataSources\ChemicalCompositionInFurnace.datasource" />
+    <None Include="Properties\DataSources\ChemicalCompositionInLadle.datasource" />
+    <None Include="Properties\DataSources\ControlPlan.datasource" />
+    <None Include="Properties\DataSources\Customer.datasource" />
+    <None Include="Properties\DataSources\Furnace.datasource" />
+    <None Include="Properties\DataSources\Kanban.datasource" />
+    <None Include="Properties\DataSources\LotNo.datasource" />
+    <None Include="Properties\DataSources\Material.datasource" />
+    <None Include="Properties\DataSources\MaterialSpecification.datasource" />
+    <None Include="Properties\DataSources\MeltStandard.datasource" />
+    <None Include="Properties\DataSources\MNG.UI.Production.frmKanban.datasource" />
+    <None Include="Properties\DataSources\MNG.UI.Production.frmPouring.datasource" />
+    <None Include="Properties\DataSources\MNG.UI.Production.frmPouringIntoMold.datasource" />
+    <None Include="Properties\DataSources\MoldStandard.datasource" />
+    <None Include="Properties\DataSources\Pouring.datasource" />
+    <None Include="Properties\DataSources\PourStandard.datasource" />
+    <None Include="Properties\DataSources\Product.datasource" />
+    <None Include="Properties\DataSources\Setting.datasource" />
+    <None Include="Properties\DataSources\ShotBlastStandard.datasource" />
+    <None Include="Properties\DataSources\TestChemicalComposition.datasource" />
+    <None Include="Properties\DataSources\Tooling.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play_resize.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-button_resize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop-button-512_resize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop-512-Resized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop-512-Resized1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\218-512-resized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images-resized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images-resized1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit-Resized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-button_resize1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Text.Json.6.0.5\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.5\build\System.Text.Json.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Text.Json.6.0.5\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Text.Json.6.0.5\build\System.Text.Json.targets'))" />
+  </Target>
+</Project>

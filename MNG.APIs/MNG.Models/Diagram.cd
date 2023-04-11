@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MNG.Models.Product">
+    <Position X="14" Y="1" Width="2.75" />
+    <AssociationLine Name="ControlPlans" Type="MNG.Models.ControlPlan" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14" Y="1.687" />
+        <Point X="8.125" Y="1.687" />
+        <Point X="8.125" Y="3" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>CEACAAAAQAAAAAAAgAAAAAQAACAAABAAAAAAARAAAAA=</HashCode>
+      <FileName>Product.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Material" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ControlPlans" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MNG.Models.User">
+    <Position X="18.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MNG.Models.ChemicalComposition">
+    <Position X="15.25" Y="8" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AJEAAQAAAAQAA2UQQRAgAAhQQAAgAAkEIAAAAAwAIAA=</HashCode>
+      <FileName>ChemicalComposition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MNG.Models.ControlPlan">
+    <Position X="6.25" Y="3" Width="2.5" />
+    <AssociationLine Name="Melting" Type="MNG.Models.MeltStandard" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.688" Y="4.817" />
+        <Point X="6.688" Y="5.192" />
+        <Point X="3.625" Y="5.192" />
+        <Point X="3.625" Y="7.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Molding" Type="MNG.Models.MoldStandard" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.219" Y="4.817" />
+        <Point X="7.219" Y="5.688" />
+        <Point X="5.562" Y="5.688" />
+        <Point X="5.562" Y="7.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Product" Type="MNG.Models.Product" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.375" Y="3" />
+        <Point X="7.375" Y="1.375" />
+        <Point X="14" Y="1.375" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ShotBlasting" Type="MNG.Models.ShotBlastStandard" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="3.875" />
+        <Point X="1.5" Y="3.875" />
+        <Point X="1.5" Y="7.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Tooling" Type="MNG.Models.Tooling" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.5" Y="4.817" />
+        <Point X="8.5" Y="5.688" />
+        <Point X="9.594" Y="5.688" />
+        <Point X="9.594" Y="7.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Specification" Type="MNG.Models.Specification" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.75" Y="3.875" />
+        <Point X="12.219" Y="3.875" />
+        <Point X="12.219" Y="7.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAwABIAAACAAEAAAEAAAAAAAgAAAQAAAAA=</HashCode>
+      <FileName>ControlPlan.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Melting" />
+      <Property Name="Molding" />
+      <Property Name="Pouring" />
+      <Property Name="Product" />
+      <Property Name="ShotBlasting" />
+      <Property Name="Tooling" />
+      <Property Name="Specification" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MNG.Models.Material">
+    <Position X="18.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Material.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MNG.Models.MaterialProperty">
+    <Position X="18.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgQAAAAAAgAAAAYAAAAESAAAQAAACAAAAAQAAAAA=</HashCode>
+      <FileName>MaterialProperty.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MNG.Models.MeltStandard">
+    <Position X="2.75" Y="7.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>OAAAAAAAAABoEAAAIAAkAgAAAAAAAABAAAAAAIAAAAA=</HashCode>
+      <FileName>MeltStandard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MNG.Models.MoldStandard">
+    <Position X="5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SQEAAAAAAAAgIgAEYAAgAAAAAAQAACAABAAAAhAAEAA=</HashCode>
+      <FileName>MoldStandard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MNG.Models.PourStandard">
+    <Position X="7" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAQQAAAAgAAAAAAAgAAAAAAAQAIFAAAAAAIAACAA=</HashCode>
+      <FileName>PourStandard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MNG.Models.ShotBlastStandard">
+    <Position X="0.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAQAAAAAAAgAABAAACgAAAAAAAAAAAAAAAAACAAIAA=</HashCode>
+      <FileName>ShotBlastStandard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MNG.Models.Specification">
+    <Position X="11.5" Y="7.25" Width="1.5" />
+    <AssociationLine Name="Furnace" Type="MNG.Models.ChemicalComposition" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.125" Y="9.354" />
+        <Point X="12.125" Y="10.812" />
+        <Point X="15.25" Y="10.812" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Ladle" Type="MNG.Models.ChemicalComposition" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13" Y="8.562" />
+        <Point X="13.375" Y="8.562" />
+        <Point X="13.375" Y="8.625" />
+        <Point X="15.25" Y="8.625" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Property" Type="MNG.Models.MaterialProperty" FixedFromPoint="true">
+      <Path>
+        <Point X="13" Y="7.438" />
+        <Point X="18.25" Y="7.438" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAgAAAAAAAgIAAAQAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Specification.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Furnace" />
+      <Property Name="Ladle" />
+      <Property Name="Property" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MNG.Models.Tooling">
+    <Position X="9" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAACAEAAAAgAAAAAAAgCAgAAAQAAAAAAQYAAAAIAAA=</HashCode>
+      <FileName>Tooling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="10" />
+</ClassDiagram>

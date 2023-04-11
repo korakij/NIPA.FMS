@@ -1,0 +1,5 @@
+API URL = http://192.168.2.3/MNG_FMS
+Path = 
+Refresh Rate = 5
+Result Path = F:\Mango.Solutions\MNG.FMS\ChemResult
+Power Meter IP = 
