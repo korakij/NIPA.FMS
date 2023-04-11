@@ -30,6 +30,9 @@ namespace MNG.Models.Productions
         public bool IsCompleted { get; set; }
         public bool IsPassed { get; set; }
 
+        public virtual ControlPlan ControlPlan { get; set; }
+        public int? ControlPlanId { get; set; }
+
         public virtual Charging Charging { get; set; }
         [Required]
         [ForeignKey(nameof(Charging))]

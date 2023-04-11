@@ -10488,6 +10488,12 @@ namespace MNG.UI
         [Newtonsoft.Json.JsonProperty("isPassed", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public bool? IsPassed { get; set; }
     
+        [Newtonsoft.Json.JsonProperty("controlPlan", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public ControlPlan ControlPlan { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("controlPlanId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public int? ControlPlanId { get; set; }
+    
         [Newtonsoft.Json.JsonProperty("charging", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public Charging Charging { get; set; }
     

@@ -32,14 +32,20 @@
             System.Windows.Forms.Label chargeTimeLabel1;
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label2;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCreateCharge));
             System.Windows.Forms.Label codeLabel;
             System.Windows.Forms.Label controlPlanIdLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCreateCharge));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.chargeNoTextBox = new System.Windows.Forms.TextBox();
             this.chargeTimeTextBox = new System.Windows.Forms.TextBox();
             this.startKwHrTextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnBrowse = new System.Windows.Forms.Button();
+            this.codeTextBox1 = new System.Windows.Forms.TextBox();
+            this.controlPlanIdTextBox = new System.Windows.Forms.TextBox();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.codeTextBox = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.btnOk = new System.Windows.Forms.Button();
@@ -51,12 +57,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.codeTextBox = new System.Windows.Forms.TextBox();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.idTextBox = new System.Windows.Forms.TextBox();
-            this.controlPlanIdTextBox = new System.Windows.Forms.TextBox();
-            this.codeTextBox1 = new System.Windows.Forms.TextBox();
-            this.btnBrowse = new System.Windows.Forms.Button();
             this.controlPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.chargingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -104,6 +104,27 @@
             label2.TabIndex = 49;
             label2.Text = "Power";
             // 
+            // codeLabel
+            // 
+            codeLabel.AutoSize = true;
+            codeLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            codeLabel.Location = new System.Drawing.Point(34, 155);
+            codeLabel.Name = "codeLabel";
+            codeLabel.Size = new System.Drawing.Size(78, 17);
+            codeLabel.TabIndex = 54;
+            codeLabel.Text = "Part Name";
+            // 
+            // controlPlanIdLabel
+            // 
+            controlPlanIdLabel.AutoSize = true;
+            controlPlanIdLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            controlPlanIdLabel.Location = new System.Drawing.Point(34, 184);
+            controlPlanIdLabel.Name = "controlPlanIdLabel";
+            controlPlanIdLabel.Size = new System.Drawing.Size(89, 17);
+            controlPlanIdLabel.TabIndex = 56;
+            controlPlanIdLabel.Text = "Control Plan";
+            controlPlanIdLabel.Click += new System.EventHandler(this.controlPlanIdLabel_Click);
+            // 
             // timer1
             // 
             this.timer1.Interval = 1000;
@@ -111,31 +132,37 @@
             // 
             // chargeNoTextBox
             // 
+            this.chargeNoTextBox.BackColor = System.Drawing.Color.White;
             this.chargeNoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.chargeNoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "ChargeNo", true));
             this.chargeNoTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chargeNoTextBox.Location = new System.Drawing.Point(134, 37);
             this.chargeNoTextBox.Name = "chargeNoTextBox";
+            this.chargeNoTextBox.ReadOnly = true;
             this.chargeNoTextBox.Size = new System.Drawing.Size(115, 23);
             this.chargeNoTextBox.TabIndex = 52;
             // 
             // chargeTimeTextBox
             // 
+            this.chargeTimeTextBox.BackColor = System.Drawing.Color.White;
             this.chargeTimeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.chargeTimeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "ChargeTime", true));
             this.chargeTimeTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chargeTimeTextBox.Location = new System.Drawing.Point(134, 66);
             this.chargeTimeTextBox.Name = "chargeTimeTextBox";
+            this.chargeTimeTextBox.ReadOnly = true;
             this.chargeTimeTextBox.Size = new System.Drawing.Size(115, 23);
             this.chargeTimeTextBox.TabIndex = 53;
             // 
             // startKwHrTextBox
             // 
+            this.startKwHrTextBox.BackColor = System.Drawing.Color.White;
             this.startKwHrTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.startKwHrTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "StartKwHr", true));
             this.startKwHrTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startKwHrTextBox.Location = new System.Drawing.Point(134, 95);
             this.startKwHrTextBox.Name = "startKwHrTextBox";
+            this.startKwHrTextBox.ReadOnly = true;
             this.startKwHrTextBox.Size = new System.Drawing.Size(115, 23);
             this.startKwHrTextBox.TabIndex = 54;
             // 
@@ -161,6 +188,78 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(634, 236);
             this.panel2.TabIndex = 72;
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnBrowse.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrowse.Location = new System.Drawing.Point(513, 152);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(27, 23);
+            this.btnBrowse.TabIndex = 231;
+            this.btnBrowse.Text = "...";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // codeTextBox1
+            // 
+            this.codeTextBox1.BackColor = System.Drawing.Color.White;
+            this.codeTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.codeTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.controlPlanBindingSource, "Code", true));
+            this.codeTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codeTextBox1.Location = new System.Drawing.Point(181, 182);
+            this.codeTextBox1.Name = "codeTextBox1";
+            this.codeTextBox1.ReadOnly = true;
+            this.codeTextBox1.Size = new System.Drawing.Size(86, 23);
+            this.codeTextBox1.TabIndex = 60;
+            // 
+            // controlPlanIdTextBox
+            // 
+            this.controlPlanIdTextBox.BackColor = System.Drawing.Color.White;
+            this.controlPlanIdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.controlPlanIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "ControlPlanId", true));
+            this.controlPlanIdTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.controlPlanIdTextBox.Location = new System.Drawing.Point(134, 182);
+            this.controlPlanIdTextBox.Name = "controlPlanIdTextBox";
+            this.controlPlanIdTextBox.ReadOnly = true;
+            this.controlPlanIdTextBox.Size = new System.Drawing.Size(41, 23);
+            this.controlPlanIdTextBox.TabIndex = 59;
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.BackColor = System.Drawing.Color.White;
+            this.idTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "Id", true));
+            this.idTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idTextBox.Location = new System.Drawing.Point(134, 153);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.ReadOnly = true;
+            this.idTextBox.Size = new System.Drawing.Size(41, 23);
+            this.idTextBox.TabIndex = 58;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.BackColor = System.Drawing.Color.White;
+            this.nameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "Name", true));
+            this.nameTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameTextBox.Location = new System.Drawing.Point(273, 153);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.ReadOnly = true;
+            this.nameTextBox.Size = new System.Drawing.Size(234, 23);
+            this.nameTextBox.TabIndex = 56;
+            // 
+            // codeTextBox
+            // 
+            this.codeTextBox.BackColor = System.Drawing.Color.White;
+            this.codeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.codeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "Code", true));
+            this.codeTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codeTextBox.Location = new System.Drawing.Point(181, 153);
+            this.codeTextBox.Name = "codeTextBox";
+            this.codeTextBox.ReadOnly = true;
+            this.codeTextBox.Size = new System.Drawing.Size(86, 23);
+            this.codeTextBox.TabIndex = 55;
             // 
             // panel4
             // 
@@ -256,10 +355,10 @@
             // 
             // label5
             // 
-            this.label5.BackColor = System.Drawing.Color.MidnightBlue;
+            this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(637, 34);
@@ -287,89 +386,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(637, 3);
             this.panel7.TabIndex = 78;
-            // 
-            // codeLabel
-            // 
-            codeLabel.AutoSize = true;
-            codeLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            codeLabel.Location = new System.Drawing.Point(34, 155);
-            codeLabel.Name = "codeLabel";
-            codeLabel.Size = new System.Drawing.Size(78, 17);
-            codeLabel.TabIndex = 54;
-            codeLabel.Text = "Part Name";
-            // 
-            // codeTextBox
-            // 
-            this.codeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.codeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "Code", true));
-            this.codeTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codeTextBox.Location = new System.Drawing.Point(181, 153);
-            this.codeTextBox.Name = "codeTextBox";
-            this.codeTextBox.Size = new System.Drawing.Size(68, 23);
-            this.codeTextBox.TabIndex = 55;
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "Name", true));
-            this.nameTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTextBox.Location = new System.Drawing.Point(255, 153);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(237, 23);
-            this.nameTextBox.TabIndex = 56;
-            // 
-            // controlPlanIdLabel
-            // 
-            controlPlanIdLabel.AutoSize = true;
-            controlPlanIdLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            controlPlanIdLabel.Location = new System.Drawing.Point(34, 184);
-            controlPlanIdLabel.Name = "controlPlanIdLabel";
-            controlPlanIdLabel.Size = new System.Drawing.Size(89, 17);
-            controlPlanIdLabel.TabIndex = 56;
-            controlPlanIdLabel.Text = "Control Plan";
-            controlPlanIdLabel.Click += new System.EventHandler(this.controlPlanIdLabel_Click);
-            // 
-            // idTextBox
-            // 
-            this.idTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "Id", true));
-            this.idTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idTextBox.Location = new System.Drawing.Point(134, 153);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(41, 23);
-            this.idTextBox.TabIndex = 58;
-            // 
-            // controlPlanIdTextBox
-            // 
-            this.controlPlanIdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.controlPlanIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "ControlPlanId", true));
-            this.controlPlanIdTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.controlPlanIdTextBox.Location = new System.Drawing.Point(134, 182);
-            this.controlPlanIdTextBox.Name = "controlPlanIdTextBox";
-            this.controlPlanIdTextBox.Size = new System.Drawing.Size(41, 23);
-            this.controlPlanIdTextBox.TabIndex = 59;
-            // 
-            // codeTextBox1
-            // 
-            this.codeTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.codeTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.controlPlanBindingSource, "Code", true));
-            this.codeTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codeTextBox1.Location = new System.Drawing.Point(181, 182);
-            this.codeTextBox1.Name = "codeTextBox1";
-            this.codeTextBox1.Size = new System.Drawing.Size(68, 23);
-            this.codeTextBox1.TabIndex = 60;
-            // 
-            // btnBrowse
-            // 
-            this.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnBrowse.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBrowse.Location = new System.Drawing.Point(498, 153);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(27, 23);
-            this.btnBrowse.TabIndex = 231;
-            this.btnBrowse.Text = "...";
-            this.btnBrowse.UseVisualStyleBackColor = true;
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // controlPlanBindingSource
             // 

@@ -1,4 +1,5 @@
 ﻿using ASRS.UI;
+using NPOI.OpenXmlFormats.Dml.Chart;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -78,14 +79,14 @@ namespace MNG.UI.Production
         public void FormDisableSelection()
         {
             pnBorderTop.BackColor = Color.White;
-            lbHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lbHeader.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             lbHeader.ForeColor = System.Drawing.SystemColors.ControlDark;
         }
 
         public void FormEnableSelection()
         {
             pnBorderTop.BackColor = Color.MidnightBlue;
-            lbHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lbHeader.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             lbHeader.ForeColor = System.Drawing.Color.Black;
         }
 
@@ -167,9 +168,19 @@ namespace MNG.UI.Production
             testChemicalCompositionBindingSource.DataSource = _testChemicalCompositions;
         }
 
-        private void testChemicalCompositionBindingSource_CurrentChanged(object sender, EventArgs e)
+        private async void testChemicalCompositionBindingSource_CurrentChanged(object sender, EventArgs e)
         {
             CurrentTestResult = testChemicalCompositionBindingSource.Current as TestChemicalComposition;
+            try
+            {
+                var ctp = (await _client.GetControlPlanByIdAsync(CurrentTestResult.ControlPlanId ?? 0));
+                controlPlanBindingSource.DataSource = ctp;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Unable to Load Control Plan","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             var MeltInfo = new MeltingEventArgs();
 
             if (CurrentTestResult == null)
@@ -202,22 +213,11 @@ namespace MNG.UI.Production
 
         private async void productIdTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (productIdTextBox.Text == "")
-                return;
-
-            int id = Convert.ToInt32(productIdTextBox.Text);
-            var p = (await _client.GetProductByIdAsync(id)) as Product;
-
-            if (p == null)
-                return;
-
-            int controlPlanId = p.ActiveControlPlanId ?? default(int);
-            CurrentControlPlan = (await _client.GetControlPlanByIdAsync(controlPlanId)) as ControlPlan;
+            CurrentControlPlan = (await _client.GetControlPlanByIdAsync(CurrentTestResult.ControlPlanId ?? 0)) as ControlPlan;
 
             ChemInFurnaceSpec = (await _client.GetChemicalCompositionInFurnaceByIdAsync(CurrentControlPlan.ChemicalCompositionInFurnaceCode));
 
             chemicalCompositionInFurnaceBindingSource.DataSource = ChemInFurnaceSpec;
-            tbPartName.Text = p.Name;
         }
 
         public async void CreateItem()
@@ -266,6 +266,7 @@ namespace MNG.UI.Production
                 newTest.Code = newTestNo;
                 newTest.ProductId = fCreateNewTest.PartNo;
                 newTest.ChargingCode = CurrentChargeNo.ChargeNo;
+                newTest.ControlPlanId = fCreateNewTest.TestChem.ControlPlanId;
                 newTest.Time = DateTime.Now;
 
                 try
@@ -383,7 +384,7 @@ namespace MNG.UI.Production
             var ctp = (await _client.GetControlPlanByIdAsync(controlPlanId)) as ControlPlan;
             var chemInFur = (await _client.GetChemicalCompositionInFurnaceByIdAsync(ctp.ChemicalCompositionInFurnaceCode));
 
-            frmCreateNewTest fTest = new frmCreateNewTest(CurrentTestResult.Code, prod, chemInFur, CurrentTestResult);
+            frmCreateNewTest fTest = new frmCreateNewTest(CurrentTestResult.Code, prod, chemInFur, CurrentTestResult, ctp);
 
             fTest.StartPosition = FormStartPosition.Manual;
             fTest.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width / 3, Screen.PrimaryScreen.WorkingArea.Height / 3);
@@ -392,7 +393,7 @@ namespace MNG.UI.Production
 
             if (result == DialogResult.OK)
             {
-                var test = fTest.CCETest;
+                var test = fTest.TestChem;
 
                 if (test == null)
                     return;
@@ -463,46 +464,8 @@ namespace MNG.UI.Production
 
         private async void btnAnalysis_Click(object sender, EventArgs e)
         {
-            //var testNo = CurrentTestResult.Code;
-            //int fileCount = Directory.GetFiles(fileSystemWatcher1.Path, "*.*", SearchOption.TopDirectoryOnly).Length;
-
-            //DialogResult result = MessageBox.Show($"Do you want to analyze chemical composition of {testNo}", "Analysis", MessageBoxButtons.OKCancel);
-
-            //if (fileCount == 0)
-            //{
-            //    MessageBox.Show("Analysis result does not exist");
-            //    return;
-            //}
-
-            //var data = new FilterData($"{fileSystemWatcher1.Path}chem1.html");
-
-            //if (data.Kanban_no != CurrentTestResult.Code)
-            //{
-            //    MessageBox.Show("Test Result does not match the selected Kanban");
-            //    return;
-            //}
-
-            //var chem = new ChemicalComposition();
-
             Spectrometer sp = new Spectrometer(@"F:\Mango.Solutions\MNG.FMS\ChemResult\Results_2276.txt");
             var chem = sp.ChemResult;
-
-            //chem.C = Convert.ToDouble(data.Chem[0]);
-            //chem.Si = Convert.ToDouble(data.Chem[1]);
-            //chem.Mn = Convert.ToDouble(data.Chem[2]);
-            //chem.Mg = Convert.ToDouble(data.Chem[17]);
-            //chem.S = Convert.ToDouble(data.Chem[4]);
-            //chem.Cu = Convert.ToDouble(data.Chem[10]);
-            //chem.Al = Convert.ToDouble(data.Chem[8]);
-            //chem.Sn = Convert.ToDouble(data.Chem[16]);
-            //chem.P = Convert.ToDouble(data.Chem[3]);
-            //chem.Mo = Convert.ToDouble(data.Chem[6]);
-            //chem.Cr = Convert.ToDouble(data.Chem[5]);
-            //chem.Ni = Convert.ToDouble(data.Chem[7]);
-            //chem.Ti = Convert.ToDouble(data.Chem[12]);
-            //chem.Te = Convert.ToDouble(data.Chem[24]);
-            //chem.V = Convert.ToDouble(data.Chem[13]);
-
             var test = testChemicalCompositionBindingSource.Current as TestChemicalComposition;
             test.Result = chem;
 

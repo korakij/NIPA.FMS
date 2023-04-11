@@ -16,7 +16,7 @@ namespace MNG.UI.Production
         private Client _client;
 
         public int PartNo { get; set; }
-        public TestChemicalComposition CCETest { get; set; }
+        public TestChemicalComposition TestChem { get; set; }
 
         public frmCreateNewTest(string newTest)
         {
@@ -24,25 +24,27 @@ namespace MNG.UI.Production
 
             var url = Properties.Settings.Default.API_URL;
             _client = new Client(url);
+            TestChem = new TestChemicalComposition();
 
             pnCCE.Hide();
             tbTestNo.Text = newTest;
             btnOk.Enabled = false;
         }
 
-        public frmCreateNewTest(string newTest, Product _prod, ChemicalCompositionInFurnace _chemInFur, TestChemicalComposition _CCETest)
+        public frmCreateNewTest(string newTest, Product _prod, ChemicalCompositionInFurnace _chemInFur, TestChemicalComposition _CCETest, ControlPlan _ctp)
         {
             InitializeComponent();
 
             var url = Properties.Settings.Default.API_URL;
             _client = new Client(url);
 
-            CCETest = new TestChemicalComposition();
-
+            TestChem = new TestChemicalComposition();
+            lbHeader.Text = "E D I T - T E S T";
             pnCCE.Show();
             productBindingSource.DataSource = _prod;
             chemicalCompositionInFurnaceBindingSource.DataSource = _chemInFur;
             testChemicalCompositionBindingSource.DataSource = _CCETest;
+            controlPlanBindingSource.DataSource = _ctp;
 
             tbTestNo.Text = newTest;
             btnOk.Enabled = true;
@@ -51,7 +53,6 @@ namespace MNG.UI.Production
         private async void btnProductBrowse_Click(object sender, EventArgs e)
         {
             var products = (await _client.GetProductAllAsync()).Where(x => x.ActiveControlPlanId != null).ToList();
-
             frmProduct fProduct = new frmProduct(products);
 
             fProduct.EnableViewMode();
@@ -69,8 +70,15 @@ namespace MNG.UI.Production
                 if (fProduct.SelectedProduct == null)
                     return;
 
+                var ctp = (await _client.GetControlPlanByIdAsync(fProduct.SelectedProduct.ActiveControlPlanId ?? 0));
+
+                TestChem.ControlPlanId = ctp.Id;
                 productBindingSource.DataSource = fProduct.SelectedProduct;
                 productBindingSource.EndEdit();
+
+                controlPlanBindingSource.DataSource = ctp;
+                testChemicalCompositionBindingSource.DataSource = TestChem;
+
                 btnOk.Enabled = true;
                 PartNo = fProduct.SelectedProduct.Id ?? 0;
             }
@@ -84,7 +92,7 @@ namespace MNG.UI.Production
         private void btnOk_Click(object sender, EventArgs e)
         {
             testChemicalCompositionBindingSource.EndEdit();
-            CCETest = testChemicalCompositionBindingSource.Current as TestChemicalComposition;
+            TestChem = testChemicalCompositionBindingSource.Current as TestChemicalComposition;
         }
     }
 }

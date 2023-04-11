@@ -61,8 +61,8 @@
             System.Windows.Forms.Label label10;
             System.Windows.Forms.Label label3;
             System.Windows.Forms.Label label4;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditMatCharging));
             System.Windows.Forms.Label label6;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditMatCharging));
             this.startKwHrNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.chargingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.maxTempKwHrNumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -106,8 +106,20 @@
             this.lbChargNo = new System.Windows.Forms.Label();
             this.statusTextBox1 = new MNG.UI.Production.StatusTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cceMinTextBox = new System.Windows.Forms.TextBox();
+            this.alMinTextBox = new System.Windows.Forms.TextBox();
             this.chemicalCompositionInFurnaceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.alMaxTextBox = new System.Windows.Forms.TextBox();
+            this.pMinTextBox = new System.Windows.Forms.TextBox();
+            this.pMaxTextBox = new System.Windows.Forms.TextBox();
+            this.cuMinTextBox = new System.Windows.Forms.TextBox();
+            this.cuMaxTextBox = new System.Windows.Forms.TextBox();
+            this.crMinTextBox = new System.Windows.Forms.TextBox();
+            this.crMaxTextBox = new System.Windows.Forms.TextBox();
+            this.mnMinTextBox = new System.Windows.Forms.TextBox();
+            this.mnMaxTextBox = new System.Windows.Forms.TextBox();
+            this.siMinTextBox = new System.Windows.Forms.TextBox();
+            this.siMaxTextBox = new System.Windows.Forms.TextBox();
+            this.cceMinTextBox = new System.Windows.Forms.TextBox();
             this.cceMaxTextBox = new System.Windows.Forms.TextBox();
             this.revisionTextBox = new System.Windows.Forms.TextBox();
             this.controlPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -161,18 +173,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.siMaxTextBox = new System.Windows.Forms.TextBox();
-            this.siMinTextBox = new System.Windows.Forms.TextBox();
-            this.mnMaxTextBox = new System.Windows.Forms.TextBox();
-            this.mnMinTextBox = new System.Windows.Forms.TextBox();
-            this.crMaxTextBox = new System.Windows.Forms.TextBox();
-            this.crMinTextBox = new System.Windows.Forms.TextBox();
-            this.cuMaxTextBox = new System.Windows.Forms.TextBox();
-            this.cuMinTextBox = new System.Windows.Forms.TextBox();
-            this.pMaxTextBox = new System.Windows.Forms.TextBox();
-            this.pMinTextBox = new System.Windows.Forms.TextBox();
-            this.alMaxTextBox = new System.Windows.Forms.TextBox();
-            this.alMinTextBox = new System.Windows.Forms.TextBox();
             c_FCLabel = new System.Windows.Forms.Label();
             c_FCDLabel = new System.Windows.Forms.Label();
             fe_MnLabel = new System.Windows.Forms.Label();
@@ -566,6 +566,16 @@
             label4.Size = new System.Drawing.Size(30, 17);
             label4.TabIndex = 53;
             label4.Text = "Min";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label6.Location = new System.Drawing.Point(583, 109);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(30, 17);
+            label6.TabIndex = 35;
+            label6.Text = "%Al";
             // 
             // startKwHrNumericUpDown
             // 
@@ -1118,6 +1128,142 @@
             this.panel2.Size = new System.Drawing.Size(870, 208);
             this.panel2.TabIndex = 2;
             // 
+            // alMinTextBox
+            // 
+            this.alMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.alMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "AlMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
+            this.alMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alMinTextBox.Location = new System.Drawing.Point(586, 158);
+            this.alMinTextBox.Name = "alMinTextBox";
+            this.alMinTextBox.Size = new System.Drawing.Size(45, 23);
+            this.alMinTextBox.TabIndex = 251;
+            this.alMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // chemicalCompositionInFurnaceBindingSource
+            // 
+            this.chemicalCompositionInFurnaceBindingSource.DataSource = typeof(MNG.UI.ChemicalCompositionInFurnace);
+            // 
+            // alMaxTextBox
+            // 
+            this.alMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.alMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "AlMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
+            this.alMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alMaxTextBox.Location = new System.Drawing.Point(586, 129);
+            this.alMaxTextBox.Name = "alMaxTextBox";
+            this.alMaxTextBox.Size = new System.Drawing.Size(45, 23);
+            this.alMaxTextBox.TabIndex = 250;
+            this.alMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // pMinTextBox
+            // 
+            this.pMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "PMin", true));
+            this.pMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pMinTextBox.Location = new System.Drawing.Point(524, 158);
+            this.pMinTextBox.Name = "pMinTextBox";
+            this.pMinTextBox.Size = new System.Drawing.Size(45, 23);
+            this.pMinTextBox.TabIndex = 249;
+            this.pMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // pMaxTextBox
+            // 
+            this.pMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "PMax", true));
+            this.pMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pMaxTextBox.Location = new System.Drawing.Point(524, 129);
+            this.pMaxTextBox.Name = "pMaxTextBox";
+            this.pMaxTextBox.Size = new System.Drawing.Size(45, 23);
+            this.pMaxTextBox.TabIndex = 248;
+            this.pMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // cuMinTextBox
+            // 
+            this.cuMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cuMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "CuMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
+            this.cuMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cuMinTextBox.Location = new System.Drawing.Point(462, 158);
+            this.cuMinTextBox.Name = "cuMinTextBox";
+            this.cuMinTextBox.Size = new System.Drawing.Size(45, 23);
+            this.cuMinTextBox.TabIndex = 247;
+            this.cuMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // cuMaxTextBox
+            // 
+            this.cuMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cuMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "CuMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
+            this.cuMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cuMaxTextBox.Location = new System.Drawing.Point(462, 129);
+            this.cuMaxTextBox.Name = "cuMaxTextBox";
+            this.cuMaxTextBox.Size = new System.Drawing.Size(45, 23);
+            this.cuMaxTextBox.TabIndex = 246;
+            this.cuMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // crMinTextBox
+            // 
+            this.crMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "CrMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
+            this.crMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.crMinTextBox.Location = new System.Drawing.Point(400, 158);
+            this.crMinTextBox.Name = "crMinTextBox";
+            this.crMinTextBox.Size = new System.Drawing.Size(45, 23);
+            this.crMinTextBox.TabIndex = 245;
+            this.crMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // crMaxTextBox
+            // 
+            this.crMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "CrMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
+            this.crMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.crMaxTextBox.Location = new System.Drawing.Point(400, 129);
+            this.crMaxTextBox.Name = "crMaxTextBox";
+            this.crMaxTextBox.Size = new System.Drawing.Size(45, 23);
+            this.crMaxTextBox.TabIndex = 244;
+            this.crMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // mnMinTextBox
+            // 
+            this.mnMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mnMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "MnMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
+            this.mnMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnMinTextBox.Location = new System.Drawing.Point(338, 158);
+            this.mnMinTextBox.Name = "mnMinTextBox";
+            this.mnMinTextBox.Size = new System.Drawing.Size(45, 23);
+            this.mnMinTextBox.TabIndex = 243;
+            this.mnMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // mnMaxTextBox
+            // 
+            this.mnMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mnMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "MnMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
+            this.mnMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnMaxTextBox.Location = new System.Drawing.Point(338, 129);
+            this.mnMaxTextBox.Name = "mnMaxTextBox";
+            this.mnMaxTextBox.Size = new System.Drawing.Size(45, 23);
+            this.mnMaxTextBox.TabIndex = 242;
+            this.mnMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // siMinTextBox
+            // 
+            this.siMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.siMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "SiMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
+            this.siMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siMinTextBox.Location = new System.Drawing.Point(276, 158);
+            this.siMinTextBox.Name = "siMinTextBox";
+            this.siMinTextBox.Size = new System.Drawing.Size(45, 23);
+            this.siMinTextBox.TabIndex = 241;
+            this.siMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // siMaxTextBox
+            // 
+            this.siMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.siMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "SiMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
+            this.siMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siMaxTextBox.Location = new System.Drawing.Point(276, 129);
+            this.siMaxTextBox.Name = "siMaxTextBox";
+            this.siMaxTextBox.Size = new System.Drawing.Size(45, 23);
+            this.siMaxTextBox.TabIndex = 240;
+            this.siMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // cceMinTextBox
             // 
             this.cceMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1128,10 +1274,6 @@
             this.cceMinTextBox.Size = new System.Drawing.Size(45, 23);
             this.cceMinTextBox.TabIndex = 239;
             this.cceMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // chemicalCompositionInFurnaceBindingSource
-            // 
-            this.chemicalCompositionInFurnaceBindingSource.DataSource = typeof(MNG.UI.ChemicalCompositionInFurnace);
             // 
             // cceMaxTextBox
             // 
@@ -2059,148 +2201,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(873, 3);
             this.panel7.TabIndex = 222;
-            // 
-            // siMaxTextBox
-            // 
-            this.siMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.siMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "SiMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
-            this.siMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siMaxTextBox.Location = new System.Drawing.Point(276, 129);
-            this.siMaxTextBox.Name = "siMaxTextBox";
-            this.siMaxTextBox.Size = new System.Drawing.Size(45, 23);
-            this.siMaxTextBox.TabIndex = 240;
-            this.siMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // siMinTextBox
-            // 
-            this.siMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.siMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "SiMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
-            this.siMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siMinTextBox.Location = new System.Drawing.Point(276, 158);
-            this.siMinTextBox.Name = "siMinTextBox";
-            this.siMinTextBox.Size = new System.Drawing.Size(45, 23);
-            this.siMinTextBox.TabIndex = 241;
-            this.siMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // mnMaxTextBox
-            // 
-            this.mnMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mnMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "MnMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
-            this.mnMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnMaxTextBox.Location = new System.Drawing.Point(338, 129);
-            this.mnMaxTextBox.Name = "mnMaxTextBox";
-            this.mnMaxTextBox.Size = new System.Drawing.Size(45, 23);
-            this.mnMaxTextBox.TabIndex = 242;
-            this.mnMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // mnMinTextBox
-            // 
-            this.mnMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mnMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "MnMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
-            this.mnMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnMinTextBox.Location = new System.Drawing.Point(338, 158);
-            this.mnMinTextBox.Name = "mnMinTextBox";
-            this.mnMinTextBox.Size = new System.Drawing.Size(45, 23);
-            this.mnMinTextBox.TabIndex = 243;
-            this.mnMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // crMaxTextBox
-            // 
-            this.crMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "CrMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
-            this.crMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.crMaxTextBox.Location = new System.Drawing.Point(400, 129);
-            this.crMaxTextBox.Name = "crMaxTextBox";
-            this.crMaxTextBox.Size = new System.Drawing.Size(45, 23);
-            this.crMaxTextBox.TabIndex = 244;
-            this.crMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // crMinTextBox
-            // 
-            this.crMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "CrMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
-            this.crMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.crMinTextBox.Location = new System.Drawing.Point(400, 158);
-            this.crMinTextBox.Name = "crMinTextBox";
-            this.crMinTextBox.Size = new System.Drawing.Size(45, 23);
-            this.crMinTextBox.TabIndex = 245;
-            this.crMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // cuMaxTextBox
-            // 
-            this.cuMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cuMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "CuMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
-            this.cuMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cuMaxTextBox.Location = new System.Drawing.Point(462, 129);
-            this.cuMaxTextBox.Name = "cuMaxTextBox";
-            this.cuMaxTextBox.Size = new System.Drawing.Size(45, 23);
-            this.cuMaxTextBox.TabIndex = 246;
-            this.cuMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // cuMinTextBox
-            // 
-            this.cuMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cuMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "CuMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
-            this.cuMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cuMinTextBox.Location = new System.Drawing.Point(462, 158);
-            this.cuMinTextBox.Name = "cuMinTextBox";
-            this.cuMinTextBox.Size = new System.Drawing.Size(45, 23);
-            this.cuMinTextBox.TabIndex = 247;
-            this.cuMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // pMaxTextBox
-            // 
-            this.pMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "PMax", true));
-            this.pMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pMaxTextBox.Location = new System.Drawing.Point(524, 129);
-            this.pMaxTextBox.Name = "pMaxTextBox";
-            this.pMaxTextBox.Size = new System.Drawing.Size(45, 23);
-            this.pMaxTextBox.TabIndex = 248;
-            this.pMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // pMinTextBox
-            // 
-            this.pMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "PMin", true));
-            this.pMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pMinTextBox.Location = new System.Drawing.Point(524, 158);
-            this.pMinTextBox.Name = "pMinTextBox";
-            this.pMinTextBox.Size = new System.Drawing.Size(45, 23);
-            this.pMinTextBox.TabIndex = 249;
-            this.pMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label6.Location = new System.Drawing.Point(583, 109);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(30, 17);
-            label6.TabIndex = 35;
-            label6.Text = "%Al";
-            // 
-            // alMaxTextBox
-            // 
-            this.alMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.alMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "AlMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
-            this.alMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alMaxTextBox.Location = new System.Drawing.Point(586, 129);
-            this.alMaxTextBox.Name = "alMaxTextBox";
-            this.alMaxTextBox.Size = new System.Drawing.Size(45, 23);
-            this.alMaxTextBox.TabIndex = 250;
-            this.alMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // alMinTextBox
-            // 
-            this.alMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.alMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "AlMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
-            this.alMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alMinTextBox.Location = new System.Drawing.Point(586, 158);
-            this.alMinTextBox.Name = "alMinTextBox";
-            this.alMinTextBox.Size = new System.Drawing.Size(45, 23);
-            this.alMinTextBox.TabIndex = 251;
-            this.alMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // frmEditMatCharging
             // 

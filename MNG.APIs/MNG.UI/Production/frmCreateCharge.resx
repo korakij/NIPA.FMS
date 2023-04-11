@@ -126,6 +126,12 @@
   <metadata name="label2.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <metadata name="codeLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="controlPlanIdLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -137,12 +143,6 @@
   </metadata>
   <metadata name="productBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>282, 17</value>
-  </metadata>
-  <metadata name="controlPlanIdLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="codeLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnOk.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -169,7 +169,7 @@
   <data name="btnClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAABodJREFUSEuNVmlsVFUUvqGFsnWms7xZOi2tXdhaQCGhAYUWEgJoZbMEBIwKCqGd
+        vAAADrwBlbxySQAABodJREFUSEuNVmlsVFUUvqGFsnWms7xZOi2tXdhaQCGhAYUWEgJoZbMEBIwKCqGd
         6UZnurJapAESJC6AYqKJkV8SMRqURoHg0gSCVVkMBYuNtkgaEVCIaPg859772pm+IpzkzHtz3znnu2e9
         V/j95fD5yuD1lsLrCcHjDal3Yg+xz6femVn2/9iU83pYl22ZdsgmrfE7Y7GsBDYXPRJYATqSg3D7QjC8
         JfASuIdkWMlU7Mu8brC+J0j6Qb2JMrjlk/TJFtvvATZ3xB9c/iBSbGHYxWI8JFbCJZ5DRtIGGQmvVuxV
