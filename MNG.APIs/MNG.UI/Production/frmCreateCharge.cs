@@ -84,5 +84,36 @@ namespace MNG.UI.Production
 
             this.Close();
         }
+
+        private void controlPlanIdLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void btnBrowse_Click(object sender, EventArgs e)
+        {
+            var products = (await _client.GetProductAllAsync()).Where(x => x.ActiveControlPlanId != null).ToList();
+
+            frmProduct fProduct = new frmProduct(products);
+            fProduct.ProductBrowseDisable();
+            fProduct.ToolDisable();
+            fProduct.BrowseDiable();
+
+            var result = fProduct.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                var p = fProduct.SelectedItem;
+                var cp = await _client.GetControlPlanByIdAsync(p.ActiveControlPlanId ?? 0);
+
+                ChargeItem.ControlPlanId = cp.Id;
+                ChargeItem.ProductId = p.Id;
+                productBindingSource.DataSource = p;
+                chargingBindingSource.DataSource = ChargeItem;
+                controlPlanBindingSource.DataSource = cp;
+
+                chargingBindingSource.ResetBindings(false);
+            }
+        }
     }
 }

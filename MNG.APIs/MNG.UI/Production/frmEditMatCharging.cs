@@ -37,6 +37,20 @@ namespace MNG.UI.Production
         {
             var furnaceCode = CurrentCharge.LotNoCode.Substring(CurrentCharge.LotNoCode.Length - 1);
 
+            try
+            {
+                var ctp = (await _client.GetControlPlanByIdAsync(CurrentCharge.ControlPlanId ?? 0));
+                var chemInFur = (await _client.GetChemicalCompositionInFurnaceByIdAsync(ctp.ChemicalCompositionInFurnaceCode));
+
+                controlPlanBindingSource.DataSource = ctp;
+                chemicalCompositionInFurnaceBindingSource.DataSource = chemInFur;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Unable to load Control Plan", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+            }
+
             CurrentFurnace = await _client.GetFurnaceByIdAsync(furnaceCode);
             furnaceBindingSource.DataSource = CurrentFurnace;
             chargingBindingSource.DataSource = CurrentCharge;
@@ -280,19 +294,11 @@ namespace MNG.UI.Production
                 }
 
                 controlPlanIdTextBox.Text = cp.Id.ToString();
-                codeTextBox2.Text = cp.Code;
 
                 productBindingSource.DataSource = p;
                 tbProductId.Text = p.Id.ToString();
                 controlPlanBindingSource.DataSource = cp;
-                
-                var C = (ChemStd.CceMax + ChemStd.CceMin) / 2f;
-                var Si = (ChemStd.SiMax + ChemStd.SiMin) / 2f;
-                var Mn = (ChemStd.MnMax + ChemStd.MnMin) / 2f;
-
-                TargetC.Value = Convert.ToDecimal(C);
-                TargetSi.Value = Convert.ToDecimal(Si);
-                TargetMn.Value = Convert.ToDecimal(Mn);
+                chemicalCompositionInFurnaceBindingSource.DataSource = ChemStd;
             }
         }
 
@@ -391,7 +397,7 @@ namespace MNG.UI.Production
                 return;
             }
 
-            frmCalculator fcal = new frmCalculator(CurrentCharge, CurrentFurnace, activeControlPlanIdTextBox.Text);
+            frmCalculator fcal = new frmCalculator(CurrentCharge, CurrentFurnace, controlPlanIdTextBox.Text);
             var result = fcal.ShowDialog();
 
             if (result == DialogResult.OK)

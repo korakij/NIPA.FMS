@@ -1,6 +1,7 @@
 ﻿using BarcodeLib;
 using MNG.UI;
 using MNG.UI.Production;
+using NPOI.OpenXmlFormats.Dml.Diagram;
 using NPOI.SS.Formula.Functions;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ASRS.UI
 {
@@ -21,6 +23,7 @@ namespace ASRS.UI
     {
         private Client _client;
         private Product _product = new Product();
+        private List<Product> ProdList = new List<Product>();
 
         public Product SelectedItem
         {
@@ -74,11 +77,13 @@ namespace ASRS.UI
         {
             InitializeComponent();
 
+            ProdList = _products;
+
             var url = MNG.UI.Properties.Settings.Default.API_URL;
             _client = new Client(url);
 
-            if (_products.Count != 0)
-                productBindingSource.DataSource = _products;
+            if (ProdList.Count != 0)
+                productBindingSource.DataSource = ProdList.OrderByDescending(x => x.Code);
         }
 
         public frmProduct(Product _product)
@@ -457,7 +462,14 @@ namespace ASRS.UI
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+        }
 
+        private void tbSearch_TextChanged(object sender, EventArgs e)
+        {
+            var filter = tbSearch.Text;
+            var prodFilter = ProdList.Where(x => x.Name.ToLower().Contains(filter.ToLower()));
+
+            productBindingSource.DataSource = prodFilter.OrderByDescending(x => x.Code).ToList();
         }
     }
 }

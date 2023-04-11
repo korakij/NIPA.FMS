@@ -59,9 +59,10 @@
             System.Windows.Forms.Label label12;
             System.Windows.Forms.Label label11;
             System.Windows.Forms.Label label10;
-            System.Windows.Forms.Label idLabel1;
-            System.Windows.Forms.Label codeLabel;
+            System.Windows.Forms.Label label3;
+            System.Windows.Forms.Label label4;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditMatCharging));
+            System.Windows.Forms.Label label6;
             this.startKwHrNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.chargingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.maxTempKwHrNumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -81,16 +82,9 @@
             this.btnReadMaxPower = new System.Windows.Forms.Button();
             this.btnMaxTempTimeRetrieval = new System.Windows.Forms.Button();
             this.btnChargeTimeRetrieval = new System.Windows.Forms.Button();
-            this.TargetC = new System.Windows.Forms.NumericUpDown();
-            this.TargetSi = new System.Windows.Forms.NumericUpDown();
-            this.TargetMn = new System.Windows.Forms.NumericUpDown();
             this.tbProductId = new System.Windows.Forms.TextBox();
-            this.activeControlPlanIdTextBox = new System.Windows.Forms.TextBox();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.TargetNi = new System.Windows.Forms.NumericUpDown();
-            this.TargetMo = new System.Windows.Forms.NumericUpDown();
-            this.TargetCr = new System.Windows.Forms.NumericUpDown();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lbHeader = new System.Windows.Forms.Label();
             this.pnToolBar = new System.Windows.Forms.Panel();
@@ -112,10 +106,13 @@
             this.lbChargNo = new System.Windows.Forms.Label();
             this.statusTextBox1 = new MNG.UI.Production.StatusTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.controlPlanIdTextBox = new System.Windows.Forms.TextBox();
-            this.codeTextBox2 = new System.Windows.Forms.TextBox();
-            this.codeTextBox1 = new System.Windows.Forms.TextBox();
+            this.cceMinTextBox = new System.Windows.Forms.TextBox();
+            this.chemicalCompositionInFurnaceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cceMaxTextBox = new System.Windows.Forms.TextBox();
+            this.revisionTextBox = new System.Windows.Forms.TextBox();
             this.controlPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.controlPlanIdTextBox = new System.Windows.Forms.TextBox();
+            this.codeTextBox1 = new System.Windows.Forms.TextBox();
             this.codeTextBox = new System.Windows.Forms.TextBox();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.label28 = new System.Windows.Forms.Label();
@@ -164,6 +161,18 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.siMaxTextBox = new System.Windows.Forms.TextBox();
+            this.siMinTextBox = new System.Windows.Forms.TextBox();
+            this.mnMaxTextBox = new System.Windows.Forms.TextBox();
+            this.mnMinTextBox = new System.Windows.Forms.TextBox();
+            this.crMaxTextBox = new System.Windows.Forms.TextBox();
+            this.crMinTextBox = new System.Windows.Forms.TextBox();
+            this.cuMaxTextBox = new System.Windows.Forms.TextBox();
+            this.cuMinTextBox = new System.Windows.Forms.TextBox();
+            this.pMaxTextBox = new System.Windows.Forms.TextBox();
+            this.pMinTextBox = new System.Windows.Forms.TextBox();
+            this.alMaxTextBox = new System.Windows.Forms.TextBox();
+            this.alMinTextBox = new System.Windows.Forms.TextBox();
             c_FCLabel = new System.Windows.Forms.Label();
             c_FCDLabel = new System.Windows.Forms.Label();
             fe_MnLabel = new System.Windows.Forms.Label();
@@ -194,25 +203,21 @@
             label12 = new System.Windows.Forms.Label();
             label11 = new System.Windows.Forms.Label();
             label10 = new System.Windows.Forms.Label();
-            idLabel1 = new System.Windows.Forms.Label();
-            codeLabel = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
+            label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.startKwHrNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxTempKwHrNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxTempNumericUpDown)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.furnaceBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TargetC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TargetSi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TargetMn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TargetNi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TargetMo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TargetCr)).BeginInit();
             this.pnToolBar.SuspendLayout();
             this.pnSaveExit.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).BeginInit();
             this.panel3.SuspendLayout();
             this.pnMaterial.SuspendLayout();
@@ -446,7 +451,7 @@
             // 
             label21.AutoSize = true;
             label21.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label21.Location = new System.Drawing.Point(401, 109);
+            label21.Location = new System.Drawing.Point(397, 109);
             label21.Name = "label21";
             label21.Size = new System.Drawing.Size(33, 17);
             label21.TabIndex = 35;
@@ -456,21 +461,21 @@
             // 
             label22.AutoSize = true;
             label22.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label22.Location = new System.Drawing.Point(464, 109);
+            label22.Location = new System.Drawing.Point(459, 109);
             label22.Name = "label22";
-            label22.Size = new System.Drawing.Size(38, 17);
+            label22.Size = new System.Drawing.Size(37, 17);
             label22.TabIndex = 35;
-            label22.Text = "%Mo";
+            label22.Text = "%Cu";
             // 
             // label23
             // 
             label23.AutoSize = true;
             label23.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label23.Location = new System.Drawing.Point(527, 109);
+            label23.Location = new System.Drawing.Point(521, 109);
             label23.Name = "label23";
-            label23.Size = new System.Drawing.Size(31, 17);
+            label23.Size = new System.Drawing.Size(26, 17);
             label23.TabIndex = 35;
-            label23.Text = "%Ni";
+            label23.Text = "%P";
             // 
             // activeControlPlanIdLabel
             // 
@@ -516,7 +521,7 @@
             // 
             label12.AutoSize = true;
             label12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label12.Location = new System.Drawing.Point(338, 109);
+            label12.Location = new System.Drawing.Point(335, 109);
             label12.Name = "label12";
             label12.Size = new System.Drawing.Size(37, 17);
             label12.TabIndex = 35;
@@ -526,7 +531,7 @@
             // 
             label11.AutoSize = true;
             label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label11.Location = new System.Drawing.Point(275, 109);
+            label11.Location = new System.Drawing.Point(273, 109);
             label11.Name = "label11";
             label11.Size = new System.Drawing.Size(27, 17);
             label11.TabIndex = 35;
@@ -538,27 +543,29 @@
             label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label10.Location = new System.Drawing.Point(212, 109);
             label10.Name = "label10";
-            label10.Size = new System.Drawing.Size(29, 17);
+            label10.Size = new System.Drawing.Size(51, 17);
             label10.TabIndex = 35;
-            label10.Text = "%C";
+            label10.Text = "%C-CE";
             // 
-            // idLabel1
+            // label3
             // 
-            idLabel1.AutoSize = true;
-            idLabel1.Location = new System.Drawing.Point(624, 89);
-            idLabel1.Name = "idLabel1";
-            idLabel1.Size = new System.Drawing.Size(19, 13);
-            idLabel1.TabIndex = 232;
-            idLabel1.Text = "Id:";
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label3.Location = new System.Drawing.Point(79, 131);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(34, 17);
+            label3.TabIndex = 53;
+            label3.Text = "Max";
             // 
-            // codeLabel
+            // label4
             // 
-            codeLabel.AutoSize = true;
-            codeLabel.Location = new System.Drawing.Point(620, 115);
-            codeLabel.Name = "codeLabel";
-            codeLabel.Size = new System.Drawing.Size(35, 13);
-            codeLabel.TabIndex = 233;
-            codeLabel.Text = "Code:";
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label4.Location = new System.Drawing.Point(79, 160);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(30, 17);
+            label4.TabIndex = 53;
+            label4.Text = "Min";
             // 
             // startKwHrNumericUpDown
             // 
@@ -768,67 +775,6 @@
             this.btnChargeTimeRetrieval.UseVisualStyleBackColor = true;
             this.btnChargeTimeRetrieval.Click += new System.EventHandler(this.btnChargeTimeRetrieval_Click);
             // 
-            // TargetC
-            // 
-            this.TargetC.DecimalPlaces = 2;
-            this.TargetC.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TargetC.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.TargetC.Location = new System.Drawing.Point(215, 128);
-            this.TargetC.Name = "TargetC";
-            this.TargetC.Size = new System.Drawing.Size(57, 23);
-            this.TargetC.TabIndex = 1;
-            this.TargetC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TargetC.ThousandsSeparator = true;
-            this.TargetC.Value = new decimal(new int[] {
-            33,
-            0,
-            0,
-            65536});
-            // 
-            // TargetSi
-            // 
-            this.TargetSi.DecimalPlaces = 2;
-            this.TargetSi.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TargetSi.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.TargetSi.Location = new System.Drawing.Point(278, 129);
-            this.TargetSi.Name = "TargetSi";
-            this.TargetSi.Size = new System.Drawing.Size(57, 23);
-            this.TargetSi.TabIndex = 2;
-            this.TargetSi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TargetSi.Value = new decimal(new int[] {
-            185,
-            0,
-            0,
-            131072});
-            // 
-            // TargetMn
-            // 
-            this.TargetMn.DecimalPlaces = 2;
-            this.TargetMn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TargetMn.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.TargetMn.Location = new System.Drawing.Point(341, 129);
-            this.TargetMn.Name = "TargetMn";
-            this.TargetMn.Size = new System.Drawing.Size(57, 23);
-            this.TargetMn.TabIndex = 3;
-            this.TargetMn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TargetMn.Value = new decimal(new int[] {
-            65,
-            0,
-            0,
-            131072});
-            // 
             // tbProductId
             // 
             this.tbProductId.BackColor = System.Drawing.Color.White;
@@ -840,18 +786,6 @@
             this.tbProductId.ReadOnly = true;
             this.tbProductId.Size = new System.Drawing.Size(54, 23);
             this.tbProductId.TabIndex = 55;
-            // 
-            // activeControlPlanIdTextBox
-            // 
-            this.activeControlPlanIdTextBox.BackColor = System.Drawing.Color.White;
-            this.activeControlPlanIdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.activeControlPlanIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "ActiveControlPlanId", true));
-            this.activeControlPlanIdTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activeControlPlanIdTextBox.Location = new System.Drawing.Point(214, 75);
-            this.activeControlPlanIdTextBox.Name = "activeControlPlanIdTextBox";
-            this.activeControlPlanIdTextBox.ReadOnly = true;
-            this.activeControlPlanIdTextBox.Size = new System.Drawing.Size(56, 23);
-            this.activeControlPlanIdTextBox.TabIndex = 54;
             // 
             // productBindingSource
             // 
@@ -866,68 +800,8 @@
             this.nameTextBox.Location = new System.Drawing.Point(374, 47);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.ReadOnly = true;
-            this.nameTextBox.Size = new System.Drawing.Size(185, 23);
+            this.nameTextBox.Size = new System.Drawing.Size(213, 23);
             this.nameTextBox.TabIndex = 51;
-            // 
-            // TargetNi
-            // 
-            this.TargetNi.DecimalPlaces = 2;
-            this.TargetNi.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TargetNi.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.TargetNi.Location = new System.Drawing.Point(530, 128);
-            this.TargetNi.Name = "TargetNi";
-            this.TargetNi.Size = new System.Drawing.Size(57, 23);
-            this.TargetNi.TabIndex = 6;
-            this.TargetNi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TargetNi.Value = new decimal(new int[] {
-            65,
-            0,
-            0,
-            131072});
-            // 
-            // TargetMo
-            // 
-            this.TargetMo.DecimalPlaces = 2;
-            this.TargetMo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TargetMo.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.TargetMo.Location = new System.Drawing.Point(467, 128);
-            this.TargetMo.Name = "TargetMo";
-            this.TargetMo.Size = new System.Drawing.Size(57, 23);
-            this.TargetMo.TabIndex = 5;
-            this.TargetMo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TargetMo.Value = new decimal(new int[] {
-            65,
-            0,
-            0,
-            131072});
-            // 
-            // TargetCr
-            // 
-            this.TargetCr.DecimalPlaces = 2;
-            this.TargetCr.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TargetCr.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.TargetCr.Location = new System.Drawing.Point(404, 129);
-            this.TargetCr.Name = "TargetCr";
-            this.TargetCr.Size = new System.Drawing.Size(57, 23);
-            this.TargetCr.TabIndex = 4;
-            this.TargetCr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TargetCr.Value = new decimal(new int[] {
-            65,
-            0,
-            0,
-            131072});
             // 
             // timer1
             // 
@@ -942,7 +816,7 @@
             this.lbHeader.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lbHeader.Location = new System.Drawing.Point(64, 3);
             this.lbHeader.Name = "lbHeader";
-            this.lbHeader.Size = new System.Drawing.Size(886, 45);
+            this.lbHeader.Size = new System.Drawing.Size(870, 45);
             this.lbHeader.TabIndex = 213;
             this.lbHeader.Text = "M A T E R I A L - C H A R G I N G";
             this.lbHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -963,7 +837,7 @@
             this.pnToolBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnToolBar.Location = new System.Drawing.Point(0, 0);
             this.pnToolBar.Name = "pnToolBar";
-            this.pnToolBar.Size = new System.Drawing.Size(59, 1009);
+            this.pnToolBar.Size = new System.Drawing.Size(59, 1068);
             this.pnToolBar.TabIndex = 214;
             // 
             // btnCalculator
@@ -1004,7 +878,7 @@
             this.pnSaveExit.Controls.Add(this.btnCancel);
             this.pnSaveExit.Controls.Add(this.btnExit);
             this.pnSaveExit.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnSaveExit.Location = new System.Drawing.Point(0, 802);
+            this.pnSaveExit.Location = new System.Drawing.Point(0, 861);
             this.pnSaveExit.Name = "pnSaveExit";
             this.pnSaveExit.Size = new System.Drawing.Size(59, 186);
             this.pnSaveExit.TabIndex = 17;
@@ -1085,7 +959,7 @@
             this.label27.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label27.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(0, 988);
+            this.label27.Location = new System.Drawing.Point(0, 1047);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(58, 21);
             this.label27.TabIndex = 9;
@@ -1107,7 +981,7 @@
             this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel14.Location = new System.Drawing.Point(59, 0);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(5, 1009);
+            this.panel14.Size = new System.Drawing.Size(5, 1068);
             this.panel14.TabIndex = 215;
             // 
             // panel1
@@ -1137,7 +1011,7 @@
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.panel1.Location = new System.Drawing.Point(64, 48);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(886, 246);
+            this.panel1.Size = new System.Drawing.Size(870, 246);
             this.panel1.TabIndex = 216;
             // 
             // intervalTextBox
@@ -1205,26 +1079,34 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.alMinTextBox);
+            this.panel2.Controls.Add(this.alMaxTextBox);
+            this.panel2.Controls.Add(this.pMinTextBox);
+            this.panel2.Controls.Add(this.pMaxTextBox);
+            this.panel2.Controls.Add(this.cuMinTextBox);
+            this.panel2.Controls.Add(this.cuMaxTextBox);
+            this.panel2.Controls.Add(this.crMinTextBox);
+            this.panel2.Controls.Add(this.crMaxTextBox);
+            this.panel2.Controls.Add(this.mnMinTextBox);
+            this.panel2.Controls.Add(this.mnMaxTextBox);
+            this.panel2.Controls.Add(this.siMinTextBox);
+            this.panel2.Controls.Add(this.siMaxTextBox);
+            this.panel2.Controls.Add(this.cceMinTextBox);
+            this.panel2.Controls.Add(this.cceMaxTextBox);
+            this.panel2.Controls.Add(this.revisionTextBox);
             this.panel2.Controls.Add(this.controlPlanIdTextBox);
-            this.panel2.Controls.Add(codeLabel);
-            this.panel2.Controls.Add(this.codeTextBox2);
-            this.panel2.Controls.Add(idLabel1);
             this.panel2.Controls.Add(this.codeTextBox1);
             this.panel2.Controls.Add(this.codeTextBox);
             this.panel2.Controls.Add(this.btnBrowse);
             this.panel2.Controls.Add(this.label28);
             this.panel2.Controls.Add(this.tbProductId);
             this.panel2.Controls.Add(idLabel);
+            this.panel2.Controls.Add(label4);
+            this.panel2.Controls.Add(label3);
             this.panel2.Controls.Add(activeControlPlanIdLabel);
-            this.panel2.Controls.Add(this.TargetSi);
-            this.panel2.Controls.Add(this.activeControlPlanIdTextBox);
             this.panel2.Controls.Add(label10);
-            this.panel2.Controls.Add(this.TargetMn);
             this.panel2.Controls.Add(this.nameTextBox);
-            this.panel2.Controls.Add(this.TargetCr);
-            this.panel2.Controls.Add(this.TargetMo);
-            this.panel2.Controls.Add(this.TargetC);
-            this.panel2.Controls.Add(this.TargetNi);
+            this.panel2.Controls.Add(label6);
             this.panel2.Controls.Add(label23);
             this.panel2.Controls.Add(label11);
             this.panel2.Controls.Add(label22);
@@ -1233,28 +1115,58 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(64, 294);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(886, 172);
+            this.panel2.Size = new System.Drawing.Size(870, 208);
             this.panel2.TabIndex = 2;
+            // 
+            // cceMinTextBox
+            // 
+            this.cceMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cceMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "CceMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
+            this.cceMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cceMinTextBox.Location = new System.Drawing.Point(215, 158);
+            this.cceMinTextBox.Name = "cceMinTextBox";
+            this.cceMinTextBox.Size = new System.Drawing.Size(45, 23);
+            this.cceMinTextBox.TabIndex = 239;
+            this.cceMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // chemicalCompositionInFurnaceBindingSource
+            // 
+            this.chemicalCompositionInFurnaceBindingSource.DataSource = typeof(MNG.UI.ChemicalCompositionInFurnace);
+            // 
+            // cceMaxTextBox
+            // 
+            this.cceMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cceMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "CceMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
+            this.cceMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cceMaxTextBox.Location = new System.Drawing.Point(214, 129);
+            this.cceMaxTextBox.Name = "cceMaxTextBox";
+            this.cceMaxTextBox.Size = new System.Drawing.Size(45, 23);
+            this.cceMaxTextBox.TabIndex = 238;
+            this.cceMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // revisionTextBox
+            // 
+            this.revisionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revisionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.controlPlanBindingSource, "Revision", true));
+            this.revisionTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.revisionTextBox.Location = new System.Drawing.Point(374, 75);
+            this.revisionTextBox.Name = "revisionTextBox";
+            this.revisionTextBox.Size = new System.Drawing.Size(34, 23);
+            this.revisionTextBox.TabIndex = 237;
+            // 
+            // controlPlanBindingSource
+            // 
+            this.controlPlanBindingSource.DataSource = typeof(MNG.UI.ControlPlan);
             // 
             // controlPlanIdTextBox
             // 
             this.controlPlanIdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.controlPlanIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "ControlPlanId", true));
             this.controlPlanIdTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.controlPlanIdTextBox.Location = new System.Drawing.Point(665, 86);
+            this.controlPlanIdTextBox.Location = new System.Drawing.Point(215, 75);
             this.controlPlanIdTextBox.Name = "controlPlanIdTextBox";
-            this.controlPlanIdTextBox.Size = new System.Drawing.Size(100, 23);
+            this.controlPlanIdTextBox.Size = new System.Drawing.Size(54, 23);
             this.controlPlanIdTextBox.TabIndex = 235;
-            // 
-            // codeTextBox2
-            // 
-            this.codeTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.codeTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "ControlPlan.Code", true));
-            this.codeTextBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codeTextBox2.Location = new System.Drawing.Point(665, 115);
-            this.codeTextBox2.Name = "codeTextBox2";
-            this.codeTextBox2.Size = new System.Drawing.Size(100, 23);
-            this.codeTextBox2.TabIndex = 234;
             // 
             // codeTextBox1
             // 
@@ -1267,10 +1179,6 @@
             this.codeTextBox1.ReadOnly = true;
             this.codeTextBox1.Size = new System.Drawing.Size(92, 23);
             this.codeTextBox1.TabIndex = 232;
-            // 
-            // controlPlanBindingSource
-            // 
-            this.controlPlanBindingSource.DataSource = typeof(MNG.UI.ControlPlan);
             // 
             // codeTextBox
             // 
@@ -1286,10 +1194,11 @@
             // 
             // btnBrowse
             // 
-            this.btnBrowse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnBrowse.Location = new System.Drawing.Point(565, 47);
+            this.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnBrowse.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrowse.Location = new System.Drawing.Point(593, 47);
             this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(27, 22);
+            this.btnBrowse.Size = new System.Drawing.Size(27, 23);
             this.btnBrowse.TabIndex = 230;
             this.btnBrowse.Text = "...";
             this.btnBrowse.UseVisualStyleBackColor = true;
@@ -1310,13 +1219,14 @@
             this.panel3.Controls.Add(this.pnMaterial);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(64, 466);
+            this.panel3.Location = new System.Drawing.Point(64, 502);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(886, 540);
+            this.panel3.Size = new System.Drawing.Size(870, 563);
             this.panel3.TabIndex = 218;
             // 
             // pnMaterial
             // 
+            this.pnMaterial.AutoScroll = true;
             this.pnMaterial.Controls.Add(label33);
             this.pnMaterial.Controls.Add(label32);
             this.pnMaterial.Controls.Add(label31);
@@ -1377,7 +1287,7 @@
             this.pnMaterial.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnMaterial.Location = new System.Drawing.Point(0, 0);
             this.pnMaterial.Name = "pnMaterial";
-            this.pnMaterial.Size = new System.Drawing.Size(886, 540);
+            this.pnMaterial.Size = new System.Drawing.Size(870, 563);
             this.pnMaterial.TabIndex = 0;
             // 
             // label29
@@ -2127,18 +2037,18 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(64, 1006);
+            this.panel4.Location = new System.Drawing.Point(64, 1065);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(886, 3);
+            this.panel4.Size = new System.Drawing.Size(870, 3);
             this.panel4.TabIndex = 219;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(950, 3);
+            this.panel6.Location = new System.Drawing.Point(934, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(3, 1006);
+            this.panel6.Size = new System.Drawing.Size(3, 1065);
             this.panel6.TabIndex = 221;
             // 
             // panel7
@@ -2147,8 +2057,150 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(64, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(889, 3);
+            this.panel7.Size = new System.Drawing.Size(873, 3);
             this.panel7.TabIndex = 222;
+            // 
+            // siMaxTextBox
+            // 
+            this.siMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.siMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "SiMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
+            this.siMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siMaxTextBox.Location = new System.Drawing.Point(276, 129);
+            this.siMaxTextBox.Name = "siMaxTextBox";
+            this.siMaxTextBox.Size = new System.Drawing.Size(45, 23);
+            this.siMaxTextBox.TabIndex = 240;
+            this.siMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // siMinTextBox
+            // 
+            this.siMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.siMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "SiMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
+            this.siMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siMinTextBox.Location = new System.Drawing.Point(276, 158);
+            this.siMinTextBox.Name = "siMinTextBox";
+            this.siMinTextBox.Size = new System.Drawing.Size(45, 23);
+            this.siMinTextBox.TabIndex = 241;
+            this.siMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // mnMaxTextBox
+            // 
+            this.mnMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mnMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "MnMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
+            this.mnMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnMaxTextBox.Location = new System.Drawing.Point(338, 129);
+            this.mnMaxTextBox.Name = "mnMaxTextBox";
+            this.mnMaxTextBox.Size = new System.Drawing.Size(45, 23);
+            this.mnMaxTextBox.TabIndex = 242;
+            this.mnMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // mnMinTextBox
+            // 
+            this.mnMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mnMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "MnMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
+            this.mnMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnMinTextBox.Location = new System.Drawing.Point(338, 158);
+            this.mnMinTextBox.Name = "mnMinTextBox";
+            this.mnMinTextBox.Size = new System.Drawing.Size(45, 23);
+            this.mnMinTextBox.TabIndex = 243;
+            this.mnMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // crMaxTextBox
+            // 
+            this.crMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "CrMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
+            this.crMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.crMaxTextBox.Location = new System.Drawing.Point(400, 129);
+            this.crMaxTextBox.Name = "crMaxTextBox";
+            this.crMaxTextBox.Size = new System.Drawing.Size(45, 23);
+            this.crMaxTextBox.TabIndex = 244;
+            this.crMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // crMinTextBox
+            // 
+            this.crMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "CrMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
+            this.crMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.crMinTextBox.Location = new System.Drawing.Point(400, 158);
+            this.crMinTextBox.Name = "crMinTextBox";
+            this.crMinTextBox.Size = new System.Drawing.Size(45, 23);
+            this.crMinTextBox.TabIndex = 245;
+            this.crMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // cuMaxTextBox
+            // 
+            this.cuMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cuMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "CuMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
+            this.cuMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cuMaxTextBox.Location = new System.Drawing.Point(462, 129);
+            this.cuMaxTextBox.Name = "cuMaxTextBox";
+            this.cuMaxTextBox.Size = new System.Drawing.Size(45, 23);
+            this.cuMaxTextBox.TabIndex = 246;
+            this.cuMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // cuMinTextBox
+            // 
+            this.cuMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cuMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "CuMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
+            this.cuMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cuMinTextBox.Location = new System.Drawing.Point(462, 158);
+            this.cuMinTextBox.Name = "cuMinTextBox";
+            this.cuMinTextBox.Size = new System.Drawing.Size(45, 23);
+            this.cuMinTextBox.TabIndex = 247;
+            this.cuMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // pMaxTextBox
+            // 
+            this.pMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "PMax", true));
+            this.pMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pMaxTextBox.Location = new System.Drawing.Point(524, 129);
+            this.pMaxTextBox.Name = "pMaxTextBox";
+            this.pMaxTextBox.Size = new System.Drawing.Size(45, 23);
+            this.pMaxTextBox.TabIndex = 248;
+            this.pMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // pMinTextBox
+            // 
+            this.pMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "PMin", true));
+            this.pMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pMinTextBox.Location = new System.Drawing.Point(524, 158);
+            this.pMinTextBox.Name = "pMinTextBox";
+            this.pMinTextBox.Size = new System.Drawing.Size(45, 23);
+            this.pMinTextBox.TabIndex = 249;
+            this.pMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label6.Location = new System.Drawing.Point(583, 109);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(30, 17);
+            label6.TabIndex = 35;
+            label6.Text = "%Al";
+            // 
+            // alMaxTextBox
+            // 
+            this.alMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.alMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "AlMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
+            this.alMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alMaxTextBox.Location = new System.Drawing.Point(586, 129);
+            this.alMaxTextBox.Name = "alMaxTextBox";
+            this.alMaxTextBox.Size = new System.Drawing.Size(45, 23);
+            this.alMaxTextBox.TabIndex = 250;
+            this.alMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // alMinTextBox
+            // 
+            this.alMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.alMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "AlMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
+            this.alMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alMinTextBox.Location = new System.Drawing.Point(586, 158);
+            this.alMinTextBox.Name = "alMinTextBox";
+            this.alMinTextBox.Size = new System.Drawing.Size(45, 23);
+            this.alMinTextBox.TabIndex = 251;
+            this.alMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // frmEditMatCharging
             // 
@@ -2156,7 +2208,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(953, 1009);
+            this.ClientSize = new System.Drawing.Size(937, 1068);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -2176,13 +2228,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.maxTempNumericUpDown)).EndInit();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.furnaceBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TargetC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TargetSi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TargetMn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TargetNi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TargetMo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TargetCr)).EndInit();
             this.pnToolBar.ResumeLayout(false);
             this.pnToolBar.PerformLayout();
             this.pnSaveExit.ResumeLayout(false);
@@ -2190,6 +2236,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             this.pnMaterial.ResumeLayout(false);
@@ -2226,9 +2273,6 @@
         private System.Windows.Forms.NumericUpDown startKwHrNumericUpDown;
         private System.Windows.Forms.NumericUpDown maxTempKwHrNumericUpDown;
         private System.Windows.Forms.Button btnReadFirstPower;
-        private System.Windows.Forms.NumericUpDown TargetC;
-        private System.Windows.Forms.NumericUpDown TargetSi;
-        private System.Windows.Forms.NumericUpDown TargetMn;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.BindingSource productBindingSource;
         private System.Windows.Forms.BindingSource furnaceBindingSource;
@@ -2242,12 +2286,8 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox powerCompTextBox;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.NumericUpDown TargetNi;
-        private System.Windows.Forms.NumericUpDown TargetMo;
-        private System.Windows.Forms.NumericUpDown TargetCr;
         private System.Windows.Forms.Button btnReadMaxPower;
         private System.Windows.Forms.NumericUpDown maxTempNumericUpDown;
-        private System.Windows.Forms.TextBox activeControlPlanIdTextBox;
         private System.Windows.Forms.BindingSource chargingBindingSource;
         private System.Windows.Forms.TextBox tbProductId;
         private System.Windows.Forms.TextBox chargeTimeTextBox;
@@ -2323,7 +2363,22 @@
         private System.Windows.Forms.Button btnCalculator;
         private System.Windows.Forms.TextBox maxTempTimeTextBox;
         private System.Windows.Forms.TextBox intervalTextBox;
-        private System.Windows.Forms.TextBox codeTextBox2;
         private System.Windows.Forms.TextBox controlPlanIdTextBox;
+        private System.Windows.Forms.TextBox revisionTextBox;
+        private System.Windows.Forms.TextBox cceMinTextBox;
+        private System.Windows.Forms.BindingSource chemicalCompositionInFurnaceBindingSource;
+        private System.Windows.Forms.TextBox cceMaxTextBox;
+        private System.Windows.Forms.TextBox alMinTextBox;
+        private System.Windows.Forms.TextBox alMaxTextBox;
+        private System.Windows.Forms.TextBox pMinTextBox;
+        private System.Windows.Forms.TextBox pMaxTextBox;
+        private System.Windows.Forms.TextBox cuMinTextBox;
+        private System.Windows.Forms.TextBox cuMaxTextBox;
+        private System.Windows.Forms.TextBox crMinTextBox;
+        private System.Windows.Forms.TextBox crMaxTextBox;
+        private System.Windows.Forms.TextBox mnMinTextBox;
+        private System.Windows.Forms.TextBox mnMaxTextBox;
+        private System.Windows.Forms.TextBox siMinTextBox;
+        private System.Windows.Forms.TextBox siMaxTextBox;
     }
 }
