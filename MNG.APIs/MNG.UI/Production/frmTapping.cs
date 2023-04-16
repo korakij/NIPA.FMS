@@ -215,7 +215,7 @@ namespace MNG.UI.Production
                 return;
 
             var result = MessageBox.Show($"Do you want to delete {CurrentKanban.Code}?\nThe Entire Data Lot No will be deleted", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            
+
             if (result == DialogResult.Yes)
             {
                 var lastK = (await _client.GetKanbansByLotNoAsync(CurrentLotNo.Code)).ToList().LastOrDefault();
@@ -453,24 +453,29 @@ namespace MNG.UI.Production
 
         private async void kanbanBindingSource_CurrentChanged(object sender, EventArgs e)
         {
+            ControlPlan ctp = new ControlPlan();
+            Product prod = new Product();
+
             CurrentKanban = kanbanBindingSource.Current as Kanban;
 
             if (CurrentKanban == null)
                 return;
 
-            var TestNo = CurrentKanban.TestChemicalCompositionCode;
-            var TestChem = (await _client.GetTestChemicalCompositionByIdAsync(TestNo));
+            try
+            {
+                ctp = (await _client.GetControlPlanByIdAsync(CurrentKanban.ControlPlanId ?? default(int)));
+                prod = (await _client.GetProductByIdAsync(ctp.ProductId));
+                CurrentChemInLadleSpec = (await _client.GetChemicalCompositionInLadleByIdAsync(ctp.ChemicalCompositionInLadleCode));
+                CurrentPourStandard = (await _client.GetPouringStandardByIdAsync(ctp.PouringCode));
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Unable to load Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            var product = (await _client.GetProductByIdAsync(TestChem.ProductId ?? 0));
-            productBindingSource.DataSource = product;
-
-            var controlPlanId = product.ActiveControlPlanId ?? default(int);
-            var c = (await _client.GetControlPlanByIdAsync(controlPlanId));
-
-            CurrentChemInLadleSpec = (await _client.GetChemicalCompositionInLadleByIdAsync(c.ChemicalCompositionInLadleCode));
+            productBindingSource.DataSource = prod;
             chemicalCompositionInLadleBindingSource.DataSource = CurrentChemInLadleSpec;
-
-            CurrentPourStandard = (await _client.GetPouringStandardByIdAsync(c.PouringCode));
             pourStandardBindingSource.DataSource = CurrentPourStandard;
 
             var meltInfo = new MeltingEventArgs();

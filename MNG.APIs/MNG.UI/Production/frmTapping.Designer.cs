@@ -75,10 +75,10 @@
             System.Windows.Forms.Label label16;
             System.Windows.Forms.Label materialCodeLabel;
             System.Windows.Forms.Label tappingWgLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTapping));
             this.pnDetails = new System.Windows.Forms.Panel();
             this.pnChemDetail = new System.Windows.Forms.Panel();
@@ -219,6 +219,10 @@
             this.testChemicalCompositionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.testChemicalCompositionCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kanbansDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.controlPlanIdTextBox = new System.Windows.Forms.TextBox();
+            this.controlPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.codeTextBox3 = new System.Windows.Forms.TextBox();
+            this.productIdTextBox = new System.Windows.Forms.TextBox();
             siMaxLabel = new System.Windows.Forms.Label();
             cMaxLabel = new System.Windows.Forms.Label();
             niMaxLabel = new System.Windows.Forms.Label();
@@ -280,6 +284,7 @@
             this.pnToolBar.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.testChemicalCompositionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // siMaxLabel
@@ -749,7 +754,7 @@
             this.pnDetails.Controls.Add(this.pnDgv);
             this.pnDetails.Controls.Add(this.pnBorderBottom);
             this.pnDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnDetails.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnDetails.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnDetails.Location = new System.Drawing.Point(64, 348);
             this.pnDetails.Name = "pnDetails";
             this.pnDetails.Size = new System.Drawing.Size(778, 752);
@@ -1992,45 +1997,45 @@
             this.kanbanDataGridView1.AllowUserToResizeRows = false;
             this.kanbanDataGridView1.AutoGenerateColumns = false;
             this.kanbanDataGridView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.kanbanDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kanbanDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.kanbanDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.kanbanDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1});
             this.kanbanDataGridView1.DataSource = this.kanbanBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.kanbanDataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.kanbanDataGridView1.DefaultCellStyle = dataGridViewCellStyle10;
             this.kanbanDataGridView1.EnableHeadersVisualStyles = false;
             this.kanbanDataGridView1.Location = new System.Drawing.Point(24, 68);
             this.kanbanDataGridView1.Name = "kanbanDataGridView1";
             this.kanbanDataGridView1.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.kanbanDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kanbanDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.kanbanDataGridView1.RowHeadersWidth = 30;
             this.kanbanDataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.kanbanDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            this.kanbanDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.kanbanDataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.kanbanDataGridView1.Size = new System.Drawing.Size(129, 540);
             this.kanbanDataGridView1.TabIndex = 292;
@@ -2055,6 +2060,9 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.productIdTextBox);
+            this.panel1.Controls.Add(this.codeTextBox3);
+            this.panel1.Controls.Add(this.controlPlanIdTextBox);
             this.panel1.Controls.Add(materialCodeLabel);
             this.panel1.Controls.Add(this.materialCodeTextBox);
             this.panel1.Controls.Add(this.tbProcessInd1);
@@ -2090,7 +2098,7 @@
             this.materialCodeTextBox.BackColor = System.Drawing.Color.White;
             this.materialCodeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.materialCodeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kanbanBindingSource, "MaterialCode", true));
-            this.materialCodeTextBox.Location = new System.Drawing.Point(354, 160);
+            this.materialCodeTextBox.Location = new System.Drawing.Point(355, 161);
             this.materialCodeTextBox.Name = "materialCodeTextBox";
             this.materialCodeTextBox.ReadOnly = true;
             this.materialCodeTextBox.Size = new System.Drawing.Size(117, 23);
@@ -2133,7 +2141,7 @@
             this.idTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "Id", true));
             this.idTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idTextBox.Location = new System.Drawing.Point(145, 131);
+            this.idTextBox.Location = new System.Drawing.Point(407, 13);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(48, 23);
@@ -2161,7 +2169,7 @@
             this.codeTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.codeTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "Code", true));
             this.codeTextBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codeTextBox2.Location = new System.Drawing.Point(199, 131);
+            this.codeTextBox2.Location = new System.Drawing.Point(199, 132);
             this.codeTextBox2.Name = "codeTextBox2";
             this.codeTextBox2.ReadOnly = true;
             this.codeTextBox2.Size = new System.Drawing.Size(83, 23);
@@ -2172,7 +2180,7 @@
             this.codeTextBox1.BackColor = System.Drawing.Color.White;
             this.codeTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.codeTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codeTextBox1.Location = new System.Drawing.Point(199, 160);
+            this.codeTextBox1.Location = new System.Drawing.Point(407, 71);
             this.codeTextBox1.Name = "codeTextBox1";
             this.codeTextBox1.ReadOnly = true;
             this.codeTextBox1.Size = new System.Drawing.Size(83, 23);
@@ -2184,7 +2192,7 @@
             this.tbControlPlan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbControlPlan.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "ActiveControlPlanId", true));
             this.tbControlPlan.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbControlPlan.Location = new System.Drawing.Point(145, 160);
+            this.tbControlPlan.Location = new System.Drawing.Point(407, 42);
             this.tbControlPlan.Name = "tbControlPlan";
             this.tbControlPlan.ReadOnly = true;
             this.tbControlPlan.Size = new System.Drawing.Size(48, 23);
@@ -2196,7 +2204,7 @@
             this.tbPartName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbPartName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "Name", true));
             this.tbPartName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPartName.Location = new System.Drawing.Point(288, 131);
+            this.tbPartName.Location = new System.Drawing.Point(289, 132);
             this.tbPartName.Name = "tbPartName";
             this.tbPartName.ReadOnly = true;
             this.tbPartName.Size = new System.Drawing.Size(183, 23);
@@ -2326,7 +2334,7 @@
             this.btnSpark.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnSpark.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
             this.btnSpark.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSpark.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSpark.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSpark.Image = ((System.Drawing.Image)(resources.GetObject("btnSpark.Image")));
             this.btnSpark.Location = new System.Drawing.Point(0, 354);
             this.btnSpark.Name = "btnSpark";
@@ -2381,7 +2389,7 @@
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.MidnightBlue;
             this.label25.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label25.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label25.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label25.ForeColor = System.Drawing.Color.White;
             this.label25.Location = new System.Drawing.Point(0, 333);
             this.label25.Name = "label25";
@@ -2403,7 +2411,7 @@
             this.label27.AutoSize = true;
             this.label27.BackColor = System.Drawing.Color.MidnightBlue;
             this.label27.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label27.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label27.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label27.ForeColor = System.Drawing.Color.White;
             this.label27.Location = new System.Drawing.Point(0, 1079);
             this.label27.Name = "label27";
@@ -2572,6 +2580,37 @@
             this.kanbansDataGridViewTextBoxColumn.HeaderText = "Kanbans";
             this.kanbansDataGridViewTextBoxColumn.Name = "kanbansDataGridViewTextBoxColumn";
             // 
+            // controlPlanIdTextBox
+            // 
+            this.controlPlanIdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.controlPlanIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kanbanBindingSource, "ControlPlanId", true));
+            this.controlPlanIdTextBox.Location = new System.Drawing.Point(145, 161);
+            this.controlPlanIdTextBox.Name = "controlPlanIdTextBox";
+            this.controlPlanIdTextBox.Size = new System.Drawing.Size(48, 23);
+            this.controlPlanIdTextBox.TabIndex = 308;
+            // 
+            // controlPlanBindingSource
+            // 
+            this.controlPlanBindingSource.DataSource = typeof(MNG.UI.ControlPlan);
+            // 
+            // codeTextBox3
+            // 
+            this.codeTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.codeTextBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.controlPlanBindingSource, "Code", true));
+            this.codeTextBox3.Location = new System.Drawing.Point(199, 161);
+            this.codeTextBox3.Name = "codeTextBox3";
+            this.codeTextBox3.Size = new System.Drawing.Size(83, 23);
+            this.codeTextBox3.TabIndex = 309;
+            // 
+            // productIdTextBox
+            // 
+            this.productIdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.productIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.controlPlanBindingSource, "ProductId", true));
+            this.productIdTextBox.Location = new System.Drawing.Point(145, 132);
+            this.productIdTextBox.Name = "productIdTextBox";
+            this.productIdTextBox.Size = new System.Drawing.Size(48, 23);
+            this.productIdTextBox.TabIndex = 310;
+            // 
             // frmTapping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2608,6 +2647,7 @@
             this.pnToolBar.PerformLayout();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.testChemicalCompositionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2754,5 +2794,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn testChemicalCompositionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn testChemicalCompositionCodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kanbansDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox productIdTextBox;
+        private System.Windows.Forms.BindingSource controlPlanBindingSource;
+        private System.Windows.Forms.TextBox codeTextBox3;
+        private System.Windows.Forms.TextBox controlPlanIdTextBox;
     }
 }

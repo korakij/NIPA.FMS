@@ -11483,6 +11483,12 @@ namespace MNG.UI
         [Newtonsoft.Json.JsonProperty("materialCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string MaterialCode { get; set; }
     
+        [Newtonsoft.Json.JsonProperty("controlPlan", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public ControlPlan ControlPlan { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("controlPlanId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public int? ControlPlanId { get; set; }
+    
         [Newtonsoft.Json.JsonProperty("testChemicalComposition", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public TestChemicalComposition TestChemicalComposition { get; set; }
     

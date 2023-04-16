@@ -15,7 +15,7 @@ namespace MNG.UI.Production
     {
         private Client _client;
 
-        public int PartNo { get; set; }
+        public int? PartNo { get; set; }
         public TestChemicalComposition TestChem { get; set; }
 
         public frmCreateNewTest(string newTest)

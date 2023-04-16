@@ -56,7 +56,7 @@
       "dateType": "System.DateTime",
       "jsonConverters": null,
       "dateTimeType": "System.DateTime",
-      "timeType": "System.TimeSpan",
+      "timeType": "System.DateTime",
       "timeSpanType": "System.TimeSpan",
       "arrayType": "System.Collections.Generic.ICollection",
       "arrayInstanceType": "System.Collections.ObjectModel.Collection",

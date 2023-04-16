@@ -164,22 +164,51 @@ namespace MNG.UI.Production
             CurrentChargeNo = e.ChargeNo;
             CurrentLotNo.Code = CurrentChargeNo.LotNoCode;
 
-            _testChemicalCompositions = (await _client.GetTestNoByChargeNoAsync(e.ChargeNo.ChargeNo)).OrderByDescending(x => x.Code).ToList();
+            try
+            {
+                _testChemicalCompositions = (await _client.GetTestNoByChargeNoAsync(e.ChargeNo.ChargeNo)).OrderByDescending(x => x.Code).ToList();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Unable to load Test Result", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             testChemicalCompositionBindingSource.DataSource = _testChemicalCompositions;
+
         }
 
         private async void testChemicalCompositionBindingSource_CurrentChanged(object sender, EventArgs e)
         {
+            ControlPlan ctp = new ControlPlan();
+            Product prod = new Product();
+
             CurrentTestResult = testChemicalCompositionBindingSource.Current as TestChemicalComposition;
+
+            if (CurrentTestResult == null)
+            {
+                controlPlanBindingSource.Clear();
+                chemicalCompositionInFurnaceBindingSource.Clear();
+                productBindingSource.Clear();
+
+                return;
+            }
+
             try
             {
-                var ctp = (await _client.GetControlPlanByIdAsync(CurrentTestResult.ControlPlanId ?? 0));
-                controlPlanBindingSource.DataSource = ctp;
+                ctp = (await _client.GetControlPlanByIdAsync(CurrentTestResult.ControlPlanId ?? 0));
+                prod = (await _client.GetProductByIdAsync(ctp.ProductId));
+                ChemInFurnaceSpec = (await _client.GetChemicalCompositionInFurnaceByIdAsync(ctp.ChemicalCompositionInFurnaceCode));
             }
             catch (Exception)
             {
-                MessageBox.Show("Unable to Load Control Plan","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Unable to Load Data xxx", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            controlPlanBindingSource.DataSource = ctp;
+            chemicalCompositionInFurnaceBindingSource.DataSource = ChemInFurnaceSpec;
+            productBindingSource.DataSource = prod;
 
             var MeltInfo = new MeltingEventArgs();
 
@@ -187,7 +216,7 @@ namespace MNG.UI.Production
             {
                 testChemicalCompositionBindingSource.Clear();
                 chemicalCompositionInFurnaceBindingSource.Clear();
-                tbPartName.Text = "";
+                productBindingSource.Clear();
 
                 pictureBox1.Image = null;
                 tbProcessInd1.Hide();
@@ -213,11 +242,6 @@ namespace MNG.UI.Production
 
         private async void productIdTextBox_TextChanged(object sender, EventArgs e)
         {
-            CurrentControlPlan = (await _client.GetControlPlanByIdAsync(CurrentTestResult.ControlPlanId ?? 0)) as ControlPlan;
-
-            ChemInFurnaceSpec = (await _client.GetChemicalCompositionInFurnaceByIdAsync(CurrentControlPlan.ChemicalCompositionInFurnaceCode));
-
-            chemicalCompositionInFurnaceBindingSource.DataSource = ChemInFurnaceSpec;
         }
 
         public async void CreateItem()
@@ -263,11 +287,13 @@ namespace MNG.UI.Production
                 productIdTextBox.Text = fCreateNewTest.PartNo.ToString();
 
                 var newTest = new TestChemicalComposition();
+                var t = fCreateNewTest.PartNo;
+
                 newTest.Code = newTestNo;
-                newTest.ProductId = fCreateNewTest.PartNo;
+                newTest.ProductId = fCreateNewTest.PartNo ?? default(int);
+                newTest.Time = DateTime.Now;
                 newTest.ChargingCode = CurrentChargeNo.ChargeNo;
                 newTest.ControlPlanId = fCreateNewTest.TestChem.ControlPlanId;
-                newTest.Time = DateTime.Now;
 
                 try
                 {

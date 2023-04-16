@@ -52,12 +52,12 @@
             System.Windows.Forms.Label vMaxLabel;
             System.Windows.Forms.Label label5;
             System.Windows.Forms.Label label4;
+            System.Windows.Forms.Label controlPlanIdLabel;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTestChem));
-            System.Windows.Forms.Label controlPlanIdLabel;
             this.pnTestChemComp = new System.Windows.Forms.Panel();
             this.vMinTextBox = new System.Windows.Forms.TextBox();
             this.vMaxTextBox = new System.Windows.Forms.TextBox();
@@ -93,9 +93,11 @@
             this.cceMinTextBox = new System.Windows.Forms.TextBox();
             this.cceMaxTextBox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.controlPlanIdTextBox = new System.Windows.Forms.TextBox();
+            this.revisionTextBox = new System.Windows.Forms.TextBox();
+            this.codeTextBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnPrint = new System.Windows.Forms.Button();
-            this.tbPartName = new System.Windows.Forms.TextBox();
             this.productIdTextBox = new System.Windows.Forms.TextBox();
             this.codeTextBox = new System.Windows.Forms.TextBox();
             this.lbHeader = new System.Windows.Forms.Label();
@@ -114,8 +116,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.ResultTimer = new System.Windows.Forms.Timer(this.components);
-            this.codeTextBox1 = new System.Windows.Forms.TextBox();
-            this.revisionTextBox = new System.Windows.Forms.TextBox();
             this.vTextBox = new MNG.UI.Production.ColorTextBox();
             this.testChemicalCompositionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.teTextBox = new MNG.UI.Production.ColorTextBox();
@@ -136,9 +136,11 @@
             this.snTextBox1 = new MNG.UI.Production.ColorTextBox();
             this.tiTextBox1 = new MNG.UI.Production.ColorTextBox();
             this.controlPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.chargingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbProcessInd1 = new MNG.UI.Production.TbProcessInd();
-            this.controlPlanIdTextBox = new System.Windows.Forms.TextBox();
+            this.chargingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.codeTextBox2 = new System.Windows.Forms.TextBox();
             nameLabel = new System.Windows.Forms.Label();
             siMaxLabel = new System.Windows.Forms.Label();
             cMaxLabel = new System.Windows.Forms.Label();
@@ -174,6 +176,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // nameLabel
@@ -407,6 +410,16 @@
             label4.Size = new System.Drawing.Size(90, 21);
             label4.TabIndex = 292;
             label4.Text = "TEST INFO.";
+            // 
+            // controlPlanIdLabel
+            // 
+            controlPlanIdLabel.AutoSize = true;
+            controlPlanIdLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            controlPlanIdLabel.Location = new System.Drawing.Point(40, 193);
+            controlPlanIdLabel.Name = "controlPlanIdLabel";
+            controlPlanIdLabel.Size = new System.Drawing.Size(89, 17);
+            controlPlanIdLabel.TabIndex = 294;
+            controlPlanIdLabel.Text = "Contorl Plan";
             // 
             // pnTestChemComp
             // 
@@ -989,6 +1002,8 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.codeTextBox2);
+            this.panel1.Controls.Add(this.nameTextBox);
             this.panel1.Controls.Add(this.controlPlanIdTextBox);
             this.panel1.Controls.Add(this.revisionTextBox);
             this.panel1.Controls.Add(this.codeTextBox1);
@@ -998,7 +1013,6 @@
             this.panel1.Controls.Add(label5);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnPrint);
-            this.panel1.Controls.Add(this.tbPartName);
             this.panel1.Controls.Add(nameLabel);
             this.panel1.Controls.Add(this.productIdTextBox);
             this.panel1.Controls.Add(this.codeTextBox);
@@ -1009,6 +1023,36 @@
             this.panel1.Size = new System.Drawing.Size(379, 300);
             this.panel1.TabIndex = 290;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
+            // 
+            // controlPlanIdTextBox
+            // 
+            this.controlPlanIdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.controlPlanIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "ControlPlanId", true));
+            this.controlPlanIdTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.controlPlanIdTextBox.Location = new System.Drawing.Point(135, 191);
+            this.controlPlanIdTextBox.Name = "controlPlanIdTextBox";
+            this.controlPlanIdTextBox.Size = new System.Drawing.Size(51, 23);
+            this.controlPlanIdTextBox.TabIndex = 298;
+            // 
+            // revisionTextBox
+            // 
+            this.revisionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revisionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.controlPlanBindingSource, "Revision", true));
+            this.revisionTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.revisionTextBox.Location = new System.Drawing.Point(298, 191);
+            this.revisionTextBox.Name = "revisionTextBox";
+            this.revisionTextBox.Size = new System.Drawing.Size(61, 23);
+            this.revisionTextBox.TabIndex = 297;
+            // 
+            // codeTextBox1
+            // 
+            this.codeTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.codeTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.controlPlanBindingSource, "Code", true));
+            this.codeTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codeTextBox1.Location = new System.Drawing.Point(192, 191);
+            this.codeTextBox1.Name = "codeTextBox1";
+            this.codeTextBox1.Size = new System.Drawing.Size(100, 23);
+            this.codeTextBox1.TabIndex = 296;
             // 
             // pictureBox1
             // 
@@ -1030,18 +1074,6 @@
             this.btnPrint.TabIndex = 0;
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
-            // tbPartName
-            // 
-            this.tbPartName.BackColor = System.Drawing.Color.White;
-            this.tbPartName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbPartName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPartName.Location = new System.Drawing.Point(135, 162);
-            this.tbPartName.Name = "tbPartName";
-            this.tbPartName.ReadOnly = true;
-            this.tbPartName.Size = new System.Drawing.Size(224, 23);
-            this.tbPartName.TabIndex = 117;
-            this.tbPartName.TabStop = false;
             // 
             // productIdTextBox
             // 
@@ -1236,36 +1268,6 @@
             // 
             this.ResultTimer.Interval = 5000;
             this.ResultTimer.Tick += new System.EventHandler(this.ResultTimer_Tick);
-            // 
-            // controlPlanIdLabel
-            // 
-            controlPlanIdLabel.AutoSize = true;
-            controlPlanIdLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            controlPlanIdLabel.Location = new System.Drawing.Point(40, 193);
-            controlPlanIdLabel.Name = "controlPlanIdLabel";
-            controlPlanIdLabel.Size = new System.Drawing.Size(89, 17);
-            controlPlanIdLabel.TabIndex = 294;
-            controlPlanIdLabel.Text = "Contorl Plan";
-            // 
-            // codeTextBox1
-            // 
-            this.codeTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.codeTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.controlPlanBindingSource, "Code", true));
-            this.codeTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codeTextBox1.Location = new System.Drawing.Point(192, 191);
-            this.codeTextBox1.Name = "codeTextBox1";
-            this.codeTextBox1.Size = new System.Drawing.Size(100, 23);
-            this.codeTextBox1.TabIndex = 296;
-            // 
-            // revisionTextBox
-            // 
-            this.revisionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.revisionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.controlPlanBindingSource, "Revision", true));
-            this.revisionTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.revisionTextBox.Location = new System.Drawing.Point(298, 191);
-            this.revisionTextBox.Name = "revisionTextBox";
-            this.revisionTextBox.Size = new System.Drawing.Size(61, 23);
-            this.revisionTextBox.TabIndex = 297;
             // 
             // vTextBox
             // 
@@ -1577,10 +1579,6 @@
             // 
             this.controlPlanBindingSource.DataSource = typeof(MNG.UI.ControlPlan);
             // 
-            // chargingBindingSource
-            // 
-            this.chargingBindingSource.DataSource = typeof(MNG.UI.Charging);
-            // 
             // tbProcessInd1
             // 
             this.tbProcessInd1.BackColor = System.Drawing.Color.White;
@@ -1600,15 +1598,33 @@
             this.tbProcessInd1.TabIndex = 294;
             this.tbProcessInd1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // controlPlanIdTextBox
+            // chargingBindingSource
             // 
-            this.controlPlanIdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.controlPlanIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "ControlPlanId", true));
-            this.controlPlanIdTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.controlPlanIdTextBox.Location = new System.Drawing.Point(135, 191);
-            this.controlPlanIdTextBox.Name = "controlPlanIdTextBox";
-            this.controlPlanIdTextBox.Size = new System.Drawing.Size(51, 23);
-            this.controlPlanIdTextBox.TabIndex = 298;
+            this.chargingBindingSource.DataSource = typeof(MNG.UI.Charging);
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(MNG.UI.Product);
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "Name", true));
+            this.nameTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameTextBox.Location = new System.Drawing.Point(135, 162);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(224, 23);
+            this.nameTextBox.TabIndex = 299;
+            // 
+            // codeTextBox2
+            // 
+            this.codeTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.codeTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "Code", true));
+            this.codeTextBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codeTextBox2.Location = new System.Drawing.Point(192, 133);
+            this.codeTextBox2.Name = "codeTextBox2";
+            this.codeTextBox2.Size = new System.Drawing.Size(100, 23);
+            this.codeTextBox2.TabIndex = 300;
             // 
             // frmTestChem
             // 
@@ -1640,6 +1656,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1650,7 +1667,6 @@
         private System.Windows.Forms.DataGridView testChemicalCompositionDataGridView;
         private System.Windows.Forms.TextBox codeTextBox;
         private System.Windows.Forms.TextBox productIdTextBox;
-        private System.Windows.Forms.TextBox tbPartName;
         private System.Windows.Forms.TextBox tiMinTextBox;
         private System.Windows.Forms.TextBox tiMaxTextBox;
         private System.Windows.Forms.TextBox snMinTextBox;
@@ -1727,5 +1743,8 @@
         private System.Windows.Forms.TextBox codeTextBox1;
         private System.Windows.Forms.BindingSource chargingBindingSource;
         private System.Windows.Forms.TextBox controlPlanIdTextBox;
+        private System.Windows.Forms.TextBox codeTextBox2;
+        private System.Windows.Forms.BindingSource productBindingSource;
+        private System.Windows.Forms.TextBox nameTextBox;
     }
 }

@@ -43,6 +43,9 @@ namespace MNG.Models.Productions
         public Material Material { get; set; }
         public string MaterialCode { get; set; }
 
+        public virtual ControlPlan ControlPlan { get; set; }
+        public int? ControlPlanId { get; set; }
+
         public virtual TestChemicalComposition TestChemicalComposition { get; set; }
         [Required]
         [StringLength(20)]
