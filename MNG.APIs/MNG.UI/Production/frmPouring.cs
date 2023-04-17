@@ -59,6 +59,7 @@ namespace MNG.UI
             fTapping.EnablePnDetails();
             fTapping.EnableTapTimer();
             fTapping.DisableTestTimer();
+            fTapping.DisableFilByTest();
 
             fTapping.TopLevel = false;
             pnKanban.Controls.Add(fTapping);

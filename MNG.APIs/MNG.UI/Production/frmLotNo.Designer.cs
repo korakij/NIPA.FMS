@@ -165,9 +165,9 @@
             this.panel12.BackColor = System.Drawing.Color.White;
             this.panel12.Controls.Add(this.lotNoDataGridView);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(5, 348);
+            this.panel12.Location = new System.Drawing.Point(5, 363);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(215, 610);
+            this.panel12.Size = new System.Drawing.Size(215, 595);
             this.panel12.TabIndex = 2;
             // 
             // lotNoDataGridView
@@ -293,7 +293,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(5, 48);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(215, 300);
+            this.panel1.Size = new System.Drawing.Size(215, 315);
             this.panel1.TabIndex = 191;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
             // 

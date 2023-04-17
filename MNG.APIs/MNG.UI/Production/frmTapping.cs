@@ -98,6 +98,8 @@ namespace MNG.UI.Production
         public void DisableTestTimer() => TestTimer.Enabled = false;
         public void EnableSpark() => btnSpark.Show();
         public void DisableSpark() => btnSpark.Hide();
+        public void EnableFilByTest() => chkTestNo.Show();
+        public void DisableFilByTest() => chkTestNo.Hide();
 
         private void frmKanban_Load(object sender, EventArgs e)
         {
@@ -178,6 +180,7 @@ namespace MNG.UI.Production
                 newKanban.TestChemicalCompositionCode = CurrentTestNo.Code;
                 newKanban.Time = DateTime.Now;
                 newKanban.MaterialCode = p.MaterialCode;
+                newKanban.ControlPlanId = ControlPlanId;
 
                 try
                 {
@@ -382,16 +385,22 @@ namespace MNG.UI.Production
             lbHeader.ForeColor = System.Drawing.SystemColors.ControlDark;
         }
 
-        public async void TestNoChanged(Object sender, MeltingEventArgs e)
+        public void TestNoChanged(Object sender, MeltingEventArgs e)
         {
             if (e.TestNo.Code == null)
             {
-                kanbanDataGridView1.ClearSelection();
+                kanbanBindingSource.Clear();
+                controlPlanBindingSource.Clear();
+                chemicalCompositionInLadleBindingSource.Clear();
+                testChemicalCompositionBindingSource.Clear();
+                productBindingSource.Clear();
+                pourStandardBindingSource.Clear();
+                CurrentLotNo = null;
                 return;
             }
 
             CurrentTestNo = e.TestNo;
-            HighLightTestNo();
+            chkTestNo_CheckedChanged(this, EventArgs.Empty);
         }
 
         public async void LotNoChanged(Object sender, MeltingEventArgs e)
@@ -399,23 +408,42 @@ namespace MNG.UI.Production
             if (e.LotNos == null)
             {
                 kanbanBindingSource.Clear();
+                controlPlanBindingSource.Clear();
                 chemicalCompositionInLadleBindingSource.Clear();
                 testChemicalCompositionBindingSource.Clear();
                 productBindingSource.Clear();
                 pourStandardBindingSource.Clear();
                 CurrentLotNo = null;
-
                 return;
             }
 
             CurrentLotNo = e.LotNos;
+            chkTestNo_CheckedChanged(this, EventArgs.Empty);
+        }
 
-            _kanbans = (await _client.GetKanbansByLotNoAsync(CurrentLotNo.Code)).OrderByDescending(x => x.Code).ToList();
+        private async void chkTestNo_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (chkTestNo.Checked)
+                    _kanbans = (await _client.GetKanbanByTestNoAsync(CurrentTestNo.Code)).OrderByDescending(x => x.Code).ToList();
+                else
+                    _kanbans = (await _client.GetKanbansByLotNoAsync(CurrentLotNo.Code)).OrderByDescending(x => x.Code).ToList();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Unable to Load Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             if (_kanbans.Count == 0)
             {
                 kanbanBindingSource.Clear();
-
+                productBindingSource.Clear();
+                controlPlanBindingSource.Clear();
+                chemicalCompositionInLadleBindingSource.Clear();
+                testChemicalCompositionBindingSource.Clear();
+                pourStandardBindingSource.Clear();
                 return;
             }
 
@@ -470,10 +498,11 @@ namespace MNG.UI.Production
             }
             catch (Exception)
             {
-                MessageBox.Show("Unable to load Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Unable to load Data xxx", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
+            controlPlanBindingSource.DataSource = ctp;
             productBindingSource.DataSource = prod;
             chemicalCompositionInLadleBindingSource.DataSource = CurrentChemInLadleSpec;
             pourStandardBindingSource.DataSource = CurrentPourStandard;
@@ -521,22 +550,12 @@ namespace MNG.UI.Production
                 return;
         }
 
-        private async void TappingTimer_Tick(object sender, EventArgs e)
+        private void TappingTimer_Tick(object sender, EventArgs e)
         {
             if (CurrentLotNo == null || CurrentLotNo.Code == null)
                 return;
 
-            var cnt = (await _client.GetKanbansByLotNoAsync(CurrentLotNo.Code)).ToList().Count;
-
-            if (cnt == 0)
-                return;
-
-            var dbKanbans = (await _client.GetKanbansByLotNoAsync(CurrentLotNo.Code)).OrderByDescending(x => x.Code).ToList();
-
-            _kanbans = dbKanbans;
-            kanbanBindingSource.DataSource = _kanbans;
-
-            //HighLightTestNo();
+            chkTestNo_CheckedChanged(this, EventArgs.Empty);
         }
 
         private async void HighLightTestNo()
@@ -700,5 +719,6 @@ namespace MNG.UI.Production
             fPrintTag.Info[2] = CurrentKanban.Time.Value.ToString("dd/MM/yy  HH:mm");
             fPrintTag.ShowDialog();
         }
+
     }
 }

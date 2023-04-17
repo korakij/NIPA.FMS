@@ -51,9 +51,9 @@
             System.Windows.Forms.Label label4;
             System.Windows.Forms.Label label5;
             System.Windows.Forms.Label totalLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnCharging = new System.Windows.Forms.Panel();
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.chargingBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -332,7 +332,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label5.Location = new System.Drawing.Point(183, 195);
+            label5.Location = new System.Drawing.Point(184, 195);
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(12, 17);
             label5.TabIndex = 38;
@@ -381,9 +381,9 @@
             this.pnCharging.Controls.Add(fe_SiLabel);
             this.pnCharging.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnCharging.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnCharging.Location = new System.Drawing.Point(5, 348);
+            this.pnCharging.Location = new System.Drawing.Point(5, 363);
             this.pnCharging.Name = "pnCharging";
-            this.pnCharging.Size = new System.Drawing.Size(355, 648);
+            this.pnCharging.Size = new System.Drawing.Size(355, 633);
             this.pnCharging.TabIndex = 3;
             // 
             // totalTextBox
@@ -411,34 +411,34 @@
             this.chargingDataGridView.AllowUserToResizeRows = false;
             this.chargingDataGridView.AutoGenerateColumns = false;
             this.chargingDataGridView.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.chargingDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.chargingDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.chargingDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.chargingDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.chargeNoDataGridViewTextBoxColumn});
             this.chargingDataGridView.DataSource = this.chargingBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.chargingDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.chargingDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
             this.chargingDataGridView.EnableHeadersVisualStyles = false;
             this.chargingDataGridView.Location = new System.Drawing.Point(18, 68);
             this.chargingDataGridView.MultiSelect = false;
             this.chargingDataGridView.Name = "chargingDataGridView";
             this.chargingDataGridView.ReadOnly = true;
             this.chargingDataGridView.RowHeadersVisible = false;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chargingDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chargingDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.chargingDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.chargingDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.chargingDataGridView.ShowCellErrors = false;
@@ -623,7 +623,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(5, 48);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(355, 300);
+            this.panel1.Size = new System.Drawing.Size(355, 315);
             this.panel1.TabIndex = 210;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
             // 

@@ -91,6 +91,7 @@ namespace MNG.UI.Production
             fTapping.DisableBtnTapTime();
             fTapping.EnableTapTimer();
             fTapping.DisableTestTimer();
+            fTapping.EnableFilByTest();
 
             fTapping.TopLevel = false;
             pnTapping.Controls.Add(fTapping);
