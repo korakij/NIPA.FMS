@@ -1440,7 +1440,6 @@
             this.productIdTextBox.Size = new System.Drawing.Size(51, 23);
             this.productIdTextBox.TabIndex = 168;
             this.productIdTextBox.TabStop = false;
-            this.productIdTextBox.TextChanged += new System.EventHandler(this.productIdTextBox_TextChanged);
             // 
             // codeTextBox
             // 

@@ -74,12 +74,12 @@
             System.Windows.Forms.Label label5;
             System.Windows.Forms.Label label16;
             System.Windows.Forms.Label tappingWgLabel;
+            System.Windows.Forms.Label label20;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTapping));
-            System.Windows.Forms.Label label20;
             this.pnDetails = new System.Windows.Forms.Panel();
             this.pnChemDetail = new System.Windows.Forms.Panel();
             this.alTextBox = new MNG.UI.Production.ColorTextBox();
@@ -160,6 +160,7 @@
             this.inoculantTolTextBox = new System.Windows.Forms.TextBox();
             this.wiredMgTextBox = new System.Windows.Forms.TextBox();
             this.pnDgv = new System.Windows.Forms.Panel();
+            this.chkTestNo = new System.Windows.Forms.CheckBox();
             this.kanbanDataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnBorderBottom = new System.Windows.Forms.Panel();
@@ -171,9 +172,9 @@
             this.materialCodeTextBox = new System.Windows.Forms.TextBox();
             this.tbProcessInd1 = new MNG.UI.Production.TbProcessInd();
             this.timeTextBox = new System.Windows.Forms.TextBox();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kwHrTextBox = new System.Windows.Forms.TextBox();
             this.codeTextBox2 = new System.Windows.Forms.TextBox();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbPartName = new System.Windows.Forms.TextBox();
             this.btnReadPower = new System.Windows.Forms.Button();
             this.btnProductBrowse = new System.Windows.Forms.Button();
@@ -220,7 +221,6 @@
             this.testChemicalCompositionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.testChemicalCompositionCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kanbansDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chkTestNo = new System.Windows.Forms.CheckBox();
             siMaxLabel = new System.Windows.Forms.Label();
             cMaxLabel = new System.Windows.Forms.Label();
             niMaxLabel = new System.Windows.Forms.Label();
@@ -734,6 +734,16 @@
             tappingWgLabel.Size = new System.Drawing.Size(54, 17);
             tappingWgLabel.TabIndex = 495;
             tappingWgLabel.Text = "Weight";
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label20.Location = new System.Drawing.Point(40, 134);
+            label20.Name = "label20";
+            label20.Size = new System.Drawing.Size(61, 17);
+            label20.TabIndex = 2;
+            label20.Text = "Part No.";
             // 
             // pnDetails
             // 
@@ -1979,6 +1989,18 @@
             this.pnDgv.Size = new System.Drawing.Size(163, 734);
             this.pnDgv.TabIndex = 496;
             // 
+            // chkTestNo
+            // 
+            this.chkTestNo.AutoSize = true;
+            this.chkTestNo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTestNo.Location = new System.Drawing.Point(28, 29);
+            this.chkTestNo.Name = "chkTestNo";
+            this.chkTestNo.Size = new System.Drawing.Size(86, 21);
+            this.chkTestNo.TabIndex = 293;
+            this.chkTestNo.Text = "By TestNo";
+            this.chkTestNo.UseVisualStyleBackColor = true;
+            this.chkTestNo.CheckedChanged += new System.EventHandler(this.chkTestNo_CheckedChanged);
+            // 
             // kanbanDataGridView1
             // 
             this.kanbanDataGridView1.AllowUserToAddRows = false;
@@ -1989,7 +2011,7 @@
             this.kanbanDataGridView1.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SlateGray;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -2154,10 +2176,6 @@
             this.timeTextBox.Size = new System.Drawing.Size(137, 23);
             this.timeTextBox.TabIndex = 305;
             // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(MNG.UI.Product);
-            // 
             // kwHrTextBox
             // 
             this.kwHrTextBox.BackColor = System.Drawing.Color.White;
@@ -2181,6 +2199,10 @@
             this.codeTextBox2.ReadOnly = true;
             this.codeTextBox2.Size = new System.Drawing.Size(83, 23);
             this.codeTextBox2.TabIndex = 302;
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(MNG.UI.Product);
             // 
             // tbPartName
             // 
@@ -2563,28 +2585,6 @@
             this.kanbansDataGridViewTextBoxColumn.DataPropertyName = "Kanbans";
             this.kanbansDataGridViewTextBoxColumn.HeaderText = "Kanbans";
             this.kanbansDataGridViewTextBoxColumn.Name = "kanbansDataGridViewTextBoxColumn";
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label20.Location = new System.Drawing.Point(40, 134);
-            label20.Name = "label20";
-            label20.Size = new System.Drawing.Size(61, 17);
-            label20.TabIndex = 2;
-            label20.Text = "Part No.";
-            // 
-            // chkTestNo
-            // 
-            this.chkTestNo.AutoSize = true;
-            this.chkTestNo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkTestNo.Location = new System.Drawing.Point(28, 29);
-            this.chkTestNo.Name = "chkTestNo";
-            this.chkTestNo.Size = new System.Drawing.Size(86, 21);
-            this.chkTestNo.TabIndex = 293;
-            this.chkTestNo.Text = "By TestNo";
-            this.chkTestNo.UseVisualStyleBackColor = true;
-            this.chkTestNo.CheckedChanged += new System.EventHandler(this.chkTestNo_CheckedChanged);
             // 
             // frmTapping
             // 

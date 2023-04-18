@@ -129,9 +129,8 @@ namespace MNG.UI.Production
             vTextBox.ReadOnly = true;
         }
 
-        internal void Export()
+        public void Export()
         {
-            throw new NotImplementedException();
         }
 
         private void frmTestChem_Load(object sender, EventArgs e)
@@ -238,10 +237,6 @@ namespace MNG.UI.Production
                 MeltInfo.IsFirstRow = false;
 
             TestNoChanged?.Invoke(this, MeltInfo);
-        }
-
-        private async void productIdTextBox_TextChanged(object sender, EventArgs e)
-        {
         }
 
         public async void CreateItem()

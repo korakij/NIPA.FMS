@@ -61,6 +61,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnDetails = new System.Windows.Forms.Panel();
             this.isSelectedCheckBox = new System.Windows.Forms.CheckBox();
+            this.settingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.apI_URLTextBox = new System.Windows.Forms.TextBox();
             this.codeTextBox = new System.Windows.Forms.TextBox();
             this.pathTextBox = new System.Windows.Forms.TextBox();
@@ -69,7 +70,6 @@
             this.refreshRateTextBox = new System.Windows.Forms.TextBox();
             this.pnDgv = new System.Windows.Forms.Panel();
             this.settingDataGridView = new System.Windows.Forms.DataGridView();
-            this.settingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             codeLabel = new System.Windows.Forms.Label();
             isSelectedLabel = new System.Windows.Forms.Label();
@@ -78,9 +78,9 @@
             this.pnCRUD.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.settingBindingSource)).BeginInit();
             this.pnDgv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.settingDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.settingBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // codeLabel
@@ -422,9 +422,15 @@
             this.isSelectedCheckBox.TabIndex = 18;
             this.isSelectedCheckBox.UseVisualStyleBackColor = true;
             // 
+            // settingBindingSource
+            // 
+            this.settingBindingSource.DataSource = typeof(MNG.UI.Setting);
+            this.settingBindingSource.CurrentChanged += new System.EventHandler(this.settingBindingSource_CurrentChanged);
+            // 
             // apI_URLTextBox
             // 
             this.apI_URLTextBox.BackColor = System.Drawing.Color.White;
+            this.apI_URLTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.apI_URLTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.settingBindingSource, "ApI_URL", true));
             this.apI_URLTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.apI_URLTextBox.Location = new System.Drawing.Point(141, 122);
@@ -436,6 +442,7 @@
             // codeTextBox
             // 
             this.codeTextBox.BackColor = System.Drawing.Color.White;
+            this.codeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.codeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.settingBindingSource, "Code", true));
             this.codeTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.codeTextBox.Location = new System.Drawing.Point(141, 64);
@@ -447,6 +454,7 @@
             // pathTextBox
             // 
             this.pathTextBox.BackColor = System.Drawing.Color.White;
+            this.pathTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.settingBindingSource, "Path", true));
             this.pathTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pathTextBox.Location = new System.Drawing.Point(141, 151);
@@ -458,6 +466,7 @@
             // result_PathTextBox
             // 
             this.result_PathTextBox.BackColor = System.Drawing.Color.White;
+            this.result_PathTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.result_PathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.settingBindingSource, "Result_Path", true));
             this.result_PathTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.result_PathTextBox.Location = new System.Drawing.Point(141, 180);
@@ -469,6 +478,7 @@
             // powerMeterIPTextBox
             // 
             this.powerMeterIPTextBox.BackColor = System.Drawing.Color.White;
+            this.powerMeterIPTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.powerMeterIPTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.settingBindingSource, "PowerMeterIP", true));
             this.powerMeterIPTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.powerMeterIPTextBox.Location = new System.Drawing.Point(141, 238);
@@ -480,6 +490,7 @@
             // refreshRateTextBox
             // 
             this.refreshRateTextBox.BackColor = System.Drawing.Color.White;
+            this.refreshRateTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.refreshRateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.settingBindingSource, "RefreshRate", true));
             this.refreshRateTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refreshRateTextBox.Location = new System.Drawing.Point(141, 267);
@@ -530,11 +541,6 @@
             this.settingDataGridView.Size = new System.Drawing.Size(112, 223);
             this.settingDataGridView.TabIndex = 13;
             // 
-            // settingBindingSource
-            // 
-            this.settingBindingSource.DataSource = typeof(MNG.UI.Setting);
-            this.settingBindingSource.CurrentChanged += new System.EventHandler(this.settingBindingSource_CurrentChanged);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Code";
@@ -564,9 +570,9 @@
             this.panel3.ResumeLayout(false);
             this.pnDetails.ResumeLayout(false);
             this.pnDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.settingBindingSource)).EndInit();
             this.pnDgv.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.settingDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.settingBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

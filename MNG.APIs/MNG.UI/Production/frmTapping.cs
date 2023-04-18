@@ -207,9 +207,8 @@ namespace MNG.UI.Production
             }
         }
 
-        internal void Export()
+        public void Export()
         {
-            throw new NotImplementedException();
         }
 
         public async void DeleteItem()
@@ -460,19 +459,25 @@ namespace MNG.UI.Production
                 productBindingSource.Clear();
                 pourStandardBindingSource.Clear();
                 CurrentLotNo = null;
-
                 return;
             }
 
             CurrentLotNo = e.LotNos;
 
-            var lotNo = CurrentLotNo.Code.Substring(0, 6);
-            _kanbans = (await _client.GetKanbansByLotNoAsync(lotNo)).OrderByDescending(x => x.Code).ToList();
+            try
+            {
+                var lotNo = CurrentLotNo.Code.Substring(0, 6);
+                _kanbans = (await _client.GetKanbansByLotNoAsync(lotNo)).OrderByDescending(x => x.Code).ToList();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Unable to Load Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             if (_kanbans.Count == 0)
             {
                 kanbanBindingSource.Clear();
-
                 return;
             }
 
@@ -556,30 +561,6 @@ namespace MNG.UI.Production
                 return;
 
             chkTestNo_CheckedChanged(this, EventArgs.Empty);
-        }
-
-        private async void HighLightTestNo()
-        {
-            if (CurrentTestNo.Code == null)
-                return;
-
-            var kList = (await _client.GetKanbanByTestNoAsync(CurrentTestNo.Code)).OrderByDescending(x => x.Code).ToList();
-
-            DataGridViewCellStyle rowStyle = kanbanDataGridView1.RowHeadersDefaultCellStyle;
-
-            for (int i = 0; i < kanbanDataGridView1.RowCount; i++)
-            {
-                var index = kList.Find(x => x.Code == kanbanDataGridView1.Rows[i].Cells[0].Value.ToString());
-
-                if (index != null)
-                {
-                    kanbanDataGridView1.Rows[i].Selected = true;
-                }
-                else
-                {
-                    kanbanDataGridView1.Rows[i].Selected = false;
-                }
-            }
         }
 
         private void panel1_Click(object sender, EventArgs e)

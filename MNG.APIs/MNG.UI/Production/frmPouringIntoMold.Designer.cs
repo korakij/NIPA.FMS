@@ -526,6 +526,7 @@
             this.noOfMoldPerLadleTextBox1.Name = "noOfMoldPerLadleTextBox1";
             this.noOfMoldPerLadleTextBox1.Size = new System.Drawing.Size(51, 23);
             this.noOfMoldPerLadleTextBox1.TabIndex = 315;
+            this.noOfMoldPerLadleTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // pouringTimeTextBox
             // 
@@ -536,6 +537,7 @@
             this.pouringTimeTextBox.Name = "pouringTimeTextBox";
             this.pouringTimeTextBox.Size = new System.Drawing.Size(51, 23);
             this.pouringTimeTextBox.TabIndex = 314;
+            this.pouringTimeTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lastTempTextBox2
             // 
@@ -546,6 +548,7 @@
             this.lastTempTextBox2.Name = "lastTempTextBox2";
             this.lastTempTextBox2.Size = new System.Drawing.Size(51, 23);
             this.lastTempTextBox2.TabIndex = 313;
+            this.lastTempTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // firstTempTextBox2
             // 
@@ -556,6 +559,7 @@
             this.firstTempTextBox2.Name = "firstTempTextBox2";
             this.firstTempTextBox2.Size = new System.Drawing.Size(51, 23);
             this.firstTempTextBox2.TabIndex = 312;
+            this.firstTempTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // firstTempTextBox
             // 
@@ -630,6 +634,7 @@
             this.tbDuration.Size = new System.Drawing.Size(38, 23);
             this.tbDuration.TabIndex = 2;
             this.tbDuration.TabStop = false;
+            this.tbDuration.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lastTempTextBox
             // 
