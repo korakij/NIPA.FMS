@@ -329,12 +329,20 @@ namespace MNG.UI
         {
             Assembly assem = Assembly.GetEntryAssembly();
             AssemblyName assemName = assem.GetName();
-            Version ver = ApplicationDeployment.CurrentDeployment.CurrentVersion;
-            string appVerString = $"Application : {assemName.Name}\nVersion : {ver}";
+            string appVerString;
+
+            try
+            {
+                Version ver = ApplicationDeployment.CurrentDeployment.CurrentVersion;
+                appVerString = $"Application : {assemName.Name}\nVersion : {ver}";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Unable to load Version", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             MessageBox.Show(appVerString, "Application Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            //MessageBox.Show($"{MNG.UI.Properties.Settings.Default.API_URL} \n {MNG.UI.Properties.Settings.Default.Result_Path}");
         }
 
     }
