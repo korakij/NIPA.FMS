@@ -282,14 +282,14 @@ namespace MNG.UI.Production
                 if (CurrentCharge.ControlPlanId != cp.Id)
                 {
                     var IsConfirm = MessageBox.Show("Current Control Plan Not Match with the Selected Control Plan\nDo you want to continue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    
+
                     if (IsConfirm == DialogResult.No)
                     {
                         return;
                     }
                     else
                     {
-          
+
                     }
                 }
 
@@ -421,6 +421,35 @@ namespace MNG.UI.Production
         private void btnRefresh_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (char.IsDigit(e.KeyChar) || e.KeyChar == 45)
+                {
+                    TextBox t = (TextBox)sender;
+                    int cursorPosition = t.Text.Length - t.SelectionStart;
+
+                    string s = t.Text;
+                    MessageBox.Show(s);
+                    //t.Text = string.Format("{0:#,##0.00}", s);
+
+                    //if (t.Text.Length < 20)
+                    //    t.Text = (decimal.Parse(t.Text.Insert(t.SelectionStart, e.KeyChar.ToString())
+                    //        .Replace(",", "").Replace(".", "")) / 100).ToString("N2");
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

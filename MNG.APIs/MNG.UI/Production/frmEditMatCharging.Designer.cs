@@ -62,6 +62,9 @@
             System.Windows.Forms.Label label3;
             System.Windows.Forms.Label label4;
             System.Windows.Forms.Label label6;
+            System.Windows.Forms.Label label5;
+            System.Windows.Forms.Label label7;
+            System.Windows.Forms.Label label8;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditMatCharging));
             this.startKwHrNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.chargingBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -130,6 +133,7 @@
             this.label28 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnMaterial = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.totTotal = new System.Windows.Forms.TextBox();
             this.actTotal = new System.Windows.Forms.TextBox();
@@ -206,6 +210,9 @@
             label3 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
+            label5 = new System.Windows.Forms.Label();
+            label7 = new System.Windows.Forms.Label();
+            label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.startKwHrNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxTempKwHrNumericUpDown)).BeginInit();
@@ -491,17 +498,17 @@
             // 
             label31.AutoSize = true;
             label31.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label31.Location = new System.Drawing.Point(211, 62);
+            label31.Location = new System.Drawing.Point(211, 57);
             label31.Name = "label31";
-            label31.Size = new System.Drawing.Size(79, 17);
+            label31.Size = new System.Drawing.Size(56, 17);
             label31.TabIndex = 35;
-            label31.Text = "Actual (kg)";
+            label31.Text = "Current";
             // 
             // label32
             // 
             label32.AutoSize = true;
             label32.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label32.Location = new System.Drawing.Point(310, 62);
+            label32.Location = new System.Drawing.Point(293, 57);
             label32.Name = "label32";
             label32.Size = new System.Drawing.Size(35, 17);
             label32.TabIndex = 35;
@@ -511,7 +518,7 @@
             // 
             label33.AutoSize = true;
             label33.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label33.Location = new System.Drawing.Point(369, 62);
+            label33.Location = new System.Drawing.Point(369, 57);
             label33.Name = "label33";
             label33.Size = new System.Drawing.Size(39, 17);
             label33.TabIndex = 35;
@@ -576,6 +583,36 @@
             label6.Size = new System.Drawing.Size(30, 17);
             label6.TabIndex = 35;
             label6.Text = "%Al";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label5.Location = new System.Drawing.Point(212, 74);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(37, 17);
+            label5.TabIndex = 33;
+            label5.Text = "(kg.)";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label7.Location = new System.Drawing.Point(293, 74);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(37, 17);
+            label7.TabIndex = 33;
+            label7.Text = "(kg.)";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label8.Location = new System.Drawing.Point(369, 74);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(37, 17);
+            label8.TabIndex = 33;
+            label8.Text = "(kg.)";
             // 
             // startKwHrNumericUpDown
             // 
@@ -1369,6 +1406,7 @@
             // pnMaterial
             // 
             this.pnMaterial.AutoScroll = true;
+            this.pnMaterial.Controls.Add(this.textBox1);
             this.pnMaterial.Controls.Add(label33);
             this.pnMaterial.Controls.Add(label32);
             this.pnMaterial.Controls.Add(label31);
@@ -1379,6 +1417,9 @@
             this.pnMaterial.Controls.Add(label13);
             this.pnMaterial.Controls.Add(this.totNi);
             this.pnMaterial.Controls.Add(ssLabel);
+            this.pnMaterial.Controls.Add(label8);
+            this.pnMaterial.Controls.Add(label7);
+            this.pnMaterial.Controls.Add(label5);
             this.pnMaterial.Controls.Add(rsLabel);
             this.pnMaterial.Controls.Add(pigFCDLabel);
             this.pnMaterial.Controls.Add(this.totMo);
@@ -1432,6 +1473,17 @@
             this.pnMaterial.Size = new System.Drawing.Size(870, 563);
             this.pnMaterial.TabIndex = 0;
             // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(296, 19);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(57, 23);
+            this.textBox1.TabIndex = 239;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
             // label29
             // 
             this.label29.AutoSize = true;
@@ -1447,7 +1499,7 @@
             this.totTotal.BackColor = System.Drawing.Color.White;
             this.totTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totTotal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totTotal.Location = new System.Drawing.Point(373, 502);
+            this.totTotal.Location = new System.Drawing.Point(372, 502);
             this.totTotal.Name = "totTotal";
             this.totTotal.ReadOnly = true;
             this.totTotal.Size = new System.Drawing.Size(54, 23);
@@ -2380,5 +2432,6 @@
         private System.Windows.Forms.TextBox mnMaxTextBox;
         private System.Windows.Forms.TextBox siMinTextBox;
         private System.Windows.Forms.TextBox siMaxTextBox;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
