@@ -67,6 +67,7 @@
             System.Windows.Forms.Label label8;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditMatCharging));
             this.startKwHrNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.chargingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.maxTempKwHrNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.btnReadFirstPower = new System.Windows.Forms.Button();
             this.chargeTimeTextBox = new System.Windows.Forms.TextBox();
@@ -74,6 +75,7 @@
             this.powerCompTextBox = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.codeLabel1 = new System.Windows.Forms.Label();
+            this.furnaceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label16 = new System.Windows.Forms.Label();
             this.brandLabel1 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -85,6 +87,7 @@
             this.btnChargeTimeRetrieval = new System.Windows.Forms.Button();
             this.tbProductId = new System.Windows.Forms.TextBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lbHeader = new System.Windows.Forms.Label();
             this.pnToolBar = new System.Windows.Forms.Panel();
@@ -104,8 +107,10 @@
             this.maxTempTimeTextBox = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.lbChargNo = new System.Windows.Forms.Label();
+            this.statusTextBox1 = new MNG.UI.Production.StatusTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.alMinTextBox = new System.Windows.Forms.TextBox();
+            this.chemicalCompositionInFurnaceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.alMaxTextBox = new System.Windows.Forms.TextBox();
             this.pMinTextBox = new System.Windows.Forms.TextBox();
             this.pMaxTextBox = new System.Windows.Forms.TextBox();
@@ -120,6 +125,7 @@
             this.cceMinTextBox = new System.Windows.Forms.TextBox();
             this.cceMaxTextBox = new System.Windows.Forms.TextBox();
             this.revisionTextBox = new System.Windows.Forms.TextBox();
+            this.controlPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.controlPlanIdTextBox = new System.Windows.Forms.TextBox();
             this.codeTextBox1 = new System.Windows.Forms.TextBox();
             this.codeTextBox = new System.Windows.Forms.TextBox();
@@ -171,12 +177,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.chargingBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.chemicalCompositionInFurnaceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.controlPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.statusTextBox1 = new MNG.UI.Production.StatusTextBox();
-            this.furnaceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             c_FCLabel = new System.Windows.Forms.Label();
             c_FCDLabel = new System.Windows.Forms.Label();
             fe_MnLabel = new System.Windows.Forms.Label();
@@ -214,13 +214,18 @@
             label7 = new System.Windows.Forms.Label();
             label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.startKwHrNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxTempKwHrNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxTempNumericUpDown)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.furnaceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.pnToolBar.SuspendLayout();
             this.pnSaveExit.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).BeginInit();
             this.panel3.SuspendLayout();
             this.pnMaterial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addNi)).BeginInit();
@@ -247,11 +252,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.addRemainMetal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.actCFC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.actRemainMetal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.furnaceBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // c_FCLabel
@@ -630,6 +630,10 @@
             this.startKwHrNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.startKwHrNumericUpDown.ValueChanged += new System.EventHandler(this.startKwHrNumericUpDown_ValueChanged);
             // 
+            // chargingBindingSource
+            // 
+            this.chargingBindingSource.DataSource = typeof(MNG.UI.Charging);
+            // 
             // maxTempKwHrNumericUpDown
             // 
             this.maxTempKwHrNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.chargingBindingSource, "MaxTempKwHr", true));
@@ -723,6 +727,10 @@
             this.codeLabel1.Size = new System.Drawing.Size(37, 46);
             this.codeLabel1.TabIndex = 212;
             this.codeLabel1.Text = "C";
+            // 
+            // furnaceBindingSource
+            // 
+            this.furnaceBindingSource.DataSource = typeof(MNG.UI.Furnace);
             // 
             // label16
             // 
@@ -837,6 +845,10 @@
             this.nameTextBox.ReadOnly = true;
             this.nameTextBox.Size = new System.Drawing.Size(213, 23);
             this.nameTextBox.TabIndex = 51;
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(MNG.UI.Product);
             // 
             // timer1
             // 
@@ -1094,6 +1106,24 @@
             this.lbChargNo.TabIndex = 228;
             this.lbChargNo.Text = "label28";
             // 
+            // statusTextBox1
+            // 
+            this.statusTextBox1.BackColor = System.Drawing.Color.White;
+            this.statusTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.statusTextBox1.ColorCompleted = "Black";
+            this.statusTextBox1.ColorRunning = "YellowGreen";
+            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "Status", true));
+            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsCompleted", this.chargingBindingSource, "IsCompleted", true));
+            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("OnStatus", this.chargingBindingSource, "Status", true));
+            this.statusTextBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusTextBox1.IsCompleted = false;
+            this.statusTextBox1.Location = new System.Drawing.Point(427, 25);
+            this.statusTextBox1.Name = "statusTextBox1";
+            this.statusTextBox1.OnStatus = null;
+            this.statusTextBox1.ReadOnly = true;
+            this.statusTextBox1.Size = new System.Drawing.Size(100, 27);
+            this.statusTextBox1.TabIndex = 223;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.alMinTextBox);
@@ -1145,6 +1175,10 @@
             this.alMinTextBox.Size = new System.Drawing.Size(45, 23);
             this.alMinTextBox.TabIndex = 251;
             this.alMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // chemicalCompositionInFurnaceBindingSource
+            // 
+            this.chemicalCompositionInFurnaceBindingSource.DataSource = typeof(MNG.UI.ChemicalCompositionInFurnace);
             // 
             // alMaxTextBox
             // 
@@ -1298,6 +1332,10 @@
             this.revisionTextBox.Name = "revisionTextBox";
             this.revisionTextBox.Size = new System.Drawing.Size(34, 23);
             this.revisionTextBox.TabIndex = 237;
+            // 
+            // controlPlanBindingSource
+            // 
+            this.controlPlanBindingSource.DataSource = typeof(MNG.UI.ControlPlan);
             // 
             // controlPlanIdTextBox
             // 
@@ -2218,44 +2256,6 @@
             this.panel7.Size = new System.Drawing.Size(873, 3);
             this.panel7.TabIndex = 222;
             // 
-            // chargingBindingSource
-            // 
-            this.chargingBindingSource.DataSource = typeof(MNG.UI.Charging);
-            // 
-            // chemicalCompositionInFurnaceBindingSource
-            // 
-            this.chemicalCompositionInFurnaceBindingSource.DataSource = typeof(MNG.UI.ChemicalCompositionInFurnace);
-            // 
-            // controlPlanBindingSource
-            // 
-            this.controlPlanBindingSource.DataSource = typeof(MNG.UI.ControlPlan);
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(MNG.UI.Product);
-            // 
-            // statusTextBox1
-            // 
-            this.statusTextBox1.BackColor = System.Drawing.Color.White;
-            this.statusTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.statusTextBox1.ColorCompleted = "Black";
-            this.statusTextBox1.ColorRunning = "YellowGreen";
-            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "Status", true));
-            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsCompleted", this.chargingBindingSource, "IsCompleted", true));
-            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("OnStatus", this.chargingBindingSource, "Status", true));
-            this.statusTextBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusTextBox1.IsCompleted = false;
-            this.statusTextBox1.Location = new System.Drawing.Point(427, 25);
-            this.statusTextBox1.Name = "statusTextBox1";
-            this.statusTextBox1.OnStatus = null;
-            this.statusTextBox1.ReadOnly = true;
-            this.statusTextBox1.Size = new System.Drawing.Size(100, 27);
-            this.statusTextBox1.TabIndex = 223;
-            // 
-            // furnaceBindingSource
-            // 
-            this.furnaceBindingSource.DataSource = typeof(MNG.UI.Furnace);
-            // 
             // frmEditMatCharging
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2277,9 +2277,12 @@
             this.Text = "frmEditMatCharging";
             this.Load += new System.EventHandler(this.frmEditMatCharging_Load);
             ((System.ComponentModel.ISupportInitialize)(this.startKwHrNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxTempKwHrNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxTempNumericUpDown)).EndInit();
             this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.furnaceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.pnToolBar.ResumeLayout(false);
             this.pnToolBar.PerformLayout();
             this.pnSaveExit.ResumeLayout(false);
@@ -2287,6 +2290,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             this.pnMaterial.ResumeLayout(false);
             this.pnMaterial.PerformLayout();
@@ -2314,11 +2319,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.addRemainMetal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.actCFC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.actRemainMetal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.furnaceBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

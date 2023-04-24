@@ -442,6 +442,10 @@ namespace MNG.UI.Production
                         textBox1.Select(textBox1.Text.Length, 0);
                     }
                 }
+                else
+                {
+                    int len = textBox1.Text.Length;
+                }
             }
             catch (Exception)
             {
