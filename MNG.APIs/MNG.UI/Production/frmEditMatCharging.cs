@@ -432,24 +432,38 @@ namespace MNG.UI.Production
         {
             try
             {
-                if (char.IsDigit(e.KeyChar) || e.KeyChar == 45)
+                if (char.IsDigit(e.KeyChar))
                 {
-                    TextBox t = (TextBox)sender;
-                    int cursorPosition = t.Text.Length - t.SelectionStart;
-
-                    string s = t.Text;
-                    MessageBox.Show(s);
-                    //t.Text = string.Format("{0:#,##0.00}", s);
-
-                    //if (t.Text.Length < 20)
-                    //    t.Text = (decimal.Parse(t.Text.Insert(t.SelectionStart, e.KeyChar.ToString())
-                    //        .Replace(",", "").Replace(".", "")) / 100).ToString("N2");
+                    if (!string.IsNullOrEmpty(textBox1.Text))
+                    {
+                        System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+                        int valueBefore = Int32.Parse(textBox1.Text, System.Globalization.NumberStyles.AllowThousands);
+                        textBox1.Text = String.Format(culture, "{0:N0}", valueBefore);
+                        textBox1.Select(textBox1.Text.Length, 0);
+                    }
                 }
             }
             catch (Exception)
             {
                 throw;
             }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            string s = textBox1.Text;
+
+            if (s.Length > 0)
+            {
+
+            }
+        }
+
+        private void textBox1_CursorChanged(object sender, EventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            tb.Focus();
+            tb.Select(tb.Text.Length, 0);
         }
     }
 }
