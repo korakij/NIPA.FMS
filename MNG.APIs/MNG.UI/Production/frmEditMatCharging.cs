@@ -177,7 +177,8 @@ namespace MNG.UI.Production
 
         private int ReadMeter()
         {
-            var ip = Properties.Settings.Default.PMeter1;
+            //var ip = Properties.Settings.Default.PMeter1;
+            var ip = "192.168.2.108";
             ModbusClient modbusClient = new ModbusClient();
 
             try
