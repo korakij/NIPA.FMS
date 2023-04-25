@@ -614,7 +614,7 @@
             0,
             0});
             this.startKwHrNumericUpDown.Name = "startKwHrNumericUpDown";
-            this.startKwHrNumericUpDown.Size = new System.Drawing.Size(88, 23);
+            this.startKwHrNumericUpDown.Size = new System.Drawing.Size(107, 23);
             this.startKwHrNumericUpDown.TabIndex = 52;
             this.startKwHrNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.startKwHrNumericUpDown.ValueChanged += new System.EventHandler(this.startKwHrNumericUpDown_ValueChanged);
@@ -630,7 +630,7 @@
             0,
             0});
             this.maxTempKwHrNumericUpDown.Name = "maxTempKwHrNumericUpDown";
-            this.maxTempKwHrNumericUpDown.Size = new System.Drawing.Size(88, 23);
+            this.maxTempKwHrNumericUpDown.Size = new System.Drawing.Size(107, 23);
             this.maxTempKwHrNumericUpDown.TabIndex = 53;
             this.maxTempKwHrNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.maxTempKwHrNumericUpDown.ValueChanged += new System.EventHandler(this.maxTempKwHrNumericUpDown_ValueChanged);
@@ -638,7 +638,7 @@
             // btnReadFirstPower
             // 
             this.btnReadFirstPower.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnReadFirstPower.Location = new System.Drawing.Point(521, 148);
+            this.btnReadFirstPower.Location = new System.Drawing.Point(540, 149);
             this.btnReadFirstPower.Name = "btnReadFirstPower";
             this.btnReadFirstPower.Size = new System.Drawing.Size(28, 22);
             this.btnReadFirstPower.TabIndex = 209;
@@ -773,7 +773,7 @@
             // btnReadMaxPower
             // 
             this.btnReadMaxPower.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnReadMaxPower.Location = new System.Drawing.Point(521, 177);
+            this.btnReadMaxPower.Location = new System.Drawing.Point(540, 178);
             this.btnReadMaxPower.Name = "btnReadMaxPower";
             this.btnReadMaxPower.Size = new System.Drawing.Size(28, 22);
             this.btnReadMaxPower.TabIndex = 209;
