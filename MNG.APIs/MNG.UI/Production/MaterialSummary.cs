@@ -23,6 +23,7 @@ namespace MNG.UI.Production
             _kanbans = _k;
         }
 
+        public double? MoltenMetal => _chargings.Select(x => x.MoltenMetal).Sum();
         public double? PigFC => _chargings.Select(x => x.PigFC).Sum();
         public double? PigFCD => _chargings.Select(x => x.PigFCD).Sum();
         public double? RS => _chargings.Select(x => x.Rs).Sum();
@@ -35,7 +36,7 @@ namespace MNG.UI.Production
         public double? HC_Cr => _chargings.Select(x => x.HC_Cr).Sum();
         public double? Fe_Ni => _chargings.Select(x => x.Fe_Ni).Sum();
         public double? Fe_Mo => _chargings.Select(x => x.Fe_Mo).Sum();
-        public double? MatSummary => PigFC + PigFCD + RS + SS + C_FC + C_FCD + Fe_Si + Fe_Mn + HC_Cr + Fe_Ni +
+        public double? MatSummary => MoltenMetal + PigFC + PigFCD + RS + SS + C_FC + C_FCD + Fe_Si + Fe_Mn + HC_Cr + Fe_Ni +
             + HC_Cr + Fe_Ni + Fe_Mo;
 
         public double? Pouring => _kanbans.Select(x => x.Weight).Sum();

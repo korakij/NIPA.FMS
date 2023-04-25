@@ -18,6 +18,7 @@ namespace MNG.Models.Productions
         public float? PigFCD { get; set; }
         public float? RS { get; set; }
         public float? SS { get; set; }
+        public double? MoltenMetal { get; set; }
         public double? RemainedMetal { get; set; }
         public double? Total { get; set; }
 

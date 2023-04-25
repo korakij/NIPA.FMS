@@ -587,6 +587,7 @@
     <None Include="Properties\DataSources\Pouring.datasource" />
     <None Include="Properties\DataSources\PourStandard.datasource" />
     <None Include="Properties\DataSources\Product.datasource" />
+    <None Include="Properties\DataSources\RawMaterial.datasource" />
     <None Include="Properties\DataSources\Setting.datasource" />
     <None Include="Properties\DataSources\ShotBlastStandard.datasource" />
     <None Include="Properties\DataSources\TestChemicalComposition.datasource" />

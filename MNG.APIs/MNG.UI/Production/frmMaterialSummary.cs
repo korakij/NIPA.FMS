@@ -61,18 +61,19 @@ namespace MNG.UI.Production
             
             MaterialSummary MatSum = new MaterialSummary(_c, _k);
 
-            tbSummarySS.Text = MatSum.SS.Value.ToString("#,##0.0");
-            tbSummaryRS.Text = MatSum.RS.Value.ToString("#,##0.0");
-            tbSummaryPIGFC.Text = MatSum.PigFC.Value.ToString("#,##0.0");
-            tbSummaryPIGFCD.Text = MatSum.PigFCD.Value.ToString("#,##0.0");
-            tbSummaryCFC.Text = MatSum.C_FC.Value.ToString("#,##0.0");
-            tbSummaryCFCD.Text = MatSum.C_FCD.Value.ToString("#,##0.0");
-            tbSummarySi.Text = MatSum.Fe_Si.Value.ToString("#,##0.0");
-            tbSummaryMn.Text = MatSum.Fe_Mn.Value.ToString("#,##0.0");
-            tbSummaryCr.Text = MatSum.HC_Cr.Value.ToString("#,##0.0");
-            tbSummaryMo.Text = MatSum.Fe_Mo.Value.ToString("#,##0.0");
-            tbSummaryNi.Text = MatSum.Fe_Ni.Value.ToString("#,##0.0");
-            tbMatSummary.Text = MatSum.MatSummary.Value.ToString("#,##0.0");
+            tbMoltenMetal.Text = string.Format("{0:N1}", MatSum.MoltenMetal);
+            tbSummarySS.Text = string.Format("{0:N1}", MatSum.SS);
+            tbSummaryRS.Text = string.Format("{0:N1}", MatSum.RS);
+            tbSummaryPIGFC.Text = string.Format("{0:N1}", MatSum.PigFC);
+            tbSummaryPIGFCD.Text = string.Format("{0:N1}", MatSum.PigFCD);
+            tbSummaryCFC.Text = string.Format("{0:N1}", MatSum.C_FC);
+            tbSummaryCFCD.Text = string.Format("{0:N1}", MatSum.C_FCD);
+            tbSummarySi.Text = string.Format("{0:N1}", MatSum.Fe_Si);
+            tbSummaryMn.Text = string.Format("{0:N1}", MatSum.Fe_Mn);
+            tbSummaryCr.Text = string.Format("{0:N1}", MatSum.HC_Cr);
+            tbSummaryMo.Text = string.Format("{0:N1}", MatSum.Fe_Mo);
+            tbSummaryNi.Text = string.Format("{0:N1}", MatSum.Fe_Ni);
+            tbMatSummary.Text = string.Format("{0:N1}", MatSum.MatSummary);
 
             tbPouringSummary.Text = MatSum.Pouring.Value.ToString("#,##0.0");
             tbFCDSummary.Text = MatSum.PouringFCD.Value.ToString("#,##0.0");
@@ -92,6 +93,7 @@ namespace MNG.UI.Production
 
         private void ClearUI()
         {
+            tbMoltenMetal.Text = "-";
             tbSummarySS.Text = "-";
             tbSummaryRS.Text = "-";
             tbSummaryPIGFC.Text = "-";
@@ -114,6 +116,11 @@ namespace MNG.UI.Production
             tbStopTime.Text = "-";
             tbIntervalHr.Text = "-";
             tbIntervalMin.Text = "-";
+        }
+
+        private void pnSummary_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

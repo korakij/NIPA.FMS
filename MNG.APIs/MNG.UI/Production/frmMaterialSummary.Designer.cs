@@ -61,6 +61,7 @@
             System.Windows.Forms.Label label19;
             System.Windows.Forms.Label label20;
             System.Windows.Forms.Label label21;
+            System.Windows.Forms.Label label12;
             this.pnSummary = new System.Windows.Forms.Panel();
             this.tbIntervalMin = new System.Windows.Forms.TextBox();
             this.tbIntervalHr = new System.Windows.Forms.TextBox();
@@ -92,6 +93,7 @@
             this.tbSummarySS = new System.Windows.Forms.TextBox();
             this.panel20 = new System.Windows.Forms.Panel();
             this.label60 = new System.Windows.Forms.Label();
+            this.tbMoltenMetal = new System.Windows.Forms.TextBox();
             label27 = new System.Windows.Forms.Label();
             label28 = new System.Windows.Forms.Label();
             label32 = new System.Windows.Forms.Label();
@@ -125,6 +127,7 @@
             label19 = new System.Windows.Forms.Label();
             label20 = new System.Windows.Forms.Label();
             label21 = new System.Windows.Forms.Label();
+            label12 = new System.Windows.Forms.Label();
             this.pnSummary.SuspendLayout();
             this.panel20.SuspendLayout();
             this.SuspendLayout();
@@ -253,18 +256,18 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(22, 116);
+            label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(5, 104);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(46, 21);
+            label1.Size = new System.Drawing.Size(37, 17);
             label1.TabIndex = 38;
             label1.Text = "Time";
             // 
             // label9
             // 
-            label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            label9.Location = new System.Drawing.Point(22, 247);
+            label9.Location = new System.Drawing.Point(5, 221);
             label9.Name = "label9";
             label9.Size = new System.Drawing.Size(180, 29);
             label9.TabIndex = 183;
@@ -273,11 +276,11 @@
             // label43
             // 
             label43.AutoSize = true;
-            label43.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label43.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label43.ForeColor = System.Drawing.SystemColors.ControlText;
-            label43.Location = new System.Drawing.Point(22, 406);
+            label43.Location = new System.Drawing.Point(5, 375);
             label43.Name = "label43";
-            label43.Size = new System.Drawing.Size(141, 21);
+            label43.Size = new System.Drawing.Size(114, 17);
             label43.TabIndex = 184;
             label43.Text = "Metal in Furnace";
             label43.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -287,7 +290,7 @@
             label10.AutoSize = true;
             label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label10.ForeColor = System.Drawing.SystemColors.ControlText;
-            label10.Location = new System.Drawing.Point(34, 441);
+            label10.Location = new System.Drawing.Point(34, 410);
             label10.Name = "label10";
             label10.Size = new System.Drawing.Size(39, 17);
             label10.TabIndex = 187;
@@ -298,7 +301,7 @@
             lbRemainWeight.AutoSize = true;
             lbRemainWeight.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             lbRemainWeight.ForeColor = System.Drawing.SystemColors.ControlText;
-            lbRemainWeight.Location = new System.Drawing.Point(34, 467);
+            lbRemainWeight.Location = new System.Drawing.Point(34, 437);
             lbRemainWeight.Name = "lbRemainWeight";
             lbRemainWeight.Size = new System.Drawing.Size(74, 17);
             lbRemainWeight.TabIndex = 189;
@@ -309,7 +312,7 @@
             lbFreeWeight.AutoSize = true;
             lbFreeWeight.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             lbFreeWeight.ForeColor = System.Drawing.SystemColors.ControlText;
-            lbFreeWeight.Location = new System.Drawing.Point(34, 493);
+            lbFreeWeight.Location = new System.Drawing.Point(34, 464);
             lbFreeWeight.Name = "lbFreeWeight";
             lbFreeWeight.Size = new System.Drawing.Size(34, 17);
             lbFreeWeight.TabIndex = 191;
@@ -320,7 +323,7 @@
             label7.AutoSize = true;
             label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            label7.Location = new System.Drawing.Point(34, 366);
+            label7.Location = new System.Drawing.Point(34, 340);
             label7.Name = "label7";
             label7.Size = new System.Drawing.Size(28, 17);
             label7.TabIndex = 186;
@@ -329,11 +332,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            label2.Location = new System.Drawing.Point(22, 526);
+            label2.Location = new System.Drawing.Point(5, 499);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(120, 21);
+            label2.Size = new System.Drawing.Size(98, 17);
             label2.TabIndex = 197;
             label2.Text = "Materials (kg.)";
             label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -343,7 +346,7 @@
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            label3.Location = new System.Drawing.Point(34, 152);
+            label3.Location = new System.Drawing.Point(35, 126);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(37, 17);
             label3.TabIndex = 186;
@@ -354,7 +357,7 @@
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            label4.Location = new System.Drawing.Point(34, 180);
+            label4.Location = new System.Drawing.Point(35, 155);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(37, 17);
             label4.TabIndex = 186;
@@ -365,7 +368,7 @@
             label5.AutoSize = true;
             label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            label5.Location = new System.Drawing.Point(34, 208);
+            label5.Location = new System.Drawing.Point(35, 183);
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(56, 17);
             label5.TabIndex = 186;
@@ -376,7 +379,7 @@
             label6.AutoSize = true;
             label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            label6.Location = new System.Drawing.Point(34, 282);
+            label6.Location = new System.Drawing.Point(34, 256);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(37, 17);
             label6.TabIndex = 186;
@@ -387,7 +390,7 @@
             label8.AutoSize = true;
             label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            label8.Location = new System.Drawing.Point(34, 310);
+            label8.Location = new System.Drawing.Point(34, 284);
             label8.Name = "label8";
             label8.Size = new System.Drawing.Size(37, 17);
             label8.TabIndex = 186;
@@ -398,7 +401,7 @@
             label11.AutoSize = true;
             label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label11.ForeColor = System.Drawing.SystemColors.ControlText;
-            label11.Location = new System.Drawing.Point(34, 338);
+            label11.Location = new System.Drawing.Point(34, 312);
             label11.Name = "label11";
             label11.Size = new System.Drawing.Size(41, 17);
             label11.TabIndex = 186;
@@ -418,20 +421,20 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label15.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label15.ForeColor = System.Drawing.SystemColors.ControlText;
-            label15.Location = new System.Drawing.Point(22, 911);
+            label15.Location = new System.Drawing.Point(5, 905);
             label15.Name = "label15";
-            label15.Size = new System.Drawing.Size(115, 21);
+            label15.Size = new System.Drawing.Size(94, 17);
             label15.TabIndex = 197;
-            label15.Text = "Molten Metal";
+            label15.Text = "Poured Metal";
             label15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label16
             // 
             label16.AutoSize = true;
             label16.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label16.Location = new System.Drawing.Point(34, 947);
+            label16.Location = new System.Drawing.Point(34, 941);
             label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label16.Name = "label16";
             label16.Size = new System.Drawing.Size(25, 17);
@@ -442,7 +445,7 @@
             // 
             label17.AutoSize = true;
             label17.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label17.Location = new System.Drawing.Point(34, 975);
+            label17.Location = new System.Drawing.Point(34, 969);
             label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label17.Name = "label17";
             label17.Size = new System.Drawing.Size(35, 17);
@@ -453,7 +456,7 @@
             // 
             label18.AutoSize = true;
             label18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label18.Location = new System.Drawing.Point(34, 1003);
+            label18.Location = new System.Drawing.Point(34, 997);
             label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label18.Name = "label18";
             label18.Size = new System.Drawing.Size(39, 17);
@@ -463,11 +466,11 @@
             // label19
             // 
             label19.AutoSize = true;
-            label19.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label19.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label19.ForeColor = System.Drawing.SystemColors.ControlText;
-            label19.Location = new System.Drawing.Point(22, 15);
+            label19.Location = new System.Drawing.Point(5, 15);
             label19.Name = "label19";
-            label19.Size = new System.Drawing.Size(105, 21);
+            label19.Size = new System.Drawing.Size(87, 17);
             label19.TabIndex = 197;
             label19.Text = "Peformance";
             label19.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -476,7 +479,7 @@
             // 
             label20.AutoSize = true;
             label20.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label20.Location = new System.Drawing.Point(34, 53);
+            label20.Location = new System.Drawing.Point(35, 37);
             label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label20.Name = "label20";
             label20.Size = new System.Drawing.Size(53, 17);
@@ -487,7 +490,7 @@
             // 
             label21.AutoSize = true;
             label21.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label21.Location = new System.Drawing.Point(34, 81);
+            label21.Location = new System.Drawing.Point(35, 65);
             label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label21.Name = "label21";
             label21.Size = new System.Drawing.Size(60, 17);
@@ -522,6 +525,7 @@
             this.pnSummary.Controls.Add(label3);
             this.pnSummary.Controls.Add(label7);
             this.pnSummary.Controls.Add(label1);
+            this.pnSummary.Controls.Add(label12);
             this.pnSummary.Controls.Add(label27);
             this.pnSummary.Controls.Add(this.tbSummaryNi);
             this.pnSummary.Controls.Add(this.tbSummaryMn);
@@ -557,6 +561,7 @@
             this.pnSummary.Controls.Add(this.tbSummaryCFC);
             this.pnSummary.Controls.Add(this.tbSummaryRS);
             this.pnSummary.Controls.Add(label33);
+            this.pnSummary.Controls.Add(this.tbMoltenMetal);
             this.pnSummary.Controls.Add(this.tbSummarySS);
             this.pnSummary.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnSummary.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -564,12 +569,13 @@
             this.pnSummary.Name = "pnSummary";
             this.pnSummary.Size = new System.Drawing.Size(230, 1033);
             this.pnSummary.TabIndex = 181;
+            this.pnSummary.Paint += new System.Windows.Forms.PaintEventHandler(this.pnSummary_Paint);
             // 
             // tbIntervalMin
             // 
             this.tbIntervalMin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbIntervalMin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbIntervalMin.Location = new System.Drawing.Point(164, 205);
+            this.tbIntervalMin.Location = new System.Drawing.Point(164, 181);
             this.tbIntervalMin.Name = "tbIntervalMin";
             this.tbIntervalMin.ReadOnly = true;
             this.tbIntervalMin.Size = new System.Drawing.Size(47, 23);
@@ -579,7 +585,7 @@
             // 
             this.tbIntervalHr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbIntervalHr.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbIntervalHr.Location = new System.Drawing.Point(111, 205);
+            this.tbIntervalHr.Location = new System.Drawing.Point(111, 181);
             this.tbIntervalHr.Name = "tbIntervalHr";
             this.tbIntervalHr.ReadOnly = true;
             this.tbIntervalHr.Size = new System.Drawing.Size(47, 23);
@@ -589,7 +595,7 @@
             // 
             this.tbStopTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbStopTime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbStopTime.Location = new System.Drawing.Point(111, 177);
+            this.tbStopTime.Location = new System.Drawing.Point(111, 153);
             this.tbStopTime.Name = "tbStopTime";
             this.tbStopTime.ReadOnly = true;
             this.tbStopTime.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -600,7 +606,7 @@
             // 
             this.tbStartTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbStartTime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbStartTime.Location = new System.Drawing.Point(111, 149);
+            this.tbStartTime.Location = new System.Drawing.Point(111, 124);
             this.tbStartTime.Name = "tbStartTime";
             this.tbStartTime.ReadOnly = true;
             this.tbStartTime.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -611,7 +617,7 @@
             // 
             this.tbFreeWeight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbFreeWeight.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFreeWeight.Location = new System.Drawing.Point(111, 490);
+            this.tbFreeWeight.Location = new System.Drawing.Point(111, 461);
             this.tbFreeWeight.Margin = new System.Windows.Forms.Padding(2);
             this.tbFreeWeight.Name = "tbFreeWeight";
             this.tbFreeWeight.ReadOnly = true;
@@ -623,7 +629,7 @@
             // 
             this.tbRemainWeight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbRemainWeight.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRemainWeight.Location = new System.Drawing.Point(111, 464);
+            this.tbRemainWeight.Location = new System.Drawing.Point(111, 434);
             this.tbRemainWeight.Margin = new System.Windows.Forms.Padding(2);
             this.tbRemainWeight.Name = "tbRemainWeight";
             this.tbRemainWeight.ReadOnly = true;
@@ -635,7 +641,7 @@
             // 
             this.tbKw.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbKw.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbKw.Location = new System.Drawing.Point(111, 335);
+            this.tbKw.Location = new System.Drawing.Point(111, 309);
             this.tbKw.Name = "tbKw";
             this.tbKw.ReadOnly = true;
             this.tbKw.Size = new System.Drawing.Size(83, 23);
@@ -645,7 +651,7 @@
             // 
             this.tbTotalWeight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbTotalWeight.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTotalWeight.Location = new System.Drawing.Point(111, 438);
+            this.tbTotalWeight.Location = new System.Drawing.Point(111, 407);
             this.tbTotalWeight.Margin = new System.Windows.Forms.Padding(2);
             this.tbTotalWeight.Name = "tbTotalWeight";
             this.tbTotalWeight.ReadOnly = true;
@@ -657,7 +663,7 @@
             // 
             this.tbKwHr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbKwHr.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbKwHr.Location = new System.Drawing.Point(111, 363);
+            this.tbKwHr.Location = new System.Drawing.Point(111, 337);
             this.tbKwHr.Name = "tbKwHr";
             this.tbKwHr.ReadOnly = true;
             this.tbKwHr.Size = new System.Drawing.Size(83, 23);
@@ -711,7 +717,7 @@
             // 
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(111, 78);
+            this.textBox7.Location = new System.Drawing.Point(111, 64);
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(58, 23);
@@ -722,7 +728,7 @@
             // 
             this.tbPouringSummary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbPouringSummary.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPouringSummary.Location = new System.Drawing.Point(111, 1000);
+            this.tbPouringSummary.Location = new System.Drawing.Point(111, 994);
             this.tbPouringSummary.Name = "tbPouringSummary";
             this.tbPouringSummary.ReadOnly = true;
             this.tbPouringSummary.Size = new System.Drawing.Size(58, 23);
@@ -733,7 +739,7 @@
             // 
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(111, 50);
+            this.textBox6.Location = new System.Drawing.Point(111, 35);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(58, 23);
@@ -744,7 +750,7 @@
             // 
             this.tbFCDSummary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbFCDSummary.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFCDSummary.Location = new System.Drawing.Point(111, 972);
+            this.tbFCDSummary.Location = new System.Drawing.Point(111, 966);
             this.tbFCDSummary.Name = "tbFCDSummary";
             this.tbFCDSummary.ReadOnly = true;
             this.tbFCDSummary.Size = new System.Drawing.Size(58, 23);
@@ -755,7 +761,7 @@
             // 
             this.tbFCSummary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbFCSummary.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFCSummary.Location = new System.Drawing.Point(111, 944);
+            this.tbFCSummary.Location = new System.Drawing.Point(111, 938);
             this.tbFCSummary.Name = "tbFCSummary";
             this.tbFCSummary.ReadOnly = true;
             this.tbFCSummary.Size = new System.Drawing.Size(58, 23);
@@ -821,7 +827,7 @@
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(111, 307);
+            this.textBox1.Location = new System.Drawing.Point(111, 281);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(83, 23);
@@ -831,7 +837,7 @@
             // 
             this.tbSummaryKwHr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbSummaryKwHr.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSummaryKwHr.Location = new System.Drawing.Point(111, 279);
+            this.tbSummaryKwHr.Location = new System.Drawing.Point(111, 253);
             this.tbSummaryKwHr.Name = "tbSummaryKwHr";
             this.tbSummaryKwHr.ReadOnly = true;
             this.tbSummaryKwHr.Size = new System.Drawing.Size(83, 23);
@@ -893,6 +899,28 @@
             this.label60.Text = "S U M M  A R Y";
             this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // tbMoltenMetal
+            // 
+            this.tbMoltenMetal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbMoltenMetal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMoltenMetal.Location = new System.Drawing.Point(111, 531);
+            this.tbMoltenMetal.Name = "tbMoltenMetal";
+            this.tbMoltenMetal.ReadOnly = true;
+            this.tbMoltenMetal.Size = new System.Drawing.Size(58, 23);
+            this.tbMoltenMetal.TabIndex = 179;
+            this.tbMoltenMetal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label12.Location = new System.Drawing.Point(35, 534);
+            label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label12.Name = "label12";
+            label12.Size = new System.Drawing.Size(44, 17);
+            label12.TabIndex = 24;
+            label12.Text = "Metal";
+            // 
             // frmMaterialSummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -944,5 +972,6 @@
         private System.Windows.Forms.TextBox tbFCDSummary;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbMoltenMetal;
     }
 }

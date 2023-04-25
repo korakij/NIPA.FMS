@@ -5,6 +5,8 @@ using System.Windows.Forms;
 using ASRS.UI;
 using EasyModbus;
 using NPOI.OpenXmlFormats.Dml.Diagram;
+using NPOI.OpenXmlFormats.Spreadsheet;
+using NPOI.SS.Formula.Functions;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace MNG.UI.Production
@@ -55,19 +57,20 @@ namespace MNG.UI.Production
             furnaceBindingSource.DataSource = CurrentFurnace;
             chargingBindingSource.DataSource = CurrentCharge;
 
-            actRemainMetal.Value = Convert.ToDecimal(CurrentCharge.RemainedMetal);
-            actRS.Value = Convert.ToDecimal(CurrentCharge.Rs);
-            actSS.Value = Convert.ToDecimal(CurrentCharge.Ss);
-            actPigFC.Value = Convert.ToDecimal(CurrentCharge.PigFC);
-            actPigFCD.Value = Convert.ToDecimal(CurrentCharge.PigFCD);
-            actCFC.Value = Convert.ToDecimal(CurrentCharge.C_FC);
-            actCFCD.Value = Convert.ToDecimal(CurrentCharge.C_FCD);
-            actSi.Value = Convert.ToDecimal(CurrentCharge.Fe_Si);
-            actMn.Value = Convert.ToDecimal(CurrentCharge.Fe_Mn);
-            actCr.Value = Convert.ToDecimal(CurrentCharge.HC_Cr);
-            actMo.Value = Convert.ToDecimal(CurrentCharge.Fe_Mo);
-            actNi.Value = Convert.ToDecimal(CurrentCharge.Fe_Ni);
-            actTotal.Text = Convert.ToDecimal(CurrentCharge.Total).ToString("#,##0.0");
+            tbCurrentRS.Text = string.Format("{0:N1}", CurrentCharge.Rs);
+            tbCurrentSS.Text = string.Format("{0:N1}", CurrentCharge.Ss);
+            tbCurrentPigFC.Text = string.Format("{0:N1}", CurrentCharge.PigFC);
+            tbCurrentPigFCD.Text = string.Format("{0:N1}", CurrentCharge.PigFCD);
+            tbCurrentCFC.Text = string.Format("{0:N1}", CurrentCharge.C_FC);
+            tbCurrentCFCD.Text = string.Format("{0:N1}", CurrentCharge.C_FCD);
+            tbCurrentFeSi.Text = string.Format("{0:N1}", CurrentCharge.Fe_Si);
+            tbCurrentFeMn.Text = string.Format("{0:N1}", CurrentCharge.Fe_Mn);
+            tbCurrentHcCr.Text = string.Format("{0:N1}", CurrentCharge.HC_Cr);
+            tbCurrentFeMo.Text = string.Format("{0:N1}", CurrentCharge.Fe_Mo);
+            tbCurrentFeNi.Text = string.Format("{0:N1}", CurrentCharge.Fe_Ni);
+            tbCurrentTotal.Text = string.Format("{0:N1}", CurrentCharge.Total);
+
+            actRemainMetal_ValueChanged(this, EventArgs.Empty);
 
             if (CurrentCharge.ProductId != null)
             {
@@ -307,10 +310,7 @@ namespace MNG.UI.Production
             IsPartIdOk = CurrentCharge.ProductId != null ? true : false;
             GetTimeInterval();
 
-            chargingBindingSource.EndEdit();
-            CurrentCharge = chargingBindingSource.Current as Charging;
-
-            CurrentCharge.RemainedMetal = totRemainMetal.Text == "" ? 0 : Convert.ToDouble(totRemainMetal.Text);
+            CurrentCharge.MoltenMetal = totMetal.Text == "" ? 0 : Convert.ToDouble(totMetal.Text);
             CurrentCharge.Rs = totRS.Text == "" ? 0 : Convert.ToDouble(totRS.Text);
             CurrentCharge.Ss = totSS.Text == "" ? 0 : Convert.ToDouble(totSS.Text);
             CurrentCharge.PigFC = totPigFC.Text == "" ? 0 : Convert.ToDouble(totPigFC.Text);
@@ -364,29 +364,60 @@ namespace MNG.UI.Production
 
         private void actRemainMetal_ValueChanged(object sender, EventArgs e)
         {
-            totRemainMetal.Text = Convert.ToDouble(actRemainMetal.Value + addRemainMetal.Value).ToString("#,##0.0");
-            totRS.Text = Convert.ToDouble(actRS.Value + addRS.Value).ToString("#,##0.0");
-            totSS.Text = Convert.ToDouble(actSS.Value + addSS.Value).ToString("#,##0.0");
-            totPigFC.Text = Convert.ToDouble(actPigFC.Value + addPigFC.Value).ToString("#,##0.0");
-            totPigFCD.Text = Convert.ToDouble(actPigFCD.Value + addPigFCD.Value).ToString("#,##0.0");
-            totCFC.Text = Convert.ToDouble(actCFC.Value + addCFC.Value).ToString("#,##0.0");
-            totCFCD.Text = Convert.ToDouble(actCFCD.Value + addCFCD.Value).ToString("#,##0.0");
-            totSi.Text = Convert.ToDouble(actSi.Value + addSi.Value).ToString("#,##0.0");
-            totMn.Text = Convert.ToDouble(actMn.Value + addMn.Value).ToString("#,##0.00");
-            totCr.Text = Convert.ToDouble(actCr.Value + addCr.Value).ToString("#,##0.0");
-            totMo.Text = Convert.ToDouble(actMo.Value + addMo.Value).ToString("#,##0.0");
-            totNi.Text = Convert.ToDouble(actNi.Value + addNi.Value).ToString("#,##0.0");
+            if (CurrentCharge == null)
+                return;
 
-            actTotal.Text = Convert.ToDouble(actRS.Value + actSS.Value + actPigFC.Value +
-                actPigFCD.Value + actCFC.Value + actCFCD.Value + actSi.Value + actMn.Value + actCr.Value +
-                actMo.Value + actNi.Value).ToString("#,##0.0");
+            CurrentCharge.Total = CurrentCharge.Rs ?? 0 + CurrentCharge.Ss ?? 0+ CurrentCharge.PigFC ?? 0+
+                    CurrentCharge.PigFCD ?? 0 + CurrentCharge.C_FC ?? 0 + CurrentCharge.C_FCD ?? 0 + CurrentCharge.Fe_Si ?? 0 + CurrentCharge.Fe_Mn ?? 0 +
+                    CurrentCharge.HC_Cr ?? 0 + CurrentCharge.Fe_Mo ?? 0 + CurrentCharge.Fe_Ni ?? 0;
 
-            addTotal.Text = Convert.ToDouble(addRS.Value + addSS.Value + addPigFC.Value +
-                addPigFCD.Value + addCFC.Value + addCFCD.Value + addSi.Value + addMn.Value + addCr.Value +
-                addMo.Value + addNi.Value).ToString("#,##0.0");
+            tbCurrentTotal.Text = string.Format("{0:N1}", CurrentCharge.Total);
 
-            var tot = Convert.ToDouble(actTotal.Text) + Convert.ToDouble(addTotal.Text);
-            totTotal.Text = tot.ToString("#,##0.0");
+            var addMat = addMetal.Value + addRS.Value + addSS.Value + addPigFC.Value + addPigFCD.Value + addCFC.Value + addCFCD.Value +
+                    addSi.Value + addMn.Value + addCr.Value + addMo.Value + addNi.Value;
+
+            addTotal.Text = string.Format("{0:N1}", addMat);
+
+            var ttMetal = Convert.ToDouble(addMetal.Value);
+            totMetal.Text = string.Format("{0:N1}", ttMetal);
+
+            var ttRS = CurrentCharge.Rs ?? 0 + Convert.ToDouble(addRS.Value);
+            totRS.Text = string.Format("{0:N1}", ttRS);
+
+            var ttSS = CurrentCharge.Ss ?? 0 + Convert.ToDouble(addSS.Value);
+            totSS.Text = string.Format("{0:N1}", ttSS);
+
+            var ttPigFC = CurrentCharge.PigFC ?? 0 + Convert.ToDouble(addPigFC.Value);
+            totPigFC.Text = string.Format("{0:N1}", ttPigFC);
+
+            var ttPigFCD = CurrentCharge.PigFCD ?? 0 + Convert.ToDouble(addPigFCD.Value);
+            totPigFCD.Text = string.Format("{0:N1}", ttPigFCD);
+
+            var ttCFC = CurrentCharge.C_FC ?? 0 + Convert.ToDouble(addCFC.Value);
+            totCFC.Text = string.Format("{0:N1}", ttCFC);
+
+            var ttCFCD = CurrentCharge.C_FCD ?? 0 + Convert.ToDouble(addCFCD.Value);
+            totCFCD.Text = string.Format("{0:N1}", ttCFCD);
+
+            var ttFeSi = CurrentCharge.Fe_Si ?? 0 + Convert.ToDouble(addSi.Value);
+            totSi.Text = string.Format("{0:N1}", ttFeSi);
+
+            var ttFeMn = CurrentCharge.Fe_Mn ?? 0 + Convert.ToDouble(addMn.Value);
+            totMn.Text = string.Format("{0:N1}", ttFeMn);
+
+            var ttHcCr = CurrentCharge.HC_Cr ?? 0 + Convert.ToDouble(addCr.Value);
+            totCr.Text = string.Format("{0:N1}", ttHcCr);
+
+            var ttFeMo = CurrentCharge.Fe_Mo ?? 0 + Convert.ToDouble(addMo.Value);
+            totMo.Text = string.Format("{0:N1}", ttFeMo);
+
+            var ttFeNi = CurrentCharge.Fe_Ni ?? 0 + Convert.ToDouble(addNi.Value);
+            totNi.Text = string.Format("{0:N1}", ttFeNi);
+
+            var ttMat = ttMetal + ttRS + ttSS + ttPigFC + ttPigFCD + ttCFC + ttCFCD +
+            ttFeSi + ttFeMn + ttHcCr + ttFeMo + ttFeNi;
+
+            totTotal.Text = string.Format("{0:N1}", ttMat);
         }
 
         private void btnCalculator_Click(object sender, EventArgs e)
@@ -402,7 +433,7 @@ namespace MNG.UI.Production
 
             if (result == DialogResult.OK)
             {
-                addRemainMetal.Value = Convert.ToDecimal(fcal.Material.RemainedMetal);
+                addMetal.Value = Convert.ToDecimal(fcal.Material.RemainedMetal);
                 addRS.Value = Convert.ToDecimal(fcal.Material.Rs);
                 addSS.Value = Convert.ToDecimal(fcal.Material.Ss);
                 addPigFC.Value = Convert.ToDecimal(fcal.Material.PigFC);
@@ -421,53 +452,6 @@ namespace MNG.UI.Production
         private void btnRefresh_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            try
-            {
-                if (char.IsDigit(e.KeyChar))
-                {
-                    if (!string.IsNullOrEmpty(textBox1.Text))
-                    {
-                        System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
-                        int valueBefore = Int32.Parse(textBox1.Text, System.Globalization.NumberStyles.AllowThousands);
-                        textBox1.Text = String.Format(culture, "{0:N0}", valueBefore);
-                        textBox1.Select(textBox1.Text.Length, 0);
-                    }
-                }
-                else
-                {
-                    int len = textBox1.Text.Length;
-                }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
-        private void textBox1_Leave(object sender, EventArgs e)
-        {
-            string s = textBox1.Text;
-
-            if (s.Length > 0)
-            {
-
-            }
-        }
-
-        private void textBox1_CursorChanged(object sender, EventArgs e)
-        {
-            TextBox tb = (TextBox)sender;
-            tb.Focus();
-            tb.Select(tb.Text.Length, 0);
         }
     }
 }

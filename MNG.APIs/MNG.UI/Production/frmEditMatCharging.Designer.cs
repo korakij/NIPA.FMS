@@ -67,7 +67,6 @@
             System.Windows.Forms.Label label8;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditMatCharging));
             this.startKwHrNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.chargingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.maxTempKwHrNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.btnReadFirstPower = new System.Windows.Forms.Button();
             this.chargeTimeTextBox = new System.Windows.Forms.TextBox();
@@ -75,7 +74,6 @@
             this.powerCompTextBox = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.codeLabel1 = new System.Windows.Forms.Label();
-            this.furnaceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label16 = new System.Windows.Forms.Label();
             this.brandLabel1 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -87,7 +85,6 @@
             this.btnChargeTimeRetrieval = new System.Windows.Forms.Button();
             this.tbProductId = new System.Windows.Forms.TextBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lbHeader = new System.Windows.Forms.Label();
             this.pnToolBar = new System.Windows.Forms.Panel();
@@ -107,10 +104,8 @@
             this.maxTempTimeTextBox = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.lbChargNo = new System.Windows.Forms.Label();
-            this.statusTextBox1 = new MNG.UI.Production.StatusTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.alMinTextBox = new System.Windows.Forms.TextBox();
-            this.chemicalCompositionInFurnaceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.alMaxTextBox = new System.Windows.Forms.TextBox();
             this.pMinTextBox = new System.Windows.Forms.TextBox();
             this.pMaxTextBox = new System.Windows.Forms.TextBox();
@@ -125,7 +120,6 @@
             this.cceMinTextBox = new System.Windows.Forms.TextBox();
             this.cceMaxTextBox = new System.Windows.Forms.TextBox();
             this.revisionTextBox = new System.Windows.Forms.TextBox();
-            this.controlPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.controlPlanIdTextBox = new System.Windows.Forms.TextBox();
             this.codeTextBox1 = new System.Windows.Forms.TextBox();
             this.codeTextBox = new System.Windows.Forms.TextBox();
@@ -133,40 +127,26 @@
             this.label28 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnMaterial = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.totTotal = new System.Windows.Forms.TextBox();
-            this.actTotal = new System.Windows.Forms.TextBox();
             this.addTotal = new System.Windows.Forms.TextBox();
             this.totNi = new System.Windows.Forms.TextBox();
             this.totMo = new System.Windows.Forms.TextBox();
             this.addNi = new System.Windows.Forms.NumericUpDown();
             this.addMo = new System.Windows.Forms.NumericUpDown();
-            this.actNi = new System.Windows.Forms.NumericUpDown();
             this.addCr = new System.Windows.Forms.NumericUpDown();
-            this.actMo = new System.Windows.Forms.NumericUpDown();
             this.addPigFCD = new System.Windows.Forms.NumericUpDown();
-            this.actCr = new System.Windows.Forms.NumericUpDown();
             this.addMn = new System.Windows.Forms.NumericUpDown();
-            this.actPigFCD = new System.Windows.Forms.NumericUpDown();
             this.addPigFC = new System.Windows.Forms.NumericUpDown();
-            this.actMn = new System.Windows.Forms.NumericUpDown();
             this.addSi = new System.Windows.Forms.NumericUpDown();
-            this.actPigFC = new System.Windows.Forms.NumericUpDown();
             this.addSS = new System.Windows.Forms.NumericUpDown();
-            this.actSi = new System.Windows.Forms.NumericUpDown();
             this.addCFCD = new System.Windows.Forms.NumericUpDown();
-            this.actSS = new System.Windows.Forms.NumericUpDown();
             this.addRS = new System.Windows.Forms.NumericUpDown();
-            this.actCFCD = new System.Windows.Forms.NumericUpDown();
             this.addCFC = new System.Windows.Forms.NumericUpDown();
-            this.actRS = new System.Windows.Forms.NumericUpDown();
-            this.addRemainMetal = new System.Windows.Forms.NumericUpDown();
-            this.actCFC = new System.Windows.Forms.NumericUpDown();
-            this.actRemainMetal = new System.Windows.Forms.NumericUpDown();
+            this.addMetal = new System.Windows.Forms.NumericUpDown();
             this.totCr = new System.Windows.Forms.TextBox();
             this.totPigFCD = new System.Windows.Forms.TextBox();
-            this.totRemainMetal = new System.Windows.Forms.TextBox();
+            this.totMetal = new System.Windows.Forms.TextBox();
             this.totCFC = new System.Windows.Forms.TextBox();
             this.totMn = new System.Windows.Forms.TextBox();
             this.totPigFC = new System.Windows.Forms.TextBox();
@@ -177,6 +157,25 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.tbCurrentTotal = new System.Windows.Forms.TextBox();
+            this.tbCurrentSS = new System.Windows.Forms.TextBox();
+            this.tbCurrentRS = new System.Windows.Forms.TextBox();
+            this.tbCurrentPigFCD = new System.Windows.Forms.TextBox();
+            this.tbCurrentPigFC = new System.Windows.Forms.TextBox();
+            this.tbCurrentHcCr = new System.Windows.Forms.TextBox();
+            this.tbCurrentFeSi = new System.Windows.Forms.TextBox();
+            this.tbCurrentFeNi = new System.Windows.Forms.TextBox();
+            this.tbCurrentFeMo = new System.Windows.Forms.TextBox();
+            this.tbCurrentFeMn = new System.Windows.Forms.TextBox();
+            this.tbCurrentCFCD = new System.Windows.Forms.TextBox();
+            this.tbCurrentCFC = new System.Windows.Forms.TextBox();
+            this.rawMaterialBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chargingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chemicalCompositionInFurnaceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.controlPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.statusTextBox1 = new MNG.UI.Production.StatusTextBox();
+            this.furnaceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             c_FCLabel = new System.Windows.Forms.Label();
             c_FCDLabel = new System.Windows.Forms.Label();
             fe_MnLabel = new System.Windows.Forms.Label();
@@ -214,44 +213,33 @@
             label7 = new System.Windows.Forms.Label();
             label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.startKwHrNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxTempKwHrNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxTempNumericUpDown)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.furnaceBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.pnToolBar.SuspendLayout();
             this.pnSaveExit.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).BeginInit();
             this.panel3.SuspendLayout();
             this.pnMaterial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addNi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addMo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actNi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addCr)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actMo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addPigFCD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actCr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addMn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actPigFCD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addPigFC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actMn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addSi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actPigFC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addSS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actSi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addCFCD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actSS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addRS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actCFCD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addCFC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actRS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addRemainMetal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actCFC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actRemainMetal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addMetal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rawMaterialBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.furnaceBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // c_FCLabel
@@ -438,11 +426,11 @@
             // 
             label13.AutoSize = true;
             label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label13.Location = new System.Drawing.Point(79, 95);
+            label13.Location = new System.Drawing.Point(79, 96);
             label13.Name = "label13";
-            label13.Size = new System.Drawing.Size(97, 17);
+            label13.Size = new System.Drawing.Size(92, 17);
             label13.TabIndex = 35;
-            label13.Text = "Remain Metal";
+            label13.Text = "Molten Metal";
             // 
             // label20
             // 
@@ -630,10 +618,6 @@
             this.startKwHrNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.startKwHrNumericUpDown.ValueChanged += new System.EventHandler(this.startKwHrNumericUpDown_ValueChanged);
             // 
-            // chargingBindingSource
-            // 
-            this.chargingBindingSource.DataSource = typeof(MNG.UI.Charging);
-            // 
             // maxTempKwHrNumericUpDown
             // 
             this.maxTempKwHrNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.chargingBindingSource, "MaxTempKwHr", true));
@@ -727,10 +711,6 @@
             this.codeLabel1.Size = new System.Drawing.Size(37, 46);
             this.codeLabel1.TabIndex = 212;
             this.codeLabel1.Text = "C";
-            // 
-            // furnaceBindingSource
-            // 
-            this.furnaceBindingSource.DataSource = typeof(MNG.UI.Furnace);
             // 
             // label16
             // 
@@ -845,10 +825,6 @@
             this.nameTextBox.ReadOnly = true;
             this.nameTextBox.Size = new System.Drawing.Size(213, 23);
             this.nameTextBox.TabIndex = 51;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(MNG.UI.Product);
             // 
             // timer1
             // 
@@ -1106,24 +1082,6 @@
             this.lbChargNo.TabIndex = 228;
             this.lbChargNo.Text = "label28";
             // 
-            // statusTextBox1
-            // 
-            this.statusTextBox1.BackColor = System.Drawing.Color.White;
-            this.statusTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.statusTextBox1.ColorCompleted = "Black";
-            this.statusTextBox1.ColorRunning = "YellowGreen";
-            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "Status", true));
-            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsCompleted", this.chargingBindingSource, "IsCompleted", true));
-            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("OnStatus", this.chargingBindingSource, "Status", true));
-            this.statusTextBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusTextBox1.IsCompleted = false;
-            this.statusTextBox1.Location = new System.Drawing.Point(427, 25);
-            this.statusTextBox1.Name = "statusTextBox1";
-            this.statusTextBox1.OnStatus = null;
-            this.statusTextBox1.ReadOnly = true;
-            this.statusTextBox1.Size = new System.Drawing.Size(100, 27);
-            this.statusTextBox1.TabIndex = 223;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.alMinTextBox);
@@ -1175,10 +1133,6 @@
             this.alMinTextBox.Size = new System.Drawing.Size(45, 23);
             this.alMinTextBox.TabIndex = 251;
             this.alMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // chemicalCompositionInFurnaceBindingSource
-            // 
-            this.chemicalCompositionInFurnaceBindingSource.DataSource = typeof(MNG.UI.ChemicalCompositionInFurnace);
             // 
             // alMaxTextBox
             // 
@@ -1333,10 +1287,6 @@
             this.revisionTextBox.Size = new System.Drawing.Size(34, 23);
             this.revisionTextBox.TabIndex = 237;
             // 
-            // controlPlanBindingSource
-            // 
-            this.controlPlanBindingSource.DataSource = typeof(MNG.UI.ControlPlan);
-            // 
             // controlPlanIdTextBox
             // 
             this.controlPlanIdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1406,13 +1356,23 @@
             // pnMaterial
             // 
             this.pnMaterial.AutoScroll = true;
-            this.pnMaterial.Controls.Add(this.textBox1);
+            this.pnMaterial.Controls.Add(this.tbCurrentCFC);
+            this.pnMaterial.Controls.Add(this.tbCurrentCFCD);
+            this.pnMaterial.Controls.Add(this.tbCurrentFeMn);
+            this.pnMaterial.Controls.Add(this.tbCurrentFeMo);
+            this.pnMaterial.Controls.Add(this.tbCurrentFeNi);
+            this.pnMaterial.Controls.Add(this.tbCurrentFeSi);
+            this.pnMaterial.Controls.Add(this.tbCurrentHcCr);
+            this.pnMaterial.Controls.Add(this.tbCurrentPigFC);
+            this.pnMaterial.Controls.Add(this.tbCurrentPigFCD);
+            this.pnMaterial.Controls.Add(this.tbCurrentRS);
+            this.pnMaterial.Controls.Add(this.tbCurrentSS);
+            this.pnMaterial.Controls.Add(this.tbCurrentTotal);
             this.pnMaterial.Controls.Add(label33);
             this.pnMaterial.Controls.Add(label32);
             this.pnMaterial.Controls.Add(label31);
             this.pnMaterial.Controls.Add(this.label29);
             this.pnMaterial.Controls.Add(this.totTotal);
-            this.pnMaterial.Controls.Add(this.actTotal);
             this.pnMaterial.Controls.Add(this.addTotal);
             this.pnMaterial.Controls.Add(label13);
             this.pnMaterial.Controls.Add(this.totNi);
@@ -1427,32 +1387,20 @@
             this.pnMaterial.Controls.Add(hC_CrLabel);
             this.pnMaterial.Controls.Add(this.addNi);
             this.pnMaterial.Controls.Add(this.addMo);
-            this.pnMaterial.Controls.Add(this.actNi);
             this.pnMaterial.Controls.Add(this.addCr);
-            this.pnMaterial.Controls.Add(this.actMo);
             this.pnMaterial.Controls.Add(this.addPigFCD);
-            this.pnMaterial.Controls.Add(this.actCr);
             this.pnMaterial.Controls.Add(this.addMn);
-            this.pnMaterial.Controls.Add(this.actPigFCD);
             this.pnMaterial.Controls.Add(this.addPigFC);
-            this.pnMaterial.Controls.Add(this.actMn);
             this.pnMaterial.Controls.Add(this.addSi);
-            this.pnMaterial.Controls.Add(this.actPigFC);
             this.pnMaterial.Controls.Add(this.addSS);
-            this.pnMaterial.Controls.Add(this.actSi);
             this.pnMaterial.Controls.Add(this.addCFCD);
-            this.pnMaterial.Controls.Add(this.actSS);
             this.pnMaterial.Controls.Add(this.addRS);
-            this.pnMaterial.Controls.Add(this.actCFCD);
             this.pnMaterial.Controls.Add(this.addCFC);
-            this.pnMaterial.Controls.Add(this.actRS);
-            this.pnMaterial.Controls.Add(this.addRemainMetal);
-            this.pnMaterial.Controls.Add(this.actCFC);
-            this.pnMaterial.Controls.Add(this.actRemainMetal);
+            this.pnMaterial.Controls.Add(this.addMetal);
             this.pnMaterial.Controls.Add(fe_MnLabel);
             this.pnMaterial.Controls.Add(this.totCr);
             this.pnMaterial.Controls.Add(this.totPigFCD);
-            this.pnMaterial.Controls.Add(this.totRemainMetal);
+            this.pnMaterial.Controls.Add(this.totMetal);
             this.pnMaterial.Controls.Add(this.totCFC);
             this.pnMaterial.Controls.Add(c_FCLabel);
             this.pnMaterial.Controls.Add(fe_MoLabel);
@@ -1473,19 +1421,6 @@
             this.pnMaterial.Size = new System.Drawing.Size(870, 563);
             this.pnMaterial.TabIndex = 0;
             // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(296, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(57, 23);
-            this.textBox1.TabIndex = 239;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox1.CursorChanged += new System.EventHandler(this.textBox1_CursorChanged);
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
-            // 
             // label29
             // 
             this.label29.AutoSize = true;
@@ -1501,32 +1436,19 @@
             this.totTotal.BackColor = System.Drawing.Color.White;
             this.totTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totTotal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totTotal.Location = new System.Drawing.Point(372, 502);
+            this.totTotal.Location = new System.Drawing.Point(372, 504);
             this.totTotal.Name = "totTotal";
             this.totTotal.ReadOnly = true;
             this.totTotal.Size = new System.Drawing.Size(54, 23);
             this.totTotal.TabIndex = 238;
             this.totTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // actTotal
-            // 
-            this.actTotal.BackColor = System.Drawing.Color.White;
-            this.actTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.actTotal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actTotal.Location = new System.Drawing.Point(214, 502);
-            this.actTotal.Name = "actTotal";
-            this.actTotal.ReadOnly = true;
-            this.actTotal.Size = new System.Drawing.Size(56, 23);
-            this.actTotal.TabIndex = 238;
-            this.actTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // addTotal
             // 
             this.addTotal.BackColor = System.Drawing.Color.White;
             this.addTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.addTotal.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "Total", true));
             this.addTotal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addTotal.Location = new System.Drawing.Point(296, 503);
+            this.addTotal.Location = new System.Drawing.Point(296, 504);
             this.addTotal.Name = "addTotal";
             this.addTotal.ReadOnly = true;
             this.addTotal.Size = new System.Drawing.Size(57, 23);
@@ -1538,7 +1460,7 @@
             this.totNi.BackColor = System.Drawing.Color.White;
             this.totNi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totNi.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totNi.Location = new System.Drawing.Point(372, 451);
+            this.totNi.Location = new System.Drawing.Point(372, 457);
             this.totNi.Name = "totNi";
             this.totNi.ReadOnly = true;
             this.totNi.Size = new System.Drawing.Size(54, 23);
@@ -1550,7 +1472,7 @@
             this.totMo.BackColor = System.Drawing.Color.White;
             this.totMo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totMo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totMo.Location = new System.Drawing.Point(372, 423);
+            this.totMo.Location = new System.Drawing.Point(372, 428);
             this.totMo.Name = "totMo";
             this.totMo.ReadOnly = true;
             this.totMo.Size = new System.Drawing.Size(54, 23);
@@ -1566,7 +1488,7 @@
             0,
             0,
             65536});
-            this.addNi.Location = new System.Drawing.Point(296, 451);
+            this.addNi.Location = new System.Drawing.Point(296, 457);
             this.addNi.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -1588,7 +1510,7 @@
             0,
             0,
             65536});
-            this.addMo.Location = new System.Drawing.Point(296, 423);
+            this.addMo.Location = new System.Drawing.Point(296, 428);
             this.addMo.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -1601,30 +1523,6 @@
             this.addMo.ThousandsSeparator = true;
             this.addMo.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
             // 
-            // actNi
-            // 
-            this.actNi.BackColor = System.Drawing.Color.White;
-            this.actNi.DecimalPlaces = 1;
-            this.actNi.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actNi.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.actNi.Location = new System.Drawing.Point(214, 451);
-            this.actNi.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.actNi.Name = "actNi";
-            this.actNi.ReadOnly = true;
-            this.actNi.Size = new System.Drawing.Size(70, 23);
-            this.actNi.TabIndex = 214;
-            this.actNi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.actNi.ThousandsSeparator = true;
-            this.actNi.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
-            // 
             // addCr
             // 
             this.addCr.DecimalPlaces = 1;
@@ -1634,7 +1532,7 @@
             0,
             0,
             65536});
-            this.addCr.Location = new System.Drawing.Point(296, 395);
+            this.addCr.Location = new System.Drawing.Point(296, 399);
             this.addCr.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -1646,30 +1544,6 @@
             this.addCr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.addCr.ThousandsSeparator = true;
             this.addCr.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
-            // 
-            // actMo
-            // 
-            this.actMo.BackColor = System.Drawing.Color.White;
-            this.actMo.DecimalPlaces = 1;
-            this.actMo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actMo.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.actMo.Location = new System.Drawing.Point(214, 423);
-            this.actMo.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.actMo.Name = "actMo";
-            this.actMo.ReadOnly = true;
-            this.actMo.Size = new System.Drawing.Size(70, 23);
-            this.actMo.TabIndex = 214;
-            this.actMo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.actMo.ThousandsSeparator = true;
-            this.actMo.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
             // 
             // addPigFCD
             // 
@@ -1693,30 +1567,6 @@
             this.addPigFCD.ThousandsSeparator = true;
             this.addPigFCD.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
             // 
-            // actCr
-            // 
-            this.actCr.BackColor = System.Drawing.Color.White;
-            this.actCr.DecimalPlaces = 1;
-            this.actCr.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actCr.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.actCr.Location = new System.Drawing.Point(214, 395);
-            this.actCr.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.actCr.Name = "actCr";
-            this.actCr.ReadOnly = true;
-            this.actCr.Size = new System.Drawing.Size(70, 23);
-            this.actCr.TabIndex = 214;
-            this.actCr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.actCr.ThousandsSeparator = true;
-            this.actCr.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
-            // 
             // addMn
             // 
             this.addMn.DecimalPlaces = 1;
@@ -1726,7 +1576,7 @@
             0,
             0,
             65536});
-            this.addMn.Location = new System.Drawing.Point(296, 367);
+            this.addMn.Location = new System.Drawing.Point(296, 370);
             this.addMn.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -1738,30 +1588,6 @@
             this.addMn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.addMn.ThousandsSeparator = true;
             this.addMn.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
-            // 
-            // actPigFCD
-            // 
-            this.actPigFCD.BackColor = System.Drawing.Color.White;
-            this.actPigFCD.DecimalPlaces = 1;
-            this.actPigFCD.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actPigFCD.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.actPigFCD.Location = new System.Drawing.Point(214, 233);
-            this.actPigFCD.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.actPigFCD.Name = "actPigFCD";
-            this.actPigFCD.ReadOnly = true;
-            this.actPigFCD.Size = new System.Drawing.Size(70, 23);
-            this.actPigFCD.TabIndex = 214;
-            this.actPigFCD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.actPigFCD.ThousandsSeparator = true;
-            this.actPigFCD.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
             // 
             // addPigFC
             // 
@@ -1785,30 +1611,6 @@
             this.addPigFC.ThousandsSeparator = true;
             this.addPigFC.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
             // 
-            // actMn
-            // 
-            this.actMn.BackColor = System.Drawing.Color.White;
-            this.actMn.DecimalPlaces = 1;
-            this.actMn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actMn.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.actMn.Location = new System.Drawing.Point(214, 367);
-            this.actMn.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.actMn.Name = "actMn";
-            this.actMn.ReadOnly = true;
-            this.actMn.Size = new System.Drawing.Size(70, 23);
-            this.actMn.TabIndex = 214;
-            this.actMn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.actMn.ThousandsSeparator = true;
-            this.actMn.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
-            // 
             // addSi
             // 
             this.addSi.DecimalPlaces = 1;
@@ -1818,7 +1620,7 @@
             0,
             0,
             65536});
-            this.addSi.Location = new System.Drawing.Point(296, 339);
+            this.addSi.Location = new System.Drawing.Point(296, 341);
             this.addSi.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -1830,30 +1632,6 @@
             this.addSi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.addSi.ThousandsSeparator = true;
             this.addSi.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
-            // 
-            // actPigFC
-            // 
-            this.actPigFC.BackColor = System.Drawing.Color.White;
-            this.actPigFC.DecimalPlaces = 1;
-            this.actPigFC.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actPigFC.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.actPigFC.Location = new System.Drawing.Point(214, 205);
-            this.actPigFC.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.actPigFC.Name = "actPigFC";
-            this.actPigFC.ReadOnly = true;
-            this.actPigFC.Size = new System.Drawing.Size(70, 23);
-            this.actPigFC.TabIndex = 214;
-            this.actPigFC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.actPigFC.ThousandsSeparator = true;
-            this.actPigFC.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
             // 
             // addSS
             // 
@@ -1877,30 +1655,6 @@
             this.addSS.ThousandsSeparator = true;
             this.addSS.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
             // 
-            // actSi
-            // 
-            this.actSi.BackColor = System.Drawing.Color.White;
-            this.actSi.DecimalPlaces = 1;
-            this.actSi.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actSi.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.actSi.Location = new System.Drawing.Point(214, 339);
-            this.actSi.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.actSi.Name = "actSi";
-            this.actSi.ReadOnly = true;
-            this.actSi.Size = new System.Drawing.Size(70, 23);
-            this.actSi.TabIndex = 214;
-            this.actSi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.actSi.ThousandsSeparator = true;
-            this.actSi.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
-            // 
             // addCFCD
             // 
             this.addCFCD.DecimalPlaces = 1;
@@ -1910,7 +1664,7 @@
             0,
             0,
             65536});
-            this.addCFCD.Location = new System.Drawing.Point(296, 311);
+            this.addCFCD.Location = new System.Drawing.Point(296, 312);
             this.addCFCD.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -1922,30 +1676,6 @@
             this.addCFCD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.addCFCD.ThousandsSeparator = true;
             this.addCFCD.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
-            // 
-            // actSS
-            // 
-            this.actSS.BackColor = System.Drawing.Color.White;
-            this.actSS.DecimalPlaces = 1;
-            this.actSS.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actSS.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.actSS.Location = new System.Drawing.Point(214, 176);
-            this.actSS.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.actSS.Name = "actSS";
-            this.actSS.ReadOnly = true;
-            this.actSS.Size = new System.Drawing.Size(70, 23);
-            this.actSS.TabIndex = 214;
-            this.actSS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.actSS.ThousandsSeparator = true;
-            this.actSS.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
             // 
             // addRS
             // 
@@ -1969,30 +1699,6 @@
             this.addRS.ThousandsSeparator = true;
             this.addRS.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
             // 
-            // actCFCD
-            // 
-            this.actCFCD.BackColor = System.Drawing.Color.White;
-            this.actCFCD.DecimalPlaces = 1;
-            this.actCFCD.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actCFCD.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.actCFCD.Location = new System.Drawing.Point(214, 311);
-            this.actCFCD.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.actCFCD.Name = "actCFCD";
-            this.actCFCD.ReadOnly = true;
-            this.actCFCD.Size = new System.Drawing.Size(70, 23);
-            this.actCFCD.TabIndex = 214;
-            this.actCFCD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.actCFCD.ThousandsSeparator = true;
-            this.actCFCD.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
-            // 
             // addCFC
             // 
             this.addCFC.DecimalPlaces = 1;
@@ -2015,106 +1721,34 @@
             this.addCFC.ThousandsSeparator = true;
             this.addCFC.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
             // 
-            // actRS
+            // addMetal
             // 
-            this.actRS.BackColor = System.Drawing.Color.White;
-            this.actRS.DecimalPlaces = 1;
-            this.actRS.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actRS.Increment = new decimal(new int[] {
+            this.addMetal.DecimalPlaces = 1;
+            this.addMetal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addMetal.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            this.actRS.Location = new System.Drawing.Point(214, 148);
-            this.actRS.Maximum = new decimal(new int[] {
+            this.addMetal.Location = new System.Drawing.Point(296, 94);
+            this.addMetal.Maximum = new decimal(new int[] {
             30000,
             0,
             0,
             0});
-            this.actRS.Name = "actRS";
-            this.actRS.ReadOnly = true;
-            this.actRS.Size = new System.Drawing.Size(70, 23);
-            this.actRS.TabIndex = 214;
-            this.actRS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.actRS.ThousandsSeparator = true;
-            this.actRS.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
-            // 
-            // addRemainMetal
-            // 
-            this.addRemainMetal.DecimalPlaces = 1;
-            this.addRemainMetal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addRemainMetal.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.addRemainMetal.Location = new System.Drawing.Point(296, 94);
-            this.addRemainMetal.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.addRemainMetal.Name = "addRemainMetal";
-            this.addRemainMetal.Size = new System.Drawing.Size(70, 23);
-            this.addRemainMetal.TabIndex = 0;
-            this.addRemainMetal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.addRemainMetal.ThousandsSeparator = true;
-            this.addRemainMetal.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
-            // 
-            // actCFC
-            // 
-            this.actCFC.BackColor = System.Drawing.Color.White;
-            this.actCFC.DecimalPlaces = 1;
-            this.actCFC.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actCFC.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.actCFC.Location = new System.Drawing.Point(214, 283);
-            this.actCFC.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.actCFC.Name = "actCFC";
-            this.actCFC.ReadOnly = true;
-            this.actCFC.Size = new System.Drawing.Size(70, 23);
-            this.actCFC.TabIndex = 214;
-            this.actCFC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.actCFC.ThousandsSeparator = true;
-            this.actCFC.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
-            // 
-            // actRemainMetal
-            // 
-            this.actRemainMetal.BackColor = System.Drawing.Color.White;
-            this.actRemainMetal.DecimalPlaces = 1;
-            this.actRemainMetal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actRemainMetal.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.actRemainMetal.Location = new System.Drawing.Point(214, 94);
-            this.actRemainMetal.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.actRemainMetal.Name = "actRemainMetal";
-            this.actRemainMetal.ReadOnly = true;
-            this.actRemainMetal.Size = new System.Drawing.Size(70, 23);
-            this.actRemainMetal.TabIndex = 214;
-            this.actRemainMetal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.actRemainMetal.ThousandsSeparator = true;
-            this.actRemainMetal.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
+            this.addMetal.Name = "addMetal";
+            this.addMetal.Size = new System.Drawing.Size(70, 23);
+            this.addMetal.TabIndex = 0;
+            this.addMetal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.addMetal.ThousandsSeparator = true;
+            this.addMetal.ValueChanged += new System.EventHandler(this.actRemainMetal_ValueChanged);
             // 
             // totCr
             // 
             this.totCr.BackColor = System.Drawing.Color.White;
             this.totCr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totCr.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totCr.Location = new System.Drawing.Point(372, 395);
+            this.totCr.Location = new System.Drawing.Point(372, 399);
             this.totCr.Name = "totCr";
             this.totCr.ReadOnly = true;
             this.totCr.Size = new System.Drawing.Size(54, 23);
@@ -2126,24 +1760,24 @@
             this.totPigFCD.BackColor = System.Drawing.Color.White;
             this.totPigFCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totPigFCD.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totPigFCD.Location = new System.Drawing.Point(372, 232);
+            this.totPigFCD.Location = new System.Drawing.Point(372, 234);
             this.totPigFCD.Name = "totPigFCD";
             this.totPigFCD.ReadOnly = true;
             this.totPigFCD.Size = new System.Drawing.Size(54, 23);
             this.totPigFCD.TabIndex = 234;
             this.totPigFCD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // totRemainMetal
+            // totMetal
             // 
-            this.totRemainMetal.BackColor = System.Drawing.Color.White;
-            this.totRemainMetal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.totRemainMetal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totRemainMetal.Location = new System.Drawing.Point(372, 94);
-            this.totRemainMetal.Name = "totRemainMetal";
-            this.totRemainMetal.ReadOnly = true;
-            this.totRemainMetal.Size = new System.Drawing.Size(54, 23);
-            this.totRemainMetal.TabIndex = 230;
-            this.totRemainMetal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.totMetal.BackColor = System.Drawing.Color.White;
+            this.totMetal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.totMetal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totMetal.Location = new System.Drawing.Point(372, 94);
+            this.totMetal.Name = "totMetal";
+            this.totMetal.ReadOnly = true;
+            this.totMetal.Size = new System.Drawing.Size(54, 23);
+            this.totMetal.TabIndex = 230;
+            this.totMetal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // totCFC
             // 
@@ -2162,7 +1796,7 @@
             this.totMn.BackColor = System.Drawing.Color.White;
             this.totMn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totMn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totMn.Location = new System.Drawing.Point(372, 367);
+            this.totMn.Location = new System.Drawing.Point(372, 370);
             this.totMn.Name = "totMn";
             this.totMn.ReadOnly = true;
             this.totMn.Size = new System.Drawing.Size(54, 23);
@@ -2174,7 +1808,7 @@
             this.totPigFC.BackColor = System.Drawing.Color.White;
             this.totPigFC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totPigFC.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totPigFC.Location = new System.Drawing.Point(372, 204);
+            this.totPigFC.Location = new System.Drawing.Point(372, 205);
             this.totPigFC.Name = "totPigFC";
             this.totPigFC.ReadOnly = true;
             this.totPigFC.Size = new System.Drawing.Size(54, 23);
@@ -2198,7 +1832,7 @@
             this.totCFCD.BackColor = System.Drawing.Color.White;
             this.totCFCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totCFCD.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totCFCD.Location = new System.Drawing.Point(372, 311);
+            this.totCFCD.Location = new System.Drawing.Point(372, 312);
             this.totCFCD.Name = "totCFCD";
             this.totCFCD.ReadOnly = true;
             this.totCFCD.Size = new System.Drawing.Size(54, 23);
@@ -2210,7 +1844,7 @@
             this.totSi.BackColor = System.Drawing.Color.White;
             this.totSi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totSi.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totSi.Location = new System.Drawing.Point(372, 339);
+            this.totSi.Location = new System.Drawing.Point(372, 341);
             this.totSi.Name = "totSi";
             this.totSi.ReadOnly = true;
             this.totSi.Size = new System.Drawing.Size(54, 23);
@@ -2256,6 +1890,180 @@
             this.panel7.Size = new System.Drawing.Size(873, 3);
             this.panel7.TabIndex = 222;
             // 
+            // tbCurrentTotal
+            // 
+            this.tbCurrentTotal.BackColor = System.Drawing.Color.White;
+            this.tbCurrentTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentTotal.Location = new System.Drawing.Point(215, 504);
+            this.tbCurrentTotal.Name = "tbCurrentTotal";
+            this.tbCurrentTotal.ReadOnly = true;
+            this.tbCurrentTotal.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentTotal.TabIndex = 266;
+            this.tbCurrentTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbCurrentSS
+            // 
+            this.tbCurrentSS.BackColor = System.Drawing.Color.White;
+            this.tbCurrentSS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentSS.Location = new System.Drawing.Point(215, 176);
+            this.tbCurrentSS.Name = "tbCurrentSS";
+            this.tbCurrentSS.ReadOnly = true;
+            this.tbCurrentSS.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentSS.TabIndex = 264;
+            this.tbCurrentSS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbCurrentRS
+            // 
+            this.tbCurrentRS.BackColor = System.Drawing.Color.White;
+            this.tbCurrentRS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentRS.Location = new System.Drawing.Point(215, 147);
+            this.tbCurrentRS.Name = "tbCurrentRS";
+            this.tbCurrentRS.ReadOnly = true;
+            this.tbCurrentRS.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentRS.TabIndex = 262;
+            this.tbCurrentRS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbCurrentPigFCD
+            // 
+            this.tbCurrentPigFCD.BackColor = System.Drawing.Color.White;
+            this.tbCurrentPigFCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentPigFCD.Location = new System.Drawing.Point(215, 234);
+            this.tbCurrentPigFCD.Name = "tbCurrentPigFCD";
+            this.tbCurrentPigFCD.ReadOnly = true;
+            this.tbCurrentPigFCD.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentPigFCD.TabIndex = 258;
+            this.tbCurrentPigFCD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbCurrentPigFC
+            // 
+            this.tbCurrentPigFC.BackColor = System.Drawing.Color.White;
+            this.tbCurrentPigFC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentPigFC.Location = new System.Drawing.Point(215, 205);
+            this.tbCurrentPigFC.Name = "tbCurrentPigFC";
+            this.tbCurrentPigFC.ReadOnly = true;
+            this.tbCurrentPigFC.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentPigFC.TabIndex = 256;
+            this.tbCurrentPigFC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbCurrentHcCr
+            // 
+            this.tbCurrentHcCr.BackColor = System.Drawing.Color.White;
+            this.tbCurrentHcCr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentHcCr.Location = new System.Drawing.Point(215, 399);
+            this.tbCurrentHcCr.Name = "tbCurrentHcCr";
+            this.tbCurrentHcCr.ReadOnly = true;
+            this.tbCurrentHcCr.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentHcCr.TabIndex = 252;
+            this.tbCurrentHcCr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbCurrentFeSi
+            // 
+            this.tbCurrentFeSi.BackColor = System.Drawing.Color.White;
+            this.tbCurrentFeSi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentFeSi.Location = new System.Drawing.Point(215, 341);
+            this.tbCurrentFeSi.Name = "tbCurrentFeSi";
+            this.tbCurrentFeSi.ReadOnly = true;
+            this.tbCurrentFeSi.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentFeSi.TabIndex = 250;
+            this.tbCurrentFeSi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbCurrentFeNi
+            // 
+            this.tbCurrentFeNi.BackColor = System.Drawing.Color.White;
+            this.tbCurrentFeNi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentFeNi.Location = new System.Drawing.Point(215, 457);
+            this.tbCurrentFeNi.Name = "tbCurrentFeNi";
+            this.tbCurrentFeNi.ReadOnly = true;
+            this.tbCurrentFeNi.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentFeNi.TabIndex = 248;
+            this.tbCurrentFeNi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbCurrentFeMo
+            // 
+            this.tbCurrentFeMo.BackColor = System.Drawing.Color.White;
+            this.tbCurrentFeMo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentFeMo.Location = new System.Drawing.Point(215, 428);
+            this.tbCurrentFeMo.Name = "tbCurrentFeMo";
+            this.tbCurrentFeMo.ReadOnly = true;
+            this.tbCurrentFeMo.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentFeMo.TabIndex = 246;
+            this.tbCurrentFeMo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbCurrentFeMn
+            // 
+            this.tbCurrentFeMn.BackColor = System.Drawing.Color.White;
+            this.tbCurrentFeMn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentFeMn.Location = new System.Drawing.Point(215, 370);
+            this.tbCurrentFeMn.Name = "tbCurrentFeMn";
+            this.tbCurrentFeMn.ReadOnly = true;
+            this.tbCurrentFeMn.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentFeMn.TabIndex = 244;
+            this.tbCurrentFeMn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbCurrentCFCD
+            // 
+            this.tbCurrentCFCD.BackColor = System.Drawing.Color.White;
+            this.tbCurrentCFCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentCFCD.Location = new System.Drawing.Point(215, 312);
+            this.tbCurrentCFCD.Name = "tbCurrentCFCD";
+            this.tbCurrentCFCD.ReadOnly = true;
+            this.tbCurrentCFCD.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentCFCD.TabIndex = 242;
+            this.tbCurrentCFCD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbCurrentCFC
+            // 
+            this.tbCurrentCFC.BackColor = System.Drawing.Color.White;
+            this.tbCurrentCFC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentCFC.Location = new System.Drawing.Point(215, 283);
+            this.tbCurrentCFC.Name = "tbCurrentCFC";
+            this.tbCurrentCFC.ReadOnly = true;
+            this.tbCurrentCFC.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentCFC.TabIndex = 240;
+            this.tbCurrentCFC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // rawMaterialBindingSource
+            // 
+            this.rawMaterialBindingSource.DataSource = typeof(MNG.UI.RawMaterial);
+            // 
+            // chargingBindingSource
+            // 
+            this.chargingBindingSource.DataSource = typeof(MNG.UI.Charging);
+            // 
+            // chemicalCompositionInFurnaceBindingSource
+            // 
+            this.chemicalCompositionInFurnaceBindingSource.DataSource = typeof(MNG.UI.ChemicalCompositionInFurnace);
+            // 
+            // controlPlanBindingSource
+            // 
+            this.controlPlanBindingSource.DataSource = typeof(MNG.UI.ControlPlan);
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(MNG.UI.Product);
+            // 
+            // statusTextBox1
+            // 
+            this.statusTextBox1.BackColor = System.Drawing.Color.White;
+            this.statusTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.statusTextBox1.ColorCompleted = "Black";
+            this.statusTextBox1.ColorRunning = "YellowGreen";
+            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "Status", true));
+            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsCompleted", this.chargingBindingSource, "IsCompleted", true));
+            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("OnStatus", this.chargingBindingSource, "Status", true));
+            this.statusTextBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusTextBox1.IsCompleted = false;
+            this.statusTextBox1.Location = new System.Drawing.Point(427, 25);
+            this.statusTextBox1.Name = "statusTextBox1";
+            this.statusTextBox1.OnStatus = null;
+            this.statusTextBox1.ReadOnly = true;
+            this.statusTextBox1.Size = new System.Drawing.Size(100, 27);
+            this.statusTextBox1.TabIndex = 223;
+            // 
+            // furnaceBindingSource
+            // 
+            this.furnaceBindingSource.DataSource = typeof(MNG.UI.Furnace);
+            // 
             // frmEditMatCharging
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2277,12 +2085,9 @@
             this.Text = "frmEditMatCharging";
             this.Load += new System.EventHandler(this.frmEditMatCharging_Load);
             ((System.ComponentModel.ISupportInitialize)(this.startKwHrNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxTempKwHrNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxTempNumericUpDown)).EndInit();
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.furnaceBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.pnToolBar.ResumeLayout(false);
             this.pnToolBar.PerformLayout();
             this.pnSaveExit.ResumeLayout(false);
@@ -2290,35 +2095,27 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             this.pnMaterial.ResumeLayout(false);
             this.pnMaterial.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addNi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addMo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actNi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addCr)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actMo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addPigFCD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actCr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addMn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actPigFCD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addPigFC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actMn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addSi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actPigFC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addSS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actSi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addCFCD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actSS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addRS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actCFCD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addCFC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actRS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addRemainMetal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actCFC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actRemainMetal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addMetal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rawMaterialBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.furnaceBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2377,12 +2174,11 @@
         private System.Windows.Forms.TextBox addTotal;
         private System.Windows.Forms.Panel pnMaterial;
         private System.Windows.Forms.TextBox totTotal;
-        private System.Windows.Forms.TextBox actTotal;
         private System.Windows.Forms.TextBox totNi;
         private System.Windows.Forms.TextBox totMo;
         private System.Windows.Forms.TextBox totCr;
         private System.Windows.Forms.TextBox totPigFCD;
-        private System.Windows.Forms.TextBox totRemainMetal;
+        private System.Windows.Forms.TextBox totMetal;
         private System.Windows.Forms.TextBox totCFC;
         private System.Windows.Forms.TextBox totMn;
         private System.Windows.Forms.TextBox totPigFC;
@@ -2390,18 +2186,6 @@
         private System.Windows.Forms.TextBox totCFCD;
         private System.Windows.Forms.TextBox totSi;
         private System.Windows.Forms.TextBox totSS;
-        private System.Windows.Forms.NumericUpDown actRemainMetal;
-        private System.Windows.Forms.NumericUpDown actCr;
-        private System.Windows.Forms.NumericUpDown actPigFCD;
-        private System.Windows.Forms.NumericUpDown actMn;
-        private System.Windows.Forms.NumericUpDown actPigFC;
-        private System.Windows.Forms.NumericUpDown actSi;
-        private System.Windows.Forms.NumericUpDown actSS;
-        private System.Windows.Forms.NumericUpDown actCFCD;
-        private System.Windows.Forms.NumericUpDown actRS;
-        private System.Windows.Forms.NumericUpDown actCFC;
-        private System.Windows.Forms.NumericUpDown actNi;
-        private System.Windows.Forms.NumericUpDown actMo;
         private System.Windows.Forms.NumericUpDown addNi;
         private System.Windows.Forms.NumericUpDown addMo;
         private System.Windows.Forms.NumericUpDown addCr;
@@ -2413,7 +2197,7 @@
         private System.Windows.Forms.NumericUpDown addCFCD;
         private System.Windows.Forms.NumericUpDown addRS;
         private System.Windows.Forms.NumericUpDown addCFC;
-        private System.Windows.Forms.NumericUpDown addRemainMetal;
+        private System.Windows.Forms.NumericUpDown addMetal;
         private System.Windows.Forms.Button btnCalculator;
         private System.Windows.Forms.TextBox maxTempTimeTextBox;
         private System.Windows.Forms.TextBox intervalTextBox;
@@ -2434,6 +2218,18 @@
         private System.Windows.Forms.TextBox mnMaxTextBox;
         private System.Windows.Forms.TextBox siMinTextBox;
         private System.Windows.Forms.TextBox siMaxTextBox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.BindingSource rawMaterialBindingSource;
+        private System.Windows.Forms.TextBox tbCurrentCFC;
+        private System.Windows.Forms.TextBox tbCurrentCFCD;
+        private System.Windows.Forms.TextBox tbCurrentFeMn;
+        private System.Windows.Forms.TextBox tbCurrentFeMo;
+        private System.Windows.Forms.TextBox tbCurrentFeNi;
+        private System.Windows.Forms.TextBox tbCurrentFeSi;
+        private System.Windows.Forms.TextBox tbCurrentHcCr;
+        private System.Windows.Forms.TextBox tbCurrentPigFC;
+        private System.Windows.Forms.TextBox tbCurrentPigFCD;
+        private System.Windows.Forms.TextBox tbCurrentRS;
+        private System.Windows.Forms.TextBox tbCurrentSS;
+        private System.Windows.Forms.TextBox tbCurrentTotal;
     }
 }
