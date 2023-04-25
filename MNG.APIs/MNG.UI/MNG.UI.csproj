@@ -411,6 +411,9 @@
     <Compile Include="Production\NotificationEventArgs.cs" />
     <Compile Include="Production\Process.cs" />
     <Compile Include="Production\Status.cs" />
+    <Compile Include="Production\NumericTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Production\TbProcessInd.cs">
       <SubType>Component</SubType>
     </Compile>

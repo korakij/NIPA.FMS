@@ -161,7 +161,7 @@ namespace MNG.UI.Production
 
         private void btnReadFirstPower_Click(object sender, EventArgs e)
         {
-            tbStartKw.Text = string.Format("{0:N2}", ReadMeter());
+            tbStartKwH.Text = string.Format("{0:N2}", ReadMeter());
         }
 
         private void btnReadMaxPower_Click(object sender, EventArgs e)
