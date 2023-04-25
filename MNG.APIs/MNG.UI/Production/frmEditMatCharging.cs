@@ -161,12 +161,12 @@ namespace MNG.UI.Production
 
         private void btnReadFirstPower_Click(object sender, EventArgs e)
         {
-            startKwHrNumericUpDown.Text = ReadMeter().ToString("###,##0.00");
+            tbStartKw.Text = string.Format("{0:N2}", ReadMeter());
         }
 
         private void btnReadMaxPower_Click(object sender, EventArgs e)
         {
-            btnReadMaxPower.Text = ReadMeter().ToString("###,##0.00");
+            maxTempKwHrNumericUpDown.Text = string.Format("0:N2", ReadMeter());
         }
 
         private void btnCancel_Click_1(object sender, EventArgs e)
@@ -175,11 +175,12 @@ namespace MNG.UI.Production
             this.Close();
         }
 
-        private int ReadMeter()
+        private double ReadMeter()
         {
             //var ip = Properties.Settings.Default.PMeter1;
             var ip = "192.168.2.108";
             ModbusClient modbusClient = new ModbusClient();
+            modbusClient.ConnectionTimeout = 2000;
 
             try
             {
@@ -193,24 +194,10 @@ namespace MNG.UI.Production
 
             modbusClient.UnitIdentifier = 1;
 
-            var data = modbusClient.ReadHoldingRegisters(26, 2);
-            var leftBit = Convert.ToString(data[0], 2);
-            var rightBit = Convert.ToString(data[1], 2);
+            var data = modbusClient.ReadHoldingRegisters(801, 4);
+            var result = ModbusClient.ConvertRegistersToDouble(data, ModbusClient.RegisterOrder.HighLow);
 
-            rightBit = rightBit.PadLeft(4, '0');
-            var x = rightBit;
-            if (rightBit.Length > 16)
-            {
-                x = rightBit.Substring(rightBit.Length - 16, 16);
-            }
-
-            var leftDec = Convert.ToInt32(leftBit + "0000000000000000", 2);
-            var rightDec = Convert.ToInt32(x, 2);
-            var result = (leftDec + rightDec) / 100;
-
-            modbusClient.Disconnect();
-
-            return result;
+            return result / 1000;
         }
 
         private void timer1_Tick(object sender, EventArgs e)

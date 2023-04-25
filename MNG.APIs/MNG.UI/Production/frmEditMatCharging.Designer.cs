@@ -127,6 +127,18 @@
             this.label28 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnMaterial = new System.Windows.Forms.Panel();
+            this.tbCurrentCFC = new System.Windows.Forms.TextBox();
+            this.tbCurrentCFCD = new System.Windows.Forms.TextBox();
+            this.tbCurrentFeMn = new System.Windows.Forms.TextBox();
+            this.tbCurrentFeMo = new System.Windows.Forms.TextBox();
+            this.tbCurrentFeNi = new System.Windows.Forms.TextBox();
+            this.tbCurrentFeSi = new System.Windows.Forms.TextBox();
+            this.tbCurrentHcCr = new System.Windows.Forms.TextBox();
+            this.tbCurrentPigFC = new System.Windows.Forms.TextBox();
+            this.tbCurrentPigFCD = new System.Windows.Forms.TextBox();
+            this.tbCurrentRS = new System.Windows.Forms.TextBox();
+            this.tbCurrentSS = new System.Windows.Forms.TextBox();
+            this.tbCurrentTotal = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.totTotal = new System.Windows.Forms.TextBox();
             this.addTotal = new System.Windows.Forms.TextBox();
@@ -157,25 +169,14 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.tbCurrentTotal = new System.Windows.Forms.TextBox();
-            this.tbCurrentSS = new System.Windows.Forms.TextBox();
-            this.tbCurrentRS = new System.Windows.Forms.TextBox();
-            this.tbCurrentPigFCD = new System.Windows.Forms.TextBox();
-            this.tbCurrentPigFC = new System.Windows.Forms.TextBox();
-            this.tbCurrentHcCr = new System.Windows.Forms.TextBox();
-            this.tbCurrentFeSi = new System.Windows.Forms.TextBox();
-            this.tbCurrentFeNi = new System.Windows.Forms.TextBox();
-            this.tbCurrentFeMo = new System.Windows.Forms.TextBox();
-            this.tbCurrentFeMn = new System.Windows.Forms.TextBox();
-            this.tbCurrentCFCD = new System.Windows.Forms.TextBox();
-            this.tbCurrentCFC = new System.Windows.Forms.TextBox();
-            this.rawMaterialBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.chargingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbStartKw = new System.Windows.Forms.TextBox();
             this.chemicalCompositionInFurnaceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.controlPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chargingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.statusTextBox1 = new MNG.UI.Production.StatusTextBox();
             this.furnaceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rawMaterialBindingSource = new System.Windows.Forms.BindingSource(this.components);
             c_FCLabel = new System.Windows.Forms.Label();
             c_FCDLabel = new System.Windows.Forms.Label();
             fe_MnLabel = new System.Windows.Forms.Label();
@@ -234,12 +235,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.addRS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addCFC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addMetal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rawMaterialBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.furnaceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rawMaterialBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // c_FCLabel
@@ -1009,6 +1010,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.tbStartKw);
             this.panel1.Controls.Add(this.intervalTextBox);
             this.panel1.Controls.Add(this.maxTempTimeTextBox);
             this.panel1.Controls.Add(this.label30);
@@ -1420,6 +1422,138 @@
             this.pnMaterial.Name = "pnMaterial";
             this.pnMaterial.Size = new System.Drawing.Size(870, 563);
             this.pnMaterial.TabIndex = 0;
+            // 
+            // tbCurrentCFC
+            // 
+            this.tbCurrentCFC.BackColor = System.Drawing.Color.White;
+            this.tbCurrentCFC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentCFC.Location = new System.Drawing.Point(215, 283);
+            this.tbCurrentCFC.Name = "tbCurrentCFC";
+            this.tbCurrentCFC.ReadOnly = true;
+            this.tbCurrentCFC.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentCFC.TabIndex = 240;
+            this.tbCurrentCFC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbCurrentCFCD
+            // 
+            this.tbCurrentCFCD.BackColor = System.Drawing.Color.White;
+            this.tbCurrentCFCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentCFCD.Location = new System.Drawing.Point(215, 312);
+            this.tbCurrentCFCD.Name = "tbCurrentCFCD";
+            this.tbCurrentCFCD.ReadOnly = true;
+            this.tbCurrentCFCD.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentCFCD.TabIndex = 242;
+            this.tbCurrentCFCD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbCurrentFeMn
+            // 
+            this.tbCurrentFeMn.BackColor = System.Drawing.Color.White;
+            this.tbCurrentFeMn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentFeMn.Location = new System.Drawing.Point(215, 370);
+            this.tbCurrentFeMn.Name = "tbCurrentFeMn";
+            this.tbCurrentFeMn.ReadOnly = true;
+            this.tbCurrentFeMn.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentFeMn.TabIndex = 244;
+            this.tbCurrentFeMn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbCurrentFeMo
+            // 
+            this.tbCurrentFeMo.BackColor = System.Drawing.Color.White;
+            this.tbCurrentFeMo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentFeMo.Location = new System.Drawing.Point(215, 428);
+            this.tbCurrentFeMo.Name = "tbCurrentFeMo";
+            this.tbCurrentFeMo.ReadOnly = true;
+            this.tbCurrentFeMo.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentFeMo.TabIndex = 246;
+            this.tbCurrentFeMo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbCurrentFeNi
+            // 
+            this.tbCurrentFeNi.BackColor = System.Drawing.Color.White;
+            this.tbCurrentFeNi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentFeNi.Location = new System.Drawing.Point(215, 457);
+            this.tbCurrentFeNi.Name = "tbCurrentFeNi";
+            this.tbCurrentFeNi.ReadOnly = true;
+            this.tbCurrentFeNi.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentFeNi.TabIndex = 248;
+            this.tbCurrentFeNi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbCurrentFeSi
+            // 
+            this.tbCurrentFeSi.BackColor = System.Drawing.Color.White;
+            this.tbCurrentFeSi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentFeSi.Location = new System.Drawing.Point(215, 341);
+            this.tbCurrentFeSi.Name = "tbCurrentFeSi";
+            this.tbCurrentFeSi.ReadOnly = true;
+            this.tbCurrentFeSi.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentFeSi.TabIndex = 250;
+            this.tbCurrentFeSi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbCurrentHcCr
+            // 
+            this.tbCurrentHcCr.BackColor = System.Drawing.Color.White;
+            this.tbCurrentHcCr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentHcCr.Location = new System.Drawing.Point(215, 399);
+            this.tbCurrentHcCr.Name = "tbCurrentHcCr";
+            this.tbCurrentHcCr.ReadOnly = true;
+            this.tbCurrentHcCr.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentHcCr.TabIndex = 252;
+            this.tbCurrentHcCr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbCurrentPigFC
+            // 
+            this.tbCurrentPigFC.BackColor = System.Drawing.Color.White;
+            this.tbCurrentPigFC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentPigFC.Location = new System.Drawing.Point(215, 205);
+            this.tbCurrentPigFC.Name = "tbCurrentPigFC";
+            this.tbCurrentPigFC.ReadOnly = true;
+            this.tbCurrentPigFC.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentPigFC.TabIndex = 256;
+            this.tbCurrentPigFC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbCurrentPigFCD
+            // 
+            this.tbCurrentPigFCD.BackColor = System.Drawing.Color.White;
+            this.tbCurrentPigFCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentPigFCD.Location = new System.Drawing.Point(215, 234);
+            this.tbCurrentPigFCD.Name = "tbCurrentPigFCD";
+            this.tbCurrentPigFCD.ReadOnly = true;
+            this.tbCurrentPigFCD.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentPigFCD.TabIndex = 258;
+            this.tbCurrentPigFCD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbCurrentRS
+            // 
+            this.tbCurrentRS.BackColor = System.Drawing.Color.White;
+            this.tbCurrentRS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentRS.Location = new System.Drawing.Point(215, 147);
+            this.tbCurrentRS.Name = "tbCurrentRS";
+            this.tbCurrentRS.ReadOnly = true;
+            this.tbCurrentRS.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentRS.TabIndex = 262;
+            this.tbCurrentRS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbCurrentSS
+            // 
+            this.tbCurrentSS.BackColor = System.Drawing.Color.White;
+            this.tbCurrentSS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentSS.Location = new System.Drawing.Point(215, 176);
+            this.tbCurrentSS.Name = "tbCurrentSS";
+            this.tbCurrentSS.ReadOnly = true;
+            this.tbCurrentSS.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentSS.TabIndex = 264;
+            this.tbCurrentSS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbCurrentTotal
+            // 
+            this.tbCurrentTotal.BackColor = System.Drawing.Color.White;
+            this.tbCurrentTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCurrentTotal.Location = new System.Drawing.Point(215, 504);
+            this.tbCurrentTotal.Name = "tbCurrentTotal";
+            this.tbCurrentTotal.ReadOnly = true;
+            this.tbCurrentTotal.Size = new System.Drawing.Size(54, 23);
+            this.tbCurrentTotal.TabIndex = 266;
+            this.tbCurrentTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label29
             // 
@@ -1890,145 +2024,14 @@
             this.panel7.Size = new System.Drawing.Size(873, 3);
             this.panel7.TabIndex = 222;
             // 
-            // tbCurrentTotal
+            // tbStartKw
             // 
-            this.tbCurrentTotal.BackColor = System.Drawing.Color.White;
-            this.tbCurrentTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbCurrentTotal.Location = new System.Drawing.Point(215, 504);
-            this.tbCurrentTotal.Name = "tbCurrentTotal";
-            this.tbCurrentTotal.ReadOnly = true;
-            this.tbCurrentTotal.Size = new System.Drawing.Size(54, 23);
-            this.tbCurrentTotal.TabIndex = 266;
-            this.tbCurrentTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // tbCurrentSS
-            // 
-            this.tbCurrentSS.BackColor = System.Drawing.Color.White;
-            this.tbCurrentSS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbCurrentSS.Location = new System.Drawing.Point(215, 176);
-            this.tbCurrentSS.Name = "tbCurrentSS";
-            this.tbCurrentSS.ReadOnly = true;
-            this.tbCurrentSS.Size = new System.Drawing.Size(54, 23);
-            this.tbCurrentSS.TabIndex = 264;
-            this.tbCurrentSS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // tbCurrentRS
-            // 
-            this.tbCurrentRS.BackColor = System.Drawing.Color.White;
-            this.tbCurrentRS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbCurrentRS.Location = new System.Drawing.Point(215, 147);
-            this.tbCurrentRS.Name = "tbCurrentRS";
-            this.tbCurrentRS.ReadOnly = true;
-            this.tbCurrentRS.Size = new System.Drawing.Size(54, 23);
-            this.tbCurrentRS.TabIndex = 262;
-            this.tbCurrentRS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // tbCurrentPigFCD
-            // 
-            this.tbCurrentPigFCD.BackColor = System.Drawing.Color.White;
-            this.tbCurrentPigFCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbCurrentPigFCD.Location = new System.Drawing.Point(215, 234);
-            this.tbCurrentPigFCD.Name = "tbCurrentPigFCD";
-            this.tbCurrentPigFCD.ReadOnly = true;
-            this.tbCurrentPigFCD.Size = new System.Drawing.Size(54, 23);
-            this.tbCurrentPigFCD.TabIndex = 258;
-            this.tbCurrentPigFCD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // tbCurrentPigFC
-            // 
-            this.tbCurrentPigFC.BackColor = System.Drawing.Color.White;
-            this.tbCurrentPigFC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbCurrentPigFC.Location = new System.Drawing.Point(215, 205);
-            this.tbCurrentPigFC.Name = "tbCurrentPigFC";
-            this.tbCurrentPigFC.ReadOnly = true;
-            this.tbCurrentPigFC.Size = new System.Drawing.Size(54, 23);
-            this.tbCurrentPigFC.TabIndex = 256;
-            this.tbCurrentPigFC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // tbCurrentHcCr
-            // 
-            this.tbCurrentHcCr.BackColor = System.Drawing.Color.White;
-            this.tbCurrentHcCr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbCurrentHcCr.Location = new System.Drawing.Point(215, 399);
-            this.tbCurrentHcCr.Name = "tbCurrentHcCr";
-            this.tbCurrentHcCr.ReadOnly = true;
-            this.tbCurrentHcCr.Size = new System.Drawing.Size(54, 23);
-            this.tbCurrentHcCr.TabIndex = 252;
-            this.tbCurrentHcCr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // tbCurrentFeSi
-            // 
-            this.tbCurrentFeSi.BackColor = System.Drawing.Color.White;
-            this.tbCurrentFeSi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbCurrentFeSi.Location = new System.Drawing.Point(215, 341);
-            this.tbCurrentFeSi.Name = "tbCurrentFeSi";
-            this.tbCurrentFeSi.ReadOnly = true;
-            this.tbCurrentFeSi.Size = new System.Drawing.Size(54, 23);
-            this.tbCurrentFeSi.TabIndex = 250;
-            this.tbCurrentFeSi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // tbCurrentFeNi
-            // 
-            this.tbCurrentFeNi.BackColor = System.Drawing.Color.White;
-            this.tbCurrentFeNi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbCurrentFeNi.Location = new System.Drawing.Point(215, 457);
-            this.tbCurrentFeNi.Name = "tbCurrentFeNi";
-            this.tbCurrentFeNi.ReadOnly = true;
-            this.tbCurrentFeNi.Size = new System.Drawing.Size(54, 23);
-            this.tbCurrentFeNi.TabIndex = 248;
-            this.tbCurrentFeNi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // tbCurrentFeMo
-            // 
-            this.tbCurrentFeMo.BackColor = System.Drawing.Color.White;
-            this.tbCurrentFeMo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbCurrentFeMo.Location = new System.Drawing.Point(215, 428);
-            this.tbCurrentFeMo.Name = "tbCurrentFeMo";
-            this.tbCurrentFeMo.ReadOnly = true;
-            this.tbCurrentFeMo.Size = new System.Drawing.Size(54, 23);
-            this.tbCurrentFeMo.TabIndex = 246;
-            this.tbCurrentFeMo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // tbCurrentFeMn
-            // 
-            this.tbCurrentFeMn.BackColor = System.Drawing.Color.White;
-            this.tbCurrentFeMn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbCurrentFeMn.Location = new System.Drawing.Point(215, 370);
-            this.tbCurrentFeMn.Name = "tbCurrentFeMn";
-            this.tbCurrentFeMn.ReadOnly = true;
-            this.tbCurrentFeMn.Size = new System.Drawing.Size(54, 23);
-            this.tbCurrentFeMn.TabIndex = 244;
-            this.tbCurrentFeMn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // tbCurrentCFCD
-            // 
-            this.tbCurrentCFCD.BackColor = System.Drawing.Color.White;
-            this.tbCurrentCFCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbCurrentCFCD.Location = new System.Drawing.Point(215, 312);
-            this.tbCurrentCFCD.Name = "tbCurrentCFCD";
-            this.tbCurrentCFCD.ReadOnly = true;
-            this.tbCurrentCFCD.Size = new System.Drawing.Size(54, 23);
-            this.tbCurrentCFCD.TabIndex = 242;
-            this.tbCurrentCFCD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // tbCurrentCFC
-            // 
-            this.tbCurrentCFC.BackColor = System.Drawing.Color.White;
-            this.tbCurrentCFC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbCurrentCFC.Location = new System.Drawing.Point(215, 283);
-            this.tbCurrentCFC.Name = "tbCurrentCFC";
-            this.tbCurrentCFC.ReadOnly = true;
-            this.tbCurrentCFC.Size = new System.Drawing.Size(54, 23);
-            this.tbCurrentCFC.TabIndex = 240;
-            this.tbCurrentCFC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // rawMaterialBindingSource
-            // 
-            this.rawMaterialBindingSource.DataSource = typeof(MNG.UI.RawMaterial);
-            // 
-            // chargingBindingSource
-            // 
-            this.chargingBindingSource.DataSource = typeof(MNG.UI.Charging);
+            this.tbStartKw.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbStartKw.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStartKw.Location = new System.Drawing.Point(426, 122);
+            this.tbStartKw.Name = "tbStartKw";
+            this.tbStartKw.Size = new System.Drawing.Size(89, 23);
+            this.tbStartKw.TabIndex = 231;
             // 
             // chemicalCompositionInFurnaceBindingSource
             // 
@@ -2037,6 +2040,10 @@
             // controlPlanBindingSource
             // 
             this.controlPlanBindingSource.DataSource = typeof(MNG.UI.ControlPlan);
+            // 
+            // chargingBindingSource
+            // 
+            this.chargingBindingSource.DataSource = typeof(MNG.UI.Charging);
             // 
             // productBindingSource
             // 
@@ -2063,6 +2070,10 @@
             // furnaceBindingSource
             // 
             this.furnaceBindingSource.DataSource = typeof(MNG.UI.Furnace);
+            // 
+            // rawMaterialBindingSource
+            // 
+            this.rawMaterialBindingSource.DataSource = typeof(MNG.UI.RawMaterial);
             // 
             // frmEditMatCharging
             // 
@@ -2110,12 +2121,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.addRS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addCFC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addMetal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rawMaterialBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.furnaceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rawMaterialBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2231,5 +2242,6 @@
         private System.Windows.Forms.TextBox tbCurrentRS;
         private System.Windows.Forms.TextBox tbCurrentSS;
         private System.Windows.Forms.TextBox tbCurrentTotal;
+        private System.Windows.Forms.TextBox tbStartKw;
     }
 }
