@@ -38,6 +38,7 @@ namespace MNG.Services
             TestLogs = new TestLogService(db);
             Notifications = new NotificationService(db);
             Settings = new SettingService(db);
+            RawMaterials = new RawMaterialService(db);
         }
 
         public ChemicalCompositionInFurnaceService ChemicalCompositionInFurnaces { get; set; }
@@ -65,6 +66,7 @@ namespace MNG.Services
         public TestLogService TestLogs { get; set; }
         public NotificationService Notifications { get; set; }
         public SettingService Settings { get; set; }
+        public RawMaterialService RawMaterials { get; set; }
 
         public int SaveChanges() => db.SaveChanges();
         public async Task<int> SaveChangesAsync() => await db.SaveChangesAsync();

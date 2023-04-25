@@ -38,6 +38,7 @@ namespace MNG.Services.Data
         public virtual DbQuery<TestNoByLotNo> TestNoByLotNo { get; set; }
         public virtual DbSet<Pouring> Pourings { get; set; }
         public virtual DbSet<Setting> Settings { get; set; }
+        public virtual DbSet<RawMaterial> RawMaterials { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

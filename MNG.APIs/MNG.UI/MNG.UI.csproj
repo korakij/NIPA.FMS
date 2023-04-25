@@ -581,10 +581,9 @@
     <None Include="Properties\DataSources\Material.datasource" />
     <None Include="Properties\DataSources\MaterialSpecification.datasource" />
     <None Include="Properties\DataSources\MeltStandard.datasource" />
-    <None Include="Properties\DataSources\MNG.UI.Production.frmKanban.datasource" />
-    <None Include="Properties\DataSources\MNG.UI.Production.frmPouring.datasource" />
     <None Include="Properties\DataSources\MNG.UI.Production.frmPouringIntoMold.datasource" />
     <None Include="Properties\DataSources\MoldStandard.datasource" />
+    <None Include="Properties\DataSources\Notification.datasource" />
     <None Include="Properties\DataSources\Pouring.datasource" />
     <None Include="Properties\DataSources\PourStandard.datasource" />
     <None Include="Properties\DataSources\Product.datasource" />
