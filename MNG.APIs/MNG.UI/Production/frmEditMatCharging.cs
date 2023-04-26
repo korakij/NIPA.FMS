@@ -238,8 +238,6 @@ namespace MNG.UI.Production
             }
 
             CurrentCharge.PowerComp = Convert.ToDouble(power);
-
-            SetStatus();
         }
 
 
@@ -251,13 +249,6 @@ namespace MNG.UI.Production
                 IsMaxTempOk = false;
             else
                 IsMaxTempOk = true;
-
-            SetStatus();
-        }
-
-        private void maxTempNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         private async void btnBrowse_Click(object sender, EventArgs e)
@@ -302,7 +293,10 @@ namespace MNG.UI.Production
         private void btnSaved_Click_1(object sender, EventArgs e)
         {
             IsPartIdOk = CurrentCharge.ProductId != null ? true : false;
+
             GetTimeInterval();
+            GetPowerConsumtion();
+            maxTempNumericTextBox_TextChanged(this, EventArgs.Empty);
 
             CurrentCharge.MoltenMetal = totMetal.Text == "" ? 0 : Convert.ToDouble(totMetal.Text);
             CurrentCharge.Rs = totRS.Text == "" ? 0 : Convert.ToDouble(totRS.Text);

@@ -135,6 +135,9 @@ namespace MNG.UI
 
             prodList = (await _client.GetProductAllAsync()).Where(x => x.ActiveControlPlanId != null).ToList();
 
+            if (type == "All")
+                prodList = (await _client.GetProductAllAsync()).ToList();
+
             if (type == "Mass" || type == "Dev" || type == "All")
             {
                 var CTPP = from ctps in ctpList

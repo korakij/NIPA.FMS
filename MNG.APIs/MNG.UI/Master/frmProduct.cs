@@ -73,6 +73,16 @@ namespace ASRS.UI
             _client = new Client(url);
         }
 
+        public frmProduct(int ctpId)
+        {
+            InitializeComponent();
+
+            var url = MNG.UI.Properties.Settings.Default.API_URL;
+            _client = new Client(url);
+
+            activeControlPlanIdTextBox.Text = ctpId.ToString();
+        }
+
         public frmProduct(List<Product> _products)
         {
             InitializeComponent();
