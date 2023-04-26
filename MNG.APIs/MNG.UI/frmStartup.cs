@@ -31,29 +31,29 @@ namespace MNG.UI
         {
             InitializeComponent();
 
-            //string fileName = @"\\192.168.2.3\wmw\Installers\NIPA_FMS\config.json";
-            //string jsonString;
-            //Config configObj = new Config();
-            //try
-            //{
-            //    jsonString = File.ReadAllText(fileName);
-            //    configObj = JsonSerializer.Deserialize<Config>(jsonString);
-            //}
-            //catch (Exception)
-            //{
-            //    MessageBox.Show("Unable to Read Config.Json", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    this.Close();
-            //}
+            string fileName = @"\\192.168.2.3\wmw\Installers\NIPA_FMS\config.json";
+            string jsonString;
+            Config configObj = new Config();
+            try
+            {
+                jsonString = File.ReadAllText(fileName);
+                configObj = JsonSerializer.Deserialize<Config>(jsonString);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Unable to Read Config.Json", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+            }
 
-            //MNG.UI.Properties.Settings.Default.API_URL = configObj.APIURL;
-            //MNG.UI.Properties.Settings.Default.Result_Path = configObj.ChemResultPath;
-            //MNG.UI.Properties.Settings.Default.Refresh_Rate = configObj.RefreshRate;
-            //MNG.UI.Properties.Settings.Default.PMeter1 = configObj.PMeterIP1;
+            MNG.UI.Properties.Settings.Default.API_URL = configObj.APIURL;
+            MNG.UI.Properties.Settings.Default.Result_Path = configObj.ChemResultPath;
+            MNG.UI.Properties.Settings.Default.Refresh_Rate = configObj.RefreshRate;
+            MNG.UI.Properties.Settings.Default.PMeter1 = configObj.PMeterIP1;
 
             //MNG.UI.Properties.Settings.Default.API_URL = "http://192.168.2.3/NIPA_FMS";
-            MNG.UI.Properties.Settings.Default.API_URL = "https://localhost:44358/";
-            MNG.UI.Properties.Settings.Default.Result_Path = @"D:\Mango.Solutions\MNG.FMS\ChemResult\";
-            MNG.UI.Properties.Settings.Default.Refresh_Rate = 5000;
+            //MNG.UI.Properties.Settings.Default.API_URL = "https://localhost:44358/";
+            //MNG.UI.Properties.Settings.Default.Result_Path = @"D:\Mango.Solutions\MNG.FMS\ChemResult\";
+            //MNG.UI.Properties.Settings.Default.Refresh_Rate = 5000;
 
             var url = MNG.UI.Properties.Settings.Default.API_URL;
             _client = new Client(url);

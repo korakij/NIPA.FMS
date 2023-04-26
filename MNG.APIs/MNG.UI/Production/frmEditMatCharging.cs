@@ -13,8 +13,9 @@ namespace MNG.UI.Production
 {
     public partial class frmEditMatCharging : Form
     {
-        public Charging CurrentCharge { get; set; }
+        public Charging ResultCharge { get; set; }
 
+        private Charging CurrentCharge;
         private Client _client;
         private Furnace CurrentFurnace;
         private bool IsPowerOk;
@@ -92,13 +93,13 @@ namespace MNG.UI.Production
             {
                 CurrentCharge.ChargeTime = fTimeRetrieval.time;
                 GetTimeInterval();
-                chargingBindingSource.ResetBindings(false);
             }
         }
 
         private void btnMaxTempTimeRetrieval_Click(object sender, EventArgs e)
         {
-            if (maxTempNumericUpDown.Value < 1)
+            var temp = Convert.ToInt32(maxTempTextBox.Text);
+            if (temp < 1)
             {
                 MessageBox.Show("Max Temp is required!!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -121,7 +122,6 @@ namespace MNG.UI.Production
                 CurrentCharge.Status = Status.Completed.ToString();
                 CurrentCharge.Interval = intervalTextBox.Text;
                 GetTimeInterval();
-                chargingBindingSource.ResetBindings(false);
             }
         }
 
@@ -161,12 +161,12 @@ namespace MNG.UI.Production
 
         private void btnReadFirstPower_Click(object sender, EventArgs e)
         {
-            tbStartKwH.Text = string.Format("{0:N2}", ReadMeter());
+            //numTbStartKw.Text = string.Format("{0:N2}", ReadMeter());
         }
 
         private void btnReadMaxPower_Click(object sender, EventArgs e)
         {
-            maxTempKwHrNumericUpDown.Text = string.Format("0:N2", ReadMeter());
+            //numTbMaxTemp.Text = string.Format("{0:N2}", ReadMeter());
         }
 
         private void btnCancel_Click_1(object sender, EventArgs e)
@@ -180,7 +180,7 @@ namespace MNG.UI.Production
             //var ip = Properties.Settings.Default.PMeter1;
             var ip = "192.168.2.108";
             ModbusClient modbusClient = new ModbusClient();
-            modbusClient.ConnectionTimeout = 2000;
+            modbusClient.ConnectionTimeout = 3000;
 
             try
             {
@@ -200,6 +200,11 @@ namespace MNG.UI.Production
             return result / 1000;
         }
 
+        private void startKwHrTextBox_TextChanged(object sender, EventArgs e)
+        {
+            GetPowerConsumtion();
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             var time = DateTime.Now;
@@ -209,23 +214,14 @@ namespace MNG.UI.Production
             GetTimeInterval();
         }
 
-        private void startKwHrNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            GetPowerConsumtion();
-        }
-
-        private void maxTempKwHrNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            GetPowerConsumtion();
-        }
-
         private void GetPowerConsumtion()
         {
-            chargingBindingSource.EndEdit();
-            var power = CurrentCharge.MaxTempKwHr - CurrentCharge.StartKwHr;
+            var start = Convert.ToDouble(startKwHrTextBox.Text);
+            var stop = Convert.ToDouble(maxTempKwHrNumericTextBox.Text);
 
-            if (power <= 0 || CurrentCharge.MaxTempKwHr == 0 || CurrentCharge.StartKwHr == 0)
+            var power = stop - start;
 
+            if (power <= 0 || start == 0 || stop == 0)
             {
                 powerCompTextBox.BackColor = Color.Red;
                 powerCompTextBox.ForeColor = Color.White;
@@ -241,17 +237,24 @@ namespace MNG.UI.Production
             CurrentCharge.PowerComp = Convert.ToDouble(power);
 
             SetStatus();
-            chargingBindingSource.ResetBindings(false);
         }
 
-        private void maxTempNumericUpDown_ValueChanged(object sender, EventArgs e)
+
+        private void maxTempNumericTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (maxTempNumericUpDown.Value <= 0)
+            var temp = Convert.ToInt32(maxTempTextBox.Text);
+
+            if (temp <= 0)
                 IsMaxTempOk = false;
             else
                 IsMaxTempOk = true;
 
             SetStatus();
+        }
+
+        private void maxTempNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+
         }
 
         private async void btnBrowse_Click(object sender, EventArgs e)
@@ -312,6 +315,10 @@ namespace MNG.UI.Production
             CurrentCharge.Fe_Ni = totNi.Text == "" ? 0 : Convert.ToDouble(totNi.Text);
             CurrentCharge.Total = totTotal.Text == "" ? 0 : Convert.ToDouble(totTotal.Text);
             CurrentCharge.IsCompleted = IsTimeIntervalOk && IsPowerOk && IsMaxTempOk && IsPartIdOk;
+
+            chargingBindingSource.ResetBindings(false);
+
+            ResultCharge = CurrentCharge;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -369,37 +376,37 @@ namespace MNG.UI.Production
             var ttMetal = Convert.ToDouble(addMetal.Value);
             totMetal.Text = string.Format("{0:N1}", ttMetal);
 
-            var ttRS = CurrentCharge.Rs ?? 0 + Convert.ToDouble(addRS.Value);
+            var ttRS = Convert.ToDouble(addRS.Value) + CurrentCharge.Rs ?? 0;
             totRS.Text = string.Format("{0:N1}", ttRS);
 
-            var ttSS = CurrentCharge.Ss ?? 0 + Convert.ToDouble(addSS.Value);
+            var ttSS = Convert.ToDouble(addSS.Value) + CurrentCharge.Ss ?? 0;
             totSS.Text = string.Format("{0:N1}", ttSS);
 
-            var ttPigFC = CurrentCharge.PigFC ?? 0 + Convert.ToDouble(addPigFC.Value);
+            var ttPigFC = Convert.ToDouble(addPigFC.Value) + CurrentCharge.PigFC ?? 0;
             totPigFC.Text = string.Format("{0:N1}", ttPigFC);
 
-            var ttPigFCD = CurrentCharge.PigFCD ?? 0 + Convert.ToDouble(addPigFCD.Value);
+            var ttPigFCD = Convert.ToDouble(addPigFCD.Value) + CurrentCharge.PigFCD ?? 0;
             totPigFCD.Text = string.Format("{0:N1}", ttPigFCD);
 
-            var ttCFC = CurrentCharge.C_FC ?? 0 + Convert.ToDouble(addCFC.Value);
+            var ttCFC = Convert.ToDouble(addCFC.Value) + CurrentCharge.C_FC ?? 0;
             totCFC.Text = string.Format("{0:N1}", ttCFC);
 
-            var ttCFCD = CurrentCharge.C_FCD ?? 0 + Convert.ToDouble(addCFCD.Value);
+            var ttCFCD = Convert.ToDouble(addCFCD.Value) + CurrentCharge.C_FCD ?? 0;
             totCFCD.Text = string.Format("{0:N1}", ttCFCD);
 
-            var ttFeSi = CurrentCharge.Fe_Si ?? 0 + Convert.ToDouble(addSi.Value);
+            var ttFeSi = Convert.ToDouble(addSi.Value) + CurrentCharge.Fe_Si ?? 0;
             totSi.Text = string.Format("{0:N1}", ttFeSi);
 
-            var ttFeMn = CurrentCharge.Fe_Mn ?? 0 + Convert.ToDouble(addMn.Value);
+            var ttFeMn = Convert.ToDouble(addMn.Value) + CurrentCharge.Fe_Mn ?? 0;
             totMn.Text = string.Format("{0:N1}", ttFeMn);
 
-            var ttHcCr = CurrentCharge.HC_Cr ?? 0 + Convert.ToDouble(addCr.Value);
+            var ttHcCr = Convert.ToDouble(addCr.Value) + CurrentCharge.HC_Cr ?? 0;
             totCr.Text = string.Format("{0:N1}", ttHcCr);
 
-            var ttFeMo = CurrentCharge.Fe_Mo ?? 0 + Convert.ToDouble(addMo.Value);
+            var ttFeMo = Convert.ToDouble(addMo.Value) + CurrentCharge.Fe_Mo ?? 0;
             totMo.Text = string.Format("{0:N1}", ttFeMo);
 
-            var ttFeNi = CurrentCharge.Fe_Ni ?? 0 + Convert.ToDouble(addNi.Value);
+            var ttFeNi = Convert.ToDouble(addNi.Value) + CurrentCharge.Fe_Ni ?? 0;
             totNi.Text = string.Format("{0:N1}", ttFeNi);
 
             var ttMat = ttMetal + ttRS + ttSS + ttPigFC + ttPigFCD + ttCFC + ttCFCD +
@@ -437,9 +444,5 @@ namespace MNG.UI.Production
             }
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -66,15 +66,11 @@
             System.Windows.Forms.Label label7;
             System.Windows.Forms.Label label8;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditMatCharging));
-            this.chargingBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.maxTempKwHrNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.btnReadFirstPower = new System.Windows.Forms.Button();
             this.chargeTimeTextBox = new System.Windows.Forms.TextBox();
-            this.maxTempNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.powerCompTextBox = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.codeLabel1 = new System.Windows.Forms.Label();
-            this.furnaceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label16 = new System.Windows.Forms.Label();
             this.brandLabel1 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -86,7 +82,6 @@
             this.btnChargeTimeRetrieval = new System.Windows.Forms.Button();
             this.tbProductId = new System.Windows.Forms.TextBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lbHeader = new System.Windows.Forms.Label();
             this.pnToolBar = new System.Windows.Forms.Panel();
@@ -102,14 +97,14 @@
             this.pnNavigator = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.maxTempTextBox = new System.Windows.Forms.TextBox();
+            this.startKwHrTextBox = new System.Windows.Forms.TextBox();
             this.intervalTextBox = new System.Windows.Forms.TextBox();
             this.maxTempTimeTextBox = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.lbChargNo = new System.Windows.Forms.Label();
-            this.statusTextBox1 = new MNG.UI.Production.StatusTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.alMinTextBox = new System.Windows.Forms.TextBox();
-            this.chemicalCompositionInFurnaceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.alMaxTextBox = new System.Windows.Forms.TextBox();
             this.pMinTextBox = new System.Windows.Forms.TextBox();
             this.pMaxTextBox = new System.Windows.Forms.TextBox();
@@ -124,7 +119,6 @@
             this.cceMinTextBox = new System.Windows.Forms.TextBox();
             this.cceMaxTextBox = new System.Windows.Forms.TextBox();
             this.revisionTextBox = new System.Windows.Forms.TextBox();
-            this.controlPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.controlPlanIdTextBox = new System.Windows.Forms.TextBox();
             this.codeTextBox1 = new System.Windows.Forms.TextBox();
             this.codeTextBox = new System.Windows.Forms.TextBox();
@@ -174,9 +168,14 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.chemicalCompositionInFurnaceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.controlPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chargingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.maxTempKwHrNumericTextBox = new MNG.UI.Production.NumericTextBox();
+            this.statusTextBox1 = new MNG.UI.Production.StatusTextBox();
+            this.furnaceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rawMaterialBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbStartKwH = new MNG.UI.Production.NumericTextBox();
-            this.startKwHrNumericUpDown = new System.Windows.Forms.NumericUpDown();
             c_FCLabel = new System.Windows.Forms.Label();
             c_FCDLabel = new System.Windows.Forms.Label();
             fe_MnLabel = new System.Windows.Forms.Label();
@@ -213,18 +212,11 @@
             label5 = new System.Windows.Forms.Label();
             label7 = new System.Windows.Forms.Label();
             label8 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maxTempKwHrNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maxTempNumericUpDown)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.furnaceBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.pnToolBar.SuspendLayout();
             this.pnSaveExit.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).BeginInit();
             this.panel3.SuspendLayout();
             this.pnMaterial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addNi)).BeginInit();
@@ -239,8 +231,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.addRS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addCFC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addMetal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.furnaceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rawMaterialBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.startKwHrNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // c_FCLabel
@@ -603,30 +599,10 @@
             label8.TabIndex = 33;
             label8.Text = "(kg.)";
             // 
-            // chargingBindingSource
-            // 
-            this.chargingBindingSource.DataSource = typeof(MNG.UI.Charging);
-            // 
-            // maxTempKwHrNumericUpDown
-            // 
-            this.maxTempKwHrNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.chargingBindingSource, "MaxTempKwHr", true));
-            this.maxTempKwHrNumericUpDown.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maxTempKwHrNumericUpDown.Location = new System.Drawing.Point(427, 177);
-            this.maxTempKwHrNumericUpDown.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.maxTempKwHrNumericUpDown.Name = "maxTempKwHrNumericUpDown";
-            this.maxTempKwHrNumericUpDown.Size = new System.Drawing.Size(107, 23);
-            this.maxTempKwHrNumericUpDown.TabIndex = 53;
-            this.maxTempKwHrNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.maxTempKwHrNumericUpDown.ValueChanged += new System.EventHandler(this.maxTempKwHrNumericUpDown_ValueChanged);
-            // 
             // btnReadFirstPower
             // 
             this.btnReadFirstPower.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnReadFirstPower.Location = new System.Drawing.Point(540, 149);
+            this.btnReadFirstPower.Location = new System.Drawing.Point(553, 149);
             this.btnReadFirstPower.Name = "btnReadFirstPower";
             this.btnReadFirstPower.Size = new System.Drawing.Size(28, 22);
             this.btnReadFirstPower.TabIndex = 209;
@@ -646,32 +622,16 @@
             this.chargeTimeTextBox.Size = new System.Drawing.Size(120, 23);
             this.chargeTimeTextBox.TabIndex = 221;
             // 
-            // maxTempNumericUpDown
-            // 
-            this.maxTempNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.chargingBindingSource, "MaxTemp", true));
-            this.maxTempNumericUpDown.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maxTempNumericUpDown.Location = new System.Drawing.Point(215, 206);
-            this.maxTempNumericUpDown.Maximum = new decimal(new int[] {
-            1700,
-            0,
-            0,
-            0});
-            this.maxTempNumericUpDown.Name = "maxTempNumericUpDown";
-            this.maxTempNumericUpDown.Size = new System.Drawing.Size(73, 23);
-            this.maxTempNumericUpDown.TabIndex = 219;
-            this.maxTempNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.maxTempNumericUpDown.ValueChanged += new System.EventHandler(this.maxTempNumericUpDown_ValueChanged);
-            // 
             // powerCompTextBox
             // 
             this.powerCompTextBox.BackColor = System.Drawing.Color.White;
             this.powerCompTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.powerCompTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "PowerComp", true));
-            this.powerCompTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.powerCompTextBox.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.powerCompTextBox.Location = new System.Drawing.Point(427, 92);
             this.powerCompTextBox.Name = "powerCompTextBox";
             this.powerCompTextBox.ReadOnly = true;
-            this.powerCompTextBox.Size = new System.Drawing.Size(131, 23);
+            this.powerCompTextBox.Size = new System.Drawing.Size(154, 41);
             this.powerCompTextBox.TabIndex = 216;
             this.powerCompTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -700,10 +660,6 @@
             this.codeLabel1.Size = new System.Drawing.Size(37, 46);
             this.codeLabel1.TabIndex = 212;
             this.codeLabel1.Text = "C";
-            // 
-            // furnaceBindingSource
-            // 
-            this.furnaceBindingSource.DataSource = typeof(MNG.UI.Furnace);
             // 
             // label16
             // 
@@ -765,7 +721,7 @@
             // btnReadMaxPower
             // 
             this.btnReadMaxPower.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnReadMaxPower.Location = new System.Drawing.Point(540, 178);
+            this.btnReadMaxPower.Location = new System.Drawing.Point(553, 178);
             this.btnReadMaxPower.Name = "btnReadMaxPower";
             this.btnReadMaxPower.Size = new System.Drawing.Size(28, 22);
             this.btnReadMaxPower.TabIndex = 209;
@@ -818,10 +774,6 @@
             this.nameTextBox.ReadOnly = true;
             this.nameTextBox.Size = new System.Drawing.Size(213, 23);
             this.nameTextBox.TabIndex = 51;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(MNG.UI.Product);
             // 
             // timer1
             // 
@@ -890,7 +842,6 @@
             this.btnRefresh.Size = new System.Drawing.Size(59, 59);
             this.btnRefresh.TabIndex = 215;
             this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // pnSaveExit
             // 
@@ -922,7 +873,7 @@
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
@@ -1006,7 +957,9 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.tbStartKwH);
+            this.panel1.Controls.Add(this.maxTempKwHrNumericTextBox);
+            this.panel1.Controls.Add(this.maxTempTextBox);
+            this.panel1.Controls.Add(this.startKwHrTextBox);
             this.panel1.Controls.Add(this.intervalTextBox);
             this.panel1.Controls.Add(this.maxTempTimeTextBox);
             this.panel1.Controls.Add(this.label30);
@@ -1014,17 +967,14 @@
             this.panel1.Controls.Add(label2);
             this.panel1.Controls.Add(maxTempTimeLabel1);
             this.panel1.Controls.Add(this.statusTextBox1);
-            this.panel1.Controls.Add(this.startKwHrNumericUpDown);
             this.panel1.Controls.Add(this.chargeTimeTextBox);
             this.panel1.Controls.Add(chargeTimeLabel1);
-            this.panel1.Controls.Add(this.maxTempNumericUpDown);
             this.panel1.Controls.Add(this.btnReadFirstPower);
             this.panel1.Controls.Add(this.btnChargeTimeRetrieval);
             this.panel1.Controls.Add(this.powerCompTextBox);
             this.panel1.Controls.Add(this.btnMaxTempTimeRetrieval);
             this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.btnReadMaxPower);
-            this.panel1.Controls.Add(this.maxTempKwHrNumericUpDown);
             this.panel1.Controls.Add(label1);
             this.panel1.Controls.Add(maxTempLabel);
             this.panel1.Controls.Add(label20);
@@ -1035,6 +985,29 @@
             this.panel1.Size = new System.Drawing.Size(870, 246);
             this.panel1.TabIndex = 216;
             // 
+            // maxTempTextBox
+            // 
+            this.maxTempTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.maxTempTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "MaxTemp", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0", "N0"));
+            this.maxTempTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maxTempTextBox.Location = new System.Drawing.Point(215, 206);
+            this.maxTempTextBox.Name = "maxTempTextBox";
+            this.maxTempTextBox.Size = new System.Drawing.Size(54, 23);
+            this.maxTempTextBox.TabIndex = 252;
+            this.maxTempTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // startKwHrTextBox
+            // 
+            this.startKwHrTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.startKwHrTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "StartKwHr", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0", "N2"));
+            this.startKwHrTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startKwHrTextBox.Location = new System.Drawing.Point(427, 148);
+            this.startKwHrTextBox.Name = "startKwHrTextBox";
+            this.startKwHrTextBox.Size = new System.Drawing.Size(120, 23);
+            this.startKwHrTextBox.TabIndex = 252;
+            this.startKwHrTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.startKwHrTextBox.TextChanged += new System.EventHandler(this.startKwHrTextBox_TextChanged);
+            // 
             // intervalTextBox
             // 
             this.intervalTextBox.BackColor = System.Drawing.Color.White;
@@ -1044,7 +1017,7 @@
             this.intervalTextBox.Location = new System.Drawing.Point(215, 95);
             this.intervalTextBox.Name = "intervalTextBox";
             this.intervalTextBox.ReadOnly = true;
-            this.intervalTextBox.Size = new System.Drawing.Size(120, 41);
+            this.intervalTextBox.Size = new System.Drawing.Size(151, 41);
             this.intervalTextBox.TabIndex = 230;
             // 
             // maxTempTimeTextBox
@@ -1079,24 +1052,6 @@
             this.lbChargNo.Size = new System.Drawing.Size(66, 21);
             this.lbChargNo.TabIndex = 228;
             this.lbChargNo.Text = "label28";
-            // 
-            // statusTextBox1
-            // 
-            this.statusTextBox1.BackColor = System.Drawing.Color.White;
-            this.statusTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.statusTextBox1.ColorCompleted = "Black";
-            this.statusTextBox1.ColorRunning = "YellowGreen";
-            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "Status", true));
-            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsCompleted", this.chargingBindingSource, "IsCompleted", true));
-            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("OnStatus", this.chargingBindingSource, "Status", true));
-            this.statusTextBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusTextBox1.IsCompleted = false;
-            this.statusTextBox1.Location = new System.Drawing.Point(427, 25);
-            this.statusTextBox1.Name = "statusTextBox1";
-            this.statusTextBox1.OnStatus = null;
-            this.statusTextBox1.ReadOnly = true;
-            this.statusTextBox1.Size = new System.Drawing.Size(100, 27);
-            this.statusTextBox1.TabIndex = 223;
             // 
             // panel2
             // 
@@ -1149,10 +1104,6 @@
             this.alMinTextBox.Size = new System.Drawing.Size(45, 23);
             this.alMinTextBox.TabIndex = 251;
             this.alMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // chemicalCompositionInFurnaceBindingSource
-            // 
-            this.chemicalCompositionInFurnaceBindingSource.DataSource = typeof(MNG.UI.ChemicalCompositionInFurnace);
             // 
             // alMaxTextBox
             // 
@@ -1306,10 +1257,6 @@
             this.revisionTextBox.Name = "revisionTextBox";
             this.revisionTextBox.Size = new System.Drawing.Size(34, 23);
             this.revisionTextBox.TabIndex = 237;
-            // 
-            // controlPlanBindingSource
-            // 
-            this.controlPlanBindingSource.DataSource = typeof(MNG.UI.ControlPlan);
             // 
             // controlPlanIdTextBox
             // 
@@ -2046,35 +1993,59 @@
             this.panel7.Size = new System.Drawing.Size(873, 3);
             this.panel7.TabIndex = 222;
             // 
+            // chemicalCompositionInFurnaceBindingSource
+            // 
+            this.chemicalCompositionInFurnaceBindingSource.DataSource = typeof(MNG.UI.ChemicalCompositionInFurnace);
+            // 
+            // controlPlanBindingSource
+            // 
+            this.controlPlanBindingSource.DataSource = typeof(MNG.UI.ControlPlan);
+            // 
+            // chargingBindingSource
+            // 
+            this.chargingBindingSource.DataSource = typeof(MNG.UI.Charging);
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(MNG.UI.Product);
+            // 
+            // maxTempKwHrNumericTextBox
+            // 
+            this.maxTempKwHrNumericTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.maxTempKwHrNumericTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "MaxTempKwHr", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0", "N2"));
+            this.maxTempKwHrNumericTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maxTempKwHrNumericTextBox.Location = new System.Drawing.Point(427, 177);
+            this.maxTempKwHrNumericTextBox.Name = "maxTempKwHrNumericTextBox";
+            this.maxTempKwHrNumericTextBox.Size = new System.Drawing.Size(120, 23);
+            this.maxTempKwHrNumericTextBox.TabIndex = 253;
+            this.maxTempKwHrNumericTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maxTempKwHrNumericTextBox.TextChanged += new System.EventHandler(this.startKwHrTextBox_TextChanged);
+            // 
+            // statusTextBox1
+            // 
+            this.statusTextBox1.BackColor = System.Drawing.Color.White;
+            this.statusTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.statusTextBox1.ColorCompleted = "Black";
+            this.statusTextBox1.ColorRunning = "YellowGreen";
+            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "Status", true));
+            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsCompleted", this.chargingBindingSource, "IsCompleted", true));
+            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("OnStatus", this.chargingBindingSource, "Status", true));
+            this.statusTextBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusTextBox1.IsCompleted = false;
+            this.statusTextBox1.Location = new System.Drawing.Point(427, 25);
+            this.statusTextBox1.Name = "statusTextBox1";
+            this.statusTextBox1.OnStatus = null;
+            this.statusTextBox1.ReadOnly = true;
+            this.statusTextBox1.Size = new System.Drawing.Size(100, 27);
+            this.statusTextBox1.TabIndex = 223;
+            // 
+            // furnaceBindingSource
+            // 
+            this.furnaceBindingSource.DataSource = typeof(MNG.UI.Furnace);
+            // 
             // rawMaterialBindingSource
             // 
             this.rawMaterialBindingSource.DataSource = typeof(MNG.UI.RawMaterial);
-            // 
-            // tbStartKwH
-            // 
-            this.tbStartKwH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbStartKwH.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbStartKwH.Location = new System.Drawing.Point(427, 208);
-            this.tbStartKwH.Name = "tbStartKwH";
-            this.tbStartKwH.Size = new System.Drawing.Size(107, 23);
-            this.tbStartKwH.TabIndex = 232;
-            this.tbStartKwH.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // startKwHrNumericUpDown
-            // 
-            this.startKwHrNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.chargingBindingSource, "StartKwHr", true));
-            this.startKwHrNumericUpDown.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.startKwHrNumericUpDown.Location = new System.Drawing.Point(427, 148);
-            this.startKwHrNumericUpDown.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.startKwHrNumericUpDown.Name = "startKwHrNumericUpDown";
-            this.startKwHrNumericUpDown.Size = new System.Drawing.Size(107, 23);
-            this.startKwHrNumericUpDown.TabIndex = 52;
-            this.startKwHrNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.startKwHrNumericUpDown.ValueChanged += new System.EventHandler(this.startKwHrNumericUpDown_ValueChanged);
             // 
             // frmEditMatCharging
             // 
@@ -2096,12 +2067,7 @@
             this.Name = "frmEditMatCharging";
             this.Text = "frmEditMatCharging";
             this.Load += new System.EventHandler(this.frmEditMatCharging_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maxTempKwHrNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maxTempNumericUpDown)).EndInit();
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.furnaceBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.pnToolBar.ResumeLayout(false);
             this.pnToolBar.PerformLayout();
             this.pnSaveExit.ResumeLayout(false);
@@ -2109,8 +2075,6 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             this.pnMaterial.ResumeLayout(false);
             this.pnMaterial.PerformLayout();
@@ -2126,14 +2090,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.addRS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addCFC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addMetal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.furnaceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rawMaterialBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.startKwHrNumericUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.NumericUpDown maxTempKwHrNumericUpDown;
         private System.Windows.Forms.Button btnReadFirstPower;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.BindingSource productBindingSource;
@@ -2149,7 +2116,6 @@
         private System.Windows.Forms.TextBox powerCompTextBox;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnReadMaxPower;
-        private System.Windows.Forms.NumericUpDown maxTempNumericUpDown;
         private System.Windows.Forms.BindingSource chargingBindingSource;
         private System.Windows.Forms.TextBox tbProductId;
         private System.Windows.Forms.TextBox chargeTimeTextBox;
@@ -2242,7 +2208,8 @@
         private System.Windows.Forms.TextBox tbCurrentRS;
         private System.Windows.Forms.TextBox tbCurrentSS;
         private System.Windows.Forms.TextBox tbCurrentTotal;
-        private NumericTextBox tbStartKwH;
-        private System.Windows.Forms.NumericUpDown startKwHrNumericUpDown;
+        private System.Windows.Forms.TextBox maxTempTextBox;
+        private NumericTextBox maxTempKwHrNumericTextBox;
+        private System.Windows.Forms.TextBox startKwHrTextBox;
     }
 }

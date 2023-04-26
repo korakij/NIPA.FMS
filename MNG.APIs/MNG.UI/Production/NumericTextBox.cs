@@ -6,13 +6,14 @@ namespace MNG.UI.Production
 {
     public class NumericTextBox : TextBox
     {
+
         public NumericTextBox()
         {
             base.KeyPress += KeyPress;
             base.KeyDown += KeyDown;
             base.MouseClick += MouseClick;
 
-            this.TextAlign = HorizontalAlignment.Center;
+            this.TextAlign = HorizontalAlignment.Right;
         }
 
         public new void KeyPress(object sender, KeyPressEventArgs e)

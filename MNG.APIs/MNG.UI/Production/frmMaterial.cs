@@ -159,7 +159,7 @@ namespace MNG.UI.Production
             {
                 try
                 {
-                    await _client.PutChargingAsync(fMatCharging.CurrentCharge.ChargeNo, fMatCharging.CurrentCharge);
+                    await _client.PutChargingAsync(fMatCharging.ResultCharge.ChargeNo, fMatCharging.ResultCharge);
                 }
                 catch (Exception ex)
                 {

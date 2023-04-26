@@ -551,6 +551,9 @@
     <EmbeddedResource Include="Production\frmTimeRetrieval.resx">
       <DependentUpon>frmTimeRetrieval.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Production\NumericTextBox.resx">
+      <DependentUpon>NumericTextBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Production\ToolBar.resx">
       <DependentUpon>ToolBar.cs</DependentUpon>
     </EmbeddedResource>

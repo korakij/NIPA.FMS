@@ -51,14 +51,13 @@
             System.Windows.Forms.Label label4;
             System.Windows.Forms.Label label5;
             System.Windows.Forms.Label totalLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.Label moltenMetalLabel;
             this.pnCharging = new System.Windows.Forms.Panel();
             this.totalTextBox = new System.Windows.Forms.TextBox();
-            this.chargingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.chargingDataGridView = new System.Windows.Forms.DataGridView();
-            this.chargeNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fe_NiTextBox1 = new System.Windows.Forms.TextBox();
             this.fe_MoTextBox1 = new System.Windows.Forms.TextBox();
             this.hC_CrTextBox1 = new System.Windows.Forms.TextBox();
@@ -71,7 +70,6 @@
             this.rsTextBox1 = new System.Windows.Forms.TextBox();
             this.ssTextBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.statusTextBox1 = new MNG.UI.Production.StatusTextBox();
             this.chargeNoTextBox = new System.Windows.Forms.TextBox();
             this.tbKwHrPerCharge = new System.Windows.Forms.TextBox();
             this.tbMinute = new System.Windows.Forms.TextBox();
@@ -85,7 +83,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnBorderBottom = new System.Windows.Forms.Panel();
             this.pnBorderTop = new System.Windows.Forms.Panel();
+            this.chargingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chargeNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusTextBox1 = new MNG.UI.Production.StatusTextBox();
             this.lotNoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.moltenMetalTextBox = new System.Windows.Forms.TextBox();
             label51 = new System.Windows.Forms.Label();
             label50 = new System.Windows.Forms.Label();
             label37 = new System.Windows.Forms.Label();
@@ -108,10 +110,11 @@
             label4 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
             totalLabel = new System.Windows.Forms.Label();
+            moltenMetalLabel = new System.Windows.Forms.Label();
             this.pnCharging.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chargingDataGridView)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lotNoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,7 +162,7 @@
             // 
             hC_CrLabel.AutoSize = true;
             hC_CrLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            hC_CrLabel.Location = new System.Drawing.Point(134, 332);
+            hC_CrLabel.Location = new System.Drawing.Point(134, 361);
             hC_CrLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             hC_CrLabel.Name = "hC_CrLabel";
             hC_CrLabel.Size = new System.Drawing.Size(23, 17);
@@ -180,7 +183,7 @@
             // 
             pigFCLabel.AutoSize = true;
             pigFCLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            pigFCLabel.Location = new System.Drawing.Point(134, 129);
+            pigFCLabel.Location = new System.Drawing.Point(134, 158);
             pigFCLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             pigFCLabel.Name = "pigFCLabel";
             pigFCLabel.Size = new System.Drawing.Size(51, 17);
@@ -191,7 +194,7 @@
             // 
             c_FCLabel.AutoSize = true;
             c_FCLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            c_FCLabel.Location = new System.Drawing.Point(134, 216);
+            c_FCLabel.Location = new System.Drawing.Point(134, 245);
             c_FCLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             c_FCLabel.Name = "c_FCLabel";
             c_FCLabel.Size = new System.Drawing.Size(40, 17);
@@ -202,7 +205,7 @@
             // 
             ssLabel.AutoSize = true;
             ssLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ssLabel.Location = new System.Drawing.Point(134, 71);
+            ssLabel.Location = new System.Drawing.Point(134, 100);
             ssLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             ssLabel.Name = "ssLabel";
             ssLabel.Size = new System.Drawing.Size(20, 17);
@@ -213,7 +216,7 @@
             // 
             pigFCDLabel.AutoSize = true;
             pigFCDLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            pigFCDLabel.Location = new System.Drawing.Point(134, 158);
+            pigFCDLabel.Location = new System.Drawing.Point(134, 187);
             pigFCDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             pigFCDLabel.Name = "pigFCDLabel";
             pigFCDLabel.Size = new System.Drawing.Size(61, 17);
@@ -224,7 +227,7 @@
             // 
             rsLabel.AutoSize = true;
             rsLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            rsLabel.Location = new System.Drawing.Point(134, 100);
+            rsLabel.Location = new System.Drawing.Point(134, 129);
             rsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             rsLabel.Name = "rsLabel";
             rsLabel.Size = new System.Drawing.Size(22, 17);
@@ -235,7 +238,7 @@
             // 
             fe_MoLabel.AutoSize = true;
             fe_MoLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            fe_MoLabel.Location = new System.Drawing.Point(134, 361);
+            fe_MoLabel.Location = new System.Drawing.Point(134, 390);
             fe_MoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             fe_MoLabel.Name = "fe_MoLabel";
             fe_MoLabel.Size = new System.Drawing.Size(28, 17);
@@ -246,7 +249,7 @@
             // 
             c_FCDLabel.AutoSize = true;
             c_FCDLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            c_FCDLabel.Location = new System.Drawing.Point(134, 245);
+            c_FCDLabel.Location = new System.Drawing.Point(134, 274);
             c_FCDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             c_FCDLabel.Name = "c_FCDLabel";
             c_FCDLabel.Size = new System.Drawing.Size(50, 17);
@@ -257,7 +260,7 @@
             // 
             fe_NiLabel.AutoSize = true;
             fe_NiLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            fe_NiLabel.Location = new System.Drawing.Point(134, 390);
+            fe_NiLabel.Location = new System.Drawing.Point(134, 419);
             fe_NiLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             fe_NiLabel.Name = "fe_NiLabel";
             fe_NiLabel.Size = new System.Drawing.Size(21, 17);
@@ -268,7 +271,7 @@
             // 
             fe_MnLabel.AutoSize = true;
             fe_MnLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            fe_MnLabel.Location = new System.Drawing.Point(134, 303);
+            fe_MnLabel.Location = new System.Drawing.Point(134, 332);
             fe_MnLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             fe_MnLabel.Name = "fe_MnLabel";
             fe_MnLabel.Size = new System.Drawing.Size(27, 17);
@@ -279,7 +282,7 @@
             // 
             fe_SiLabel.AutoSize = true;
             fe_SiLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            fe_SiLabel.Location = new System.Drawing.Point(134, 274);
+            fe_SiLabel.Location = new System.Drawing.Point(134, 303);
             fe_SiLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             fe_SiLabel.Name = "fe_SiLabel";
             fe_SiLabel.Size = new System.Drawing.Size(17, 17);
@@ -342,7 +345,7 @@
             // 
             totalLabel.AutoSize = true;
             totalLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            totalLabel.Location = new System.Drawing.Point(134, 448);
+            totalLabel.Location = new System.Drawing.Point(134, 477);
             totalLabel.Name = "totalLabel";
             totalLabel.Size = new System.Drawing.Size(43, 17);
             totalLabel.TabIndex = 211;
@@ -353,6 +356,8 @@
             this.pnCharging.AutoScroll = true;
             this.pnCharging.AutoSize = true;
             this.pnCharging.BackColor = System.Drawing.Color.White;
+            this.pnCharging.Controls.Add(moltenMetalLabel);
+            this.pnCharging.Controls.Add(this.moltenMetalTextBox);
             this.pnCharging.Controls.Add(totalLabel);
             this.pnCharging.Controls.Add(this.totalTextBox);
             this.pnCharging.Controls.Add(this.chargingDataGridView);
@@ -391,17 +396,12 @@
             this.totalTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "Total", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N1"));
             this.totalTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalTextBox.Location = new System.Drawing.Point(271, 445);
+            this.totalTextBox.Location = new System.Drawing.Point(271, 474);
             this.totalTextBox.Name = "totalTextBox";
             this.totalTextBox.ReadOnly = true;
             this.totalTextBox.Size = new System.Drawing.Size(63, 23);
             this.totalTextBox.TabIndex = 212;
             this.totalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // chargingBindingSource
-            // 
-            this.chargingBindingSource.DataSource = typeof(MNG.UI.Charging);
-            this.chargingBindingSource.CurrentChanged += new System.EventHandler(this.chargingBindingSource_CurrentChanged);
             // 
             // chargingDataGridView
             // 
@@ -411,34 +411,34 @@
             this.chargingDataGridView.AllowUserToResizeRows = false;
             this.chargingDataGridView.AutoGenerateColumns = false;
             this.chargingDataGridView.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.chargingDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.chargingDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.chargingDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.chargingDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.chargeNoDataGridViewTextBoxColumn});
             this.chargingDataGridView.DataSource = this.chargingBindingSource;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.chargingDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.chargingDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.chargingDataGridView.EnableHeadersVisualStyles = false;
             this.chargingDataGridView.Location = new System.Drawing.Point(18, 68);
             this.chargingDataGridView.MultiSelect = false;
             this.chargingDataGridView.Name = "chargingDataGridView";
             this.chargingDataGridView.ReadOnly = true;
             this.chargingDataGridView.RowHeadersVisible = false;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chargingDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chargingDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.chargingDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.chargingDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.chargingDataGridView.ShowCellErrors = false;
@@ -446,21 +446,13 @@
             this.chargingDataGridView.Size = new System.Drawing.Size(106, 540);
             this.chargingDataGridView.TabIndex = 0;
             // 
-            // chargeNoDataGridViewTextBoxColumn
-            // 
-            this.chargeNoDataGridViewTextBoxColumn.DataPropertyName = "ChargeNo";
-            this.chargeNoDataGridViewTextBoxColumn.HeaderText = "Charge No";
-            this.chargeNoDataGridViewTextBoxColumn.Name = "chargeNoDataGridViewTextBoxColumn";
-            this.chargeNoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.chargeNoDataGridViewTextBoxColumn.Width = 125;
-            // 
             // fe_NiTextBox1
             // 
             this.fe_NiTextBox1.BackColor = System.Drawing.Color.White;
             this.fe_NiTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fe_NiTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "Fe_Ni", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N1"));
             this.fe_NiTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fe_NiTextBox1.Location = new System.Drawing.Point(271, 387);
+            this.fe_NiTextBox1.Location = new System.Drawing.Point(271, 416);
             this.fe_NiTextBox1.Name = "fe_NiTextBox1";
             this.fe_NiTextBox1.ReadOnly = true;
             this.fe_NiTextBox1.Size = new System.Drawing.Size(63, 23);
@@ -473,7 +465,7 @@
             this.fe_MoTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fe_MoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "Fe_Mo", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N1"));
             this.fe_MoTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fe_MoTextBox1.Location = new System.Drawing.Point(271, 358);
+            this.fe_MoTextBox1.Location = new System.Drawing.Point(271, 387);
             this.fe_MoTextBox1.Name = "fe_MoTextBox1";
             this.fe_MoTextBox1.ReadOnly = true;
             this.fe_MoTextBox1.Size = new System.Drawing.Size(63, 23);
@@ -486,7 +478,7 @@
             this.hC_CrTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.hC_CrTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "HC_Cr", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N1"));
             this.hC_CrTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hC_CrTextBox1.Location = new System.Drawing.Point(271, 329);
+            this.hC_CrTextBox1.Location = new System.Drawing.Point(271, 358);
             this.hC_CrTextBox1.Name = "hC_CrTextBox1";
             this.hC_CrTextBox1.ReadOnly = true;
             this.hC_CrTextBox1.Size = new System.Drawing.Size(63, 23);
@@ -499,7 +491,7 @@
             this.fe_MnTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fe_MnTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "Fe_Mn", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N1"));
             this.fe_MnTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fe_MnTextBox1.Location = new System.Drawing.Point(271, 300);
+            this.fe_MnTextBox1.Location = new System.Drawing.Point(271, 329);
             this.fe_MnTextBox1.Name = "fe_MnTextBox1";
             this.fe_MnTextBox1.ReadOnly = true;
             this.fe_MnTextBox1.Size = new System.Drawing.Size(63, 23);
@@ -512,7 +504,7 @@
             this.fe_SiTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fe_SiTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "Fe_Si", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N1"));
             this.fe_SiTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fe_SiTextBox1.Location = new System.Drawing.Point(271, 271);
+            this.fe_SiTextBox1.Location = new System.Drawing.Point(271, 300);
             this.fe_SiTextBox1.Name = "fe_SiTextBox1";
             this.fe_SiTextBox1.ReadOnly = true;
             this.fe_SiTextBox1.Size = new System.Drawing.Size(63, 23);
@@ -525,7 +517,7 @@
             this.c_FCTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.c_FCTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "C_FC", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N1"));
             this.c_FCTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.c_FCTextBox1.Location = new System.Drawing.Point(271, 213);
+            this.c_FCTextBox1.Location = new System.Drawing.Point(271, 242);
             this.c_FCTextBox1.Name = "c_FCTextBox1";
             this.c_FCTextBox1.ReadOnly = true;
             this.c_FCTextBox1.Size = new System.Drawing.Size(63, 23);
@@ -538,7 +530,7 @@
             this.c_FCDTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.c_FCDTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "C_FCD", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N1"));
             this.c_FCDTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.c_FCDTextBox1.Location = new System.Drawing.Point(271, 242);
+            this.c_FCDTextBox1.Location = new System.Drawing.Point(271, 271);
             this.c_FCDTextBox1.Name = "c_FCDTextBox1";
             this.c_FCDTextBox1.ReadOnly = true;
             this.c_FCDTextBox1.Size = new System.Drawing.Size(63, 23);
@@ -551,7 +543,7 @@
             this.pigFCDTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pigFCDTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "PigFCD", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N1"));
             this.pigFCDTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pigFCDTextBox1.Location = new System.Drawing.Point(271, 155);
+            this.pigFCDTextBox1.Location = new System.Drawing.Point(271, 184);
             this.pigFCDTextBox1.Name = "pigFCDTextBox1";
             this.pigFCDTextBox1.ReadOnly = true;
             this.pigFCDTextBox1.Size = new System.Drawing.Size(63, 23);
@@ -564,7 +556,7 @@
             this.pigFCTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pigFCTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "PigFC", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N1"));
             this.pigFCTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pigFCTextBox1.Location = new System.Drawing.Point(271, 126);
+            this.pigFCTextBox1.Location = new System.Drawing.Point(271, 155);
             this.pigFCTextBox1.Name = "pigFCTextBox1";
             this.pigFCTextBox1.ReadOnly = true;
             this.pigFCTextBox1.Size = new System.Drawing.Size(63, 23);
@@ -577,7 +569,7 @@
             this.rsTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rsTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "Rs", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N1"));
             this.rsTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rsTextBox1.Location = new System.Drawing.Point(271, 97);
+            this.rsTextBox1.Location = new System.Drawing.Point(271, 126);
             this.rsTextBox1.Name = "rsTextBox1";
             this.rsTextBox1.ReadOnly = true;
             this.rsTextBox1.Size = new System.Drawing.Size(63, 23);
@@ -590,7 +582,7 @@
             this.ssTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ssTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "Ss", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N1"));
             this.ssTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ssTextBox1.Location = new System.Drawing.Point(271, 68);
+            this.ssTextBox1.Location = new System.Drawing.Point(271, 97);
             this.ssTextBox1.Name = "ssTextBox1";
             this.ssTextBox1.ReadOnly = true;
             this.ssTextBox1.Size = new System.Drawing.Size(63, 23);
@@ -626,23 +618,6 @@
             this.panel1.Size = new System.Drawing.Size(355, 315);
             this.panel1.TabIndex = 210;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
-            // 
-            // statusTextBox1
-            // 
-            this.statusTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.statusTextBox1.ColorCompleted = null;
-            this.statusTextBox1.ColorRunning = null;
-            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "Status", true));
-            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsCompleted", this.chargingBindingSource, "IsCompleted", true));
-            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("OnStatus", this.chargingBindingSource, "Status", true));
-            this.statusTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusTextBox1.IsCompleted = false;
-            this.statusTextBox1.Location = new System.Drawing.Point(248, 50);
-            this.statusTextBox1.Name = "statusTextBox1";
-            this.statusTextBox1.OnStatus = null;
-            this.statusTextBox1.Size = new System.Drawing.Size(91, 23);
-            this.statusTextBox1.TabIndex = 211;
-            this.statusTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // chargeNoTextBox
             // 
@@ -800,9 +775,60 @@
             this.pnBorderTop.Size = new System.Drawing.Size(355, 3);
             this.pnBorderTop.TabIndex = 213;
             // 
+            // chargingBindingSource
+            // 
+            this.chargingBindingSource.DataSource = typeof(MNG.UI.Charging);
+            this.chargingBindingSource.CurrentChanged += new System.EventHandler(this.chargingBindingSource_CurrentChanged);
+            // 
+            // chargeNoDataGridViewTextBoxColumn
+            // 
+            this.chargeNoDataGridViewTextBoxColumn.DataPropertyName = "ChargeNo";
+            this.chargeNoDataGridViewTextBoxColumn.HeaderText = "Charge No";
+            this.chargeNoDataGridViewTextBoxColumn.Name = "chargeNoDataGridViewTextBoxColumn";
+            this.chargeNoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.chargeNoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // statusTextBox1
+            // 
+            this.statusTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.statusTextBox1.ColorCompleted = null;
+            this.statusTextBox1.ColorRunning = null;
+            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "Status", true));
+            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsCompleted", this.chargingBindingSource, "IsCompleted", true));
+            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("OnStatus", this.chargingBindingSource, "Status", true));
+            this.statusTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusTextBox1.IsCompleted = false;
+            this.statusTextBox1.Location = new System.Drawing.Point(248, 50);
+            this.statusTextBox1.Name = "statusTextBox1";
+            this.statusTextBox1.OnStatus = null;
+            this.statusTextBox1.Size = new System.Drawing.Size(91, 23);
+            this.statusTextBox1.TabIndex = 211;
+            this.statusTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // lotNoBindingSource
             // 
             this.lotNoBindingSource.DataSource = typeof(MNG.UI.LotNo);
+            // 
+            // moltenMetalLabel
+            // 
+            moltenMetalLabel.AutoSize = true;
+            moltenMetalLabel.Location = new System.Drawing.Point(134, 70);
+            moltenMetalLabel.Name = "moltenMetalLabel";
+            moltenMetalLabel.Size = new System.Drawing.Size(96, 17);
+            moltenMetalLabel.TabIndex = 212;
+            moltenMetalLabel.Text = "Molten Metal:";
+            // 
+            // moltenMetalTextBox
+            // 
+            this.moltenMetalTextBox.BackColor = System.Drawing.Color.White;
+            this.moltenMetalTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.moltenMetalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "MoltenMetal", true));
+            this.moltenMetalTextBox.Location = new System.Drawing.Point(271, 68);
+            this.moltenMetalTextBox.Name = "moltenMetalTextBox";
+            this.moltenMetalTextBox.ReadOnly = true;
+            this.moltenMetalTextBox.Size = new System.Drawing.Size(63, 23);
+            this.moltenMetalTextBox.TabIndex = 213;
+            this.moltenMetalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // frmMaterial
             // 
@@ -822,10 +848,10 @@
             this.Load += new System.EventHandler(this.frmAddMaterial_Load);
             this.pnCharging.ResumeLayout(false);
             this.pnCharging.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chargingDataGridView)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lotNoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -866,5 +892,6 @@
         private System.Windows.Forms.Panel pnBorderBottom;
         private System.Windows.Forms.Panel pnBorderTop;
         private System.Windows.Forms.TextBox totalTextBox;
+        private System.Windows.Forms.TextBox moltenMetalTextBox;
     }
 }
