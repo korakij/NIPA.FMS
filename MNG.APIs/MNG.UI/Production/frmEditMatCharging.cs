@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 using ASRS.UI;
@@ -92,13 +93,15 @@ namespace MNG.UI.Production
             if (fTimeRetrieval.ShowDialog() == DialogResult.OK)
             {
                 CurrentCharge.ChargeTime = fTimeRetrieval.time;
+                chargingBindingSource.ResetBindings(false);
                 GetTimeInterval();
             }
         }
 
         private void btnMaxTempTimeRetrieval_Click(object sender, EventArgs e)
         {
-            var temp = Convert.ToInt32(maxTempTextBox.Text);
+            var temp = int.Parse(maxTempTextBox.Text, NumberStyles.AllowThousands, new CultureInfo("en-US"));
+
             if (temp < 1)
             {
                 MessageBox.Show("Max Temp is required!!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -116,7 +119,7 @@ namespace MNG.UI.Production
             if (fTimeRetrieval.ShowDialog() == DialogResult.OK)
             {
                 CurrentCharge.MaxTempTime = fTimeRetrieval.time;
-                maxTempTimeTextBox.Text = fTimeRetrieval.time.ToString();
+                chargingBindingSource.ResetBindings(false);
 
                 timer1.Stop();
                 CurrentCharge.Status = Status.Completed.ToString();
@@ -200,7 +203,7 @@ namespace MNG.UI.Production
             return result / 1000;
         }
 
-        private void startKwHrTextBox_TextChanged(object sender, EventArgs e)
+        private void startKwHrTextBox_Leave(object sender, EventArgs e)
         {
             GetPowerConsumtion();
         }
@@ -216,8 +219,8 @@ namespace MNG.UI.Production
 
         private void GetPowerConsumtion()
         {
+            var stop = Convert.ToDouble(maxTempKwHrTextBox.Text);
             var start = Convert.ToDouble(startKwHrTextBox.Text);
-            var stop = Convert.ToDouble(maxTempKwHrNumericTextBox.Text);
 
             var power = stop - start;
 

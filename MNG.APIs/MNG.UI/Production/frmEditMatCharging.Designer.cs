@@ -172,10 +172,10 @@
             this.controlPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.chargingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.maxTempKwHrNumericTextBox = new MNG.UI.Production.NumericTextBox();
             this.statusTextBox1 = new MNG.UI.Production.StatusTextBox();
             this.furnaceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rawMaterialBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.maxTempKwHrTextBox = new System.Windows.Forms.TextBox();
             c_FCLabel = new System.Windows.Forms.Label();
             c_FCDLabel = new System.Windows.Forms.Label();
             fe_MnLabel = new System.Windows.Forms.Label();
@@ -614,7 +614,7 @@
             // 
             this.chargeTimeTextBox.BackColor = System.Drawing.Color.White;
             this.chargeTimeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.chargeTimeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "ChargeTime", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "dd/MM/yy  HH:mm:ss"));
+            this.chargeTimeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "ChargeTime", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "dd/MM/yy  HH:mm"));
             this.chargeTimeTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chargeTimeTextBox.Location = new System.Drawing.Point(215, 148);
             this.chargeTimeTextBox.Name = "chargeTimeTextBox";
@@ -957,7 +957,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.maxTempKwHrNumericTextBox);
+            this.panel1.Controls.Add(this.maxTempKwHrTextBox);
             this.panel1.Controls.Add(this.maxTempTextBox);
             this.panel1.Controls.Add(this.startKwHrTextBox);
             this.panel1.Controls.Add(this.intervalTextBox);
@@ -988,7 +988,7 @@
             // maxTempTextBox
             // 
             this.maxTempTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.maxTempTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "MaxTemp", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0", "N0"));
+            this.maxTempTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "MaxTemp", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0"));
             this.maxTempTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maxTempTextBox.Location = new System.Drawing.Point(215, 206);
             this.maxTempTextBox.Name = "maxTempTextBox";
@@ -1006,7 +1006,7 @@
             this.startKwHrTextBox.Size = new System.Drawing.Size(120, 23);
             this.startKwHrTextBox.TabIndex = 252;
             this.startKwHrTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.startKwHrTextBox.TextChanged += new System.EventHandler(this.startKwHrTextBox_TextChanged);
+            this.startKwHrTextBox.Leave += new System.EventHandler(this.startKwHrTextBox_Leave);
             // 
             // intervalTextBox
             // 
@@ -1024,7 +1024,7 @@
             // 
             this.maxTempTimeTextBox.BackColor = System.Drawing.Color.White;
             this.maxTempTimeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.maxTempTimeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "MaxTempTime", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "dd/MM/yy  HH:mm:ss"));
+            this.maxTempTimeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "MaxTempTime", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "dd/MM/yy  HH:mm"));
             this.maxTempTimeTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maxTempTimeTextBox.Location = new System.Drawing.Point(215, 177);
             this.maxTempTimeTextBox.Name = "maxTempTimeTextBox";
@@ -2009,18 +2009,6 @@
             // 
             this.productBindingSource.DataSource = typeof(MNG.UI.Product);
             // 
-            // maxTempKwHrNumericTextBox
-            // 
-            this.maxTempKwHrNumericTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.maxTempKwHrNumericTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "MaxTempKwHr", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0", "N2"));
-            this.maxTempKwHrNumericTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maxTempKwHrNumericTextBox.Location = new System.Drawing.Point(427, 177);
-            this.maxTempKwHrNumericTextBox.Name = "maxTempKwHrNumericTextBox";
-            this.maxTempKwHrNumericTextBox.Size = new System.Drawing.Size(120, 23);
-            this.maxTempKwHrNumericTextBox.TabIndex = 253;
-            this.maxTempKwHrNumericTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.maxTempKwHrNumericTextBox.TextChanged += new System.EventHandler(this.startKwHrTextBox_TextChanged);
-            // 
             // statusTextBox1
             // 
             this.statusTextBox1.BackColor = System.Drawing.Color.White;
@@ -2046,6 +2034,18 @@
             // rawMaterialBindingSource
             // 
             this.rawMaterialBindingSource.DataSource = typeof(MNG.UI.RawMaterial);
+            // 
+            // maxTempKwHrTextBox
+            // 
+            this.maxTempKwHrTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.maxTempKwHrTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "MaxTempKwHr", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0", "N2"));
+            this.maxTempKwHrTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maxTempKwHrTextBox.Location = new System.Drawing.Point(427, 177);
+            this.maxTempKwHrTextBox.Name = "maxTempKwHrTextBox";
+            this.maxTempKwHrTextBox.Size = new System.Drawing.Size(120, 23);
+            this.maxTempKwHrTextBox.TabIndex = 252;
+            this.maxTempKwHrTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maxTempKwHrTextBox.Leave += new System.EventHandler(this.startKwHrTextBox_Leave);
             // 
             // frmEditMatCharging
             // 
@@ -2209,7 +2209,7 @@
         private System.Windows.Forms.TextBox tbCurrentSS;
         private System.Windows.Forms.TextBox tbCurrentTotal;
         private System.Windows.Forms.TextBox maxTempTextBox;
-        private NumericTextBox maxTempKwHrNumericTextBox;
         private System.Windows.Forms.TextBox startKwHrTextBox;
+        private System.Windows.Forms.TextBox maxTempKwHrTextBox;
     }
 }

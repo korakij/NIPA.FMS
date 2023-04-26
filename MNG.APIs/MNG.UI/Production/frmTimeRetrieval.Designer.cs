@@ -37,18 +37,18 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.dateTimePicker1.CustomFormat = "dd/MM/yy  HH:mm:ss";
+            this.dateTimePicker1.CustomFormat = "dd/MM/yy  HH:mm";
             this.dateTimePicker1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(12, 12);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.ShowUpDown = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(153, 27);
+            this.dateTimePicker1.Size = new System.Drawing.Size(134, 27);
             this.dateTimePicker1.TabIndex = 0;
             // 
             // btnGetTime
             // 
-            this.btnGetTime.Location = new System.Drawing.Point(171, 12);
+            this.btnGetTime.Location = new System.Drawing.Point(152, 12);
             this.btnGetTime.Name = "btnGetTime";
             this.btnGetTime.Size = new System.Drawing.Size(28, 27);
             this.btnGetTime.TabIndex = 1;
@@ -84,7 +84,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(210, 82);
+            this.ClientSize = new System.Drawing.Size(190, 82);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnGetTime);

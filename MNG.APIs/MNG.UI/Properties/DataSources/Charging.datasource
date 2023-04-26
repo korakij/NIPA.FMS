@@ -129,7 +129,7 @@
          <PropertyUISetting Name="MaxTempKwHr">
             <ControlSettings>
                <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
-                  <BindableControlInfo Name="NumericTextBox" Type="MNG.UI.Production.NumericTextBox" AssemblyName="MNG.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" AssemblyCodeBase="file:///D:/Mango.Solutions/NIPA.FMS/MNG.APIs/MNG.UI/obj/Debug/MNG.UI.exe" Frameworks=".NETFramework,Version=v4.6.1;.NETFramework,Version=v4.7.2;.NETFramework,Version=v4.8" />
+                  <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
                </ControlSetting>
             </ControlSettings>
          </PropertyUISetting>
