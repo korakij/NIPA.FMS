@@ -533,7 +533,8 @@ namespace MNG.UI
 
         private async void btnCreate_Click(object sender, EventArgs e)
         {
-            frmControlPlan fControlPlan = new frmControlPlan(new ControlPlan());
+            var newCTP = new ControlPlan();
+            frmControlPlan fControlPlan = new frmControlPlan(newCTP);
 
             fControlPlan.StartPosition = FormStartPosition.Manual;
             fControlPlan.Location = new Point(100, 50);
@@ -550,25 +551,52 @@ namespace MNG.UI
 
             if (result == DialogResult.OK)
             {
+                if (SelectedItem.Id == null)
+                {
+                    MessageBox.Show("Missing Product", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (SelectedItem.Revision.Substring(0, 1) == "0")
+                    SelectedItem.Type = "Dev";
+                else
+                    SelectedItem.Type = "Mass";
+
                 try
                 {
+
                     await _client.PostControlPlanAsync(fControlPlan.SelectedItem);
+                    MessageBox.Show("Control Plan Added", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
                     if (ex.Message.Contains("201"))
                     {
-                        MessageBox.Show("Control Plan Added", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Product Added", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
                         MessageBox.Show("ERROR", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Search();
+                        return;
                     }
                 }
 
+                try
+                {
+                    var ctp = await _client.GetControlPlanByCodeAsync(fControlPlan.SelectedItem.Code);
+                    var prod = await _client.GetProductByIdAsync(ctp.ProductId);
+
+                    prod.ActiveControlPlanId = ctp.Id;
+
+                    await _client.PutProductAsync(prod.Id ?? 0, prod);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Unable to bind with Product", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
                 Search();
-                //var items = await _client.GetControlPlanAllAsync();
-                //controlPlanBindingSource.DataSource = items.ToList().OrderByDescending(x => x.Code); ;
             }
         }
 
@@ -624,12 +652,6 @@ namespace MNG.UI
         {
             controlPlanBindingSource.EndEdit();
             SelectedItem = controlPlanBindingSource.Current as ControlPlan;
-
-            if (SelectedItem.Revision.Substring(0, 1) == "0")
-                SelectedItem.Type = "Dev";
-            else
-                SelectedItem.Type = "Mass";
-
         }
 
         private void cbRelease_CheckedChanged(object sender, EventArgs e)
@@ -693,26 +715,6 @@ namespace MNG.UI
                 return;
 
             controlPlanBindingSource_CurrentItemChanged(this, EventArgs.Empty);
-
-            //SelectedProduct = (await _client.GetProductByIdAsync(SelectedItem.ProductId));
-            //SelectedMatSpec = (await _client.GetMaterialSpecificationByIdAsync(SelectedItem.MaterialSpecificationCode));
-            //SelectedMeltStandards = (await _client.GetMeltStandardByIdAsync(SelectedItem.MeltingCode));
-            //SelectedChemInFurnaces = (await _client.GetChemicalCompositionInFurnaceByIdAsync(SelectedItem.ChemicalCompositionInFurnaceCode));
-            //SelectedChemInLadle = (await _client.GetChemicalCompositionInLadleByIdAsync(SelectedItem.ChemicalCompositionInLadleCode));
-            //SelectedPourStd = (await _client.GetPouringStandardByIdAsync(SelectedItem.PouringCode));
-            //SelectedTooling = (await _client.GetToolingByIdAsync(SelectedItem.ToolingCode));
-            //SelectedMoldStd = (await _client.GetMoldStandardByIdAsync(SelectedItem.MoldingCode));
-            //SelectedShotBlastStd = (await _client.GetShotBlastStandardByIdAsync(SelectedItem.ShotBlastingCode));
-
-            //fProduct.SelectedItem = SelectedProduct;
-            //fMatSpec.Data = SelectedMatSpec;
-            //fMeltStd.Data = SelectedMeltStandards;
-            //fChemInFurnace.Data = SelectedChemInFurnaces;
-            //fChemInLadle.Data = SelectedChemInLadle;
-            //fPourStd.Data = SelectedPourStd;
-            //fTooling.Data = SelectedTooling;
-            //fMoldStd.Data = SelectedMoldStd;
-            //fShotBlastStd.Data = SelectedShotBlastStd;
         }
     }
 }

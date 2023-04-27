@@ -425,7 +425,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(642, 714);
+            this.panel3.Size = new System.Drawing.Size(642, 760);
             this.panel3.TabIndex = 7;
             // 
             // panel7
@@ -436,7 +436,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(281, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(361, 714);
+            this.panel7.Size = new System.Drawing.Size(361, 760);
             this.panel7.TabIndex = 24;
             // 
             // panel6
@@ -445,7 +445,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 90);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(361, 624);
+            this.panel6.Size = new System.Drawing.Size(361, 670);
             this.panel6.TabIndex = 21;
             // 
             // panel11
@@ -494,7 +494,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(361, 624);
+            this.panel11.Size = new System.Drawing.Size(361, 670);
             this.panel11.TabIndex = 20;
             // 
             // btnItemBrowse
@@ -748,7 +748,7 @@
             this.pnMain.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnMain.Location = new System.Drawing.Point(64, 0);
             this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(217, 714);
+            this.pnMain.Size = new System.Drawing.Size(217, 760);
             this.pnMain.TabIndex = 23;
             // 
             // toolingDataGridView
@@ -785,7 +785,7 @@
             this.toolingDataGridView.Name = "toolingDataGridView";
             this.toolingDataGridView.ReadOnly = true;
             this.toolingDataGridView.RowHeadersVisible = false;
-            this.toolingDataGridView.Size = new System.Drawing.Size(217, 624);
+            this.toolingDataGridView.Size = new System.Drawing.Size(217, 670);
             this.toolingDataGridView.TabIndex = 4;
             // 
             // codeDataGridViewTextBoxColumn
@@ -826,7 +826,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(59, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(5, 714);
+            this.panel2.Size = new System.Drawing.Size(5, 760);
             this.panel2.TabIndex = 22;
             // 
             // pnToolBar
@@ -841,7 +841,7 @@
             this.pnToolBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnToolBar.Location = new System.Drawing.Point(0, 0);
             this.pnToolBar.Name = "pnToolBar";
-            this.pnToolBar.Size = new System.Drawing.Size(59, 714);
+            this.pnToolBar.Size = new System.Drawing.Size(59, 760);
             this.pnToolBar.TabIndex = 7;
             // 
             // label4
@@ -917,7 +917,7 @@
             this.panel13.Controls.Add(this.btnOk);
             this.panel13.Controls.Add(this.tbClose);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel13.Location = new System.Drawing.Point(0, 559);
+            this.panel13.Location = new System.Drawing.Point(0, 605);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(59, 134);
             this.panel13.TabIndex = 15;
@@ -974,7 +974,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(0, 693);
+            this.label2.Location = new System.Drawing.Point(0, 739);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 21);
             this.label2.TabIndex = 9;
@@ -1002,7 +1002,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(642, 714);
+            this.ClientSize = new System.Drawing.Size(642, 760);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTooling";
