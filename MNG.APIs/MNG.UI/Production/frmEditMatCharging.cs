@@ -359,9 +359,22 @@ namespace MNG.UI.Production
             if (CurrentCharge == null)
                 return;
 
-            CurrentCharge.Total = CurrentCharge.Rs ?? 0 + CurrentCharge.Ss ?? 0+ CurrentCharge.PigFC ?? 0+
-                    CurrentCharge.PigFCD ?? 0 + CurrentCharge.C_FC ?? 0 + CurrentCharge.C_FCD ?? 0 + CurrentCharge.Fe_Si ?? 0 + CurrentCharge.Fe_Mn ?? 0 +
-                    CurrentCharge.HC_Cr ?? 0 + CurrentCharge.Fe_Mo ?? 0 + CurrentCharge.Fe_Ni ?? 0;
+            if (CurrentCharge.Rs == null) CurrentCharge.Rs = 0;
+            if (CurrentCharge.Ss == null) CurrentCharge.Ss = 0;
+            if (CurrentCharge.PigFC == null) CurrentCharge.PigFC = 0;
+            if (CurrentCharge.PigFCD == null) CurrentCharge.PigFCD = 0;
+            if (CurrentCharge.C_FC == null) CurrentCharge.C_FC = 0;
+            if (CurrentCharge.C_FCD == null) CurrentCharge.C_FCD = 0;
+            if (CurrentCharge.Fe_Si == null) CurrentCharge.Fe_Si = 0;
+            if (CurrentCharge.Fe_Mn == null) CurrentCharge.Fe_Mn = 0;
+            if (CurrentCharge.HC_Cr == null) CurrentCharge.HC_Cr = 0;
+            if (CurrentCharge.HC_Cr == null) CurrentCharge.HC_Cr = 0;
+            if (CurrentCharge.Fe_Mo == null) CurrentCharge.Fe_Mo = 0;
+            if (CurrentCharge.Fe_Ni == null) CurrentCharge.Fe_Ni = 0;
+
+            CurrentCharge.Total = CurrentCharge.Rs + CurrentCharge.Ss + CurrentCharge.PigFC +
+                    CurrentCharge.PigFCD + CurrentCharge.C_FC + CurrentCharge.C_FCD + CurrentCharge.Fe_Si + CurrentCharge.Fe_Mn +
+                    CurrentCharge.HC_Cr + CurrentCharge.Fe_Mo + CurrentCharge.Fe_Ni;
 
             tbCurrentTotal.Text = string.Format("{0:N1}", CurrentCharge.Total);
 
