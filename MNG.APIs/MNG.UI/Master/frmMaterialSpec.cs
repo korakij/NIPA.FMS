@@ -45,7 +45,10 @@ namespace ASRS.UI
             set
             {
                 _data = value;
-                materialSpecificationBindingSource.DataSource = _data;
+                if (_data == null)
+                    materialSpecificationBindingSource.Clear();
+                else
+                    materialSpecificationBindingSource.DataSource = _data;
             }
         }
 

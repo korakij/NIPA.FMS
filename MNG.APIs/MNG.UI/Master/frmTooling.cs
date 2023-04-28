@@ -44,7 +44,10 @@ namespace ASRS.UI
             set
             {
                 _data = value;
-                toolingBindingSource.DataSource = _data;
+                if (_data != null)
+                    toolingBindingSource.DataSource = _data;
+                else
+                    toolingBindingSource.Clear();
             }
         }
 
@@ -274,7 +277,7 @@ namespace ASRS.UI
             }
             else
             {
-                var c = Convert.ToInt32(id.Code.Substring(10,2)) + 1;
+                var c = Convert.ToInt32(id.Code.Substring(10, 2)) + 1;
                 newId = $"TL-{date}-{c.ToString("00")}";
             }
 

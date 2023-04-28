@@ -44,7 +44,10 @@ namespace ASRS.UI
             set
             {
                 _data = value;
-                meltStandardBindingSource.DataSource = _data;
+                if (_data == null)
+                    meltStandardBindingSource.Clear();
+                else
+                    meltStandardBindingSource.DataSource = _data;
             }
         }
 

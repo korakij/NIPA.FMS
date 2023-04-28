@@ -497,7 +497,7 @@
             // controlPlanBindingSource
             // 
             this.controlPlanBindingSource.DataSource = typeof(MNG.UI.ControlPlan);
-            this.controlPlanBindingSource.CurrentItemChanged += new System.EventHandler(this.controlPlanBindingSource_CurrentItemChanged);
+            this.controlPlanBindingSource.CurrentChanged += new System.EventHandler(this.controlPlanBindingSource_CurrentChanged);
             // 
             // productIdTextBox
             // 

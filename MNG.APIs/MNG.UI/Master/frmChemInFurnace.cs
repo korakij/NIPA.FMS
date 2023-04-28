@@ -44,7 +44,10 @@ namespace ASRS.UI
             set
             {
                 _data = value;
-                chemicalCompositionInFurnaceBindingSource.DataSource = _data;
+                if (_data != null)
+                    chemicalCompositionInFurnaceBindingSource.DataSource = _data;
+                else
+                    chemicalCompositionInFurnaceBindingSource.Clear();
             }
         }
 

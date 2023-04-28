@@ -44,7 +44,10 @@ namespace ASRS.UI
             set
             {
                 _data = value;
-                shotBlastStandardBindingSource.DataSource = _data;
+                if (_data != null)
+                    shotBlastStandardBindingSource.DataSource = _data;
+                else
+                    shotBlastStandardBindingSource.Clear();
             }
         }
 

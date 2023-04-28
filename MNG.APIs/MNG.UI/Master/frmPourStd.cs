@@ -44,7 +44,10 @@ namespace ASRS.UI
             set
             {
                 _data = value;
-                pourStandardBindingSource.DataSource = _data;
+                if (_data != null)
+                    pourStandardBindingSource.DataSource = _data;
+                else
+                    pourStandardBindingSource.Clear();
             }
         }
 

@@ -42,7 +42,10 @@ namespace ASRS.UI
             set
             {
                 _data = value;
-                moldStandardBindingSource.DataSource = _data;
+                if (_data != null)
+                    moldStandardBindingSource.DataSource = _data;
+                else
+                    moldStandardBindingSource.Clear();
             }
         }
 

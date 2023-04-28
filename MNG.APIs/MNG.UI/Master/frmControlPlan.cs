@@ -20,10 +20,8 @@ namespace MNG.UI
     public partial class frmControlPlan : Form
     {
         private Client _client;
-        private string SelectedCTPCode;
         private List<ControlPlan> ControlPlans;
         private ControlPlan SelectedItem;
-        private ControlPlan SelectedCTP;
         private MeltStandard SelectedMeltStandards;
         private ChemicalCompositionInFurnace SelectedChemInFurnaces;
         private ChemicalCompositionInLadle SelectedChemInLadle;
@@ -33,6 +31,7 @@ namespace MNG.UI
         private Product SelectedProduct;
         private MaterialSpecification SelectedMatSpec;
         private ShotBlastStandard SelectedShotBlastStd;
+        private bool IsCreate;
 
         private frmProduct fProduct;
         private frmMaterialSpec fMatSpec;
@@ -44,7 +43,6 @@ namespace MNG.UI
         private frmMeltStd fMeltStd;
         private frmShotBlastStd fShotBlastStd;
 
-        private int CurrentPage = 1;
         private FormMode Mode { get; set; }
 
         public void ListEnable() => pnList.Show();
@@ -75,15 +73,31 @@ namespace MNG.UI
         private void btnClose_Click(object sender, EventArgs e) => this.Close();
         private void btnExit_Click(object sender, EventArgs e) => this.Close();
 
-        public frmControlPlan(ControlPlan _controlPlan)
+        public frmControlPlan()
         {
             InitializeComponent();
+            IsCreate = true;
 
             var url = MNG.UI.Properties.Settings.Default.API_URL;
             _client = new Client(url);
 
             InitialStandard();
             LoadPanelCreate();
+
+            SelectedItem = new ControlPlan();
+            controlPlanBindingSource.DataSource = SelectedItem;
+        }
+
+        public frmControlPlan(ControlPlan _controlPlan)
+        {
+            InitializeComponent();
+            IsCreate = false;
+
+            var url = MNG.UI.Properties.Settings.Default.API_URL;
+            _client = new Client(url);
+
+            InitialStandard();
+            LoadPanelEdit();
 
             SelectedItem = _controlPlan;
             controlPlanBindingSource.DataSource = _controlPlan;
@@ -104,7 +118,6 @@ namespace MNG.UI
             LoadPanelView();
 
             cboMassDev.SelectedIndex = 0;
-            //controlPlanBindingSource.DataSource = ControlPlans.ToList().OrderByDescending(x => x.Code);
         }
 
         private void tbSearch_TextChanged(object sender, EventArgs e)
@@ -169,7 +182,6 @@ namespace MNG.UI
         private void InitialStandard()
         {
             SelectedItem = new ControlPlan();
-            SelectedCTP = new ControlPlan();
             SelectedMeltStandards = new MeltStandard();
             SelectedChemInFurnaces = new ChemicalCompositionInFurnace();
             SelectedChemInLadle = new ChemicalCompositionInLadle();
@@ -319,6 +331,25 @@ namespace MNG.UI
             fProduct.ProductBrowseEnable();
             fProduct.Show();
 
+            fProduct.ProductCodeChanged += this.ProductCodeChanged;
+        }
+
+        private void LoadPanelEdit()
+        {
+            this.cbRelease.Show();
+
+            fProduct = new frmProduct();
+            fProduct.TopLevel = false;
+            pnProductInfo.Controls.Add(fProduct);
+            fProduct.BringToFront();
+            fProduct.Dock = DockStyle.Fill;
+            fProduct.EnableViewMode();
+            fProduct.ToolBarDisable();
+            fProduct.MainDiable();
+            fProduct.BrowseEnable();
+            fProduct.ProductBrowseEnable();
+            fProduct.Show();
+
             fMatSpec = new frmMaterialSpec();
             fMatSpec.TopLevel = false;
             pnMatSpec.Controls.Add(fMatSpec);
@@ -430,6 +461,9 @@ namespace MNG.UI
             pnProductInfo.BringToFront();
             pnProductInfo.Dock = DockStyle.Left;
 
+            if (IsCreate)
+                return;
+
             pnDetails.Controls.Add(pnMatSpec);
             pnMatSpec.BringToFront();
             pnMatSpec.Dock = DockStyle.Left;
@@ -463,23 +497,73 @@ namespace MNG.UI
             pnShotBlast.Dock = DockStyle.Left;
         }
 
-        private async void controlPlanBindingSource_CurrentItemChanged(object sender, EventArgs e)
+        private async void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //SelectedItem = controlPlanBindingSource.Current as ControlPlan;
+            string _selectedCTPCode = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            var _selectedCTP = new ControlPlan();
+
+            try
+            {
+                _selectedCTP = (await _client.GetControlPlanByCodeAsync(_selectedCTPCode));
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Unable to Load Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            SelectedItem = _selectedCTP;
 
             if (SelectedItem.Id == null)
                 return;
 
+            controlPlanBindingSource_CurrentChanged(this, EventArgs.Empty);
+        }
+
+        private async void controlPlanBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            if (SelectedItem.Id == null)
+                return;
+
             controlPlanBindingSource.DataSource = SelectedItem;
-            SelectedProduct = (await _client.GetProductByIdAsync(SelectedItem.ProductId));
-            SelectedMatSpec = (await _client.GetMaterialSpecificationByIdAsync(SelectedItem.MaterialSpecificationCode));
-            SelectedMeltStandards = (await _client.GetMeltStandardByIdAsync(SelectedItem.MeltingCode));
-            SelectedChemInFurnaces = (await _client.GetChemicalCompositionInFurnaceByIdAsync(SelectedItem.ChemicalCompositionInFurnaceCode));
-            SelectedChemInLadle = (await _client.GetChemicalCompositionInLadleByIdAsync(SelectedItem.ChemicalCompositionInLadleCode));
-            SelectedPourStd = (await _client.GetPouringStandardByIdAsync(SelectedItem.PouringCode));
-            SelectedTooling = (await _client.GetToolingByIdAsync(SelectedItem.ToolingCode));
-            SelectedMoldStd = (await _client.GetMoldStandardByIdAsync(SelectedItem.MoldingCode));
-            SelectedShotBlastStd = (await _client.GetShotBlastStandardByIdAsync(SelectedItem.ShotBlastingCode));
+
+            if (SelectedItem.ProductId != null)
+                SelectedProduct = (await _client.GetProductByIdAsync(SelectedItem.ProductId));
+            else
+                SelectedProduct = null;
+
+            if (SelectedItem.MaterialSpecificationCode != null)
+                SelectedMatSpec = (await _client.GetMaterialSpecificationByIdAsync(SelectedItem.MaterialSpecificationCode));
+            else
+                SelectedMatSpec = null;
+            if (SelectedItem.MeltingCode != null)
+                SelectedMeltStandards = (await _client.GetMeltStandardByIdAsync(SelectedItem.MeltingCode));
+            else
+                SelectedMeltStandards = null;
+            if (SelectedItem.ChemicalCompositionInFurnaceCode != null)
+                SelectedChemInFurnaces = (await _client.GetChemicalCompositionInFurnaceByIdAsync(SelectedItem.ChemicalCompositionInFurnaceCode));
+            else
+                SelectedChemInFurnaces = null;
+            if (SelectedItem.ChemicalCompositionInLadleCode != null)
+                SelectedChemInLadle = (await _client.GetChemicalCompositionInLadleByIdAsync(SelectedItem.ChemicalCompositionInLadleCode));
+            else
+                SelectedChemInLadle = null;
+            if (SelectedItem.PouringCode != null)
+                SelectedPourStd = (await _client.GetPouringStandardByIdAsync(SelectedItem.PouringCode));
+            else
+                SelectedPourStd = null;
+            if (SelectedItem.ToolingCode != null)
+                SelectedTooling = (await _client.GetToolingByIdAsync(SelectedItem.ToolingCode));
+            else
+                SelectedTooling = null;
+            if (SelectedItem.MoldingCode != null)
+                SelectedMoldStd = (await _client.GetMoldStandardByIdAsync(SelectedItem.MoldingCode));
+            else
+                SelectedMoldStd = null;
+            if (SelectedItem.ShotBlastingCode != null)
+                SelectedShotBlastStd = (await _client.GetShotBlastStandardByIdAsync(SelectedItem.ShotBlastingCode));
+            else
+                SelectedShotBlastStd = null;
 
             fProduct.SelectedItem = SelectedProduct;
             fMatSpec.Data = SelectedMatSpec;
@@ -534,7 +618,7 @@ namespace MNG.UI
         private async void btnCreate_Click(object sender, EventArgs e)
         {
             var newCTP = new ControlPlan();
-            frmControlPlan fControlPlan = new frmControlPlan(newCTP);
+            frmControlPlan fControlPlan = new frmControlPlan();
 
             fControlPlan.StartPosition = FormStartPosition.Manual;
             fControlPlan.Location = new Point(100, 50);
@@ -551,20 +635,13 @@ namespace MNG.UI
 
             if (result == DialogResult.OK)
             {
-                if (SelectedItem.Id == null)
-                {
-                    MessageBox.Show("Missing Product", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                if (SelectedItem.Revision.Substring(0, 1) == "0")
-                    SelectedItem.Type = "Dev";
+                if (fControlPlan.SelectedItem.Revision.Substring(0, 1) == "0")
+                    fControlPlan.SelectedItem.Type = "Dev";
                 else
-                    SelectedItem.Type = "Mass";
+                    fControlPlan.SelectedItem.Type = "Mass";
 
                 try
                 {
-
                     await _client.PostControlPlanAsync(fControlPlan.SelectedItem);
                     MessageBox.Show("Control Plan Added", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -605,7 +682,7 @@ namespace MNG.UI
             //var ctp = controlPlanBindingSource.Current as ControlPlan;
             //frmControlPlan fControlPlan = new frmControlPlan(ctp);
 
-            frmControlPlan fControlPlan = new frmControlPlan(SelectedCTP);
+            frmControlPlan fControlPlan = new frmControlPlan(SelectedItem);
             fControlPlan.StartPosition = FormStartPosition.Manual;
             fControlPlan.Location = new Point(100, 50);
             fControlPlan.WindowState = FormWindowState.Normal;
@@ -651,6 +728,8 @@ namespace MNG.UI
         private void btnSave_Click(object sender, EventArgs e)
         {
             controlPlanBindingSource.EndEdit();
+            controlPlanBindingSource.ResetBindings(false);
+
             SelectedItem = controlPlanBindingSource.Current as ControlPlan;
         }
 
@@ -694,27 +773,5 @@ namespace MNG.UI
 
         }
 
-        private async void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            SelectedCTPCode = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            //var selectedCTP = (await _client.GetControlPlanAllAsync()).Where(x => x.Code.Contains(code)).LastOrDefault();
-            try
-            {
-                SelectedCTP = (await _client.GetControlPlanByCodeAsync(SelectedCTPCode));
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Unable to Load Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            //SelectedItem = controlPlanBindingSource.Current as ControlPlan;
-            SelectedItem = SelectedCTP;
-
-            if (SelectedItem.Id == null)
-                return;
-
-            controlPlanBindingSource_CurrentItemChanged(this, EventArgs.Empty);
-        }
     }
 }

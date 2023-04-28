@@ -44,7 +44,10 @@ namespace ASRS.UI
             set
             {
                 _data = value;
-                chemicalCompositionInLadleBindingSource.DataSource = _data;
+                if (_data != null)
+                    chemicalCompositionInLadleBindingSource.DataSource = _data;
+                else
+                    chemicalCompositionInLadleBindingSource.Clear();
             }
         }
 
