@@ -48,6 +48,8 @@ namespace MNG.UI.Production
             CurrentPouring = new Pouring();
             CurrentPourStandard = new PourStandard();
             CurrentProduct = new Product();
+
+            ChangeMode(false);
         }
 
         public frmInspection(Pouring _pouring, Product _product)
@@ -61,6 +63,8 @@ namespace MNG.UI.Production
             CurrentProduct = _product;
 
             pouringBindingSource.DataSource = _pouring;
+
+            ChangeMode(true);
         }
 
         public void EnableToolBar() => pnToolBar.Show();
@@ -68,22 +72,42 @@ namespace MNG.UI.Production
 
         private async void frmEditQC_Load(object sender, EventArgs e)
         {
-            //IsSaved = false;
-            //btnSave.Enabled = false;
+        }
 
-            ////pouringBindingSource.DataSource = PouringItem;
-            //IsLoaded = true;
-
-            //meltingDefect = PouringItem.Defect.MeltDefect.Total ?? 0;
-            //moldingDefect = PouringItem.Defect.MoldDefect.Total ?? 0;
-            //pouringDefect = PouringItem.Defect.PourDefect.Total ?? 0;
-            //finDefect = PouringItem.Defect.FinDefect.Total ?? 0;
-            //engDefect = PouringItem.Defect.EngDefect.Total ?? 0;
-            //coreDefect = PouringItem.Defect.CoreDefect.Total ?? 0;
-
-            //ProductItem = (await _client.GetProductByIdAsync(PouringItem.ProductCode));
-            //productBindingSource.DataSource = ProductItem;
-
+        public void ChangeMode(bool isEdit)
+        {
+            totalNumberTextBox.ReadOnly = !isEdit;
+            blowHoleTextBox.ReadOnly = !isEdit;
+            chemNGTextBox.ReadOnly = !isEdit;
+            chillTextBox.ReadOnly = !isEdit;
+            hardnessNGTextBox.ReadOnly = !isEdit;
+            microNGTextBox.ReadOnly = !isEdit;
+            pinHoleTextBox.ReadOnly = !isEdit;
+            shrinkageTextBox.ReadOnly = !isEdit;
+            burrTextBox.ReadOnly = !isEdit;
+            chillMismatchTextBox.ReadOnly = !isEdit;
+            coreMismatchTextBox.ReadOnly = !isEdit;
+            missMatchTextBox.ReadOnly = !isEdit;
+            pinHoleTextBox1.ReadOnly = !isEdit;
+            sandBrokenTextBox.ReadOnly = !isEdit;
+            sandDropTextBox.ReadOnly = !isEdit;
+            coreDeformTextBox.ReadOnly  = !isEdit;
+            wetCoreTextBox.ReadOnly = !isEdit;
+            coreBrokenTextBox.ReadOnly = !isEdit;
+            blowHoleTextBox2.ReadOnly = !isEdit;
+            chillTextBox1.ReadOnly= !isEdit;
+            coldShutTextBox.ReadOnly= !isEdit;
+            hardnessNGTextBox1.ReadOnly = !isEdit;
+            microNGTextBox1.ReadOnly = !isEdit;  
+            pinHoleTextBox2.ReadOnly = !isEdit;
+            shrinkageTextBox1.ReadOnly = !isEdit;
+            slagTextBox.ReadOnly = !isEdit;
+            airPocketTextBox.ReadOnly= !isEdit;
+            missedIdentiferTextBox.ReadOnly = !isEdit;
+            wornToolingTextBox.ReadOnly = !isEdit;
+            deformTextBox.ReadOnly = !isEdit;
+            dentTextBox.ReadOnly = !isEdit;
+            overGrindingTextBox.ReadOnly = !isEdit;
         }
 
         public async void PouringIntoMoldChanged(object sender, MeltingEventArgs e)
@@ -110,7 +134,7 @@ namespace MNG.UI.Production
             var y = Screen.PrimaryScreen.WorkingArea.Height;
             var x = Screen.PrimaryScreen.WorkingArea.Width;
 
-            fInspection.Location = new Point((x / 2) - (fInspection.Width / 2), (y/2) - (fInspection.Height / 2));
+            fInspection.Location = new Point((x / 2) - (fInspection.Width / 2), (y / 2) - (fInspection.Height / 2));
 
             if (fInspection.ShowDialog() == DialogResult.OK)
             {
@@ -270,6 +294,7 @@ namespace MNG.UI.Production
             if (p.Defect.TotalNumber <= 0)
                 return;
 
+            p.PouredWeight = p.NoOfPouredMold * CurrentProduct.Weight;
             p.Defect.TotalGood = p.Defect.TotalNumber - p.Defect.TotalDefect;
             p.Defect.TotalWeight = p.Defect.TotalNumber * CurrentProduct.Weight;
             p.Defect.TotalDefectWeight = p.Defect.TotalDefect * CurrentProduct.Weight;
@@ -286,5 +311,6 @@ namespace MNG.UI.Production
             pouringBindingSource.EndEdit();
             PouringItem = pouringBindingSource.Current as Pouring;
         }
+
     }
 }
