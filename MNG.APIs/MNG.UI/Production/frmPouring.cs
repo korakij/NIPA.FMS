@@ -75,6 +75,7 @@ namespace MNG.UI
             fPouring.DisableLastMoldTime();
             fPouring.DisableDataEntryDetails();
             fPouring.DisablePouringTimer();
+            fPouring.EnableNoProduct();
 
             fPouring.TopLevel = false;
             pnPouring.Controls.Add(fPouring);

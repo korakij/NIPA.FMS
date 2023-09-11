@@ -1,4 +1,5 @@
 ﻿using ASRS.UI;
+using Org.BouncyCastle.Bcpg.OpenPgp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -86,6 +87,7 @@ namespace MNG.UI.Production
             Mode = FormMode.Editing;
             NewPouring = new Pouring();
             NewPouring = _currentPouring;
+            this.DisableNoProduct();
             pouringBindingSource.DataSource = NewPouring;
         }
 
@@ -107,6 +109,9 @@ namespace MNG.UI.Production
         public void DisableLastMoldTime() => btnLastTimeRetrieval.Hide();
         public void EnablePouringTimer() => PouringTimer.Start();
         public void DisablePouringTimer() => PouringTimer.Stop();
+        public void DisableNoProduct() => productNoTextBox.Hide();
+        public void EnableNoProduct() => productNoTextBox.Show();
+
 
         public void EnableDataEntryDetails()
         {
@@ -213,7 +218,7 @@ namespace MNG.UI.Production
                 {
                     if (ex.Message.Contains("201"))
                     {
-
+                        MessageBox.Show("Hi");
                     }
                     else
                     {
