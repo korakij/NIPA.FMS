@@ -639,7 +639,7 @@
             // 
             this.btnReadFirstPower.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnReadFirstPower.Location = new System.Drawing.Point(737, 183);
-            this.btnReadFirstPower.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReadFirstPower.Margin = new System.Windows.Forms.Padding(4);
             this.btnReadFirstPower.Name = "btnReadFirstPower";
             this.btnReadFirstPower.Size = new System.Drawing.Size(37, 27);
             this.btnReadFirstPower.TabIndex = 209;
@@ -654,7 +654,7 @@
             this.chargeTimeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "ChargeTime", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "dd/MM/yy  HH:mm:ss"));
             this.chargeTimeTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chargeTimeTextBox.Location = new System.Drawing.Point(287, 182);
-            this.chargeTimeTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chargeTimeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.chargeTimeTextBox.Name = "chargeTimeTextBox";
             this.chargeTimeTextBox.ReadOnly = true;
             this.chargeTimeTextBox.Size = new System.Drawing.Size(159, 27);
@@ -671,7 +671,7 @@
             this.powerCompTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "PowerComp", true));
             this.powerCompTextBox.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.powerCompTextBox.Location = new System.Drawing.Point(569, 113);
-            this.powerCompTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.powerCompTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.powerCompTextBox.Name = "powerCompTextBox";
             this.powerCompTextBox.ReadOnly = true;
             this.powerCompTextBox.Size = new System.Drawing.Size(205, 49);
@@ -689,9 +689,9 @@
             this.groupBox4.Controls.Add(this.capacityLabel1);
             this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(831, 63);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(297, 214);
             this.groupBox4.TabIndex = 215;
             this.groupBox4.TabStop = false;
@@ -778,7 +778,7 @@
             // 
             this.btnReadMaxPower.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnReadMaxPower.Location = new System.Drawing.Point(737, 219);
-            this.btnReadMaxPower.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReadMaxPower.Margin = new System.Windows.Forms.Padding(4);
             this.btnReadMaxPower.Name = "btnReadMaxPower";
             this.btnReadMaxPower.Size = new System.Drawing.Size(37, 27);
             this.btnReadMaxPower.TabIndex = 209;
@@ -790,7 +790,7 @@
             // 
             this.btnMaxTempTimeRetrieval.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnMaxTempTimeRetrieval.Location = new System.Drawing.Point(455, 218);
-            this.btnMaxTempTimeRetrieval.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMaxTempTimeRetrieval.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaxTempTimeRetrieval.Name = "btnMaxTempTimeRetrieval";
             this.btnMaxTempTimeRetrieval.Size = new System.Drawing.Size(36, 27);
             this.btnMaxTempTimeRetrieval.TabIndex = 209;
@@ -802,7 +802,7 @@
             // 
             this.btnChargeTimeRetrieval.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnChargeTimeRetrieval.Location = new System.Drawing.Point(455, 182);
-            this.btnChargeTimeRetrieval.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChargeTimeRetrieval.Margin = new System.Windows.Forms.Padding(4);
             this.btnChargeTimeRetrieval.Name = "btnChargeTimeRetrieval";
             this.btnChargeTimeRetrieval.Size = new System.Drawing.Size(36, 27);
             this.btnChargeTimeRetrieval.TabIndex = 209;
@@ -817,7 +817,7 @@
             this.tbProductId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "ProductId", true));
             this.tbProductId.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbProductId.Location = new System.Drawing.Point(287, 58);
-            this.tbProductId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbProductId.Margin = new System.Windows.Forms.Padding(4);
             this.tbProductId.Name = "tbProductId";
             this.tbProductId.ReadOnly = true;
             this.tbProductId.Size = new System.Drawing.Size(71, 27);
@@ -830,7 +830,7 @@
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "Name", true));
             this.nameTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameTextBox.Location = new System.Drawing.Point(499, 58);
-            this.nameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.ReadOnly = true;
             this.nameTextBox.Size = new System.Drawing.Size(283, 27);
@@ -874,7 +874,7 @@
             this.pnToolBar.Controls.Add(this.pnNavigator);
             this.pnToolBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnToolBar.Location = new System.Drawing.Point(0, 0);
-            this.pnToolBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnToolBar.Margin = new System.Windows.Forms.Padding(4);
             this.pnToolBar.Name = "pnToolBar";
             this.pnToolBar.Size = new System.Drawing.Size(79, 1222);
             this.pnToolBar.TabIndex = 214;
@@ -889,7 +889,7 @@
             this.btnCalculator.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalculator.Image = ((System.Drawing.Image)(resources.GetObject("btnCalculator.Image")));
             this.btnCalculator.Location = new System.Drawing.Point(0, 648);
-            this.btnCalculator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCalculator.Margin = new System.Windows.Forms.Padding(4);
             this.btnCalculator.Name = "btnCalculator";
             this.btnCalculator.Size = new System.Drawing.Size(79, 73);
             this.btnCalculator.TabIndex = 216;
@@ -906,7 +906,7 @@
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
             this.btnRefresh.Location = new System.Drawing.Point(0, 575);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(79, 73);
             this.btnRefresh.TabIndex = 215;
@@ -919,7 +919,7 @@
             this.pnSaveExit.Controls.Add(this.btnExit);
             this.pnSaveExit.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnSaveExit.Location = new System.Drawing.Point(0, 965);
-            this.pnSaveExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnSaveExit.Margin = new System.Windows.Forms.Padding(4);
             this.pnSaveExit.Name = "pnSaveExit";
             this.pnSaveExit.Size = new System.Drawing.Size(79, 229);
             this.pnSaveExit.TabIndex = 17;
@@ -934,7 +934,7 @@
             this.btnSaved.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaved.Image = ((System.Drawing.Image)(resources.GetObject("btnSaved.Image")));
             this.btnSaved.Location = new System.Drawing.Point(0, 10);
-            this.btnSaved.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSaved.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaved.Name = "btnSaved";
             this.btnSaved.Size = new System.Drawing.Size(79, 73);
             this.btnSaved.TabIndex = 9;
@@ -951,7 +951,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.Location = new System.Drawing.Point(0, 83);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(79, 73);
             this.btnCancel.TabIndex = 10;
@@ -967,7 +967,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.Location = new System.Drawing.Point(0, 156);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(79, 73);
             this.btnExit.TabIndex = 8;
@@ -993,7 +993,7 @@
             // 
             this.pnCRUD.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnCRUD.Location = new System.Drawing.Point(0, 143);
-            this.pnCRUD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnCRUD.Margin = new System.Windows.Forms.Padding(4);
             this.pnCRUD.Name = "pnCRUD";
             this.pnCRUD.Size = new System.Drawing.Size(79, 404);
             this.pnCRUD.TabIndex = 16;
@@ -1018,7 +1018,7 @@
             this.pnNavigator.BackColor = System.Drawing.Color.MidnightBlue;
             this.pnNavigator.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnNavigator.Location = new System.Drawing.Point(0, 0);
-            this.pnNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.pnNavigator.Name = "pnNavigator";
             this.pnNavigator.Size = new System.Drawing.Size(79, 143);
             this.pnNavigator.TabIndex = 14;
@@ -1028,7 +1028,7 @@
             this.panel14.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel14.Location = new System.Drawing.Point(79, 0);
-            this.panel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel14.Margin = new System.Windows.Forms.Padding(4);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(7, 1222);
             this.panel14.TabIndex = 215;
@@ -1059,7 +1059,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.panel1.Location = new System.Drawing.Point(86, 59);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1159, 303);
             this.panel1.TabIndex = 216;
@@ -1070,7 +1070,7 @@
             this.maxTempKwHrTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "MaxTempKwHr", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0", "N2"));
             this.maxTempKwHrTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maxTempKwHrTextBox.Location = new System.Drawing.Point(569, 218);
-            this.maxTempKwHrTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.maxTempKwHrTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.maxTempKwHrTextBox.Name = "maxTempKwHrTextBox";
             this.maxTempKwHrTextBox.Size = new System.Drawing.Size(159, 27);
             this.maxTempKwHrTextBox.TabIndex = 252;
@@ -1083,7 +1083,7 @@
             this.maxTempTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "MaxTemp", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0"));
             this.maxTempTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maxTempTextBox.Location = new System.Drawing.Point(287, 254);
-            this.maxTempTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.maxTempTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.maxTempTextBox.Name = "maxTempTextBox";
             this.maxTempTextBox.Size = new System.Drawing.Size(71, 27);
             this.maxTempTextBox.TabIndex = 252;
@@ -1095,7 +1095,7 @@
             this.startKwHrTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "StartKwHr", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0", "N2"));
             this.startKwHrTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startKwHrTextBox.Location = new System.Drawing.Point(569, 182);
-            this.startKwHrTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.startKwHrTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.startKwHrTextBox.Name = "startKwHrTextBox";
             this.startKwHrTextBox.Size = new System.Drawing.Size(159, 27);
             this.startKwHrTextBox.TabIndex = 252;
@@ -1109,7 +1109,7 @@
             this.intervalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "Interval", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "HH:mm:ss"));
             this.intervalTextBox.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.intervalTextBox.Location = new System.Drawing.Point(287, 117);
-            this.intervalTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.intervalTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.intervalTextBox.Name = "intervalTextBox";
             this.intervalTextBox.ReadOnly = true;
             this.intervalTextBox.Size = new System.Drawing.Size(201, 49);
@@ -1122,7 +1122,7 @@
             this.maxTempTimeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "MaxTempTime", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "dd/MM/yy  HH:mm:ss"));
             this.maxTempTimeTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maxTempTimeTextBox.Location = new System.Drawing.Point(287, 218);
-            this.maxTempTimeTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.maxTempTimeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.maxTempTimeTextBox.Name = "maxTempTimeTextBox";
             this.maxTempTimeTextBox.ReadOnly = true;
             this.maxTempTimeTextBox.Size = new System.Drawing.Size(159, 27);
@@ -1163,7 +1163,7 @@
             this.statusTextBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusTextBox1.IsCompleted = false;
             this.statusTextBox1.Location = new System.Drawing.Point(569, 31);
-            this.statusTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.statusTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.statusTextBox1.Name = "statusTextBox1";
             this.statusTextBox1.OnStatus = null;
             this.statusTextBox1.ReadOnly = true;
@@ -1207,7 +1207,7 @@
             this.panel2.Controls.Add(label21);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(86, 362);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1159, 256);
             this.panel2.TabIndex = 2;
@@ -1218,7 +1218,7 @@
             this.alMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "AlMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
             this.alMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alMinTextBox.Location = new System.Drawing.Point(781, 194);
-            this.alMinTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.alMinTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.alMinTextBox.Name = "alMinTextBox";
             this.alMinTextBox.Size = new System.Drawing.Size(59, 27);
             this.alMinTextBox.TabIndex = 251;
@@ -1234,7 +1234,7 @@
             this.alMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "AlMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
             this.alMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alMaxTextBox.Location = new System.Drawing.Point(781, 159);
-            this.alMaxTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.alMaxTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.alMaxTextBox.Name = "alMaxTextBox";
             this.alMaxTextBox.Size = new System.Drawing.Size(59, 27);
             this.alMaxTextBox.TabIndex = 250;
@@ -1246,7 +1246,7 @@
             this.pMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "PMin", true));
             this.pMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pMinTextBox.Location = new System.Drawing.Point(699, 194);
-            this.pMinTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pMinTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.pMinTextBox.Name = "pMinTextBox";
             this.pMinTextBox.Size = new System.Drawing.Size(59, 27);
             this.pMinTextBox.TabIndex = 249;
@@ -1258,7 +1258,7 @@
             this.pMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "PMax", true));
             this.pMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pMaxTextBox.Location = new System.Drawing.Point(699, 159);
-            this.pMaxTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pMaxTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.pMaxTextBox.Name = "pMaxTextBox";
             this.pMaxTextBox.Size = new System.Drawing.Size(59, 27);
             this.pMaxTextBox.TabIndex = 248;
@@ -1270,7 +1270,7 @@
             this.cuMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "CuMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
             this.cuMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cuMinTextBox.Location = new System.Drawing.Point(616, 194);
-            this.cuMinTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cuMinTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.cuMinTextBox.Name = "cuMinTextBox";
             this.cuMinTextBox.Size = new System.Drawing.Size(59, 27);
             this.cuMinTextBox.TabIndex = 247;
@@ -1282,7 +1282,7 @@
             this.cuMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "CuMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
             this.cuMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cuMaxTextBox.Location = new System.Drawing.Point(616, 159);
-            this.cuMaxTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cuMaxTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.cuMaxTextBox.Name = "cuMaxTextBox";
             this.cuMaxTextBox.Size = new System.Drawing.Size(59, 27);
             this.cuMaxTextBox.TabIndex = 246;
@@ -1294,7 +1294,7 @@
             this.crMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "CrMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
             this.crMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.crMinTextBox.Location = new System.Drawing.Point(533, 194);
-            this.crMinTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.crMinTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.crMinTextBox.Name = "crMinTextBox";
             this.crMinTextBox.Size = new System.Drawing.Size(59, 27);
             this.crMinTextBox.TabIndex = 245;
@@ -1306,7 +1306,7 @@
             this.crMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "CrMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
             this.crMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.crMaxTextBox.Location = new System.Drawing.Point(533, 159);
-            this.crMaxTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.crMaxTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.crMaxTextBox.Name = "crMaxTextBox";
             this.crMaxTextBox.Size = new System.Drawing.Size(59, 27);
             this.crMaxTextBox.TabIndex = 244;
@@ -1318,7 +1318,7 @@
             this.mnMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "MnMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
             this.mnMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnMinTextBox.Location = new System.Drawing.Point(451, 194);
-            this.mnMinTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mnMinTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.mnMinTextBox.Name = "mnMinTextBox";
             this.mnMinTextBox.Size = new System.Drawing.Size(59, 27);
             this.mnMinTextBox.TabIndex = 243;
@@ -1330,7 +1330,7 @@
             this.mnMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "MnMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
             this.mnMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnMaxTextBox.Location = new System.Drawing.Point(451, 159);
-            this.mnMaxTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mnMaxTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.mnMaxTextBox.Name = "mnMaxTextBox";
             this.mnMaxTextBox.Size = new System.Drawing.Size(59, 27);
             this.mnMaxTextBox.TabIndex = 242;
@@ -1342,7 +1342,7 @@
             this.siMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "SiMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
             this.siMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siMinTextBox.Location = new System.Drawing.Point(368, 194);
-            this.siMinTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.siMinTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.siMinTextBox.Name = "siMinTextBox";
             this.siMinTextBox.Size = new System.Drawing.Size(59, 27);
             this.siMinTextBox.TabIndex = 241;
@@ -1354,7 +1354,7 @@
             this.siMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "SiMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
             this.siMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siMaxTextBox.Location = new System.Drawing.Point(368, 159);
-            this.siMaxTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.siMaxTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.siMaxTextBox.Name = "siMaxTextBox";
             this.siMaxTextBox.Size = new System.Drawing.Size(59, 27);
             this.siMaxTextBox.TabIndex = 240;
@@ -1366,7 +1366,7 @@
             this.cceMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "CceMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
             this.cceMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cceMinTextBox.Location = new System.Drawing.Point(287, 194);
-            this.cceMinTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cceMinTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.cceMinTextBox.Name = "cceMinTextBox";
             this.cceMinTextBox.Size = new System.Drawing.Size(59, 27);
             this.cceMinTextBox.TabIndex = 239;
@@ -1378,7 +1378,7 @@
             this.cceMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chemicalCompositionInFurnaceBindingSource, "CceMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N2"));
             this.cceMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cceMaxTextBox.Location = new System.Drawing.Point(285, 159);
-            this.cceMaxTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cceMaxTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.cceMaxTextBox.Name = "cceMaxTextBox";
             this.cceMaxTextBox.Size = new System.Drawing.Size(59, 27);
             this.cceMaxTextBox.TabIndex = 238;
@@ -1390,7 +1390,7 @@
             this.revisionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.controlPlanBindingSource, "Revision", true));
             this.revisionTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.revisionTextBox.Location = new System.Drawing.Point(499, 92);
-            this.revisionTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.revisionTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.revisionTextBox.Name = "revisionTextBox";
             this.revisionTextBox.Size = new System.Drawing.Size(45, 27);
             this.revisionTextBox.TabIndex = 237;
@@ -1405,7 +1405,7 @@
             this.controlPlanIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "ControlPlanId", true));
             this.controlPlanIdTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.controlPlanIdTextBox.Location = new System.Drawing.Point(287, 92);
-            this.controlPlanIdTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.controlPlanIdTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.controlPlanIdTextBox.Name = "controlPlanIdTextBox";
             this.controlPlanIdTextBox.Size = new System.Drawing.Size(71, 27);
             this.controlPlanIdTextBox.TabIndex = 235;
@@ -1417,7 +1417,7 @@
             this.codeTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.controlPlanBindingSource, "Code", true));
             this.codeTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.codeTextBox1.Location = new System.Drawing.Point(368, 92);
-            this.codeTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.codeTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.codeTextBox1.Name = "codeTextBox1";
             this.codeTextBox1.ReadOnly = true;
             this.codeTextBox1.Size = new System.Drawing.Size(122, 27);
@@ -1430,7 +1430,7 @@
             this.codeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "Code", true));
             this.codeTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.codeTextBox.Location = new System.Drawing.Point(368, 58);
-            this.codeTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.codeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.codeTextBox.Name = "codeTextBox";
             this.codeTextBox.ReadOnly = true;
             this.codeTextBox.Size = new System.Drawing.Size(122, 27);
@@ -1441,7 +1441,7 @@
             this.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnBrowse.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBrowse.Location = new System.Drawing.Point(791, 58);
-            this.btnBrowse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBrowse.Margin = new System.Windows.Forms.Padding(4);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(36, 28);
             this.btnBrowse.TabIndex = 230;
@@ -1466,7 +1466,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(86, 618);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1159, 600);
             this.panel3.TabIndex = 218;
@@ -1535,7 +1535,7 @@
             this.pnMaterial.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnMaterial.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnMaterial.Location = new System.Drawing.Point(0, 0);
-            this.pnMaterial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnMaterial.Margin = new System.Windows.Forms.Padding(4);
             this.pnMaterial.Name = "pnMaterial";
             this.pnMaterial.Size = new System.Drawing.Size(1159, 600);
             this.pnMaterial.TabIndex = 0;
@@ -1545,7 +1545,7 @@
             this.tbCurrentCFC.BackColor = System.Drawing.Color.White;
             this.tbCurrentCFC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCurrentCFC.Location = new System.Drawing.Point(287, 348);
-            this.tbCurrentCFC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCurrentCFC.Margin = new System.Windows.Forms.Padding(4);
             this.tbCurrentCFC.Name = "tbCurrentCFC";
             this.tbCurrentCFC.ReadOnly = true;
             this.tbCurrentCFC.Size = new System.Drawing.Size(71, 27);
@@ -1557,7 +1557,7 @@
             this.tbCurrentCFCD.BackColor = System.Drawing.Color.White;
             this.tbCurrentCFCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCurrentCFCD.Location = new System.Drawing.Point(287, 384);
-            this.tbCurrentCFCD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCurrentCFCD.Margin = new System.Windows.Forms.Padding(4);
             this.tbCurrentCFCD.Name = "tbCurrentCFCD";
             this.tbCurrentCFCD.ReadOnly = true;
             this.tbCurrentCFCD.Size = new System.Drawing.Size(71, 27);
@@ -1569,7 +1569,7 @@
             this.tbCurrentFeMn.BackColor = System.Drawing.Color.White;
             this.tbCurrentFeMn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCurrentFeMn.Location = new System.Drawing.Point(287, 455);
-            this.tbCurrentFeMn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCurrentFeMn.Margin = new System.Windows.Forms.Padding(4);
             this.tbCurrentFeMn.Name = "tbCurrentFeMn";
             this.tbCurrentFeMn.ReadOnly = true;
             this.tbCurrentFeMn.Size = new System.Drawing.Size(71, 27);
@@ -1581,7 +1581,7 @@
             this.tbCurrentFeMo.BackColor = System.Drawing.Color.White;
             this.tbCurrentFeMo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCurrentFeMo.Location = new System.Drawing.Point(287, 527);
-            this.tbCurrentFeMo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCurrentFeMo.Margin = new System.Windows.Forms.Padding(4);
             this.tbCurrentFeMo.Name = "tbCurrentFeMo";
             this.tbCurrentFeMo.ReadOnly = true;
             this.tbCurrentFeMo.Size = new System.Drawing.Size(71, 27);
@@ -1593,7 +1593,7 @@
             this.tbCurrentFeNi.BackColor = System.Drawing.Color.White;
             this.tbCurrentFeNi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCurrentFeNi.Location = new System.Drawing.Point(287, 562);
-            this.tbCurrentFeNi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCurrentFeNi.Margin = new System.Windows.Forms.Padding(4);
             this.tbCurrentFeNi.Name = "tbCurrentFeNi";
             this.tbCurrentFeNi.ReadOnly = true;
             this.tbCurrentFeNi.Size = new System.Drawing.Size(71, 27);
@@ -1605,7 +1605,7 @@
             this.tbCurrentFeSi.BackColor = System.Drawing.Color.White;
             this.tbCurrentFeSi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCurrentFeSi.Location = new System.Drawing.Point(287, 420);
-            this.tbCurrentFeSi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCurrentFeSi.Margin = new System.Windows.Forms.Padding(4);
             this.tbCurrentFeSi.Name = "tbCurrentFeSi";
             this.tbCurrentFeSi.ReadOnly = true;
             this.tbCurrentFeSi.Size = new System.Drawing.Size(71, 27);
@@ -1617,7 +1617,7 @@
             this.tbCurrentHcCr.BackColor = System.Drawing.Color.White;
             this.tbCurrentHcCr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCurrentHcCr.Location = new System.Drawing.Point(287, 491);
-            this.tbCurrentHcCr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCurrentHcCr.Margin = new System.Windows.Forms.Padding(4);
             this.tbCurrentHcCr.Name = "tbCurrentHcCr";
             this.tbCurrentHcCr.ReadOnly = true;
             this.tbCurrentHcCr.Size = new System.Drawing.Size(71, 27);
@@ -1629,7 +1629,7 @@
             this.tbCurrentPigFC.BackColor = System.Drawing.Color.White;
             this.tbCurrentPigFC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCurrentPigFC.Location = new System.Drawing.Point(287, 252);
-            this.tbCurrentPigFC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCurrentPigFC.Margin = new System.Windows.Forms.Padding(4);
             this.tbCurrentPigFC.Name = "tbCurrentPigFC";
             this.tbCurrentPigFC.ReadOnly = true;
             this.tbCurrentPigFC.Size = new System.Drawing.Size(71, 27);
@@ -1641,7 +1641,7 @@
             this.tbCurrentPigFCD.BackColor = System.Drawing.Color.White;
             this.tbCurrentPigFCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCurrentPigFCD.Location = new System.Drawing.Point(287, 288);
-            this.tbCurrentPigFCD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCurrentPigFCD.Margin = new System.Windows.Forms.Padding(4);
             this.tbCurrentPigFCD.Name = "tbCurrentPigFCD";
             this.tbCurrentPigFCD.ReadOnly = true;
             this.tbCurrentPigFCD.Size = new System.Drawing.Size(71, 27);
@@ -1653,7 +1653,7 @@
             this.tbCurrentRS.BackColor = System.Drawing.Color.White;
             this.tbCurrentRS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCurrentRS.Location = new System.Drawing.Point(287, 181);
-            this.tbCurrentRS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCurrentRS.Margin = new System.Windows.Forms.Padding(4);
             this.tbCurrentRS.Name = "tbCurrentRS";
             this.tbCurrentRS.ReadOnly = true;
             this.tbCurrentRS.Size = new System.Drawing.Size(71, 27);
@@ -1665,7 +1665,7 @@
             this.tbCurrentSS.BackColor = System.Drawing.Color.White;
             this.tbCurrentSS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCurrentSS.Location = new System.Drawing.Point(287, 217);
-            this.tbCurrentSS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCurrentSS.Margin = new System.Windows.Forms.Padding(4);
             this.tbCurrentSS.Name = "tbCurrentSS";
             this.tbCurrentSS.ReadOnly = true;
             this.tbCurrentSS.Size = new System.Drawing.Size(71, 27);
@@ -1677,7 +1677,7 @@
             this.tbCurrentTotal.BackColor = System.Drawing.Color.White;
             this.tbCurrentTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCurrentTotal.Location = new System.Drawing.Point(287, 620);
-            this.tbCurrentTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCurrentTotal.Margin = new System.Windows.Forms.Padding(4);
             this.tbCurrentTotal.Name = "tbCurrentTotal";
             this.tbCurrentTotal.ReadOnly = true;
             this.tbCurrentTotal.Size = new System.Drawing.Size(71, 27);
@@ -1701,7 +1701,7 @@
             this.totTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totTotal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totTotal.Location = new System.Drawing.Point(496, 620);
-            this.totTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.totTotal.Margin = new System.Windows.Forms.Padding(4);
             this.totTotal.Name = "totTotal";
             this.totTotal.ReadOnly = true;
             this.totTotal.Size = new System.Drawing.Size(71, 27);
@@ -1714,7 +1714,7 @@
             this.addTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.addTotal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addTotal.Location = new System.Drawing.Point(395, 620);
-            this.addTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addTotal.Margin = new System.Windows.Forms.Padding(4);
             this.addTotal.Name = "addTotal";
             this.addTotal.ReadOnly = true;
             this.addTotal.Size = new System.Drawing.Size(75, 27);
@@ -1727,7 +1727,7 @@
             this.totNi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totNi.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totNi.Location = new System.Drawing.Point(496, 562);
-            this.totNi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.totNi.Margin = new System.Windows.Forms.Padding(4);
             this.totNi.Name = "totNi";
             this.totNi.ReadOnly = true;
             this.totNi.Size = new System.Drawing.Size(71, 27);
@@ -1740,7 +1740,7 @@
             this.totMo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totMo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totMo.Location = new System.Drawing.Point(496, 527);
-            this.totMo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.totMo.Margin = new System.Windows.Forms.Padding(4);
             this.totMo.Name = "totMo";
             this.totMo.ReadOnly = true;
             this.totMo.Size = new System.Drawing.Size(71, 27);
@@ -1757,7 +1757,7 @@
             0,
             65536});
             this.addNi.Location = new System.Drawing.Point(395, 562);
-            this.addNi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addNi.Margin = new System.Windows.Forms.Padding(4);
             this.addNi.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -1780,7 +1780,7 @@
             0,
             65536});
             this.addMo.Location = new System.Drawing.Point(395, 527);
-            this.addMo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addMo.Margin = new System.Windows.Forms.Padding(4);
             this.addMo.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -1803,7 +1803,7 @@
             0,
             65536});
             this.addCr.Location = new System.Drawing.Point(395, 491);
-            this.addCr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addCr.Margin = new System.Windows.Forms.Padding(4);
             this.addCr.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -1826,7 +1826,7 @@
             0,
             65536});
             this.addPigFCD.Location = new System.Drawing.Point(395, 287);
-            this.addPigFCD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addPigFCD.Margin = new System.Windows.Forms.Padding(4);
             this.addPigFCD.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -1849,7 +1849,7 @@
             0,
             65536});
             this.addMn.Location = new System.Drawing.Point(395, 455);
-            this.addMn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addMn.Margin = new System.Windows.Forms.Padding(4);
             this.addMn.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -1872,7 +1872,7 @@
             0,
             65536});
             this.addPigFC.Location = new System.Drawing.Point(395, 252);
-            this.addPigFC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addPigFC.Margin = new System.Windows.Forms.Padding(4);
             this.addPigFC.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -1895,7 +1895,7 @@
             0,
             65536});
             this.addSi.Location = new System.Drawing.Point(395, 420);
-            this.addSi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addSi.Margin = new System.Windows.Forms.Padding(4);
             this.addSi.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -1918,7 +1918,7 @@
             0,
             65536});
             this.addSS.Location = new System.Drawing.Point(395, 217);
-            this.addSS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addSS.Margin = new System.Windows.Forms.Padding(4);
             this.addSS.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -1941,7 +1941,7 @@
             0,
             65536});
             this.addCFCD.Location = new System.Drawing.Point(395, 384);
-            this.addCFCD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addCFCD.Margin = new System.Windows.Forms.Padding(4);
             this.addCFCD.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -1964,7 +1964,7 @@
             0,
             65536});
             this.addRS.Location = new System.Drawing.Point(395, 182);
-            this.addRS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addRS.Margin = new System.Windows.Forms.Padding(4);
             this.addRS.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -1987,7 +1987,7 @@
             0,
             65536});
             this.addCFC.Location = new System.Drawing.Point(395, 348);
-            this.addCFC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addCFC.Margin = new System.Windows.Forms.Padding(4);
             this.addCFC.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -2010,7 +2010,7 @@
             0,
             65536});
             this.addMetal.Location = new System.Drawing.Point(395, 116);
-            this.addMetal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addMetal.Margin = new System.Windows.Forms.Padding(4);
             this.addMetal.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -2029,7 +2029,7 @@
             this.totCr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totCr.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totCr.Location = new System.Drawing.Point(496, 491);
-            this.totCr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.totCr.Margin = new System.Windows.Forms.Padding(4);
             this.totCr.Name = "totCr";
             this.totCr.ReadOnly = true;
             this.totCr.Size = new System.Drawing.Size(71, 27);
@@ -2042,7 +2042,7 @@
             this.totPigFCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totPigFCD.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totPigFCD.Location = new System.Drawing.Point(496, 288);
-            this.totPigFCD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.totPigFCD.Margin = new System.Windows.Forms.Padding(4);
             this.totPigFCD.Name = "totPigFCD";
             this.totPigFCD.ReadOnly = true;
             this.totPigFCD.Size = new System.Drawing.Size(71, 27);
@@ -2055,7 +2055,7 @@
             this.totMetal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totMetal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totMetal.Location = new System.Drawing.Point(496, 116);
-            this.totMetal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.totMetal.Margin = new System.Windows.Forms.Padding(4);
             this.totMetal.Name = "totMetal";
             this.totMetal.ReadOnly = true;
             this.totMetal.Size = new System.Drawing.Size(71, 27);
@@ -2068,7 +2068,7 @@
             this.totCFC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totCFC.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totCFC.Location = new System.Drawing.Point(496, 348);
-            this.totCFC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.totCFC.Margin = new System.Windows.Forms.Padding(4);
             this.totCFC.Name = "totCFC";
             this.totCFC.ReadOnly = true;
             this.totCFC.Size = new System.Drawing.Size(71, 27);
@@ -2081,7 +2081,7 @@
             this.totMn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totMn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totMn.Location = new System.Drawing.Point(496, 455);
-            this.totMn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.totMn.Margin = new System.Windows.Forms.Padding(4);
             this.totMn.Name = "totMn";
             this.totMn.ReadOnly = true;
             this.totMn.Size = new System.Drawing.Size(71, 27);
@@ -2094,7 +2094,7 @@
             this.totPigFC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totPigFC.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totPigFC.Location = new System.Drawing.Point(496, 252);
-            this.totPigFC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.totPigFC.Margin = new System.Windows.Forms.Padding(4);
             this.totPigFC.Name = "totPigFC";
             this.totPigFC.ReadOnly = true;
             this.totPigFC.Size = new System.Drawing.Size(71, 27);
@@ -2107,7 +2107,7 @@
             this.totRS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totRS.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totRS.Location = new System.Drawing.Point(496, 182);
-            this.totRS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.totRS.Margin = new System.Windows.Forms.Padding(4);
             this.totRS.Name = "totRS";
             this.totRS.ReadOnly = true;
             this.totRS.Size = new System.Drawing.Size(71, 27);
@@ -2120,7 +2120,7 @@
             this.totCFCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totCFCD.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totCFCD.Location = new System.Drawing.Point(496, 384);
-            this.totCFCD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.totCFCD.Margin = new System.Windows.Forms.Padding(4);
             this.totCFCD.Name = "totCFCD";
             this.totCFCD.ReadOnly = true;
             this.totCFCD.Size = new System.Drawing.Size(71, 27);
@@ -2133,7 +2133,7 @@
             this.totSi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totSi.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totSi.Location = new System.Drawing.Point(496, 420);
-            this.totSi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.totSi.Margin = new System.Windows.Forms.Padding(4);
             this.totSi.Name = "totSi";
             this.totSi.ReadOnly = true;
             this.totSi.Size = new System.Drawing.Size(71, 27);
@@ -2146,7 +2146,7 @@
             this.totSS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totSS.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totSS.Location = new System.Drawing.Point(496, 217);
-            this.totSS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.totSS.Margin = new System.Windows.Forms.Padding(4);
             this.totSS.Name = "totSS";
             this.totSS.ReadOnly = true;
             this.totSS.Size = new System.Drawing.Size(71, 27);
@@ -2158,7 +2158,7 @@
             this.panel4.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(86, 1218);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1159, 4);
             this.panel4.TabIndex = 219;
@@ -2168,7 +2168,7 @@
             this.panel6.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel6.Location = new System.Drawing.Point(1245, 4);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(4, 1218);
             this.panel6.TabIndex = 221;
@@ -2178,7 +2178,7 @@
             this.panel7.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(86, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1163, 4);
             this.panel7.TabIndex = 222;
@@ -2204,7 +2204,7 @@
             this.Controls.Add(this.panel14);
             this.Controls.Add(this.pnToolBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmEditMatCharging";
             this.Text = "frmEditMatCharging";
             this.Load += new System.EventHandler(this.frmEditMatCharging_Load);

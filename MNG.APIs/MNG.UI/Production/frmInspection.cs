@@ -285,7 +285,7 @@ namespace MNG.UI.Production
             p.Defect.PourDefect.Total = pouringDefect;
             p.Defect.EngDefect.Total = engDefect;
             p.Defect.FinDefect.Total = finDefect;
-
+            
             p.Defect.TotalDefect = meltingDefect + moldingDefect + coreDefect + pouringDefect +
                 engDefect + finDefect;
 
