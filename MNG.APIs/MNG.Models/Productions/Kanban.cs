@@ -22,6 +22,7 @@ namespace MNG.Models.Productions
 
         public DateTime Time { get; set; }
         public DateTime UpdatedTime { get; set; }
+        public int? TappingTemp { get; set; }
 
         public float Weight { get; set; }
         public float KwHr { get; set; }
