@@ -285,6 +285,24 @@
     <Compile Include="Production\frmCreateCharge.Designer.cs">
       <DependentUpon>frmCreateCharge.cs</DependentUpon>
     </Compile>
+    <Compile Include="Production\frmQA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmQA.Designer.cs">
+      <DependentUpon>frmQA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmQAPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmQAPanel.Designer.cs">
+      <DependentUpon>frmQAPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmQAProc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmQAProc.Designer.cs">
+      <DependentUpon>frmQAProc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Production\frmVerifyInput.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -491,6 +509,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmCreateCharge.resx">
       <DependentUpon>frmCreateCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmQA.resx">
+      <DependentUpon>frmQA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmQAPanel.resx">
+      <DependentUpon>frmQAPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmQAProc.resx">
+      <DependentUpon>frmQAProc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmVerifyInput.resx">
       <DependentUpon>frmVerifyInput.cs</DependentUpon>

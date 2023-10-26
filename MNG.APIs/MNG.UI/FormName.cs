@@ -13,6 +13,7 @@ namespace MNG.UI
         frmTestChem,
         frmTapping,
         frmPouringIntoMold,
-        frmInspection
+        frmInspection,
+        frmQA
     }
 }

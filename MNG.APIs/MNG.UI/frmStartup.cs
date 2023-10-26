@@ -24,6 +24,7 @@ namespace MNG.UI
         private frmSpectrometer fSpectroMeter;
         private frmPouringProc fPouring;
         private frmInspectionProc fInspection;
+        private frmQAProc fQA;
 
         private MNG.UI.Production.frmMultiMelting fMelting;
 
@@ -320,6 +321,19 @@ namespace MNG.UI
             }
         }
 
+        private void btnQA_Click(object sender, EventArgs e)
+        {
+            if (fQA == null || fQA.IsDisposed)
+            {
+                frmQAProc fQA = new frmQAProc();
+
+                fQA.StartPosition = FormStartPosition.Manual;
+                fQA.Location = new Point(0, 0);
+                fQA.WindowState = FormWindowState.Maximized;
+                fQA.Show();
+            }
+        }
+
         private void btnOk_Click(object sender, EventArgs e)
         {
 
@@ -343,6 +357,11 @@ namespace MNG.UI
             }
 
             MessageBox.Show(appVerString, "Application Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace MNG.UI.Production
 {
-    partial class frmInspectionProc
+    partial class frmQAProc
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInspectionProc));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQAProc));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnToolBar = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -327,7 +327,7 @@
             // 
             this.furnaceBindingSource.DataSource = typeof(MNG.UI.Furnace);
             // 
-            // frmInspectionProc
+            // frmQAProc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -337,7 +337,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
-            this.Name = "frmInspectionProc";
+            this.Name = "frmQAProc";
             this.Text = "MELTING";
             this.Load += new System.EventHandler(this.frmCharging_Load);
             this.pnToolBar.ResumeLayout(false);
