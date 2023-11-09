@@ -368,7 +368,7 @@
             this.pnToolBar.Controls.Add(this.label27);
             this.pnToolBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnToolBar.Location = new System.Drawing.Point(0, 0);
-            this.pnToolBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnToolBar.Margin = new System.Windows.Forms.Padding(4);
             this.pnToolBar.Name = "pnToolBar";
             this.pnToolBar.Size = new System.Drawing.Size(79, 1220);
             this.pnToolBar.TabIndex = 295;
@@ -383,7 +383,7 @@
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
             this.btnRefresh.Location = new System.Drawing.Point(0, 173);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(79, 73);
             this.btnRefresh.TabIndex = 215;
@@ -396,7 +396,7 @@
             this.panel4.Controls.Add(this.btnExit);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(0, 1021);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(79, 171);
             this.panel4.TabIndex = 17;
@@ -411,7 +411,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.Location = new System.Drawing.Point(0, 25);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(79, 73);
             this.btnSave.TabIndex = 9;
@@ -427,7 +427,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.Location = new System.Drawing.Point(0, 98);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(79, 73);
             this.btnExit.TabIndex = 8;
@@ -453,7 +453,7 @@
             // 
             this.pnNavigator.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnNavigator.Location = new System.Drawing.Point(0, 0);
-            this.pnNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.pnNavigator.Name = "pnNavigator";
             this.pnNavigator.Size = new System.Drawing.Size(79, 145);
             this.pnNavigator.TabIndex = 16;
@@ -478,7 +478,7 @@
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(79, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(7, 1220);
             this.panel2.TabIndex = 296;
@@ -547,7 +547,7 @@
             this.pnHeader.Controls.Add(this.pnBorderBottom);
             this.pnHeader.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnHeader.Location = new System.Drawing.Point(86, 55);
-            this.pnHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnHeader.Margin = new System.Windows.Forms.Padding(4);
             this.pnHeader.Name = "pnHeader";
             this.pnHeader.Size = new System.Drawing.Size(1377, 1165);
             this.pnHeader.TabIndex = 298;
@@ -559,7 +559,7 @@
             this.codeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "Code", true));
             this.codeTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.codeTextBox.Location = new System.Drawing.Point(235, 65);
-            this.codeTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.codeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.codeTextBox.Name = "codeTextBox";
             this.codeTextBox.Size = new System.Drawing.Size(127, 27);
             this.codeTextBox.TabIndex = 335;
@@ -574,7 +574,7 @@
             this.cementiteMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "CementiteMax", true));
             this.cementiteMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cementiteMaxTextBox.Location = new System.Drawing.Point(235, 539);
-            this.cementiteMaxTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cementiteMaxTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.cementiteMaxTextBox.Name = "cementiteMaxTextBox";
             this.cementiteMaxTextBox.Size = new System.Drawing.Size(59, 27);
             this.cementiteMaxTextBox.TabIndex = 300;
@@ -585,7 +585,7 @@
             this.cementiteMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "CementiteMin", true));
             this.cementiteMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cementiteMinTextBox.Location = new System.Drawing.Point(303, 539);
-            this.cementiteMinTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cementiteMinTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.cementiteMinTextBox.Name = "cementiteMinTextBox";
             this.cementiteMinTextBox.Size = new System.Drawing.Size(59, 27);
             this.cementiteMinTextBox.TabIndex = 302;
@@ -596,7 +596,7 @@
             this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "Description", true));
             this.descriptionTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descriptionTextBox.Location = new System.Drawing.Point(235, 101);
-            this.descriptionTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.descriptionTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(221, 99);
@@ -608,7 +608,7 @@
             this.elongationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "Elongation", true));
             this.elongationTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.elongationTextBox.Location = new System.Drawing.Point(303, 753);
-            this.elongationTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.elongationTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.elongationTextBox.Name = "elongationTextBox";
             this.elongationTextBox.Size = new System.Drawing.Size(59, 27);
             this.elongationTextBox.TabIndex = 308;
@@ -619,7 +619,7 @@
             this.ferriteMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "FerriteMax", true));
             this.ferriteMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ferriteMaxTextBox.Location = new System.Drawing.Point(235, 468);
-            this.ferriteMaxTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ferriteMaxTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ferriteMaxTextBox.Name = "ferriteMaxTextBox";
             this.ferriteMaxTextBox.Size = new System.Drawing.Size(59, 27);
             this.ferriteMaxTextBox.TabIndex = 310;
@@ -630,7 +630,7 @@
             this.ferriteMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "FerriteMin", true));
             this.ferriteMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ferriteMinTextBox.Location = new System.Drawing.Point(303, 468);
-            this.ferriteMinTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ferriteMinTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ferriteMinTextBox.Name = "ferriteMinTextBox";
             this.ferriteMinTextBox.Size = new System.Drawing.Size(59, 27);
             this.ferriteMinTextBox.TabIndex = 312;
@@ -641,7 +641,7 @@
             this.graphiteATextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "GraphiteA", true));
             this.graphiteATextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.graphiteATextBox.Location = new System.Drawing.Point(303, 254);
-            this.graphiteATextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.graphiteATextBox.Margin = new System.Windows.Forms.Padding(4);
             this.graphiteATextBox.Name = "graphiteATextBox";
             this.graphiteATextBox.Size = new System.Drawing.Size(59, 27);
             this.graphiteATextBox.TabIndex = 314;
@@ -652,7 +652,7 @@
             this.hbMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "HbMax", true));
             this.hbMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hbMaxTextBox.Location = new System.Drawing.Point(235, 646);
-            this.hbMaxTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hbMaxTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.hbMaxTextBox.Name = "hbMaxTextBox";
             this.hbMaxTextBox.Size = new System.Drawing.Size(59, 27);
             this.hbMaxTextBox.TabIndex = 316;
@@ -663,7 +663,7 @@
             this.hbMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "HbMin", true));
             this.hbMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hbMinTextBox.Location = new System.Drawing.Point(303, 646);
-            this.hbMinTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hbMinTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.hbMinTextBox.Name = "hbMinTextBox";
             this.hbMinTextBox.Size = new System.Drawing.Size(59, 27);
             this.hbMinTextBox.TabIndex = 318;
@@ -674,7 +674,7 @@
             this.nodularityMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "NodularityMin", true));
             this.nodularityMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nodularityMinTextBox.Location = new System.Drawing.Point(303, 289);
-            this.nodularityMinTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nodularityMinTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nodularityMinTextBox.Name = "nodularityMinTextBox";
             this.nodularityMinTextBox.Size = new System.Drawing.Size(59, 27);
             this.nodularityMinTextBox.TabIndex = 320;
@@ -685,7 +685,7 @@
             this.noduleCountTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "NoduleCount", true));
             this.noduleCountTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noduleCountTextBox.Location = new System.Drawing.Point(303, 361);
-            this.noduleCountTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.noduleCountTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.noduleCountTextBox.Name = "noduleCountTextBox";
             this.noduleCountTextBox.Size = new System.Drawing.Size(59, 27);
             this.noduleCountTextBox.TabIndex = 322;
@@ -696,7 +696,7 @@
             this.pearliteMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "PearliteMax", true));
             this.pearliteMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pearliteMaxTextBox.Location = new System.Drawing.Point(235, 503);
-            this.pearliteMaxTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pearliteMaxTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.pearliteMaxTextBox.Name = "pearliteMaxTextBox";
             this.pearliteMaxTextBox.Size = new System.Drawing.Size(59, 27);
             this.pearliteMaxTextBox.TabIndex = 324;
@@ -707,7 +707,7 @@
             this.pearliteMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "PearliteMin", true));
             this.pearliteMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pearliteMinTextBox.Location = new System.Drawing.Point(303, 503);
-            this.pearliteMinTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pearliteMinTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.pearliteMinTextBox.Name = "pearliteMinTextBox";
             this.pearliteMinTextBox.Size = new System.Drawing.Size(59, 27);
             this.pearliteMinTextBox.TabIndex = 326;
@@ -718,7 +718,7 @@
             this.sizeMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "SizeMax", true));
             this.sizeMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sizeMaxTextBox.Location = new System.Drawing.Point(235, 325);
-            this.sizeMaxTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sizeMaxTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.sizeMaxTextBox.Name = "sizeMaxTextBox";
             this.sizeMaxTextBox.Size = new System.Drawing.Size(59, 27);
             this.sizeMaxTextBox.TabIndex = 328;
@@ -729,7 +729,7 @@
             this.sizeMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "SizeMin", true));
             this.sizeMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sizeMinTextBox.Location = new System.Drawing.Point(303, 325);
-            this.sizeMinTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sizeMinTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.sizeMinTextBox.Name = "sizeMinTextBox";
             this.sizeMinTextBox.Size = new System.Drawing.Size(59, 27);
             this.sizeMinTextBox.TabIndex = 330;
@@ -740,7 +740,7 @@
             this.tensileTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "Tensile", true));
             this.tensileTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tensileTextBox.Location = new System.Drawing.Point(303, 682);
-            this.tensileTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tensileTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.tensileTextBox.Name = "tensileTextBox";
             this.tensileTextBox.Size = new System.Drawing.Size(59, 27);
             this.tensileTextBox.TabIndex = 332;
@@ -751,7 +751,7 @@
             this.yieldTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "Yield", true));
             this.yieldTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yieldTextBox.Location = new System.Drawing.Point(303, 718);
-            this.yieldTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.yieldTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.yieldTextBox.Name = "yieldTextBox";
             this.yieldTextBox.Size = new System.Drawing.Size(59, 27);
             this.yieldTextBox.TabIndex = 334;
@@ -761,7 +761,7 @@
             this.pnBorderBottom.BackColor = System.Drawing.Color.White;
             this.pnBorderBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnBorderBottom.Location = new System.Drawing.Point(0, 1161);
-            this.pnBorderBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnBorderBottom.Margin = new System.Windows.Forms.Padding(4);
             this.pnBorderBottom.Name = "pnBorderBottom";
             this.pnBorderBottom.Size = new System.Drawing.Size(1377, 4);
             this.pnBorderBottom.TabIndex = 299;
@@ -770,7 +770,7 @@
             // 
             this.pnBorderTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnBorderTop.Location = new System.Drawing.Point(86, 55);
-            this.pnBorderTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnBorderTop.Margin = new System.Windows.Forms.Padding(4);
             this.pnBorderTop.Name = "pnBorderTop";
             this.pnBorderTop.Size = new System.Drawing.Size(1377, 4);
             this.pnBorderTop.TabIndex = 299;
@@ -795,7 +795,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnToolBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmQA";
             this.Text = "frmEditQC";
             this.Load += new System.EventHandler(this.frmEditQC_Load);
