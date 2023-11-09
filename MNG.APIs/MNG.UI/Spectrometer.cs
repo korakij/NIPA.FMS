@@ -84,21 +84,21 @@ namespace MNG.UI
         {
             TestNo = Info[lastLine][5];
 
-            ChemResult.C = Convert.ToDouble(CorrectString(Info[lastLine][Index[0]]));
-            ChemResult.Si = Convert.ToDouble(CorrectString(Info[lastLine][Index[1]]));
-            ChemResult.Mn = Convert.ToDouble(CorrectString(Info[lastLine][Index[2]]));
-            ChemResult.Mg = Convert.ToDouble(CorrectString(Info[lastLine][Index[3]]));
-            ChemResult.S = Convert.ToDouble(CorrectString(Info[lastLine][Index[4]]));
-            ChemResult.Al = Convert.ToDouble(CorrectString(Info[lastLine][Index[5]]));
-            ChemResult.Cu = Convert.ToDouble(CorrectString(Info[lastLine][Index[6]]));
-            ChemResult.Sn = Convert.ToDouble(CorrectString(Info[lastLine][Index[7]]));
-            ChemResult.Cr = Convert.ToDouble(CorrectString(Info[lastLine][Index[8]]));
-            ChemResult.P = Convert.ToDouble(CorrectString(Info[lastLine][Index[9]]));
-            ChemResult.Mo = Convert.ToDouble(CorrectString(Info[lastLine][Index[10]]));
-            ChemResult.Ni = Convert.ToDouble(CorrectString(Info[lastLine][Index[11]]));
-            ChemResult.V = Convert.ToDouble(CorrectString(Info[lastLine][Index[12]]));
-            ChemResult.Ti = Convert.ToDouble(CorrectString(Info[lastLine][Index[13]]));
-            ChemResult.Te = Convert.ToDouble(CorrectString(Info[lastLine][Index[14]]));
+            ChemResult.C = Convert.ToSingle(CorrectString(Info[lastLine][Index[0]]));
+            ChemResult.Si = Convert.ToSingle(CorrectString(Info[lastLine][Index[1]]));
+            ChemResult.Mn = Convert.ToSingle(CorrectString(Info[lastLine][Index[2]]));
+            ChemResult.Mg = Convert.ToSingle(CorrectString(Info[lastLine][Index[3]]));
+            ChemResult.S = Convert.ToSingle(CorrectString(Info[lastLine][Index[4]]));
+            ChemResult.Al = Convert.ToSingle(CorrectString(Info[lastLine][Index[5]]));
+            ChemResult.Cu = Convert.ToSingle(CorrectString(Info[lastLine][Index[6]]));
+            ChemResult.Sn = Convert.ToSingle(CorrectString(Info[lastLine][Index[7]]));
+            ChemResult.Cr = Convert.ToSingle(CorrectString(Info[lastLine][Index[8]]));
+            ChemResult.P = Convert.ToSingle(CorrectString(Info[lastLine][Index[9]]));
+            ChemResult.Mo = Convert.ToSingle(CorrectString(Info[lastLine][Index[10]]));
+            ChemResult.Ni = Convert.ToSingle(CorrectString(Info[lastLine][Index[11]]));
+            ChemResult.V = Convert.ToSingle(CorrectString(Info[lastLine][Index[12]]));
+            ChemResult.Ti = Convert.ToSingle(CorrectString(Info[lastLine][Index[13]]));
+            ChemResult.Te = Convert.ToSingle(CorrectString(Info[lastLine][Index[14]]));
 
             return ChemResult;
         }

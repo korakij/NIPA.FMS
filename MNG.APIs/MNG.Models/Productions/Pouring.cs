@@ -1,4 +1,5 @@
 ﻿using MNG.Models.Productions.Defects;
+using MNG.Models.Productions.QA;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -42,6 +43,7 @@ namespace MNG.Models.Productions
         public int ProductNo { get; set; }
         public decimal PouredWeight { get; set; }
         public DefectCause Defect { get; set; }
+        public QAInspection QInspect { get; set; }
 
         public virtual Product Product { get; set; }
         [Required]

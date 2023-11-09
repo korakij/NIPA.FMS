@@ -54,6 +54,7 @@ namespace MNG.Services.Data
             modelBuilder.Entity<Pouring>().OwnsOne(x => x.Defect).OwnsOne(x => x.EngDefect);
             modelBuilder.Entity<Pouring>().OwnsOne(x => x.Defect).OwnsOne(x => x.CoreDefect);
             modelBuilder.Entity<Pouring>().OwnsOne(x => x.Defect);
+            modelBuilder.Entity<Pouring>().OwnsOne(x => x.QInspect);
         }
     }
 }

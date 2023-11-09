@@ -332,18 +332,18 @@ namespace MNG.UI.Production
 
             try
             {
-                Material.Rs = Convert.ToDouble(RsQty.Value);
-                Material.Ss = Convert.ToDouble(SsQty.Value);
-                Material.PigFC = Convert.ToDouble(PigFcQty.Value);
-                Material.PigFCD = Convert.ToDouble(PigFcdQty.Value);
-                Material.C_FC = Convert.ToDouble(calCFC.Text);
-                Material.C_FCD = Convert.ToDouble(calCFCD.Text);
-                Material.Fe_Si = Convert.ToDouble(calSi.Text);
-                Material.Fe_Mn = Convert.ToDouble(calMn.Text);
-                Material.HC_Cr = Convert.ToDouble(calCr.Text);
-                Material.Fe_Mo = Convert.ToDouble(calMo.Text);
-                Material.Fe_Ni = Convert.ToDouble(calNi.Text);
-                Material.Total = Convert.ToDouble(calTotal.Text);
+                Material.Rs = Convert.ToSingle(RsQty.Value);
+                Material.Ss = Convert.ToSingle(SsQty.Value);
+                Material.PigFC = Convert.ToSingle(PigFcQty.Value);
+                Material.PigFCD = Convert.ToSingle(PigFcdQty.Value);
+                Material.C_FC = Convert.ToSingle(calCFC.Text);
+                Material.C_FCD = Convert.ToSingle(calCFCD.Text);
+                Material.Fe_Si = Convert.ToSingle(calSi.Text);
+                Material.Fe_Mn = Convert.ToSingle(calMn.Text);
+                Material.HC_Cr = Convert.ToSingle(calCr.Text);
+                Material.Fe_Mo = Convert.ToSingle(calMo.Text);
+                Material.Fe_Ni = Convert.ToSingle(calNi.Text);
+                Material.Total = Convert.ToSingle(calTotal.Text);
 
                 btnOk.DialogResult = DialogResult.OK;
             }

@@ -299,18 +299,18 @@ namespace MNG.UI.Production
             maxTempNumericTextBox_TextChanged(this, EventArgs.Empty);
 
             CurrentCharge.MoltenMetal = totMetal.Text == "" ? 0 : Convert.ToDouble(totMetal.Text);
-            CurrentCharge.Rs = totRS.Text == "" ? 0 : Convert.ToDouble(totRS.Text);
-            CurrentCharge.Ss = totSS.Text == "" ? 0 : Convert.ToDouble(totSS.Text);
-            CurrentCharge.PigFC = totPigFC.Text == "" ? 0 : Convert.ToDouble(totPigFC.Text);
-            CurrentCharge.PigFCD = totPigFCD.Text == "" ? 0 : Convert.ToDouble(totPigFCD.Text);
-            CurrentCharge.C_FC = totCFC.Text == "" ? 0 : Convert.ToDouble(totCFC.Text);
-            CurrentCharge.C_FCD = totCFCD.Text == "" ? 0 : Convert.ToDouble(totCFCD.Text);
-            CurrentCharge.Fe_Si = totSi.Text == "" ? 0 : Convert.ToDouble(totSi.Text);
-            CurrentCharge.Fe_Mn = totMn.Text == "" ? 0 : Convert.ToDouble(totMn.Text);
-            CurrentCharge.HC_Cr = totCr.Text == "" ? 0 : Convert.ToDouble(totCr.Text);
-            CurrentCharge.Fe_Mo = totMo.Text == "" ? 0 : Convert.ToDouble(totMo.Text);
-            CurrentCharge.Fe_Ni = totNi.Text == "" ? 0 : Convert.ToDouble(totNi.Text);
-            CurrentCharge.Total = totTotal.Text == "" ? 0 : Convert.ToDouble(totTotal.Text);
+            CurrentCharge.Rs = totRS.Text == "" ? 0 : Convert.ToSingle(totRS.Text);
+            CurrentCharge.Ss = totSS.Text == "" ? 0 : Convert.ToSingle(totSS.Text);
+            CurrentCharge.PigFC = totPigFC.Text == "" ? 0 : Convert.ToSingle(totPigFC.Text);
+            CurrentCharge.PigFCD = totPigFCD.Text == "" ? 0 : Convert.ToSingle(totPigFCD.Text);
+            CurrentCharge.C_FC = totCFC.Text == "" ? 0 : Convert.ToSingle(totCFC.Text);
+            CurrentCharge.C_FCD = totCFCD.Text == "" ? 0 : Convert.ToSingle(totCFCD.Text);
+            CurrentCharge.Fe_Si = totSi.Text == "" ? 0 : Convert.ToSingle(totSi.Text);
+            CurrentCharge.Fe_Mn = totMn.Text == "" ? 0 : Convert.ToSingle(totMn.Text);
+            CurrentCharge.HC_Cr = totCr.Text == "" ? 0 : Convert.ToSingle(totCr.Text);
+            CurrentCharge.Fe_Mo = totMo.Text == "" ? 0 : Convert.ToSingle(totMo.Text);
+            CurrentCharge.Fe_Ni = totNi.Text == "" ? 0 : Convert.ToSingle(totNi.Text);
+            CurrentCharge.Total = totTotal.Text == "" ? 0 : Convert.ToSingle(totTotal.Text);
             CurrentCharge.IsCompleted = IsTimeIntervalOk && IsPowerOk && IsMaxTempOk && IsPartIdOk;
 
             chargingBindingSource.ResetBindings(false);

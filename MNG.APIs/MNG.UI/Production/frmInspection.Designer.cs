@@ -205,10 +205,9 @@
             // 
             blowHoleLabel2.AutoSize = true;
             blowHoleLabel2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            blowHoleLabel2.Location = new System.Drawing.Point(29, 52);
-            blowHoleLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            blowHoleLabel2.Location = new System.Drawing.Point(22, 42);
             blowHoleLabel2.Name = "blowHoleLabel2";
-            blowHoleLabel2.Size = new System.Drawing.Size(95, 21);
+            blowHoleLabel2.Size = new System.Drawing.Size(76, 17);
             blowHoleLabel2.TabIndex = 223;
             blowHoleLabel2.Text = "Blow Hole:";
             // 
@@ -216,10 +215,9 @@
             // 
             chemNGLabel1.AutoSize = true;
             chemNGLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chemNGLabel1.Location = new System.Drawing.Point(29, 87);
-            chemNGLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            chemNGLabel1.Location = new System.Drawing.Point(22, 71);
             chemNGLabel1.Name = "chemNGLabel1";
-            chemNGLabel1.Size = new System.Drawing.Size(98, 21);
+            chemNGLabel1.Size = new System.Drawing.Size(77, 17);
             chemNGLabel1.TabIndex = 225;
             chemNGLabel1.Text = "Chem NG:";
             // 
@@ -227,10 +225,9 @@
             // 
             chillLabel1.AutoSize = true;
             chillLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chillLabel1.Location = new System.Drawing.Point(29, 123);
-            chillLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            chillLabel1.Location = new System.Drawing.Point(22, 100);
             chillLabel1.Name = "chillLabel1";
-            chillLabel1.Size = new System.Drawing.Size(48, 21);
+            chillLabel1.Size = new System.Drawing.Size(40, 17);
             chillLabel1.TabIndex = 227;
             chillLabel1.Text = "Chill:";
             // 
@@ -238,10 +235,9 @@
             // 
             hardnessNGLabel1.AutoSize = true;
             hardnessNGLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            hardnessNGLabel1.Location = new System.Drawing.Point(29, 159);
-            hardnessNGLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            hardnessNGLabel1.Location = new System.Drawing.Point(22, 129);
             hardnessNGLabel1.Name = "hardnessNGLabel1";
-            hardnessNGLabel1.Size = new System.Drawing.Size(124, 21);
+            hardnessNGLabel1.Size = new System.Drawing.Size(94, 17);
             hardnessNGLabel1.TabIndex = 229;
             hardnessNGLabel1.Text = "Hardness NG:";
             // 
@@ -249,10 +245,9 @@
             // 
             microNGLabel1.AutoSize = true;
             microNGLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            microNGLabel1.Location = new System.Drawing.Point(29, 194);
-            microNGLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            microNGLabel1.Location = new System.Drawing.Point(22, 158);
             microNGLabel1.Name = "microNGLabel1";
-            microNGLabel1.Size = new System.Drawing.Size(95, 21);
+            microNGLabel1.Size = new System.Drawing.Size(72, 17);
             microNGLabel1.TabIndex = 231;
             microNGLabel1.Text = "Micro NG:";
             // 
@@ -260,10 +255,9 @@
             // 
             pinHoleLabel2.AutoSize = true;
             pinHoleLabel2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            pinHoleLabel2.Location = new System.Drawing.Point(29, 230);
-            pinHoleLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            pinHoleLabel2.Location = new System.Drawing.Point(22, 187);
             pinHoleLabel2.Name = "pinHoleLabel2";
-            pinHoleLabel2.Size = new System.Drawing.Size(80, 21);
+            pinHoleLabel2.Size = new System.Drawing.Size(64, 17);
             pinHoleLabel2.TabIndex = 233;
             pinHoleLabel2.Text = "Pin Hole:";
             // 
@@ -271,10 +265,9 @@
             // 
             shrinkageLabel1.AutoSize = true;
             shrinkageLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            shrinkageLabel1.Location = new System.Drawing.Point(29, 266);
-            shrinkageLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            shrinkageLabel1.Location = new System.Drawing.Point(22, 216);
             shrinkageLabel1.Name = "shrinkageLabel1";
-            shrinkageLabel1.Size = new System.Drawing.Size(94, 21);
+            shrinkageLabel1.Size = new System.Drawing.Size(74, 17);
             shrinkageLabel1.TabIndex = 235;
             shrinkageLabel1.Text = "Shrinkage:";
             // 
@@ -282,10 +275,9 @@
             // 
             meltDefectLabel1.AutoSize = true;
             meltDefectLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            meltDefectLabel1.Location = new System.Drawing.Point(29, 373);
-            meltDefectLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            meltDefectLabel1.Location = new System.Drawing.Point(22, 303);
             meltDefectLabel1.Name = "meltDefectLabel1";
-            meltDefectLabel1.Size = new System.Drawing.Size(51, 21);
+            meltDefectLabel1.Size = new System.Drawing.Size(39, 17);
             meltDefectLabel1.TabIndex = 236;
             meltDefectLabel1.Text = "Total";
             // 
@@ -293,10 +285,9 @@
             // 
             burrLabel.AutoSize = true;
             burrLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            burrLabel.Location = new System.Drawing.Point(28, 52);
-            burrLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            burrLabel.Location = new System.Drawing.Point(21, 42);
             burrLabel.Name = "burrLabel";
-            burrLabel.Size = new System.Drawing.Size(45, 21);
+            burrLabel.Size = new System.Drawing.Size(35, 17);
             burrLabel.TabIndex = 2;
             burrLabel.Text = "Burr:";
             // 
@@ -304,10 +295,9 @@
             // 
             chillMismatchLabel.AutoSize = true;
             chillMismatchLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chillMismatchLabel.Location = new System.Drawing.Point(28, 87);
-            chillMismatchLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            chillMismatchLabel.Location = new System.Drawing.Point(21, 71);
             chillMismatchLabel.Name = "chillMismatchLabel";
-            chillMismatchLabel.Size = new System.Drawing.Size(135, 21);
+            chillMismatchLabel.Size = new System.Drawing.Size(106, 17);
             chillMismatchLabel.TabIndex = 4;
             chillMismatchLabel.Text = "Chill Mismatch:";
             // 
@@ -315,10 +305,9 @@
             // 
             coreMismatchLabel.AutoSize = true;
             coreMismatchLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            coreMismatchLabel.Location = new System.Drawing.Point(28, 122);
-            coreMismatchLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            coreMismatchLabel.Location = new System.Drawing.Point(21, 99);
             coreMismatchLabel.Name = "coreMismatchLabel";
-            coreMismatchLabel.Size = new System.Drawing.Size(143, 21);
+            coreMismatchLabel.Size = new System.Drawing.Size(110, 17);
             coreMismatchLabel.TabIndex = 6;
             coreMismatchLabel.Text = "Core Mismatch:";
             // 
@@ -326,10 +315,9 @@
             // 
             missMatchLabel.AutoSize = true;
             missMatchLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            missMatchLabel.Location = new System.Drawing.Point(28, 159);
-            missMatchLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            missMatchLabel.Location = new System.Drawing.Point(21, 129);
             missMatchLabel.Name = "missMatchLabel";
-            missMatchLabel.Size = new System.Drawing.Size(111, 21);
+            missMatchLabel.Size = new System.Drawing.Size(81, 17);
             missMatchLabel.TabIndex = 8;
             missMatchLabel.Text = "Miss Match:";
             // 
@@ -337,10 +325,9 @@
             // 
             pinHoleLabel.AutoSize = true;
             pinHoleLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            pinHoleLabel.Location = new System.Drawing.Point(28, 194);
-            pinHoleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            pinHoleLabel.Location = new System.Drawing.Point(21, 158);
             pinHoleLabel.Name = "pinHoleLabel";
-            pinHoleLabel.Size = new System.Drawing.Size(80, 21);
+            pinHoleLabel.Size = new System.Drawing.Size(64, 17);
             pinHoleLabel.TabIndex = 10;
             pinHoleLabel.Text = "Pin Hole:";
             // 
@@ -348,10 +335,9 @@
             // 
             sandBrokenLabel.AutoSize = true;
             sandBrokenLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sandBrokenLabel.Location = new System.Drawing.Point(28, 230);
-            sandBrokenLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            sandBrokenLabel.Location = new System.Drawing.Point(21, 187);
             sandBrokenLabel.Name = "sandBrokenLabel";
-            sandBrokenLabel.Size = new System.Drawing.Size(118, 21);
+            sandBrokenLabel.Size = new System.Drawing.Size(91, 17);
             sandBrokenLabel.TabIndex = 12;
             sandBrokenLabel.Text = "Sand Broken:";
             // 
@@ -359,10 +345,9 @@
             // 
             sandDropLabel.AutoSize = true;
             sandDropLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sandDropLabel.Location = new System.Drawing.Point(28, 266);
-            sandDropLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            sandDropLabel.Location = new System.Drawing.Point(21, 216);
             sandDropLabel.Name = "sandDropLabel";
-            sandDropLabel.Size = new System.Drawing.Size(103, 21);
+            sandDropLabel.Size = new System.Drawing.Size(80, 17);
             sandDropLabel.TabIndex = 14;
             sandDropLabel.Text = "Sand Drop:";
             // 
@@ -370,10 +355,9 @@
             // 
             moldDefectLabel.AutoSize = true;
             moldDefectLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            moldDefectLabel.Location = new System.Drawing.Point(28, 373);
-            moldDefectLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            moldDefectLabel.Location = new System.Drawing.Point(21, 303);
             moldDefectLabel.Name = "moldDefectLabel";
-            moldDefectLabel.Size = new System.Drawing.Size(51, 21);
+            moldDefectLabel.Size = new System.Drawing.Size(39, 17);
             moldDefectLabel.TabIndex = 16;
             moldDefectLabel.Text = "Total";
             // 
@@ -381,10 +365,9 @@
             // 
             blowHoleLabel1.AutoSize = true;
             blowHoleLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            blowHoleLabel1.Location = new System.Drawing.Point(28, 52);
-            blowHoleLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            blowHoleLabel1.Location = new System.Drawing.Point(21, 42);
             blowHoleLabel1.Name = "blowHoleLabel1";
-            blowHoleLabel1.Size = new System.Drawing.Size(95, 21);
+            blowHoleLabel1.Size = new System.Drawing.Size(76, 17);
             blowHoleLabel1.TabIndex = 0;
             blowHoleLabel1.Text = "Blow Hole:";
             // 
@@ -392,10 +375,9 @@
             // 
             chillLabel.AutoSize = true;
             chillLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chillLabel.Location = new System.Drawing.Point(28, 87);
-            chillLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            chillLabel.Location = new System.Drawing.Point(21, 71);
             chillLabel.Name = "chillLabel";
-            chillLabel.Size = new System.Drawing.Size(48, 21);
+            chillLabel.Size = new System.Drawing.Size(40, 17);
             chillLabel.TabIndex = 2;
             chillLabel.Text = "Chill:";
             // 
@@ -403,10 +385,9 @@
             // 
             coldShutLabel.AutoSize = true;
             coldShutLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            coldShutLabel.Location = new System.Drawing.Point(28, 123);
-            coldShutLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            coldShutLabel.Location = new System.Drawing.Point(21, 100);
             coldShutLabel.Name = "coldShutLabel";
-            coldShutLabel.Size = new System.Drawing.Size(95, 21);
+            coldShutLabel.Size = new System.Drawing.Size(75, 17);
             coldShutLabel.TabIndex = 4;
             coldShutLabel.Text = "Cold Shut:";
             // 
@@ -414,10 +395,9 @@
             // 
             hardnessNGLabel.AutoSize = true;
             hardnessNGLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            hardnessNGLabel.Location = new System.Drawing.Point(28, 159);
-            hardnessNGLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            hardnessNGLabel.Location = new System.Drawing.Point(21, 129);
             hardnessNGLabel.Name = "hardnessNGLabel";
-            hardnessNGLabel.Size = new System.Drawing.Size(124, 21);
+            hardnessNGLabel.Size = new System.Drawing.Size(94, 17);
             hardnessNGLabel.TabIndex = 6;
             hardnessNGLabel.Text = "Hardness NG:";
             // 
@@ -425,10 +405,9 @@
             // 
             microNGLabel.AutoSize = true;
             microNGLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            microNGLabel.Location = new System.Drawing.Point(28, 194);
-            microNGLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            microNGLabel.Location = new System.Drawing.Point(21, 158);
             microNGLabel.Name = "microNGLabel";
-            microNGLabel.Size = new System.Drawing.Size(95, 21);
+            microNGLabel.Size = new System.Drawing.Size(72, 17);
             microNGLabel.TabIndex = 8;
             microNGLabel.Text = "Micro NG:";
             // 
@@ -436,10 +415,9 @@
             // 
             pinHoleLabel1.AutoSize = true;
             pinHoleLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            pinHoleLabel1.Location = new System.Drawing.Point(28, 230);
-            pinHoleLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            pinHoleLabel1.Location = new System.Drawing.Point(21, 187);
             pinHoleLabel1.Name = "pinHoleLabel1";
-            pinHoleLabel1.Size = new System.Drawing.Size(80, 21);
+            pinHoleLabel1.Size = new System.Drawing.Size(64, 17);
             pinHoleLabel1.TabIndex = 10;
             pinHoleLabel1.Text = "Pin Hole:";
             // 
@@ -447,10 +425,9 @@
             // 
             shrinkageLabel.AutoSize = true;
             shrinkageLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            shrinkageLabel.Location = new System.Drawing.Point(28, 266);
-            shrinkageLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            shrinkageLabel.Location = new System.Drawing.Point(21, 216);
             shrinkageLabel.Name = "shrinkageLabel";
-            shrinkageLabel.Size = new System.Drawing.Size(94, 21);
+            shrinkageLabel.Size = new System.Drawing.Size(74, 17);
             shrinkageLabel.TabIndex = 12;
             shrinkageLabel.Text = "Shrinkage:";
             // 
@@ -458,10 +435,9 @@
             // 
             slagLabel.AutoSize = true;
             slagLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            slagLabel.Location = new System.Drawing.Point(28, 302);
-            slagLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            slagLabel.Location = new System.Drawing.Point(21, 245);
             slagLabel.Name = "slagLabel";
-            slagLabel.Size = new System.Drawing.Size(49, 21);
+            slagLabel.Size = new System.Drawing.Size(39, 17);
             slagLabel.TabIndex = 14;
             slagLabel.Text = "Slag:";
             // 
@@ -469,10 +445,9 @@
             // 
             pourDefectLabel.AutoSize = true;
             pourDefectLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            pourDefectLabel.Location = new System.Drawing.Point(28, 373);
-            pourDefectLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            pourDefectLabel.Location = new System.Drawing.Point(21, 303);
             pourDefectLabel.Name = "pourDefectLabel";
-            pourDefectLabel.Size = new System.Drawing.Size(51, 21);
+            pourDefectLabel.Size = new System.Drawing.Size(39, 17);
             pourDefectLabel.TabIndex = 16;
             pourDefectLabel.Text = "Total";
             // 
@@ -480,10 +455,9 @@
             // 
             airPocketLabel.AutoSize = true;
             airPocketLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            airPocketLabel.Location = new System.Drawing.Point(35, 52);
-            airPocketLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            airPocketLabel.Location = new System.Drawing.Point(26, 42);
             airPocketLabel.Name = "airPocketLabel";
-            airPocketLabel.Size = new System.Drawing.Size(100, 21);
+            airPocketLabel.Size = new System.Drawing.Size(77, 17);
             airPocketLabel.TabIndex = 0;
             airPocketLabel.Text = "Air Pocket:";
             // 
@@ -491,10 +465,9 @@
             // 
             missedIdentiferLabel.AutoSize = true;
             missedIdentiferLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            missedIdentiferLabel.Location = new System.Drawing.Point(35, 87);
-            missedIdentiferLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            missedIdentiferLabel.Location = new System.Drawing.Point(26, 71);
             missedIdentiferLabel.Name = "missedIdentiferLabel";
-            missedIdentiferLabel.Size = new System.Drawing.Size(146, 21);
+            missedIdentiferLabel.Size = new System.Drawing.Size(109, 17);
             missedIdentiferLabel.TabIndex = 2;
             missedIdentiferLabel.Text = "Missed Identifer:";
             // 
@@ -502,10 +475,9 @@
             // 
             wornToolingLabel.AutoSize = true;
             wornToolingLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            wornToolingLabel.Location = new System.Drawing.Point(35, 123);
-            wornToolingLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            wornToolingLabel.Location = new System.Drawing.Point(26, 100);
             wornToolingLabel.Name = "wornToolingLabel";
-            wornToolingLabel.Size = new System.Drawing.Size(120, 21);
+            wornToolingLabel.Size = new System.Drawing.Size(96, 17);
             wornToolingLabel.TabIndex = 4;
             wornToolingLabel.Text = "Worn Tooling:";
             // 
@@ -513,10 +485,9 @@
             // 
             deformLabel.AutoSize = true;
             deformLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            deformLabel.Location = new System.Drawing.Point(28, 52);
-            deformLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            deformLabel.Location = new System.Drawing.Point(21, 42);
             deformLabel.Name = "deformLabel";
-            deformLabel.Size = new System.Drawing.Size(75, 21);
+            deformLabel.Size = new System.Drawing.Size(60, 17);
             deformLabel.TabIndex = 6;
             deformLabel.Text = "Deform:";
             // 
@@ -524,10 +495,9 @@
             // 
             dentLabel.AutoSize = true;
             dentLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dentLabel.Location = new System.Drawing.Point(28, 87);
-            dentLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            dentLabel.Location = new System.Drawing.Point(21, 71);
             dentLabel.Name = "dentLabel";
-            dentLabel.Size = new System.Drawing.Size(56, 21);
+            dentLabel.Size = new System.Drawing.Size(43, 17);
             dentLabel.TabIndex = 8;
             dentLabel.Text = "Dent:";
             // 
@@ -535,10 +505,9 @@
             // 
             overGrindingLabel.AutoSize = true;
             overGrindingLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            overGrindingLabel.Location = new System.Drawing.Point(28, 123);
-            overGrindingLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            overGrindingLabel.Location = new System.Drawing.Point(21, 100);
             overGrindingLabel.Name = "overGrindingLabel";
-            overGrindingLabel.Size = new System.Drawing.Size(131, 21);
+            overGrindingLabel.Size = new System.Drawing.Size(102, 17);
             overGrindingLabel.TabIndex = 10;
             overGrindingLabel.Text = "Over Grinding:";
             // 
@@ -546,10 +515,9 @@
             // 
             engDefectLabel.AutoSize = true;
             engDefectLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            engDefectLabel.Location = new System.Drawing.Point(35, 373);
-            engDefectLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            engDefectLabel.Location = new System.Drawing.Point(26, 303);
             engDefectLabel.Name = "engDefectLabel";
-            engDefectLabel.Size = new System.Drawing.Size(51, 21);
+            engDefectLabel.Size = new System.Drawing.Size(39, 17);
             engDefectLabel.TabIndex = 12;
             engDefectLabel.Text = "Total";
             // 
@@ -557,10 +525,9 @@
             // 
             finDefectLabel.AutoSize = true;
             finDefectLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            finDefectLabel.Location = new System.Drawing.Point(28, 373);
-            finDefectLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            finDefectLabel.Location = new System.Drawing.Point(21, 303);
             finDefectLabel.Name = "finDefectLabel";
-            finDefectLabel.Size = new System.Drawing.Size(51, 21);
+            finDefectLabel.Size = new System.Drawing.Size(39, 17);
             finDefectLabel.TabIndex = 14;
             finDefectLabel.Text = "Total";
             // 
@@ -568,10 +535,9 @@
             // 
             wetCoreLabel.AutoSize = true;
             wetCoreLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            wetCoreLabel.Location = new System.Drawing.Point(35, 87);
-            wetCoreLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            wetCoreLabel.Location = new System.Drawing.Point(26, 71);
             wetCoreLabel.Name = "wetCoreLabel";
-            wetCoreLabel.Size = new System.Drawing.Size(96, 21);
+            wetCoreLabel.Size = new System.Drawing.Size(74, 17);
             wetCoreLabel.TabIndex = 239;
             wetCoreLabel.Text = "Wet Core:";
             // 
@@ -579,10 +545,9 @@
             // 
             totalLabel.AutoSize = true;
             totalLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            totalLabel.Location = new System.Drawing.Point(35, 373);
-            totalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            totalLabel.Location = new System.Drawing.Point(26, 303);
             totalLabel.Name = "totalLabel";
-            totalLabel.Size = new System.Drawing.Size(51, 21);
+            totalLabel.Size = new System.Drawing.Size(39, 17);
             totalLabel.TabIndex = 238;
             totalLabel.Text = "Total";
             // 
@@ -590,10 +555,9 @@
             // 
             coreDeformLabel.AutoSize = true;
             coreDeformLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            coreDeformLabel.Location = new System.Drawing.Point(35, 52);
-            coreDeformLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            coreDeformLabel.Location = new System.Drawing.Point(26, 42);
             coreDeformLabel.Name = "coreDeformLabel";
-            coreDeformLabel.Size = new System.Drawing.Size(121, 21);
+            coreDeformLabel.Size = new System.Drawing.Size(96, 17);
             coreDeformLabel.TabIndex = 237;
             coreDeformLabel.Text = "Core Deform:";
             // 
@@ -601,80 +565,72 @@
             // 
             coreBrokenLabel.AutoSize = true;
             coreBrokenLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            coreBrokenLabel.Location = new System.Drawing.Point(35, 123);
-            coreBrokenLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            coreBrokenLabel.Location = new System.Drawing.Point(26, 100);
             coreBrokenLabel.Name = "coreBrokenLabel";
-            coreBrokenLabel.Size = new System.Drawing.Size(117, 21);
+            coreBrokenLabel.Size = new System.Drawing.Size(91, 17);
             coreBrokenLabel.TabIndex = 236;
             coreBrokenLabel.Text = "Core Broken:";
             // 
             // totalNumberLabel
             // 
             totalNumberLabel.AutoSize = true;
-            totalNumberLabel.Location = new System.Drawing.Point(385, 44);
-            totalNumberLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            totalNumberLabel.Location = new System.Drawing.Point(289, 36);
             totalNumberLabel.Name = "totalNumberLabel";
-            totalNumberLabel.Size = new System.Drawing.Size(76, 23);
+            totalNumberLabel.Size = new System.Drawing.Size(64, 21);
             totalNumberLabel.TabIndex = 9;
             totalNumberLabel.Text = "Actual";
             // 
             // totalDefectLabel
             // 
             totalDefectLabel.AutoSize = true;
-            totalDefectLabel.Location = new System.Drawing.Point(585, 44);
-            totalDefectLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            totalDefectLabel.Location = new System.Drawing.Point(439, 36);
             totalDefectLabel.Name = "totalDefectLabel";
-            totalDefectLabel.Size = new System.Drawing.Size(85, 23);
+            totalDefectLabel.Size = new System.Drawing.Size(70, 21);
             totalDefectLabel.TabIndex = 11;
             totalDefectLabel.Text = "Defects";
             // 
             // defectRateLabel
             // 
             defectRateLabel.AutoSize = true;
-            defectRateLabel.Location = new System.Drawing.Point(761, 44);
-            defectRateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            defectRateLabel.Location = new System.Drawing.Point(571, 36);
             defectRateLabel.Name = "defectRateLabel";
-            defectRateLabel.Size = new System.Drawing.Size(56, 23);
+            defectRateLabel.Size = new System.Drawing.Size(48, 21);
             defectRateLabel.TabIndex = 13;
             defectRateLabel.Text = "Rate";
             // 
             // totalWeightLabel
             // 
             totalWeightLabel.AutoSize = true;
-            totalWeightLabel.Location = new System.Drawing.Point(27, 116);
-            totalWeightLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            totalWeightLabel.Location = new System.Drawing.Point(20, 94);
             totalWeightLabel.Name = "totalWeightLabel";
-            totalWeightLabel.Size = new System.Drawing.Size(75, 23);
+            totalWeightLabel.Size = new System.Drawing.Size(66, 21);
             totalWeightLabel.TabIndex = 15;
             totalWeightLabel.Text = "Weight";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(27, 76);
-            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Location = new System.Drawing.Point(20, 62);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(89, 23);
+            label1.Size = new System.Drawing.Size(73, 21);
             label1.TabIndex = 15;
             label1.Text = "Number";
             // 
             // productNoLabel
             // 
             productNoLabel.AutoSize = true;
-            productNoLabel.Location = new System.Drawing.Point(181, 44);
-            productNoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            productNoLabel.Location = new System.Drawing.Point(136, 36);
             productNoLabel.Name = "productNoLabel";
-            productNoLabel.Size = new System.Drawing.Size(80, 23);
+            productNoLabel.Size = new System.Drawing.Size(65, 21);
             productNoLabel.TabIndex = 20;
             productNoLabel.Text = "Poured";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(479, 44);
-            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label2.Location = new System.Drawing.Point(359, 36);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(67, 23);
+            label2.Size = new System.Drawing.Size(55, 21);
             label2.TabIndex = 9;
             label2.Text = "Good";
             // 
@@ -697,11 +653,9 @@
             this.groupBox1.Controls.Add(this.chemNGTextBox);
             this.groupBox1.Controls.Add(this.chillTextBox);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(25, 241);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(19, 196);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(299, 423);
+            this.groupBox1.Size = new System.Drawing.Size(224, 344);
             this.groupBox1.TabIndex = 221;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Melting";
@@ -712,11 +666,10 @@
             this.totalTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.MeltDefect.Total", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0", "N0"));
             this.totalTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalTextBox.Location = new System.Drawing.Point(196, 369);
-            this.totalTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.totalTextBox.Location = new System.Drawing.Point(147, 300);
             this.totalTextBox.Name = "totalTextBox";
             this.totalTextBox.ReadOnly = true;
-            this.totalTextBox.Size = new System.Drawing.Size(74, 27);
+            this.totalTextBox.Size = new System.Drawing.Size(56, 23);
             this.totalTextBox.TabIndex = 237;
             this.totalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -730,11 +683,10 @@
             this.shrinkageTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.shrinkageTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.MeltDefect.Shrinkage", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0", "N0"));
             this.shrinkageTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shrinkageTextBox.Location = new System.Drawing.Point(196, 262);
-            this.shrinkageTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.shrinkageTextBox.Location = new System.Drawing.Point(147, 213);
             this.shrinkageTextBox.Name = "shrinkageTextBox";
             this.shrinkageTextBox.ReadOnly = true;
-            this.shrinkageTextBox.Size = new System.Drawing.Size(74, 27);
+            this.shrinkageTextBox.Size = new System.Drawing.Size(56, 23);
             this.shrinkageTextBox.TabIndex = 234;
             this.shrinkageTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -744,11 +696,10 @@
             this.pinHoleTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pinHoleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.MeltDefect.PinHole", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0", "N0"));
             this.pinHoleTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pinHoleTextBox.Location = new System.Drawing.Point(196, 226);
-            this.pinHoleTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.pinHoleTextBox.Location = new System.Drawing.Point(147, 184);
             this.pinHoleTextBox.Name = "pinHoleTextBox";
             this.pinHoleTextBox.ReadOnly = true;
-            this.pinHoleTextBox.Size = new System.Drawing.Size(74, 27);
+            this.pinHoleTextBox.Size = new System.Drawing.Size(56, 23);
             this.pinHoleTextBox.TabIndex = 233;
             this.pinHoleTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -758,11 +709,10 @@
             this.microNGTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.microNGTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.MeltDefect.MicroNG", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0", "N0"));
             this.microNGTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.microNGTextBox.Location = new System.Drawing.Point(196, 191);
-            this.microNGTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.microNGTextBox.Location = new System.Drawing.Point(147, 155);
             this.microNGTextBox.Name = "microNGTextBox";
             this.microNGTextBox.ReadOnly = true;
-            this.microNGTextBox.Size = new System.Drawing.Size(74, 27);
+            this.microNGTextBox.Size = new System.Drawing.Size(56, 23);
             this.microNGTextBox.TabIndex = 232;
             this.microNGTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -772,11 +722,10 @@
             this.hardnessNGTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.hardnessNGTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.MeltDefect.HardnessNG", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0", "N0"));
             this.hardnessNGTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hardnessNGTextBox.Location = new System.Drawing.Point(196, 155);
-            this.hardnessNGTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.hardnessNGTextBox.Location = new System.Drawing.Point(147, 126);
             this.hardnessNGTextBox.Name = "hardnessNGTextBox";
             this.hardnessNGTextBox.ReadOnly = true;
-            this.hardnessNGTextBox.Size = new System.Drawing.Size(74, 27);
+            this.hardnessNGTextBox.Size = new System.Drawing.Size(56, 23);
             this.hardnessNGTextBox.TabIndex = 231;
             this.hardnessNGTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -786,11 +735,10 @@
             this.blowHoleTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.blowHoleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.MeltDefect.BlowHole", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0", "N0"));
             this.blowHoleTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blowHoleTextBox.Location = new System.Drawing.Point(196, 48);
-            this.blowHoleTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.blowHoleTextBox.Location = new System.Drawing.Point(147, 39);
             this.blowHoleTextBox.Name = "blowHoleTextBox";
             this.blowHoleTextBox.ReadOnly = true;
-            this.blowHoleTextBox.Size = new System.Drawing.Size(74, 27);
+            this.blowHoleTextBox.Size = new System.Drawing.Size(56, 23);
             this.blowHoleTextBox.TabIndex = 228;
             this.blowHoleTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -800,11 +748,10 @@
             this.chemNGTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.chemNGTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.MeltDefect.ChemNG", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0", "N0"));
             this.chemNGTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chemNGTextBox.Location = new System.Drawing.Point(196, 84);
-            this.chemNGTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.chemNGTextBox.Location = new System.Drawing.Point(147, 68);
             this.chemNGTextBox.Name = "chemNGTextBox";
             this.chemNGTextBox.ReadOnly = true;
-            this.chemNGTextBox.Size = new System.Drawing.Size(74, 27);
+            this.chemNGTextBox.Size = new System.Drawing.Size(56, 23);
             this.chemNGTextBox.TabIndex = 229;
             this.chemNGTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -814,11 +761,10 @@
             this.chillTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.chillTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.MeltDefect.Chill", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0", "N0"));
             this.chillTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chillTextBox.Location = new System.Drawing.Point(196, 119);
-            this.chillTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.chillTextBox.Location = new System.Drawing.Point(147, 97);
             this.chillTextBox.Name = "chillTextBox";
             this.chillTextBox.ReadOnly = true;
-            this.chillTextBox.Size = new System.Drawing.Size(74, 27);
+            this.chillTextBox.Size = new System.Drawing.Size(56, 23);
             this.chillTextBox.TabIndex = 230;
             this.chillTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -841,11 +787,9 @@
             this.groupBox2.Controls.Add(this.chillMismatchTextBox);
             this.groupBox2.Controls.Add(this.burrTextBox);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(325, 241);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Location = new System.Drawing.Point(244, 196);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(291, 420);
+            this.groupBox2.Size = new System.Drawing.Size(218, 341);
             this.groupBox2.TabIndex = 222;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Molding";
@@ -856,11 +800,10 @@
             this.totalTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.MoldDefect.Total", true));
             this.totalTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalTextBox1.Location = new System.Drawing.Point(196, 369);
-            this.totalTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.totalTextBox1.Location = new System.Drawing.Point(147, 300);
             this.totalTextBox1.Name = "totalTextBox1";
             this.totalTextBox1.ReadOnly = true;
-            this.totalTextBox1.Size = new System.Drawing.Size(74, 27);
+            this.totalTextBox1.Size = new System.Drawing.Size(56, 23);
             this.totalTextBox1.TabIndex = 18;
             this.totalTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -870,11 +813,10 @@
             this.sandDropTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sandDropTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.MoldDefect.SandDrop", true));
             this.sandDropTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sandDropTextBox.Location = new System.Drawing.Point(196, 262);
-            this.sandDropTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.sandDropTextBox.Location = new System.Drawing.Point(147, 213);
             this.sandDropTextBox.Name = "sandDropTextBox";
             this.sandDropTextBox.ReadOnly = true;
-            this.sandDropTextBox.Size = new System.Drawing.Size(74, 27);
+            this.sandDropTextBox.Size = new System.Drawing.Size(56, 23);
             this.sandDropTextBox.TabIndex = 235;
             this.sandDropTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -884,11 +826,10 @@
             this.sandBrokenTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sandBrokenTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.MoldDefect.SandBroken", true));
             this.sandBrokenTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sandBrokenTextBox.Location = new System.Drawing.Point(196, 226);
-            this.sandBrokenTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.sandBrokenTextBox.Location = new System.Drawing.Point(147, 184);
             this.sandBrokenTextBox.Name = "sandBrokenTextBox";
             this.sandBrokenTextBox.ReadOnly = true;
-            this.sandBrokenTextBox.Size = new System.Drawing.Size(74, 27);
+            this.sandBrokenTextBox.Size = new System.Drawing.Size(56, 23);
             this.sandBrokenTextBox.TabIndex = 234;
             this.sandBrokenTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -898,11 +839,10 @@
             this.pinHoleTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pinHoleTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.MoldDefect.PinHole", true));
             this.pinHoleTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pinHoleTextBox1.Location = new System.Drawing.Point(196, 191);
-            this.pinHoleTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pinHoleTextBox1.Location = new System.Drawing.Point(147, 155);
             this.pinHoleTextBox1.Name = "pinHoleTextBox1";
             this.pinHoleTextBox1.ReadOnly = true;
-            this.pinHoleTextBox1.Size = new System.Drawing.Size(74, 27);
+            this.pinHoleTextBox1.Size = new System.Drawing.Size(56, 23);
             this.pinHoleTextBox1.TabIndex = 233;
             this.pinHoleTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -912,11 +852,10 @@
             this.missMatchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.missMatchTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.MoldDefect.MissMatch", true));
             this.missMatchTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.missMatchTextBox.Location = new System.Drawing.Point(196, 155);
-            this.missMatchTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.missMatchTextBox.Location = new System.Drawing.Point(147, 126);
             this.missMatchTextBox.Name = "missMatchTextBox";
             this.missMatchTextBox.ReadOnly = true;
-            this.missMatchTextBox.Size = new System.Drawing.Size(74, 27);
+            this.missMatchTextBox.Size = new System.Drawing.Size(56, 23);
             this.missMatchTextBox.TabIndex = 232;
             this.missMatchTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -926,11 +865,10 @@
             this.coreMismatchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.coreMismatchTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.MoldDefect.CoreMismatch", true));
             this.coreMismatchTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.coreMismatchTextBox.Location = new System.Drawing.Point(196, 119);
-            this.coreMismatchTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.coreMismatchTextBox.Location = new System.Drawing.Point(147, 97);
             this.coreMismatchTextBox.Name = "coreMismatchTextBox";
             this.coreMismatchTextBox.ReadOnly = true;
-            this.coreMismatchTextBox.Size = new System.Drawing.Size(74, 27);
+            this.coreMismatchTextBox.Size = new System.Drawing.Size(56, 23);
             this.coreMismatchTextBox.TabIndex = 231;
             this.coreMismatchTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -940,11 +878,10 @@
             this.chillMismatchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.chillMismatchTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.MoldDefect.ChillMismatch", true));
             this.chillMismatchTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chillMismatchTextBox.Location = new System.Drawing.Point(196, 84);
-            this.chillMismatchTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.chillMismatchTextBox.Location = new System.Drawing.Point(147, 68);
             this.chillMismatchTextBox.Name = "chillMismatchTextBox";
             this.chillMismatchTextBox.ReadOnly = true;
-            this.chillMismatchTextBox.Size = new System.Drawing.Size(74, 27);
+            this.chillMismatchTextBox.Size = new System.Drawing.Size(56, 23);
             this.chillMismatchTextBox.TabIndex = 230;
             this.chillMismatchTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -954,11 +891,10 @@
             this.burrTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.burrTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.MoldDefect.Burr", true));
             this.burrTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.burrTextBox.Location = new System.Drawing.Point(196, 48);
-            this.burrTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.burrTextBox.Location = new System.Drawing.Point(147, 39);
             this.burrTextBox.Name = "burrTextBox";
             this.burrTextBox.ReadOnly = true;
-            this.burrTextBox.Size = new System.Drawing.Size(74, 27);
+            this.burrTextBox.Size = new System.Drawing.Size(56, 23);
             this.burrTextBox.TabIndex = 229;
             this.burrTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -983,11 +919,9 @@
             this.groupBox3.Controls.Add(shrinkageLabel);
             this.groupBox3.Controls.Add(slagLabel);
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(25, 670);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Location = new System.Drawing.Point(19, 544);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(291, 420);
+            this.groupBox3.Size = new System.Drawing.Size(218, 341);
             this.groupBox3.TabIndex = 223;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Pouring";
@@ -998,11 +932,10 @@
             this.slagTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.slagTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.PourDefect.Slag", true));
             this.slagTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.slagTextBox.Location = new System.Drawing.Point(196, 298);
-            this.slagTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.slagTextBox.Location = new System.Drawing.Point(147, 242);
             this.slagTextBox.Name = "slagTextBox";
             this.slagTextBox.ReadOnly = true;
-            this.slagTextBox.Size = new System.Drawing.Size(74, 27);
+            this.slagTextBox.Size = new System.Drawing.Size(56, 23);
             this.slagTextBox.TabIndex = 231;
             this.slagTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1012,11 +945,10 @@
             this.shrinkageTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.shrinkageTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.PourDefect.Shrinkage", true));
             this.shrinkageTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shrinkageTextBox1.Location = new System.Drawing.Point(196, 262);
-            this.shrinkageTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.shrinkageTextBox1.Location = new System.Drawing.Point(147, 213);
             this.shrinkageTextBox1.Name = "shrinkageTextBox1";
             this.shrinkageTextBox1.ReadOnly = true;
-            this.shrinkageTextBox1.Size = new System.Drawing.Size(74, 27);
+            this.shrinkageTextBox1.Size = new System.Drawing.Size(56, 23);
             this.shrinkageTextBox1.TabIndex = 230;
             this.shrinkageTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1026,11 +958,10 @@
             this.hardnessNGTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.hardnessNGTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.PourDefect.HardnessNG", true));
             this.hardnessNGTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hardnessNGTextBox1.Location = new System.Drawing.Point(196, 155);
-            this.hardnessNGTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.hardnessNGTextBox1.Location = new System.Drawing.Point(147, 126);
             this.hardnessNGTextBox1.Name = "hardnessNGTextBox1";
             this.hardnessNGTextBox1.ReadOnly = true;
-            this.hardnessNGTextBox1.Size = new System.Drawing.Size(74, 27);
+            this.hardnessNGTextBox1.Size = new System.Drawing.Size(56, 23);
             this.hardnessNGTextBox1.TabIndex = 229;
             this.hardnessNGTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1040,11 +971,10 @@
             this.pinHoleTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pinHoleTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.PourDefect.PinHole", true));
             this.pinHoleTextBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pinHoleTextBox2.Location = new System.Drawing.Point(196, 226);
-            this.pinHoleTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pinHoleTextBox2.Location = new System.Drawing.Point(147, 184);
             this.pinHoleTextBox2.Name = "pinHoleTextBox2";
             this.pinHoleTextBox2.ReadOnly = true;
-            this.pinHoleTextBox2.Size = new System.Drawing.Size(74, 27);
+            this.pinHoleTextBox2.Size = new System.Drawing.Size(56, 23);
             this.pinHoleTextBox2.TabIndex = 229;
             this.pinHoleTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1054,11 +984,10 @@
             this.chillTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.chillTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.PourDefect.Chill", true));
             this.chillTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chillTextBox1.Location = new System.Drawing.Point(196, 84);
-            this.chillTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.chillTextBox1.Location = new System.Drawing.Point(147, 68);
             this.chillTextBox1.Name = "chillTextBox1";
             this.chillTextBox1.ReadOnly = true;
-            this.chillTextBox1.Size = new System.Drawing.Size(74, 27);
+            this.chillTextBox1.Size = new System.Drawing.Size(56, 23);
             this.chillTextBox1.TabIndex = 229;
             this.chillTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1068,11 +997,10 @@
             this.microNGTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.microNGTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.PourDefect.MicroNG", true));
             this.microNGTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.microNGTextBox1.Location = new System.Drawing.Point(196, 191);
-            this.microNGTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.microNGTextBox1.Location = new System.Drawing.Point(147, 155);
             this.microNGTextBox1.Name = "microNGTextBox1";
             this.microNGTextBox1.ReadOnly = true;
-            this.microNGTextBox1.Size = new System.Drawing.Size(74, 27);
+            this.microNGTextBox1.Size = new System.Drawing.Size(56, 23);
             this.microNGTextBox1.TabIndex = 228;
             this.microNGTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1082,11 +1010,10 @@
             this.coldShutTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.coldShutTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.PourDefect.ColdShut", true));
             this.coldShutTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.coldShutTextBox.Location = new System.Drawing.Point(196, 119);
-            this.coldShutTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.coldShutTextBox.Location = new System.Drawing.Point(147, 97);
             this.coldShutTextBox.Name = "coldShutTextBox";
             this.coldShutTextBox.ReadOnly = true;
-            this.coldShutTextBox.Size = new System.Drawing.Size(74, 27);
+            this.coldShutTextBox.Size = new System.Drawing.Size(56, 23);
             this.coldShutTextBox.TabIndex = 228;
             this.coldShutTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1096,11 +1023,10 @@
             this.totalTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.PourDefect.Total", true));
             this.totalTextBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalTextBox2.Location = new System.Drawing.Point(196, 369);
-            this.totalTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.totalTextBox2.Location = new System.Drawing.Point(147, 300);
             this.totalTextBox2.Name = "totalTextBox2";
             this.totalTextBox2.ReadOnly = true;
-            this.totalTextBox2.Size = new System.Drawing.Size(74, 27);
+            this.totalTextBox2.Size = new System.Drawing.Size(56, 23);
             this.totalTextBox2.TabIndex = 18;
             this.totalTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1110,11 +1036,10 @@
             this.blowHoleTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.blowHoleTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.PourDefect.BlowHole", true));
             this.blowHoleTextBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blowHoleTextBox2.Location = new System.Drawing.Point(196, 48);
-            this.blowHoleTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.blowHoleTextBox2.Location = new System.Drawing.Point(147, 39);
             this.blowHoleTextBox2.Name = "blowHoleTextBox2";
             this.blowHoleTextBox2.ReadOnly = true;
-            this.blowHoleTextBox2.Size = new System.Drawing.Size(74, 27);
+            this.blowHoleTextBox2.Size = new System.Drawing.Size(56, 23);
             this.blowHoleTextBox2.TabIndex = 228;
             this.blowHoleTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1129,11 +1054,9 @@
             this.groupBox4.Controls.Add(dentLabel);
             this.groupBox4.Controls.Add(overGrindingLabel);
             this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(624, 670);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Location = new System.Drawing.Point(468, 544);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(291, 421);
+            this.groupBox4.Size = new System.Drawing.Size(218, 342);
             this.groupBox4.TabIndex = 224;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Finishing && Engineering";
@@ -1144,11 +1067,10 @@
             this.overGrindingTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.overGrindingTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.FinDefect.OverGrinding", true));
             this.overGrindingTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.overGrindingTextBox.Location = new System.Drawing.Point(196, 119);
-            this.overGrindingTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.overGrindingTextBox.Location = new System.Drawing.Point(147, 97);
             this.overGrindingTextBox.Name = "overGrindingTextBox";
             this.overGrindingTextBox.ReadOnly = true;
-            this.overGrindingTextBox.Size = new System.Drawing.Size(74, 27);
+            this.overGrindingTextBox.Size = new System.Drawing.Size(56, 23);
             this.overGrindingTextBox.TabIndex = 230;
             this.overGrindingTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1158,11 +1080,10 @@
             this.dentTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.FinDefect.Dent", true));
             this.dentTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dentTextBox.Location = new System.Drawing.Point(196, 84);
-            this.dentTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.dentTextBox.Location = new System.Drawing.Point(147, 68);
             this.dentTextBox.Name = "dentTextBox";
             this.dentTextBox.ReadOnly = true;
-            this.dentTextBox.Size = new System.Drawing.Size(74, 27);
+            this.dentTextBox.Size = new System.Drawing.Size(56, 23);
             this.dentTextBox.TabIndex = 229;
             this.dentTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1172,11 +1093,10 @@
             this.totalTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalTextBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.FinDefect.Total", true));
             this.totalTextBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalTextBox3.Location = new System.Drawing.Point(196, 369);
-            this.totalTextBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.totalTextBox3.Location = new System.Drawing.Point(147, 300);
             this.totalTextBox3.Name = "totalTextBox3";
             this.totalTextBox3.ReadOnly = true;
-            this.totalTextBox3.Size = new System.Drawing.Size(74, 27);
+            this.totalTextBox3.Size = new System.Drawing.Size(56, 23);
             this.totalTextBox3.TabIndex = 228;
             this.totalTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1186,11 +1106,10 @@
             this.deformTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.deformTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.FinDefect.Deform", true));
             this.deformTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deformTextBox.Location = new System.Drawing.Point(196, 48);
-            this.deformTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.deformTextBox.Location = new System.Drawing.Point(147, 39);
             this.deformTextBox.Name = "deformTextBox";
             this.deformTextBox.ReadOnly = true;
-            this.deformTextBox.Size = new System.Drawing.Size(74, 27);
+            this.deformTextBox.Size = new System.Drawing.Size(56, 23);
             this.deformTextBox.TabIndex = 228;
             this.deformTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1200,11 +1119,10 @@
             this.totalTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalTextBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.EngDefect.Total", true));
             this.totalTextBox5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalTextBox5.Location = new System.Drawing.Point(196, 369);
-            this.totalTextBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.totalTextBox5.Location = new System.Drawing.Point(147, 300);
             this.totalTextBox5.Name = "totalTextBox5";
             this.totalTextBox5.ReadOnly = true;
-            this.totalTextBox5.Size = new System.Drawing.Size(74, 27);
+            this.totalTextBox5.Size = new System.Drawing.Size(56, 23);
             this.totalTextBox5.TabIndex = 229;
             this.totalTextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1228,11 +1146,9 @@
             this.groupBox5.Controls.Add(label2);
             this.groupBox5.Controls.Add(totalNumberLabel);
             this.groupBox5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(35, 18);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox5.Location = new System.Drawing.Point(26, 15);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Size = new System.Drawing.Size(880, 203);
+            this.groupBox5.Size = new System.Drawing.Size(660, 165);
             this.groupBox5.TabIndex = 225;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Info.";
@@ -1242,11 +1158,10 @@
             this.totalGoodWeightTextBox.BackColor = System.Drawing.Color.White;
             this.totalGoodWeightTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalGoodWeightTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.TotalGoodWeight", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N1"));
-            this.totalGoodWeightTextBox.Location = new System.Drawing.Point(489, 114);
-            this.totalGoodWeightTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.totalGoodWeightTextBox.Location = new System.Drawing.Point(367, 93);
             this.totalGoodWeightTextBox.Name = "totalGoodWeightTextBox";
             this.totalGoodWeightTextBox.ReadOnly = true;
-            this.totalGoodWeightTextBox.Size = new System.Drawing.Size(93, 32);
+            this.totalGoodWeightTextBox.Size = new System.Drawing.Size(70, 27);
             this.totalGoodWeightTextBox.TabIndex = 28;
             this.totalGoodWeightTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1255,11 +1170,10 @@
             this.totalGoodTextBox.BackColor = System.Drawing.Color.White;
             this.totalGoodTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalGoodTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.TotalGood", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
-            this.totalGoodTextBox.Location = new System.Drawing.Point(489, 74);
-            this.totalGoodTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.totalGoodTextBox.Location = new System.Drawing.Point(367, 60);
             this.totalGoodTextBox.Name = "totalGoodTextBox";
             this.totalGoodTextBox.ReadOnly = true;
-            this.totalGoodTextBox.Size = new System.Drawing.Size(93, 32);
+            this.totalGoodTextBox.Size = new System.Drawing.Size(70, 27);
             this.totalGoodTextBox.TabIndex = 27;
             this.totalGoodTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1268,11 +1182,10 @@
             this.totalNumberTextBox.BackColor = System.Drawing.Color.White;
             this.totalNumberTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalNumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.TotalNumber", true));
-            this.totalNumberTextBox.Location = new System.Drawing.Point(388, 74);
-            this.totalNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.totalNumberTextBox.Location = new System.Drawing.Point(291, 60);
             this.totalNumberTextBox.Name = "totalNumberTextBox";
             this.totalNumberTextBox.ReadOnly = true;
-            this.totalNumberTextBox.Size = new System.Drawing.Size(93, 32);
+            this.totalNumberTextBox.Size = new System.Drawing.Size(70, 27);
             this.totalNumberTextBox.TabIndex = 26;
             this.totalNumberTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1281,11 +1194,10 @@
             this.defectRateTextBox.BackColor = System.Drawing.Color.White;
             this.defectRateTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.defectRateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.DefectRate", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "#0.0%"));
-            this.defectRateTextBox.Location = new System.Drawing.Point(767, 74);
-            this.defectRateTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.defectRateTextBox.Location = new System.Drawing.Point(575, 60);
             this.defectRateTextBox.Name = "defectRateTextBox";
             this.defectRateTextBox.ReadOnly = true;
-            this.defectRateTextBox.Size = new System.Drawing.Size(93, 32);
+            this.defectRateTextBox.Size = new System.Drawing.Size(70, 27);
             this.defectRateTextBox.TabIndex = 25;
             this.defectRateTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1294,11 +1206,10 @@
             this.pouredWeightTextBox.BackColor = System.Drawing.Color.White;
             this.pouredWeightTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pouredWeightTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "PouredWeight", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0", "N1"));
-            this.pouredWeightTextBox.Location = new System.Drawing.Point(185, 114);
-            this.pouredWeightTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.pouredWeightTextBox.Location = new System.Drawing.Point(139, 93);
             this.pouredWeightTextBox.Name = "pouredWeightTextBox";
             this.pouredWeightTextBox.ReadOnly = true;
-            this.pouredWeightTextBox.Size = new System.Drawing.Size(93, 32);
+            this.pouredWeightTextBox.Size = new System.Drawing.Size(70, 27);
             this.pouredWeightTextBox.TabIndex = 23;
             this.pouredWeightTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1307,11 +1218,10 @@
             this.productNoTextBox.BackColor = System.Drawing.Color.White;
             this.productNoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.productNoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "ProductNo", true));
-            this.productNoTextBox.Location = new System.Drawing.Point(185, 74);
-            this.productNoTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.productNoTextBox.Location = new System.Drawing.Point(139, 60);
             this.productNoTextBox.Name = "productNoTextBox";
             this.productNoTextBox.ReadOnly = true;
-            this.productNoTextBox.Size = new System.Drawing.Size(93, 32);
+            this.productNoTextBox.Size = new System.Drawing.Size(70, 27);
             this.productNoTextBox.TabIndex = 21;
             this.productNoTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1320,11 +1230,10 @@
             this.defectWeightRateTextBox.BackColor = System.Drawing.Color.White;
             this.defectWeightRateTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.defectWeightRateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.DefectWeightRate", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "#0.0%"));
-            this.defectWeightRateTextBox.Location = new System.Drawing.Point(767, 114);
-            this.defectWeightRateTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.defectWeightRateTextBox.Location = new System.Drawing.Point(575, 93);
             this.defectWeightRateTextBox.Name = "defectWeightRateTextBox";
             this.defectWeightRateTextBox.ReadOnly = true;
-            this.defectWeightRateTextBox.Size = new System.Drawing.Size(93, 32);
+            this.defectWeightRateTextBox.Size = new System.Drawing.Size(70, 27);
             this.defectWeightRateTextBox.TabIndex = 20;
             this.defectWeightRateTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1333,11 +1242,10 @@
             this.totalDefectWeightTextBox.BackColor = System.Drawing.Color.White;
             this.totalDefectWeightTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalDefectWeightTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.TotalDefectWeight", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "#,##0.0"));
-            this.totalDefectWeightTextBox.Location = new System.Drawing.Point(591, 114);
-            this.totalDefectWeightTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.totalDefectWeightTextBox.Location = new System.Drawing.Point(443, 93);
             this.totalDefectWeightTextBox.Name = "totalDefectWeightTextBox";
             this.totalDefectWeightTextBox.ReadOnly = true;
-            this.totalDefectWeightTextBox.Size = new System.Drawing.Size(93, 32);
+            this.totalDefectWeightTextBox.Size = new System.Drawing.Size(70, 27);
             this.totalDefectWeightTextBox.TabIndex = 18;
             this.totalDefectWeightTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1346,11 +1254,10 @@
             this.totalWeightTextBox.BackColor = System.Drawing.Color.White;
             this.totalWeightTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalWeightTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.TotalWeight", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "#,##0.0"));
-            this.totalWeightTextBox.Location = new System.Drawing.Point(388, 114);
-            this.totalWeightTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.totalWeightTextBox.Location = new System.Drawing.Point(291, 93);
             this.totalWeightTextBox.Name = "totalWeightTextBox";
             this.totalWeightTextBox.ReadOnly = true;
-            this.totalWeightTextBox.Size = new System.Drawing.Size(93, 32);
+            this.totalWeightTextBox.Size = new System.Drawing.Size(70, 27);
             this.totalWeightTextBox.TabIndex = 16;
             this.totalWeightTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1359,11 +1266,10 @@
             this.totalDefectTextBox.BackColor = System.Drawing.Color.White;
             this.totalDefectTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalDefectTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.TotalDefect", true));
-            this.totalDefectTextBox.Location = new System.Drawing.Point(591, 74);
-            this.totalDefectTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.totalDefectTextBox.Location = new System.Drawing.Point(443, 60);
             this.totalDefectTextBox.Name = "totalDefectTextBox";
             this.totalDefectTextBox.ReadOnly = true;
-            this.totalDefectTextBox.Size = new System.Drawing.Size(93, 32);
+            this.totalDefectTextBox.Size = new System.Drawing.Size(70, 27);
             this.totalDefectTextBox.TabIndex = 12;
             this.totalDefectTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1378,11 +1284,9 @@
             this.groupBox6.Controls.Add(coreDeformLabel);
             this.groupBox6.Controls.Add(coreBrokenLabel);
             this.groupBox6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(624, 241);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox6.Location = new System.Drawing.Point(468, 196);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox6.Size = new System.Drawing.Size(291, 420);
+            this.groupBox6.Size = new System.Drawing.Size(218, 341);
             this.groupBox6.TabIndex = 227;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Core";
@@ -1393,11 +1297,10 @@
             this.wetCoreTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.wetCoreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.CoreDefect.WetCore", true));
             this.wetCoreTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wetCoreTextBox.Location = new System.Drawing.Point(196, 84);
-            this.wetCoreTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.wetCoreTextBox.Location = new System.Drawing.Point(147, 68);
             this.wetCoreTextBox.Name = "wetCoreTextBox";
             this.wetCoreTextBox.ReadOnly = true;
-            this.wetCoreTextBox.Size = new System.Drawing.Size(74, 27);
+            this.wetCoreTextBox.Size = new System.Drawing.Size(56, 23);
             this.wetCoreTextBox.TabIndex = 242;
             this.wetCoreTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1407,11 +1310,10 @@
             this.coreDeformTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.coreDeformTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.CoreDefect.CoreDeform", true));
             this.coreDeformTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.coreDeformTextBox.Location = new System.Drawing.Point(196, 48);
-            this.coreDeformTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.coreDeformTextBox.Location = new System.Drawing.Point(147, 39);
             this.coreDeformTextBox.Name = "coreDeformTextBox";
             this.coreDeformTextBox.ReadOnly = true;
-            this.coreDeformTextBox.Size = new System.Drawing.Size(74, 27);
+            this.coreDeformTextBox.Size = new System.Drawing.Size(56, 23);
             this.coreDeformTextBox.TabIndex = 241;
             this.coreDeformTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1421,11 +1323,10 @@
             this.coreBrokenTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.coreBrokenTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.CoreDefect.CoreBroken", true));
             this.coreBrokenTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.coreBrokenTextBox.Location = new System.Drawing.Point(196, 119);
-            this.coreBrokenTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.coreBrokenTextBox.Location = new System.Drawing.Point(147, 97);
             this.coreBrokenTextBox.Name = "coreBrokenTextBox";
             this.coreBrokenTextBox.ReadOnly = true;
-            this.coreBrokenTextBox.Size = new System.Drawing.Size(74, 27);
+            this.coreBrokenTextBox.Size = new System.Drawing.Size(56, 23);
             this.coreBrokenTextBox.TabIndex = 240;
             this.coreBrokenTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1435,11 +1336,10 @@
             this.totalTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalTextBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.CoreDefect.Total", true));
             this.totalTextBox4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalTextBox4.Location = new System.Drawing.Point(196, 369);
-            this.totalTextBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.totalTextBox4.Location = new System.Drawing.Point(147, 300);
             this.totalTextBox4.Name = "totalTextBox4";
             this.totalTextBox4.ReadOnly = true;
-            this.totalTextBox4.Size = new System.Drawing.Size(74, 27);
+            this.totalTextBox4.Size = new System.Drawing.Size(56, 23);
             this.totalTextBox4.TabIndex = 239;
             this.totalTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1453,9 +1353,8 @@
             this.pnToolBar.Controls.Add(this.label27);
             this.pnToolBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnToolBar.Location = new System.Drawing.Point(0, 0);
-            this.pnToolBar.Margin = new System.Windows.Forms.Padding(4);
             this.pnToolBar.Name = "pnToolBar";
-            this.pnToolBar.Size = new System.Drawing.Size(79, 1220);
+            this.pnToolBar.Size = new System.Drawing.Size(59, 991);
             this.pnToolBar.TabIndex = 295;
             // 
             // btnRefresh
@@ -1467,10 +1366,9 @@
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(0, 173);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefresh.Location = new System.Drawing.Point(0, 139);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(79, 73);
+            this.btnRefresh.Size = new System.Drawing.Size(59, 59);
             this.btnRefresh.TabIndex = 215;
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
@@ -1480,10 +1378,9 @@
             this.panel4.Controls.Add(this.btnSave);
             this.panel4.Controls.Add(this.btnExit);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 1021);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Location = new System.Drawing.Point(0, 831);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(79, 171);
+            this.panel4.Size = new System.Drawing.Size(59, 139);
             this.panel4.TabIndex = 17;
             // 
             // btnSave
@@ -1495,10 +1392,9 @@
             this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(0, 25);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Location = new System.Drawing.Point(0, 21);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(79, 73);
+            this.btnSave.Size = new System.Drawing.Size(59, 59);
             this.btnSave.TabIndex = 9;
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
@@ -1511,10 +1407,9 @@
             this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(0, 98);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Location = new System.Drawing.Point(0, 80);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(79, 73);
+            this.btnExit.Size = new System.Drawing.Size(59, 59);
             this.btnExit.TabIndex = 8;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -1526,10 +1421,9 @@
             this.label25.Dock = System.Windows.Forms.DockStyle.Top;
             this.label25.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(0, 145);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Location = new System.Drawing.Point(0, 118);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(76, 28);
+            this.label25.Size = new System.Drawing.Size(58, 21);
             this.label25.TabIndex = 13;
             this.label25.Text = "--------";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1538,9 +1432,8 @@
             // 
             this.pnNavigator.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnNavigator.Location = new System.Drawing.Point(0, 0);
-            this.pnNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.pnNavigator.Name = "pnNavigator";
-            this.pnNavigator.Size = new System.Drawing.Size(79, 145);
+            this.pnNavigator.Size = new System.Drawing.Size(59, 118);
             this.pnNavigator.TabIndex = 16;
             // 
             // label27
@@ -1550,10 +1443,9 @@
             this.label27.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label27.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(0, 1192);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Location = new System.Drawing.Point(0, 970);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(76, 28);
+            this.label27.Size = new System.Drawing.Size(58, 21);
             this.label27.TabIndex = 9;
             this.label27.Text = "--------";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1562,10 +1454,9 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(79, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(59, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(7, 1220);
+            this.panel2.Size = new System.Drawing.Size(5, 991);
             this.panel2.TabIndex = 296;
             // 
             // lbHeader
@@ -1574,10 +1465,9 @@
             this.lbHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.lbHeader.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHeader.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbHeader.Location = new System.Drawing.Point(86, 0);
-            this.lbHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbHeader.Location = new System.Drawing.Point(64, 0);
             this.lbHeader.Name = "lbHeader";
-            this.lbHeader.Size = new System.Drawing.Size(1377, 55);
+            this.lbHeader.Size = new System.Drawing.Size(1033, 45);
             this.lbHeader.TabIndex = 297;
             this.lbHeader.Text = "I N S P E C T I O N";
             this.lbHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1598,10 +1488,9 @@
             this.pnHeader.Controls.Add(this.groupBox3);
             this.pnHeader.Controls.Add(this.groupBox2);
             this.pnHeader.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnHeader.Location = new System.Drawing.Point(86, 55);
-            this.pnHeader.Margin = new System.Windows.Forms.Padding(4);
+            this.pnHeader.Location = new System.Drawing.Point(64, 45);
             this.pnHeader.Name = "pnHeader";
-            this.pnHeader.Size = new System.Drawing.Size(1377, 1165);
+            this.pnHeader.Size = new System.Drawing.Size(1033, 946);
             this.pnHeader.TabIndex = 298;
             this.pnHeader.Click += new System.EventHandler(this.pnHeader_Click);
             // 
@@ -1609,10 +1498,9 @@
             // 
             this.pnBorderBottom.BackColor = System.Drawing.Color.White;
             this.pnBorderBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnBorderBottom.Location = new System.Drawing.Point(0, 1161);
-            this.pnBorderBottom.Margin = new System.Windows.Forms.Padding(4);
+            this.pnBorderBottom.Location = new System.Drawing.Point(0, 943);
             this.pnBorderBottom.Name = "pnBorderBottom";
-            this.pnBorderBottom.Size = new System.Drawing.Size(1377, 4);
+            this.pnBorderBottom.Size = new System.Drawing.Size(1033, 3);
             this.pnBorderBottom.TabIndex = 299;
             // 
             // groupBox7
@@ -1626,11 +1514,9 @@
             this.groupBox7.Controls.Add(engDefectLabel);
             this.groupBox7.Controls.Add(this.airPocketTextBox);
             this.groupBox7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(325, 670);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox7.Location = new System.Drawing.Point(244, 544);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox7.Size = new System.Drawing.Size(291, 421);
+            this.groupBox7.Size = new System.Drawing.Size(218, 342);
             this.groupBox7.TabIndex = 228;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Engineering";
@@ -1641,11 +1527,10 @@
             this.wornToolingTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.wornToolingTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.EngDefect.WornTooling", true));
             this.wornToolingTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wornToolingTextBox.Location = new System.Drawing.Point(196, 119);
-            this.wornToolingTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.wornToolingTextBox.Location = new System.Drawing.Point(147, 97);
             this.wornToolingTextBox.Name = "wornToolingTextBox";
             this.wornToolingTextBox.ReadOnly = true;
-            this.wornToolingTextBox.Size = new System.Drawing.Size(74, 27);
+            this.wornToolingTextBox.Size = new System.Drawing.Size(56, 23);
             this.wornToolingTextBox.TabIndex = 230;
             this.wornToolingTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1655,11 +1540,10 @@
             this.missedIdentiferTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.missedIdentiferTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.EngDefect.MissedIdentifer", true));
             this.missedIdentiferTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.missedIdentiferTextBox.Location = new System.Drawing.Point(196, 84);
-            this.missedIdentiferTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.missedIdentiferTextBox.Location = new System.Drawing.Point(147, 68);
             this.missedIdentiferTextBox.Name = "missedIdentiferTextBox";
             this.missedIdentiferTextBox.ReadOnly = true;
-            this.missedIdentiferTextBox.Size = new System.Drawing.Size(74, 27);
+            this.missedIdentiferTextBox.Size = new System.Drawing.Size(56, 23);
             this.missedIdentiferTextBox.TabIndex = 229;
             this.missedIdentiferTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1669,11 +1553,10 @@
             this.airPocketTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.airPocketTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Defect.EngDefect.AirPocket", true));
             this.airPocketTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.airPocketTextBox.Location = new System.Drawing.Point(196, 48);
-            this.airPocketTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.airPocketTextBox.Location = new System.Drawing.Point(147, 39);
             this.airPocketTextBox.Name = "airPocketTextBox";
             this.airPocketTextBox.ReadOnly = true;
-            this.airPocketTextBox.Size = new System.Drawing.Size(74, 27);
+            this.airPocketTextBox.Size = new System.Drawing.Size(56, 23);
             this.airPocketTextBox.TabIndex = 228;
             this.airPocketTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1684,25 +1567,23 @@
             // pnBorderTop
             // 
             this.pnBorderTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnBorderTop.Location = new System.Drawing.Point(86, 55);
-            this.pnBorderTop.Margin = new System.Windows.Forms.Padding(4);
+            this.pnBorderTop.Location = new System.Drawing.Point(64, 45);
             this.pnBorderTop.Name = "pnBorderTop";
-            this.pnBorderTop.Size = new System.Drawing.Size(1377, 4);
+            this.pnBorderTop.Size = new System.Drawing.Size(1033, 3);
             this.pnBorderTop.TabIndex = 299;
             // 
             // frmInspection
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1463, 1220);
+            this.ClientSize = new System.Drawing.Size(1097, 991);
             this.Controls.Add(this.pnBorderTop);
             this.Controls.Add(this.pnHeader);
             this.Controls.Add(this.lbHeader);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnToolBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmInspection";
             this.Text = "frmEditQC";
             this.Load += new System.EventHandler(this.frmEditQC_Load);
