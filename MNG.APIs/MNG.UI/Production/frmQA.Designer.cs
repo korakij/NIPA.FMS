@@ -86,9 +86,6 @@
             this.yieldTextBox = new System.Windows.Forms.TextBox();
             this.pnBorderBottom = new System.Windows.Forms.Panel();
             this.pnBorderTop = new System.Windows.Forms.Panel();
-            this.materialSpecificationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pouringBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cementiteTextBox = new System.Windows.Forms.TextBox();
             this.countTextBox = new System.Windows.Forms.TextBox();
             this.elongationTextBox1 = new System.Windows.Forms.TextBox();
@@ -100,7 +97,11 @@
             this.sizeTextBox = new System.Windows.Forms.TextBox();
             this.tensileTextBox1 = new System.Windows.Forms.TextBox();
             this.yeildTextBox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.GraphiteImg = new System.Windows.Forms.PictureBox();
+            this.pouringBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.materialSpecificationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.MatrixImg = new System.Windows.Forms.PictureBox();
             cementiteMaxLabel = new System.Windows.Forms.Label();
             descriptionLabel = new System.Windows.Forms.Label();
             elongationLabel = new System.Windows.Forms.Label();
@@ -129,10 +130,11 @@
             this.pnToolBar.SuspendLayout();
             this.panel4.SuspendLayout();
             this.pnHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.materialSpecificationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GraphiteImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pouringBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materialSpecificationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MatrixImg)).BeginInit();
             this.SuspendLayout();
             // 
             // cementiteMaxLabel
@@ -491,7 +493,8 @@
             // 
             this.pnHeader.AutoScroll = true;
             this.pnHeader.BackColor = System.Drawing.Color.White;
-            this.pnHeader.Controls.Add(this.pictureBox1);
+            this.pnHeader.Controls.Add(this.MatrixImg);
+            this.pnHeader.Controls.Add(this.GraphiteImg);
             this.pnHeader.Controls.Add(label12);
             this.pnHeader.Controls.Add(label11);
             this.pnHeader.Controls.Add(this.cementiteTextBox);
@@ -739,9 +742,9 @@
             // 
             this.pnBorderBottom.BackColor = System.Drawing.Color.White;
             this.pnBorderBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnBorderBottom.Location = new System.Drawing.Point(0, 943);
+            this.pnBorderBottom.Location = new System.Drawing.Point(0, 1039);
             this.pnBorderBottom.Name = "pnBorderBottom";
-            this.pnBorderBottom.Size = new System.Drawing.Size(1033, 3);
+            this.pnBorderBottom.Size = new System.Drawing.Size(1021, 3);
             this.pnBorderBottom.TabIndex = 299;
             // 
             // pnBorderTop
@@ -751,18 +754,6 @@
             this.pnBorderTop.Name = "pnBorderTop";
             this.pnBorderTop.Size = new System.Drawing.Size(1033, 3);
             this.pnBorderTop.TabIndex = 299;
-            // 
-            // materialSpecificationBindingSource
-            // 
-            this.materialSpecificationBindingSource.DataSource = typeof(MNG.UI.MaterialSpecification);
-            // 
-            // pouringBindingSource
-            // 
-            this.pouringBindingSource.DataSource = typeof(MNG.UI.Pouring);
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(MNG.UI.Product);
             // 
             // cementiteTextBox
             // 
@@ -904,13 +895,35 @@
             label12.TabIndex = 367;
             label12.Text = "Result";
             // 
-            // pictureBox1
+            // GraphiteImg
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(371, 179);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(650, 490);
-            this.pictureBox1.TabIndex = 368;
-            this.pictureBox1.TabStop = false;
+            this.GraphiteImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GraphiteImg.Location = new System.Drawing.Point(371, 53);
+            this.GraphiteImg.Name = "GraphiteImg";
+            this.GraphiteImg.Size = new System.Drawing.Size(650, 490);
+            this.GraphiteImg.TabIndex = 368;
+            this.GraphiteImg.TabStop = false;
+            // 
+            // pouringBindingSource
+            // 
+            this.pouringBindingSource.DataSource = typeof(MNG.UI.Pouring);
+            // 
+            // materialSpecificationBindingSource
+            // 
+            this.materialSpecificationBindingSource.DataSource = typeof(MNG.UI.MaterialSpecification);
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(MNG.UI.Product);
+            // 
+            // MatrixImg
+            // 
+            this.MatrixImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MatrixImg.Location = new System.Drawing.Point(371, 549);
+            this.MatrixImg.Name = "MatrixImg";
+            this.MatrixImg.Size = new System.Drawing.Size(650, 490);
+            this.MatrixImg.TabIndex = 369;
+            this.MatrixImg.TabStop = false;
             // 
             // frmQA
             // 
@@ -932,10 +945,11 @@
             this.panel4.ResumeLayout(false);
             this.pnHeader.ResumeLayout(false);
             this.pnHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.materialSpecificationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GraphiteImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pouringBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materialSpecificationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MatrixImg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -986,6 +1000,7 @@
         private System.Windows.Forms.TextBox sizeTextBox;
         private System.Windows.Forms.TextBox tensileTextBox1;
         private System.Windows.Forms.TextBox yeildTextBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox GraphiteImg;
+        private System.Windows.Forms.PictureBox MatrixImg;
     }
 }
