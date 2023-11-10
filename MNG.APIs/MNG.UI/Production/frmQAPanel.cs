@@ -33,7 +33,8 @@ namespace MNG.UI
             Line = _line;
         }
 
-        private async void frmInspectionPanel_Load(object sender, EventArgs e)
+
+        private async void frmQAPanel_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.None;
 

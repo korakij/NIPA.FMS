@@ -86,8 +86,9 @@
             this.pnToolBar.Controls.Add(this.pnNavigator);
             this.pnToolBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnToolBar.Location = new System.Drawing.Point(0, 0);
+            this.pnToolBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnToolBar.Name = "pnToolBar";
-            this.pnToolBar.Size = new System.Drawing.Size(59, 991);
+            this.pnToolBar.Size = new System.Drawing.Size(79, 1220);
             this.pnToolBar.TabIndex = 171;
             // 
             // label4
@@ -97,9 +98,10 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Top;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(0, 458);
+            this.label4.Location = new System.Drawing.Point(0, 566);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 21);
+            this.label4.Size = new System.Drawing.Size(76, 28);
             this.label4.TabIndex = 13;
             this.label4.Text = "--------";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -107,9 +109,10 @@
             // pnSaveExit
             // 
             this.pnSaveExit.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnSaveExit.Location = new System.Drawing.Point(0, 716);
+            this.pnSaveExit.Location = new System.Drawing.Point(0, 880);
+            this.pnSaveExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnSaveExit.Name = "pnSaveExit";
-            this.pnSaveExit.Size = new System.Drawing.Size(59, 127);
+            this.pnSaveExit.Size = new System.Drawing.Size(79, 156);
             this.pnSaveExit.TabIndex = 17;
             // 
             // pnCRUD
@@ -118,9 +121,10 @@
             this.pnCRUD.Controls.Add(this.btnEdit);
             this.pnCRUD.Controls.Add(this.btnCreate);
             this.pnCRUD.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnCRUD.Location = new System.Drawing.Point(0, 267);
+            this.pnCRUD.Location = new System.Drawing.Point(0, 331);
+            this.pnCRUD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnCRUD.Name = "pnCRUD";
-            this.pnCRUD.Size = new System.Drawing.Size(59, 191);
+            this.pnCRUD.Size = new System.Drawing.Size(79, 235);
             this.pnCRUD.TabIndex = 16;
             // 
             // btnDelete
@@ -131,9 +135,10 @@
             this.btnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(0, 118);
+            this.btnDelete.Location = new System.Drawing.Point(0, 146);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(59, 59);
+            this.btnDelete.Size = new System.Drawing.Size(79, 73);
             this.btnDelete.TabIndex = 10;
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -145,9 +150,10 @@
             this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.Location = new System.Drawing.Point(0, 59);
+            this.btnEdit.Location = new System.Drawing.Point(0, 73);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(59, 59);
+            this.btnEdit.Size = new System.Drawing.Size(79, 73);
             this.btnEdit.TabIndex = 11;
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -161,8 +167,9 @@
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Image = ((System.Drawing.Image)(resources.GetObject("btnCreate.Image")));
             this.btnCreate.Location = new System.Drawing.Point(0, 0);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(59, 59);
+            this.btnCreate.Size = new System.Drawing.Size(79, 73);
             this.btnCreate.TabIndex = 8;
             this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
@@ -171,9 +178,10 @@
             // 
             this.pnExit.Controls.Add(this.btnClose);
             this.pnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnExit.Location = new System.Drawing.Point(0, 843);
+            this.pnExit.Location = new System.Drawing.Point(0, 1036);
+            this.pnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnExit.Name = "pnExit";
-            this.pnExit.Size = new System.Drawing.Size(59, 127);
+            this.pnExit.Size = new System.Drawing.Size(79, 156);
             this.pnExit.TabIndex = 15;
             // 
             // btnClose
@@ -184,9 +192,10 @@
             this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(0, 68);
+            this.btnClose.Location = new System.Drawing.Point(0, 83);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(59, 59);
+            this.btnClose.Size = new System.Drawing.Size(79, 73);
             this.btnClose.TabIndex = 8;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -198,9 +207,10 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(0, 246);
+            this.label3.Location = new System.Drawing.Point(0, 303);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 21);
+            this.label3.Size = new System.Drawing.Size(76, 28);
             this.label3.TabIndex = 10;
             this.label3.Text = "--------\r\n";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -212,9 +222,10 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(0, 970);
+            this.label2.Location = new System.Drawing.Point(0, 1192);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 21);
+            this.label2.Size = new System.Drawing.Size(76, 28);
             this.label2.TabIndex = 9;
             this.label2.Text = "--------";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -228,8 +239,9 @@
             this.pnNavigator.Controls.Add(this.btnL1);
             this.pnNavigator.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnNavigator.Location = new System.Drawing.Point(0, 0);
+            this.pnNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnNavigator.Name = "pnNavigator";
-            this.pnNavigator.Size = new System.Drawing.Size(59, 246);
+            this.pnNavigator.Size = new System.Drawing.Size(79, 303);
             this.pnNavigator.TabIndex = 14;
             // 
             // btnAll
@@ -240,9 +252,10 @@
             this.btnAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnAll.ForeColor = System.Drawing.Color.White;
-            this.btnAll.Location = new System.Drawing.Point(0, 177);
+            this.btnAll.Location = new System.Drawing.Point(0, 219);
+            this.btnAll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAll.Name = "btnAll";
-            this.btnAll.Size = new System.Drawing.Size(59, 59);
+            this.btnAll.Size = new System.Drawing.Size(79, 73);
             this.btnAll.TabIndex = 11;
             this.btnAll.Text = "All";
             this.btnAll.UseVisualStyleBackColor = false;
@@ -256,9 +269,10 @@
             this.btnL3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnL3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnL3.ForeColor = System.Drawing.Color.White;
-            this.btnL3.Location = new System.Drawing.Point(0, 118);
+            this.btnL3.Location = new System.Drawing.Point(0, 146);
+            this.btnL3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnL3.Name = "btnL3";
-            this.btnL3.Size = new System.Drawing.Size(59, 59);
+            this.btnL3.Size = new System.Drawing.Size(79, 73);
             this.btnL3.TabIndex = 19;
             this.btnL3.Text = "L3";
             this.btnL3.UseVisualStyleBackColor = false;
@@ -271,9 +285,10 @@
             this.btnL2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnL2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnL2.ForeColor = System.Drawing.Color.White;
-            this.btnL2.Location = new System.Drawing.Point(0, 59);
+            this.btnL2.Location = new System.Drawing.Point(0, 73);
+            this.btnL2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnL2.Name = "btnL2";
-            this.btnL2.Size = new System.Drawing.Size(59, 59);
+            this.btnL2.Size = new System.Drawing.Size(79, 73);
             this.btnL2.TabIndex = 11;
             this.btnL2.Text = "L2";
             this.btnL2.UseVisualStyleBackColor = false;
@@ -288,8 +303,9 @@
             this.btnL1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnL1.ForeColor = System.Drawing.Color.White;
             this.btnL1.Location = new System.Drawing.Point(0, 0);
+            this.btnL1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnL1.Name = "btnL1";
-            this.btnL1.Size = new System.Drawing.Size(59, 59);
+            this.btnL1.Size = new System.Drawing.Size(79, 73);
             this.btnL1.TabIndex = 18;
             this.btnL1.Text = "L1";
             this.btnL1.UseVisualStyleBackColor = false;
@@ -329,14 +345,15 @@
             // 
             // frmQAProc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1455, 991);
+            this.ClientSize = new System.Drawing.Size(1940, 1220);
             this.Controls.Add(this.pnToolBar);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmQAProc";
             this.Text = "MELTING";
             this.Load += new System.EventHandler(this.frmCharging_Load);

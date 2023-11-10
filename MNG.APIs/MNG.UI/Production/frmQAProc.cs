@@ -73,12 +73,12 @@ namespace MNG.UI.Production
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            var fm = ActiveMdiChild as frmInspectionPanel;
+            var fm = ActiveMdiChild as frmQAPanel;
 
             switch (fm.fmName)
             {
-                case FormName.frmInspection:
-                    fm.fInspection.DeletedItem();
+                case FormName.frmQA:
+                    fm.fQA.DeletedItem();
                     break;
             }
         }

@@ -14,12 +14,11 @@ namespace MNG.UI.Production
     {
         private Client _client;
         private Product CurrentProduct;
-        private LotNo CurrentLotNo;
-        private Kanban CurrentKanban;
         private Pouring CurrentPouring;
         private List<Pouring> _pourings;
         private ControlPlan CurrentControlPlan;
         private PourStandard CurrentPourStandard;
+        private MaterialSpecification CurrentMatSpec;
 
         private bool IsSaved;
         private bool IsLoaded = false;
@@ -42,12 +41,11 @@ namespace MNG.UI.Production
             var url = Properties.Settings.Default.API_URL;
             _client = new Client(url);
 
-            CurrentLotNo = new LotNo();
-            CurrentKanban = new Kanban();
             CurrentControlPlan = new ControlPlan();
             CurrentPouring = new Pouring();
             CurrentPourStandard = new PourStandard();
             CurrentProduct = new Product();
+            CurrentMatSpec = new MaterialSpecification();
 
             ChangeMode(false);
         }
@@ -85,48 +83,51 @@ namespace MNG.UI.Production
             pouringBindingSource.DataSource = CurrentPouring;
 
             CurrentProduct = await _client.GetProductByIdAsync(CurrentPouring.ProductCode);
+            CurrentControlPlan = (await _client.GetControlPlanByIdAsync(CurrentProduct.ActiveControlPlanId ?? 0));
+
+            CurrentMatSpec = (await _client.GetMaterialSpecificationByIdAsync(CurrentControlPlan.MaterialSpecificationCode));
+            materialSpecificationBindingSource.DataSource = CurrentMatSpec;
         }
 
         public async void EditItem()
         {
-            CurrentPouring = pouringBindingSource.Current as Pouring;
-
             if (CurrentPouring == null)
             {
                 MessageBox.Show("Unable to Edit Current Pouring", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            frmInspection fInspection = new frmInspection(CurrentPouring, CurrentProduct);
-            fInspection.Height = 950;
-            fInspection.StartPosition = FormStartPosition.Manual;
+            frmQA fQA = new frmQA(CurrentPouring, CurrentProduct);
+
+            fQA.Height = 950;
+            fQA.StartPosition = FormStartPosition.Manual;
             var y = Screen.PrimaryScreen.WorkingArea.Height;
             var x = Screen.PrimaryScreen.WorkingArea.Width;
 
-            fInspection.Location = new Point((x / 2) - (fInspection.Width / 2), (y / 2) - (fInspection.Height / 2));
+            fQA.Location = new Point((x / 2) - (fQA.Width / 2), (y / 2) - (fQA.Height / 2));
 
-            if (fInspection.ShowDialog() == DialogResult.OK)
+            if (fQA.ShowDialog() == DialogResult.OK)
             {
-                try
-                {
-                    await _client.PutPouringInspectionAsync(fInspection.PouringItem.Code, fInspection.PouringItem);
-                }
-                catch (Exception ex)
-                {
-                    if (ex.Message.Contains("201"))
-                    {
+                //try
+                //{
+                //    await _client.PutPouringInspectionAsync(fQA.PouringItem.Code, fQA.PouringItem);
+                //}
+                //catch (Exception ex)
+                //{
+                //    if (ex.Message.Contains("201"))
+                //    {
 
-                    }
-                    else
-                    {
-                        MessageBox.Show("ERROR " + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                finally
-                {
-                    CurrentPouring = await _client.GetPouringByIdAsync(CurrentPouring.Code);
-                    pouringBindingSource.DataSource = CurrentPouring;
-                }
+                //    }
+                //    else
+                //    {
+                //        MessageBox.Show("ERROR " + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    }
+                //}
+                //finally
+                //{
+                //    CurrentPouring = await _client.GetPouringByIdAsync(CurrentPouring.Code);
+                //    pouringBindingSource.DataSource = CurrentPouring;
+                //}
             }
             else
             {
