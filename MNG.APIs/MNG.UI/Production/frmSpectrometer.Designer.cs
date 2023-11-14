@@ -47,27 +47,30 @@
             // pnKanban
             // 
             this.pnKanban.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnKanban.Location = new System.Drawing.Point(705, 0);
+            this.pnKanban.Location = new System.Drawing.Point(941, 0);
+            this.pnKanban.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnKanban.Name = "pnKanban";
-            this.pnKanban.Size = new System.Drawing.Size(687, 720);
+            this.pnKanban.Size = new System.Drawing.Size(916, 886);
             this.pnKanban.TabIndex = 228;
             // 
             // pnTestChem
             // 
             this.pnTestChem.BackColor = System.Drawing.Color.White;
             this.pnTestChem.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnTestChem.Location = new System.Drawing.Point(310, 0);
+            this.pnTestChem.Location = new System.Drawing.Point(414, 0);
+            this.pnTestChem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnTestChem.Name = "pnTestChem";
-            this.pnTestChem.Size = new System.Drawing.Size(395, 720);
+            this.pnTestChem.Size = new System.Drawing.Size(527, 886);
             this.pnTestChem.TabIndex = 227;
             // 
             // pnLotNo
             // 
             this.pnLotNo.BackColor = System.Drawing.Color.White;
             this.pnLotNo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnLotNo.Location = new System.Drawing.Point(59, 0);
+            this.pnLotNo.Location = new System.Drawing.Point(79, 0);
+            this.pnLotNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnLotNo.Name = "pnLotNo";
-            this.pnLotNo.Size = new System.Drawing.Size(251, 720);
+            this.pnLotNo.Size = new System.Drawing.Size(335, 886);
             this.pnLotNo.TabIndex = 226;
             // 
             // panel1
@@ -81,8 +84,9 @@
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(59, 720);
+            this.panel1.Size = new System.Drawing.Size(79, 886);
             this.panel1.TabIndex = 229;
             // 
             // btnEdit
@@ -94,9 +98,10 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.Location = new System.Drawing.Point(0, 217);
+            this.btnEdit.Location = new System.Drawing.Point(0, 269);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(59, 59);
+            this.btnEdit.Size = new System.Drawing.Size(79, 73);
             this.btnEdit.TabIndex = 215;
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -105,9 +110,10 @@
             // 
             this.panel2.Controls.Add(this.btnExit);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 513);
+            this.panel2.Location = new System.Drawing.Point(0, 629);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(59, 186);
+            this.panel2.Size = new System.Drawing.Size(79, 229);
             this.panel2.TabIndex = 17;
             // 
             // btnExit
@@ -118,9 +124,10 @@
             this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(0, 127);
+            this.btnExit.Location = new System.Drawing.Point(0, 156);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(59, 59);
+            this.btnExit.Size = new System.Drawing.Size(79, 73);
             this.btnExit.TabIndex = 8;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -132,9 +139,10 @@
             this.label25.Dock = System.Windows.Forms.DockStyle.Top;
             this.label25.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(0, 196);
+            this.label25.Location = new System.Drawing.Point(0, 241);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(58, 21);
+            this.label25.Size = new System.Drawing.Size(76, 28);
             this.label25.TabIndex = 13;
             this.label25.Text = "--------";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -142,9 +150,10 @@
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 116);
+            this.panel3.Location = new System.Drawing.Point(0, 143);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(59, 80);
+            this.panel3.Size = new System.Drawing.Size(79, 98);
             this.panel3.TabIndex = 16;
             // 
             // label27
@@ -154,9 +163,10 @@
             this.label27.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label27.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(0, 699);
+            this.label27.Location = new System.Drawing.Point(0, 858);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(58, 21);
+            this.label27.Size = new System.Drawing.Size(76, 28);
             this.label27.TabIndex = 9;
             this.label27.Text = "--------";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -166,22 +176,24 @@
             this.panel4.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(59, 116);
+            this.panel4.Size = new System.Drawing.Size(79, 143);
             this.panel4.TabIndex = 14;
             // 
             // frmSpectrometer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1720, 720);
+            this.ClientSize = new System.Drawing.Size(2293, 886);
             this.Controls.Add(this.pnKanban);
             this.Controls.Add(this.pnTestChem);
             this.Controls.Add(this.pnLotNo);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmSpectrometer";
             this.Text = "MNG - SPECTROMETERING";
             this.Load += new System.EventHandler(this.frmSpectrometer_Load);

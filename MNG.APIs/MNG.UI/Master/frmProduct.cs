@@ -199,6 +199,10 @@ namespace ASRS.UI
         private async void productBindingSource_CurrentChanged(object sender, EventArgs e)
         {
             SelectedProduct = productBindingSource.Current as Product;
+
+            if (SelectedProduct == null)
+                return;
+
             _product = productBindingSource.Current as Product;
 
             if (SelectedProduct.CustomerId == 0)
@@ -455,6 +459,9 @@ namespace ASRS.UI
         {
             productBindingSource.EndEdit();
             var prod = productBindingSource.Current as Product;
+            if (prod == null)
+                return;
+
             var arg = new CTPEventArg();
             arg.Code = prod.Id.ToString();
 
