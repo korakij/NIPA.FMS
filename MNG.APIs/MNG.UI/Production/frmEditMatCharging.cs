@@ -237,7 +237,8 @@ namespace MNG.UI.Production
                 IsPowerOk = true;
             }
 
-            CurrentCharge.PowerComp = Convert.ToDouble(power);
+            var p = Math.Round(power, 2);
+            CurrentCharge.PowerComp = Convert.ToDouble(p);
         }
 
 

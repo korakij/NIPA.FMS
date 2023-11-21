@@ -74,6 +74,11 @@ namespace MNG.UI.Production
             NewPouring.KanbanCode = _kanbanCode;
             NewPouring.LineCode = _pLine;
 
+            if (NewPouring.Defect == null)
+                NewPouring.Defect = new DefectCause();
+            if (NewPouring.QInspect == null)
+                NewPouring.QInspect = new QAInspection();
+
             pouringBindingSource.DataSource = NewPouring;
         }
 

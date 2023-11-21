@@ -13,6 +13,7 @@ namespace MNG.Models.Productions
         public Pouring()
         {
             Defect = new DefectCause();
+            QInspect = new QAInspection();
         }
 
         [Key]
