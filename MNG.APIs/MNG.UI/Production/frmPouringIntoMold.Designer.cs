@@ -52,14 +52,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.codeTextBox2 = new System.Windows.Forms.TextBox();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.kanbanCodeTextBox = new System.Windows.Forms.TextBox();
+            this.pouringBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnProductBrowse = new System.Windows.Forms.Button();
             this.weightTextBox = new System.Windows.Forms.TextBox();
             this.cavityTextBox = new System.Windows.Forms.TextBox();
+            this.toolingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.activeControlPlanIdTextBox = new System.Windows.Forms.TextBox();
             this.codeTextBox = new System.Windows.Forms.TextBox();
+            this.pourStandardBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.codeTextBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnPrint = new System.Windows.Forms.Button();
@@ -69,12 +73,18 @@
             this.pouringTimeTextBox = new System.Windows.Forms.TextBox();
             this.lastTempTextBox2 = new System.Windows.Forms.TextBox();
             this.firstTempTextBox2 = new System.Windows.Forms.TextBox();
+            this.firstTempTextBox = new MNG.UI.Production.ColorTextBox();
+            this.noOfPouredMoldTextBox = new MNG.UI.Production.ColorTextBox();
+            this.productNoTextBox = new MNG.UI.Production.ColorTextBox();
+            this.tbDuration = new MNG.UI.Production.ColorTextBox();
+            this.lastTempTextBox = new MNG.UI.Production.ColorTextBox();
             this.btnLastTimeRetrieval = new System.Windows.Forms.Button();
             this.btnFirstTimeRetrieval = new System.Windows.Forms.Button();
             this.tbTotalPcs = new System.Windows.Forms.TextBox();
             this.lastMoldTimeTextBox = new System.Windows.Forms.TextBox();
             this.firstMoldTimeTextBox = new System.Windows.Forms.TextBox();
             this.pouringDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PouringTimer = new System.Windows.Forms.Timer(this.components);
             this.pnToolBar = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -86,16 +96,6 @@
             this.lbHeader = new System.Windows.Forms.Label();
             this.pnBorderTop = new System.Windows.Forms.Panel();
             this.pnBorderBottom = new System.Windows.Forms.Panel();
-            this.toolingBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.firstTempTextBox = new MNG.UI.Production.ColorTextBox();
-            this.pouringBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.noOfPouredMoldTextBox = new MNG.UI.Production.ColorTextBox();
-            this.productNoTextBox = new MNG.UI.Production.ColorTextBox();
-            this.tbDuration = new MNG.UI.Production.ColorTextBox();
-            this.lastTempTextBox = new MNG.UI.Production.ColorTextBox();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pourStandardBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.moldStandardBindingSource = new System.Windows.Forms.BindingSource(this.components);
             noOfPouredMoldLabel = new System.Windows.Forms.Label();
             firstTempLabel = new System.Windows.Forms.Label();
@@ -114,15 +114,15 @@
             label7 = new System.Windows.Forms.Label();
             kanbanCodeLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pouringBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toolingBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pourStandardBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pouringDataGridView)).BeginInit();
             this.pnToolBar.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toolingBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pouringBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pourStandardBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moldStandardBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -331,6 +331,10 @@
             this.codeTextBox2.Size = new System.Drawing.Size(59, 23);
             this.codeTextBox2.TabIndex = 316;
             // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(MNG.UI.Product);
+            // 
             // idTextBox
             // 
             this.idTextBox.BackColor = System.Drawing.Color.White;
@@ -354,6 +358,11 @@
             this.kanbanCodeTextBox.ReadOnly = true;
             this.kanbanCodeTextBox.Size = new System.Drawing.Size(204, 23);
             this.kanbanCodeTextBox.TabIndex = 314;
+            // 
+            // pouringBindingSource
+            // 
+            this.pouringBindingSource.DataSource = typeof(MNG.UI.Pouring);
+            this.pouringBindingSource.CurrentChanged += new System.EventHandler(this.pouringBindingSource_CurrentChanged);
             // 
             // btnProductBrowse
             // 
@@ -388,6 +397,10 @@
             this.cavityTextBox.ReadOnly = true;
             this.cavityTextBox.Size = new System.Drawing.Size(51, 23);
             this.cavityTextBox.TabIndex = 301;
+            // 
+            // toolingBindingSource
+            // 
+            this.toolingBindingSource.DataSource = typeof(MNG.UI.Tooling);
             // 
             // nameTextBox
             // 
@@ -424,6 +437,10 @@
             this.codeTextBox.ReadOnly = true;
             this.codeTextBox.Size = new System.Drawing.Size(87, 23);
             this.codeTextBox.TabIndex = 305;
+            // 
+            // pourStandardBindingSource
+            // 
+            this.pourStandardBindingSource.DataSource = typeof(MNG.UI.PourStandard);
             // 
             // codeTextBox1
             // 
@@ -544,6 +561,99 @@
             this.firstTempTextBox2.TabIndex = 312;
             this.firstTempTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // firstTempTextBox
+            // 
+            this.firstTempTextBox.BackColor = System.Drawing.Color.White;
+            this.firstTempTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.firstTempTextBox.ColorNotOK = "Red";
+            this.firstTempTextBox.ColorNull = "white";
+            this.firstTempTextBox.ColorOK = "greenyellow";
+            this.firstTempTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "FirstTemp", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
+            this.firstTempTextBox.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.pouringBindingSource, "IsFirstTempOK", true));
+            this.firstTempTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstTempTextBox.ForeColor = System.Drawing.Color.Black;
+            this.firstTempTextBox.IsOK = null;
+            this.firstTempTextBox.Location = new System.Drawing.Point(351, 65);
+            this.firstTempTextBox.Name = "firstTempTextBox";
+            this.firstTempTextBox.Size = new System.Drawing.Size(51, 23);
+            this.firstTempTextBox.TabIndex = 0;
+            this.firstTempTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // noOfPouredMoldTextBox
+            // 
+            this.noOfPouredMoldTextBox.BackColor = System.Drawing.Color.White;
+            this.noOfPouredMoldTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.noOfPouredMoldTextBox.ColorNotOK = "Red";
+            this.noOfPouredMoldTextBox.ColorNull = "white";
+            this.noOfPouredMoldTextBox.ColorOK = "greenyellow";
+            this.noOfPouredMoldTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "NoOfPouredMold", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
+            this.noOfPouredMoldTextBox.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.pouringBindingSource, "IsNoOfMoldOK", true));
+            this.noOfPouredMoldTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noOfPouredMoldTextBox.ForeColor = System.Drawing.Color.Black;
+            this.noOfPouredMoldTextBox.IsOK = null;
+            this.noOfPouredMoldTextBox.Location = new System.Drawing.Point(351, 181);
+            this.noOfPouredMoldTextBox.Name = "noOfPouredMoldTextBox";
+            this.noOfPouredMoldTextBox.Size = new System.Drawing.Size(51, 23);
+            this.noOfPouredMoldTextBox.TabIndex = 3;
+            this.noOfPouredMoldTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // productNoTextBox
+            // 
+            this.productNoTextBox.BackColor = System.Drawing.Color.White;
+            this.productNoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.productNoTextBox.ColorNotOK = "Red";
+            this.productNoTextBox.ColorNull = "white";
+            this.productNoTextBox.ColorOK = "greenyellow";
+            this.productNoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "ProductNo", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
+            this.productNoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.pouringBindingSource, "IsNoOfMoldOK", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
+            this.productNoTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productNoTextBox.ForeColor = System.Drawing.Color.Black;
+            this.productNoTextBox.IsOK = null;
+            this.productNoTextBox.Location = new System.Drawing.Point(351, 210);
+            this.productNoTextBox.Name = "productNoTextBox";
+            this.productNoTextBox.ReadOnly = true;
+            this.productNoTextBox.Size = new System.Drawing.Size(51, 23);
+            this.productNoTextBox.TabIndex = 310;
+            this.productNoTextBox.TabStop = false;
+            this.productNoTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbDuration
+            // 
+            this.tbDuration.BackColor = System.Drawing.Color.White;
+            this.tbDuration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbDuration.ColorNotOK = "Red";
+            this.tbDuration.ColorNull = "white";
+            this.tbDuration.ColorOK = "greenyellow";
+            this.tbDuration.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Duration", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "mm:ss"));
+            this.tbDuration.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.pouringBindingSource, "IsDurationOK", true));
+            this.tbDuration.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDuration.ForeColor = System.Drawing.Color.Black;
+            this.tbDuration.IsOK = null;
+            this.tbDuration.Location = new System.Drawing.Point(364, 123);
+            this.tbDuration.Name = "tbDuration";
+            this.tbDuration.Size = new System.Drawing.Size(38, 23);
+            this.tbDuration.TabIndex = 2;
+            this.tbDuration.TabStop = false;
+            this.tbDuration.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lastTempTextBox
+            // 
+            this.lastTempTextBox.BackColor = System.Drawing.Color.White;
+            this.lastTempTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lastTempTextBox.ColorNotOK = "Red";
+            this.lastTempTextBox.ColorNull = "white";
+            this.lastTempTextBox.ColorOK = "greenyellow";
+            this.lastTempTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "LastTemp", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
+            this.lastTempTextBox.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.pouringBindingSource, "IsLastTempOK", true));
+            this.lastTempTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastTempTextBox.ForeColor = System.Drawing.Color.Black;
+            this.lastTempTextBox.IsOK = null;
+            this.lastTempTextBox.Location = new System.Drawing.Point(351, 94);
+            this.lastTempTextBox.Name = "lastTempTextBox";
+            this.lastTempTextBox.Size = new System.Drawing.Size(51, 23);
+            this.lastTempTextBox.TabIndex = 1;
+            this.lastTempTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // btnLastTimeRetrieval
             // 
             this.btnLastTimeRetrieval.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
@@ -654,6 +764,15 @@
             this.pouringDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.pouringDataGridView.Size = new System.Drawing.Size(172, 580);
             this.pouringDataGridView.TabIndex = 7;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Code";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Code";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 130;
             // 
             // PouringTimer
             // 
@@ -780,125 +899,6 @@
             this.pnBorderBottom.Size = new System.Drawing.Size(591, 3);
             this.pnBorderBottom.TabIndex = 298;
             // 
-            // toolingBindingSource
-            // 
-            this.toolingBindingSource.DataSource = typeof(MNG.UI.Tooling);
-            // 
-            // firstTempTextBox
-            // 
-            this.firstTempTextBox.BackColor = System.Drawing.Color.White;
-            this.firstTempTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.firstTempTextBox.ColorNotOK = "Red";
-            this.firstTempTextBox.ColorNull = "white";
-            this.firstTempTextBox.ColorOK = "greenyellow";
-            this.firstTempTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "FirstTemp", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
-            this.firstTempTextBox.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.pouringBindingSource, "IsFirstTempOK", true));
-            this.firstTempTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstTempTextBox.ForeColor = System.Drawing.Color.Black;
-            this.firstTempTextBox.IsOK = null;
-            this.firstTempTextBox.Location = new System.Drawing.Point(351, 65);
-            this.firstTempTextBox.Name = "firstTempTextBox";
-            this.firstTempTextBox.Size = new System.Drawing.Size(51, 23);
-            this.firstTempTextBox.TabIndex = 0;
-            this.firstTempTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // pouringBindingSource
-            // 
-            this.pouringBindingSource.DataSource = typeof(MNG.UI.Pouring);
-            this.pouringBindingSource.CurrentChanged += new System.EventHandler(this.pouringBindingSource_CurrentChanged);
-            // 
-            // noOfPouredMoldTextBox
-            // 
-            this.noOfPouredMoldTextBox.BackColor = System.Drawing.Color.White;
-            this.noOfPouredMoldTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.noOfPouredMoldTextBox.ColorNotOK = "Red";
-            this.noOfPouredMoldTextBox.ColorNull = "white";
-            this.noOfPouredMoldTextBox.ColorOK = "greenyellow";
-            this.noOfPouredMoldTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "NoOfPouredMold", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
-            this.noOfPouredMoldTextBox.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.pouringBindingSource, "IsNoOfMoldOK", true));
-            this.noOfPouredMoldTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noOfPouredMoldTextBox.ForeColor = System.Drawing.Color.Black;
-            this.noOfPouredMoldTextBox.IsOK = null;
-            this.noOfPouredMoldTextBox.Location = new System.Drawing.Point(351, 181);
-            this.noOfPouredMoldTextBox.Name = "noOfPouredMoldTextBox";
-            this.noOfPouredMoldTextBox.Size = new System.Drawing.Size(51, 23);
-            this.noOfPouredMoldTextBox.TabIndex = 3;
-            this.noOfPouredMoldTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // productNoTextBox
-            // 
-            this.productNoTextBox.BackColor = System.Drawing.Color.White;
-            this.productNoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.productNoTextBox.ColorNotOK = "Red";
-            this.productNoTextBox.ColorNull = "white";
-            this.productNoTextBox.ColorOK = "greenyellow";
-            this.productNoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "ProductNo", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
-            this.productNoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.pouringBindingSource, "IsNoOfMoldOK", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
-            this.productNoTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productNoTextBox.ForeColor = System.Drawing.Color.Black;
-            this.productNoTextBox.IsOK = null;
-            this.productNoTextBox.Location = new System.Drawing.Point(351, 210);
-            this.productNoTextBox.Name = "productNoTextBox";
-            this.productNoTextBox.ReadOnly = true;
-            this.productNoTextBox.Size = new System.Drawing.Size(51, 23);
-            this.productNoTextBox.TabIndex = 310;
-            this.productNoTextBox.TabStop = false;
-            this.productNoTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // tbDuration
-            // 
-            this.tbDuration.BackColor = System.Drawing.Color.White;
-            this.tbDuration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbDuration.ColorNotOK = "Red";
-            this.tbDuration.ColorNull = "white";
-            this.tbDuration.ColorOK = "greenyellow";
-            this.tbDuration.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "Duration", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "mm:ss"));
-            this.tbDuration.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.pouringBindingSource, "IsDurationOK", true));
-            this.tbDuration.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDuration.ForeColor = System.Drawing.Color.Black;
-            this.tbDuration.IsOK = null;
-            this.tbDuration.Location = new System.Drawing.Point(364, 123);
-            this.tbDuration.Name = "tbDuration";
-            this.tbDuration.Size = new System.Drawing.Size(38, 23);
-            this.tbDuration.TabIndex = 2;
-            this.tbDuration.TabStop = false;
-            this.tbDuration.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // lastTempTextBox
-            // 
-            this.lastTempTextBox.BackColor = System.Drawing.Color.White;
-            this.lastTempTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lastTempTextBox.ColorNotOK = "Red";
-            this.lastTempTextBox.ColorNull = "white";
-            this.lastTempTextBox.ColorOK = "greenyellow";
-            this.lastTempTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pouringBindingSource, "LastTemp", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
-            this.lastTempTextBox.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.pouringBindingSource, "IsLastTempOK", true));
-            this.lastTempTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastTempTextBox.ForeColor = System.Drawing.Color.Black;
-            this.lastTempTextBox.IsOK = null;
-            this.lastTempTextBox.Location = new System.Drawing.Point(351, 94);
-            this.lastTempTextBox.Name = "lastTempTextBox";
-            this.lastTempTextBox.Size = new System.Drawing.Size(51, 23);
-            this.lastTempTextBox.TabIndex = 1;
-            this.lastTempTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Code";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Code";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 130;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(MNG.UI.Product);
-            // 
-            // pourStandardBindingSource
-            // 
-            this.pourStandardBindingSource.DataSource = typeof(MNG.UI.PourStandard);
-            // 
             // moldStandardBindingSource
             // 
             this.moldStandardBindingSource.DataSource = typeof(MNG.UI.MoldStandard);
@@ -923,6 +923,10 @@
             this.Load += new System.EventHandler(this.frmPouringIntoMold_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pouringBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toolingBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pourStandardBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnDetails.ResumeLayout(false);
             this.pnDetails.PerformLayout();
@@ -930,10 +934,6 @@
             this.pnToolBar.ResumeLayout(false);
             this.pnToolBar.PerformLayout();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.toolingBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pouringBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pourStandardBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.moldStandardBindingSource)).EndInit();
             this.ResumeLayout(false);
 
