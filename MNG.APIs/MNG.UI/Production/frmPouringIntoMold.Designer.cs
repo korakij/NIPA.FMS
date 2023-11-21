@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label noOfPouredMoldLabel;
             System.Windows.Forms.Label firstTempLabel;
             System.Windows.Forms.Label lastTempLabel;
@@ -52,18 +51,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.codeTextBox2 = new System.Windows.Forms.TextBox();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productBindingSource = new System.Windows.Forms.BindingSource();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.kanbanCodeTextBox = new System.Windows.Forms.TextBox();
-            this.pouringBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pouringBindingSource = new System.Windows.Forms.BindingSource();
             this.btnProductBrowse = new System.Windows.Forms.Button();
             this.weightTextBox = new System.Windows.Forms.TextBox();
             this.cavityTextBox = new System.Windows.Forms.TextBox();
-            this.toolingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.toolingBindingSource = new System.Windows.Forms.BindingSource();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.activeControlPlanIdTextBox = new System.Windows.Forms.TextBox();
             this.codeTextBox = new System.Windows.Forms.TextBox();
-            this.pourStandardBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pourStandardBindingSource = new System.Windows.Forms.BindingSource();
             this.codeTextBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnPrint = new System.Windows.Forms.Button();
@@ -85,7 +84,7 @@
             this.firstMoldTimeTextBox = new System.Windows.Forms.TextBox();
             this.pouringDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PouringTimer = new System.Windows.Forms.Timer(this.components);
+            this.PouringTimer = new System.Windows.Forms.Timer();
             this.pnToolBar = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
@@ -96,7 +95,7 @@
             this.lbHeader = new System.Windows.Forms.Label();
             this.pnBorderTop = new System.Windows.Forms.Panel();
             this.pnBorderBottom = new System.Windows.Forms.Panel();
-            this.moldStandardBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.moldStandardBindingSource = new System.Windows.Forms.BindingSource();
             noOfPouredMoldLabel = new System.Windows.Forms.Label();
             firstTempLabel = new System.Windows.Forms.Label();
             lastTempLabel = new System.Windows.Forms.Label();
