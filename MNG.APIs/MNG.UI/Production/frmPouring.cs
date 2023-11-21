@@ -67,7 +67,7 @@ namespace MNG.UI
             fTapping.Dock = DockStyle.Fill;
             fTapping.Show();
 
-            fPouring = new frmPouringIntoMold(Line);
+            fPouring = new frmPouringIntoMold(Line, true);
             fPouring.EnablePrint();
             fPouring.DisableToolBar();
             fPouring.DisableProductBrowse();

@@ -188,6 +188,7 @@
     <Compile Include="frmStartup.Designer.cs">
       <DependentUpon>frmStartup.cs</DependentUpon>
     </Compile>
+    <Compile Include="LightTower_ChemicalInLader.cs" />
     <Compile Include="Master\frmMeltStd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -542,9 +543,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmPouringProc.resx">
       <DependentUpon>frmPouringProc.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmMultiMelting.resx">
       <DependentUpon>frmMultiMelting.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmPouring.resx">
       <DependentUpon>frmPouring.cs</DependentUpon>
@@ -690,6 +693,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Note Update.txt" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

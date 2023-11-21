@@ -52,7 +52,7 @@ namespace MNG.UI
             MNG.UI.Properties.Settings.Default.PMeter1 = configObj.PMeterIP1;
 
             //MNG.UI.Properties.Settings.Default.API_URL = "http://192.168.2.3/NIPA_FMS";
-            //MNG.UI.Properties.Settings.Default.API_URL = "https://localhost:44358/";
+            MNG.UI.Properties.Settings.Default.API_URL = "http://localhost/NIPA_FMS";
             //MNG.UI.Properties.Settings.Default.Result_Path = @"D:\Mango.Solutions\MNG.FMS\ChemResult\";
             //MNG.UI.Properties.Settings.Default.Refresh_Rate = 5000;
 

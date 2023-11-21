@@ -1,0 +1,95 @@
+﻿20231116	frmPouringIntoMold.cs	frmPouringIntoMold()	add	
+            if(NewPouring.Defect == null)
+                NewPouring.Defect = new DefectCause();
+            if (NewPouring.QInspect == null)
+                NewPouring.QInspect = new QAInspection();
+--------------------------------------------------------------
+202311182   LightTower_ChemicalInLader  LightTower_ChemicalInLader  add
+            ModbusClient master; 
+            public LightTower_ChemicalInLader()
+            {
+                master = new ModbusClient();
+                master.Baudrate = 9600;
+                master.Port = 4;
+                master.ConnectionTimeout = 5000;
+                try
+                {
+                    master.Connect();
+                }
+                catch 
+                {
+                    MessageBox.Show("ไม่สามารถเชื่อมต่อกับไฟแสดงสถานะค่าเคมีได้ โปรดตรวจสอบอุปกรณ์ใหม่อีกครั้ง");
+                }
+            }
+
+            public void ResultChem(bool _isComplete, bool _isPassed, string _kanbanCode)
+            {
+                if (master.Connected | true)
+                {
+                    if (_isComplete)
+                    {
+                        FontDialog fontDialog = new FontDialog();
+                    
+                        if (_isPassed)
+                        {
+                            master.WriteSingleCoil(0, true);
+                            master.WriteSingleCoil(1, false);
+
+                            DialogResult dr = MessageBox.Show($"Kanban : {_kanbanCode}\nค่าเคมีผ่าน", "ผลการตรวจสอบค่าเคมี", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            if (dr == DialogResult.Yes)
+                            {
+                                master.WriteSingleCoil(0, false);
+                                master.WriteSingleCoil(1, false);
+                            }
+                        }
+                        else
+                        {
+                            master.WriteSingleCoil(0, false);
+                            master.WriteSingleCoil(1, true);
+
+                            DialogResult dr = MessageBox.Show($"Kanban : {_kanbanCode}\nค่าเคมีไม่ผ่าน โปรดทบทวนการเทน้ำเหล็ก", "ผลการตรวจสอบค่าเคมี", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            if (dr == DialogResult.Yes)
+                            {
+                                master.WriteSingleCoil(0, false);
+                                master.WriteSingleCoil(1, false);
+                            }
+                        }
+                    }
+                }
+            }
+--------------------------------------------------------------
+20231118    frmPouring  frmPouring_Load()   edit
+            fPouring = new frmPouringIntoMold(Line, true);
+--------------------------------------------------------------
+20231118    frmPouringIntoMold  frmPouringIntoMold  edit
+            private LightTower_ChemicalInLader lightChem;
+
+            public frmPouringIntoMold(string _line, bool connectLight)
+            {
+                InitializeComponent();
+
+                var url = Properties.Settings.Default.API_URL;
+                _client = new Client(url);
+
+                _pourings = new List<Pouring>();
+                MeltInfo = new MeltingEventArgs();
+                CurrentLotNo = new LotNo();
+                CurrentKanban = new Kanban();
+                CurrentControlPlan = new ControlPlan();
+                CurrentPouring = new Pouring();
+                CurrentPourStandard = new PourStandard();
+                CurrentProduct = new Product();
+                CurrentTooling = new Tooling();
+                PLine = _line;
+
+                lightChem = new LightTower_ChemicalInLader();
+            }
+            
+            if(NewPouring.Defect == null)
+                NewPouring.Defect = new DefectCause();
+            if (NewPouring.QInspect == null)
+                NewPouring.QInspect = new QAInspection();
+
+            if(lightChem != null)
+                        lightChem.ResultChem((bool)CurrentKanban.IsCompleted, (bool)CurrentKanban.IsPassed, CurrentKanban.Code);
+--------------------------------------------------------------

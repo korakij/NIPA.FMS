@@ -83,7 +83,7 @@
             this.pnMain.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnMain.Location = new System.Drawing.Point(0, 0);
             this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(52, 991);
+            this.pnMain.Size = new System.Drawing.Size(52, 1080);
             this.pnMain.TabIndex = 8;
             // 
             // btnShowSetting
@@ -93,9 +93,9 @@
             this.btnShowSetting.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnShowSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnShowSetting.Image")));
-            this.btnShowSetting.Location = new System.Drawing.Point(0, 998);
+            this.btnShowSetting.Location = new System.Drawing.Point(0, 954);
             this.btnShowSetting.Name = "btnShowSetting";
-            this.btnShowSetting.Size = new System.Drawing.Size(52, 52);
+            this.btnShowSetting.Size = new System.Drawing.Size(52, 50);
             this.btnShowSetting.TabIndex = 23;
             this.btnShowSetting.UseVisualStyleBackColor = false;
             this.btnShowSetting.Click += new System.EventHandler(this.btnShowSetting_Click);
@@ -107,9 +107,9 @@
             this.btnShotblast.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnShotblast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShotblast.Image = ((System.Drawing.Image)(resources.GetObject("btnShotblast.Image")));
-            this.btnShotblast.Location = new System.Drawing.Point(0, 946);
+            this.btnShotblast.Location = new System.Drawing.Point(0, 904);
             this.btnShotblast.Name = "btnShotblast";
-            this.btnShotblast.Size = new System.Drawing.Size(52, 52);
+            this.btnShotblast.Size = new System.Drawing.Size(52, 50);
             this.btnShotblast.TabIndex = 21;
             this.btnShotblast.UseVisualStyleBackColor = false;
             this.btnShotblast.Click += new System.EventHandler(this.btnShotblast_Click);
@@ -121,9 +121,9 @@
             this.btnTooling.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnTooling.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTooling.Image = ((System.Drawing.Image)(resources.GetObject("btnTooling.Image")));
-            this.btnTooling.Location = new System.Drawing.Point(0, 894);
+            this.btnTooling.Location = new System.Drawing.Point(0, 854);
             this.btnTooling.Name = "btnTooling";
-            this.btnTooling.Size = new System.Drawing.Size(52, 52);
+            this.btnTooling.Size = new System.Drawing.Size(52, 50);
             this.btnTooling.TabIndex = 22;
             this.btnTooling.UseVisualStyleBackColor = false;
             this.btnTooling.Click += new System.EventHandler(this.btnTooling_Click);
@@ -135,9 +135,9 @@
             this.btnMoldStd.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnMoldStd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMoldStd.Image = ((System.Drawing.Image)(resources.GetObject("btnMoldStd.Image")));
-            this.btnMoldStd.Location = new System.Drawing.Point(0, 842);
+            this.btnMoldStd.Location = new System.Drawing.Point(0, 804);
             this.btnMoldStd.Name = "btnMoldStd";
-            this.btnMoldStd.Size = new System.Drawing.Size(52, 52);
+            this.btnMoldStd.Size = new System.Drawing.Size(52, 50);
             this.btnMoldStd.TabIndex = 20;
             this.btnMoldStd.UseVisualStyleBackColor = false;
             this.btnMoldStd.Click += new System.EventHandler(this.btnMoldStd_Click);
@@ -149,9 +149,9 @@
             this.btnPourStd.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnPourStd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPourStd.Image = ((System.Drawing.Image)(resources.GetObject("btnPourStd.Image")));
-            this.btnPourStd.Location = new System.Drawing.Point(0, 790);
+            this.btnPourStd.Location = new System.Drawing.Point(0, 754);
             this.btnPourStd.Name = "btnPourStd";
-            this.btnPourStd.Size = new System.Drawing.Size(52, 52);
+            this.btnPourStd.Size = new System.Drawing.Size(52, 50);
             this.btnPourStd.TabIndex = 19;
             this.btnPourStd.UseVisualStyleBackColor = false;
             this.btnPourStd.Click += new System.EventHandler(this.btnPourStd_Click);
@@ -163,9 +163,9 @@
             this.btnChemInLad.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnChemInLad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChemInLad.Image = ((System.Drawing.Image)(resources.GetObject("btnChemInLad.Image")));
-            this.btnChemInLad.Location = new System.Drawing.Point(0, 738);
+            this.btnChemInLad.Location = new System.Drawing.Point(0, 704);
             this.btnChemInLad.Name = "btnChemInLad";
-            this.btnChemInLad.Size = new System.Drawing.Size(52, 52);
+            this.btnChemInLad.Size = new System.Drawing.Size(52, 50);
             this.btnChemInLad.TabIndex = 9;
             this.btnChemInLad.UseVisualStyleBackColor = false;
             this.btnChemInLad.Click += new System.EventHandler(this.btnChemInLad_Click);
@@ -176,9 +176,9 @@
             this.btnChemInFur.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnChemInFur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChemInFur.Image = ((System.Drawing.Image)(resources.GetObject("btnChemInFur.Image")));
-            this.btnChemInFur.Location = new System.Drawing.Point(0, 686);
+            this.btnChemInFur.Location = new System.Drawing.Point(0, 654);
             this.btnChemInFur.Name = "btnChemInFur";
-            this.btnChemInFur.Size = new System.Drawing.Size(52, 52);
+            this.btnChemInFur.Size = new System.Drawing.Size(52, 50);
             this.btnChemInFur.TabIndex = 18;
             this.btnChemInFur.UseVisualStyleBackColor = true;
             this.btnChemInFur.Click += new System.EventHandler(this.btnChemInFur_Click);
@@ -189,9 +189,9 @@
             this.btnMaterial.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaterial.Image = ((System.Drawing.Image)(resources.GetObject("btnMaterial.Image")));
-            this.btnMaterial.Location = new System.Drawing.Point(0, 634);
+            this.btnMaterial.Location = new System.Drawing.Point(0, 604);
             this.btnMaterial.Name = "btnMaterial";
-            this.btnMaterial.Size = new System.Drawing.Size(52, 52);
+            this.btnMaterial.Size = new System.Drawing.Size(52, 50);
             this.btnMaterial.TabIndex = 24;
             this.btnMaterial.UseVisualStyleBackColor = true;
             this.btnMaterial.Click += new System.EventHandler(this.btnMaterial_Click);
@@ -202,9 +202,9 @@
             this.btnMaterialSpec.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnMaterialSpec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaterialSpec.Image = ((System.Drawing.Image)(resources.GetObject("btnMaterialSpec.Image")));
-            this.btnMaterialSpec.Location = new System.Drawing.Point(0, 582);
+            this.btnMaterialSpec.Location = new System.Drawing.Point(0, 554);
             this.btnMaterialSpec.Name = "btnMaterialSpec";
-            this.btnMaterialSpec.Size = new System.Drawing.Size(52, 52);
+            this.btnMaterialSpec.Size = new System.Drawing.Size(52, 50);
             this.btnMaterialSpec.TabIndex = 17;
             this.btnMaterialSpec.UseVisualStyleBackColor = true;
             this.btnMaterialSpec.Click += new System.EventHandler(this.btnMaterialSpec_Click);
@@ -215,9 +215,9 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Top;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(0, 559);
+            this.label4.Location = new System.Drawing.Point(0, 534);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 23);
+            this.label4.Size = new System.Drawing.Size(52, 20);
             this.label4.TabIndex = 13;
             this.label4.Text = "------";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -230,7 +230,7 @@
             this.pnMaster.Controls.Add(this.btnProducts);
             this.pnMaster.Controls.Add(this.btnCTP);
             this.pnMaster.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnMaster.Location = new System.Drawing.Point(0, 295);
+            this.pnMaster.Location = new System.Drawing.Point(0, 270);
             this.pnMaster.Name = "pnMaster";
             this.pnMaster.Size = new System.Drawing.Size(52, 264);
             this.pnMaster.TabIndex = 16;
@@ -311,9 +311,9 @@
             // 
             this.panel13.Controls.Add(this.tbClose);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel13.Location = new System.Drawing.Point(0, 927);
+            this.panel13.Location = new System.Drawing.Point(0, 1025);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(52, 64);
+            this.panel13.Size = new System.Drawing.Size(52, 55);
             this.panel13.TabIndex = 15;
             // 
             // tbClose
@@ -324,9 +324,9 @@
             this.tbClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
             this.tbClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tbClose.Image = ((System.Drawing.Image)(resources.GetObject("tbClose.Image")));
-            this.tbClose.Location = new System.Drawing.Point(0, 12);
+            this.tbClose.Location = new System.Drawing.Point(0, -9);
             this.tbClose.Name = "tbClose";
-            this.tbClose.Size = new System.Drawing.Size(52, 52);
+            this.tbClose.Size = new System.Drawing.Size(52, 64);
             this.tbClose.TabIndex = 8;
             this.tbClose.UseVisualStyleBackColor = false;
             this.tbClose.Click += new System.EventHandler(this.tbClose_Click);
@@ -337,9 +337,9 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(0, 268);
+            this.label3.Location = new System.Drawing.Point(0, 250);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 27);
+            this.label3.Size = new System.Drawing.Size(52, 20);
             this.label3.TabIndex = 10;
             this.label3.Text = "------";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -355,7 +355,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(52, 268);
+            this.panel8.Size = new System.Drawing.Size(52, 250);
             this.panel8.TabIndex = 14;
             // 
             // btnQA
@@ -366,9 +366,9 @@
             this.btnQA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQA.Image = ((System.Drawing.Image)(resources.GetObject("btnQA.Image")));
-            this.btnQA.Location = new System.Drawing.Point(0, 208);
+            this.btnQA.Location = new System.Drawing.Point(0, 200);
             this.btnQA.Name = "btnQA";
-            this.btnQA.Size = new System.Drawing.Size(52, 52);
+            this.btnQA.Size = new System.Drawing.Size(52, 50);
             this.btnQA.TabIndex = 16;
             this.btnQA.UseVisualStyleBackColor = false;
             this.btnQA.Click += new System.EventHandler(this.btnQA_Click);
@@ -381,9 +381,9 @@
             this.btnInspection.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnInspection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInspection.Image = ((System.Drawing.Image)(resources.GetObject("btnInspection.Image")));
-            this.btnInspection.Location = new System.Drawing.Point(0, 156);
+            this.btnInspection.Location = new System.Drawing.Point(0, 150);
             this.btnInspection.Name = "btnInspection";
-            this.btnInspection.Size = new System.Drawing.Size(52, 52);
+            this.btnInspection.Size = new System.Drawing.Size(52, 50);
             this.btnInspection.TabIndex = 15;
             this.btnInspection.UseVisualStyleBackColor = false;
             this.btnInspection.Click += new System.EventHandler(this.btnInspection_Click);
@@ -396,9 +396,9 @@
             this.btnPouring.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnPouring.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPouring.Image = ((System.Drawing.Image)(resources.GetObject("btnPouring.Image")));
-            this.btnPouring.Location = new System.Drawing.Point(0, 104);
+            this.btnPouring.Location = new System.Drawing.Point(0, 100);
             this.btnPouring.Name = "btnPouring";
-            this.btnPouring.Size = new System.Drawing.Size(52, 52);
+            this.btnPouring.Size = new System.Drawing.Size(52, 50);
             this.btnPouring.TabIndex = 14;
             this.btnPouring.UseVisualStyleBackColor = false;
             this.btnPouring.Click += new System.EventHandler(this.btnPouring_Click);
@@ -411,9 +411,9 @@
             this.btnSpectroMeter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnSpectroMeter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSpectroMeter.Image = ((System.Drawing.Image)(resources.GetObject("btnSpectroMeter.Image")));
-            this.btnSpectroMeter.Location = new System.Drawing.Point(0, 52);
+            this.btnSpectroMeter.Location = new System.Drawing.Point(0, 50);
             this.btnSpectroMeter.Name = "btnSpectroMeter";
-            this.btnSpectroMeter.Size = new System.Drawing.Size(52, 52);
+            this.btnSpectroMeter.Size = new System.Drawing.Size(52, 50);
             this.btnSpectroMeter.TabIndex = 10;
             this.btnSpectroMeter.UseVisualStyleBackColor = false;
             this.btnSpectroMeter.Click += new System.EventHandler(this.btnSpectroMeter_Click);
@@ -428,7 +428,7 @@
             this.btnMelting.Image = ((System.Drawing.Image)(resources.GetObject("btnMelting.Image")));
             this.btnMelting.Location = new System.Drawing.Point(0, 0);
             this.btnMelting.Name = "btnMelting";
-            this.btnMelting.Size = new System.Drawing.Size(52, 52);
+            this.btnMelting.Size = new System.Drawing.Size(52, 50);
             this.btnMelting.TabIndex = 9;
             this.btnMelting.UseVisualStyleBackColor = false;
             this.btnMelting.Click += new System.EventHandler(this.btnMelting_Click);
@@ -438,7 +438,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(52, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(5, 991);
+            this.panel1.Size = new System.Drawing.Size(5, 1080);
             this.panel1.TabIndex = 9;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -448,7 +448,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(57, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(743, 991);
+            this.panel2.Size = new System.Drawing.Size(743, 1080);
             this.panel2.TabIndex = 10;
             // 
             // frmStartup
@@ -456,7 +456,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 991);
+            this.ClientSize = new System.Drawing.Size(800, 1080);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnMain);
