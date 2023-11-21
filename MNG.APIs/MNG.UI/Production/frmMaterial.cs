@@ -445,7 +445,7 @@ namespace MNG.UI.Production
             }
 
             kwDiff = Convert.ToDouble(maxTempKwHrTextBox.Text) - Convert.ToDouble(startKwHrTextBox.Text);
-            tbKwHrPerCharge.Text = kwDiff.ToString();
+            tbKwHrPerCharge.Text = string.Format("{0:0.00}",kwDiff);
 
             if (string.IsNullOrEmpty(maxTempTextBox.Text))
                 MaxTemp = 0;
