@@ -115,6 +115,14 @@ namespace MNG.UI.Production
 
             fTapping.SummaryUpdate += fMatSummary.SummaryUpdate;
             fMatSummary.MatSumUpated += fAddMat.MatSumUpdated;
+
+            fTestChem.StatusUpdate += FTestChem_StatusUpdate;
+        }
+
+        private void FTestChem_StatusUpdate(object sender, StatusUpdateEventArgs e)
+        {
+            string status = "   สถานะ : " + e.Status;
+            tbxStatusBar.Text = status;
         }
 
         private void FormSelected(object sender, FormEventArgs e)

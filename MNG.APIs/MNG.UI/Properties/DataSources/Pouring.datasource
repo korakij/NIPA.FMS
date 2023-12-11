@@ -21,6 +21,27 @@
             </PropertyUISettings>
          </TypeUISetting>
       </GenericObjectDataSource>
+      <GenericObjectDataSource DisplayName="QInspect" Version="1.0">
+         <TypeInfo>MNG.UI.QAInspection, MNG.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+         <TypeUISetting>
+            <PropertyUISettings>
+               <PropertyUISetting Name="GraphiteImg">
+                  <ControlSettings>
+                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                        <BindableControlInfo Name="PictureBox" Type="System.Windows.Forms.PictureBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+                     </ControlSetting>
+                  </ControlSettings>
+               </PropertyUISetting>
+               <PropertyUISetting Name="MatrixImg">
+                  <ControlSettings>
+                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                        <BindableControlInfo Name="PictureBox" Type="System.Windows.Forms.PictureBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+                     </ControlSetting>
+                  </ControlSettings>
+               </PropertyUISetting>
+            </PropertyUISettings>
+         </TypeUISetting>
+      </GenericObjectDataSource>
       <GenericObjectDataSource DisplayName="MeltDefect" Version="1.0">
          <TypeInfo>MNG.UI.MeltingDefect, MNG.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
          <TypeUISetting>
@@ -33,60 +54,44 @@
                   </ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="BlowHole">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="ChemNG">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="Chill">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="HardnessNG">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="MicroNG">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="PinHole">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="Shrinkage">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="Total">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
             </PropertyUISettings>
          </TypeUISetting>
@@ -96,60 +101,44 @@
          <TypeUISetting>
             <PropertyUISettings>
                <PropertyUISetting Name="BlowHole">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="Burr">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="ChillMismatch">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="CoreMismatch">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="MissMatch">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="PinHole">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="SandBroken">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="SandDrop">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="Pouring.Defect.MoldDefect">
                   <ControlSettings>
@@ -166,60 +155,44 @@
          <TypeUISetting>
             <PropertyUISettings>
                <PropertyUISetting Name="BlowHole">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="Chill">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="ColdShut">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="HardnessNG">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="MicroNG">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="PinHole">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="Shrinkage">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="Slag">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="Pouring.Defect.PourDefect">
                   <ControlSettings>
@@ -243,25 +216,19 @@
                   </ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="Deform">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="Dent">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="OverGrinding">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
             </PropertyUISettings>
          </TypeUISetting>
@@ -271,25 +238,19 @@
          <TypeUISetting>
             <PropertyUISettings>
                <PropertyUISetting Name="AirPocket">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="MissedIdentifer">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="WornTooling">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="Pouring.Defect.EngDefect">
                   <ControlSettings>
@@ -313,32 +274,24 @@
                   </ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="CoreBroken">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="Total">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="CoreDeform">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="WetCore">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
             </PropertyUISettings>
          </TypeUISetting>

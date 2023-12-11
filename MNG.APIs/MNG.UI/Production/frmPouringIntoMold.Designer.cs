@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label noOfPouredMoldLabel;
             System.Windows.Forms.Label firstTempLabel;
             System.Windows.Forms.Label lastTempLabel;
@@ -51,18 +52,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.codeTextBox2 = new System.Windows.Forms.TextBox();
-            this.productBindingSource = new System.Windows.Forms.BindingSource();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.kanbanCodeTextBox = new System.Windows.Forms.TextBox();
-            this.pouringBindingSource = new System.Windows.Forms.BindingSource();
+            this.pouringBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnProductBrowse = new System.Windows.Forms.Button();
             this.weightTextBox = new System.Windows.Forms.TextBox();
             this.cavityTextBox = new System.Windows.Forms.TextBox();
-            this.toolingBindingSource = new System.Windows.Forms.BindingSource();
+            this.toolingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.activeControlPlanIdTextBox = new System.Windows.Forms.TextBox();
             this.codeTextBox = new System.Windows.Forms.TextBox();
-            this.pourStandardBindingSource = new System.Windows.Forms.BindingSource();
+            this.pourStandardBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.codeTextBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnPrint = new System.Windows.Forms.Button();
@@ -84,7 +85,7 @@
             this.firstMoldTimeTextBox = new System.Windows.Forms.TextBox();
             this.pouringDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PouringTimer = new System.Windows.Forms.Timer();
+            this.PouringTimer = new System.Windows.Forms.Timer(this.components);
             this.pnToolBar = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
@@ -95,7 +96,7 @@
             this.lbHeader = new System.Windows.Forms.Label();
             this.pnBorderTop = new System.Windows.Forms.Panel();
             this.pnBorderBottom = new System.Windows.Forms.Panel();
-            this.moldStandardBindingSource = new System.Windows.Forms.BindingSource();
+            this.moldStandardBindingSource = new System.Windows.Forms.BindingSource(this.components);
             noOfPouredMoldLabel = new System.Windows.Forms.Label();
             firstTempLabel = new System.Windows.Forms.Label();
             lastTempLabel = new System.Windows.Forms.Label();
@@ -766,12 +767,12 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Code";
             this.dataGridViewTextBoxColumn2.HeaderText = "Code";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 130;
             // 
             // PouringTimer
             // 
@@ -981,10 +982,10 @@
         private ColorTextBox productNoTextBox;
         private ColorTextBox noOfPouredMoldTextBox;
         private ColorTextBox tbDuration;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.TextBox noOfMoldPerLadleTextBox1;
         private System.Windows.Forms.TextBox pouringTimeTextBox;
         private System.Windows.Forms.TextBox lastTempTextBox2;
         private System.Windows.Forms.TextBox firstTempTextBox2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }

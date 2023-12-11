@@ -246,7 +246,7 @@ namespace MNG.UI.Production
                 {
                     if (ex.Message.Contains("201"))
                     {
-                        MessageBox.Show("Hi");
+                        
                     }
                     else
                     {

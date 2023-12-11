@@ -73,6 +73,16 @@ namespace MNG.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_image_photo_icon {
+            get {
+                object obj = ResourceManager.GetObject("add-image-photo-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Edit_Resized {
             get {
                 object obj = ResourceManager.GetObject("Edit-Resized", resourceCulture);
@@ -96,6 +106,16 @@ namespace MNG.UI.Properties {
         internal static System.Drawing.Bitmap images_resized1 {
             get {
                 object obj = ResourceManager.GetObject("images-resized1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InsertImage {
+            get {
+                object obj = ResourceManager.GetObject("InsertImage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +156,26 @@ namespace MNG.UI.Properties {
         internal static System.Drawing.Bitmap Play_resize {
             get {
                 object obj = ResourceManager.GetObject("Play_resize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2023_11_30_163640 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2023-11-30 163640", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2023_11_30_163659 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2023-11-30 163659", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

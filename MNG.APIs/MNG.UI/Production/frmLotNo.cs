@@ -221,7 +221,6 @@ namespace MNG.UI.Production
             }
             else
             {
-
                 dbLots = (await _client.GetLotNoByFilterAsync(dm)).OrderByDescending(x => x.Code).Where(y => y.Code.Substring(7, 1) == Furnace.Code).ToList();
             }
 

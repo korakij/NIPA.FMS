@@ -104,15 +104,21 @@ namespace MNG.UI.Production
             if (result == DialogResult.OK)
             {
                 var p = fProduct.SelectedItem;
-                var cp = await _client.GetControlPlanByIdAsync(p.ActiveControlPlanId ?? 0);
+                try
+                {
+                    var cp = await _client.GetControlPlanByIdAsync(p.ActiveControlPlanId ?? 0);
+                    ChargeItem.ControlPlanId = cp.Id;
+                    ChargeItem.ProductId = p.Id;
+                    productBindingSource.DataSource = p;
+                    chargingBindingSource.DataSource = ChargeItem;
+                    controlPlanBindingSource.DataSource = cp;
 
-                ChargeItem.ControlPlanId = cp.Id;
-                ChargeItem.ProductId = p.Id;
-                productBindingSource.DataSource = p;
-                chargingBindingSource.DataSource = ChargeItem;
-                controlPlanBindingSource.DataSource = cp;
-
-                chargingBindingSource.ResetBindings(false);
+                    chargingBindingSource.ResetBindings(false);
+                }
+                catch 
+                {
+                    MessageBox.Show("เกิดข้อผิดพลาดบางอย่าง โปรดตรวจสอบข้อมูล และเลือกอีกครั้ง");
+                }
             }
         }
     }

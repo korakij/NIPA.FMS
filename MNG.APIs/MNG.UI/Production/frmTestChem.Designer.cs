@@ -59,30 +59,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTestChem));
             this.pnTestChemComp = new System.Windows.Forms.Panel();
-            this.vTextBox = new MNG.UI.Production.ColorTextBox();
-            this.testChemicalCompositionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.teTextBox = new MNG.UI.Production.ColorTextBox();
             this.vMinTextBox = new System.Windows.Forms.TextBox();
-            this.chemicalCompositionInFurnaceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vMaxTextBox = new System.Windows.Forms.TextBox();
             this.teMinTextBox = new System.Windows.Forms.TextBox();
             this.teMaxTextBox = new System.Windows.Forms.TextBox();
             this.testChemicalCompositionDataGridView = new System.Windows.Forms.DataGridView();
-            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alTextBox1 = new MNG.UI.Production.ColorTextBox();
-            this.cTextBox1 = new MNG.UI.Production.ColorTextBox();
-            this.cceTextBox1 = new MNG.UI.Production.ColorTextBox();
-            this.crTextBox1 = new MNG.UI.Production.ColorTextBox();
-            this.cuTextBox1 = new MNG.UI.Production.ColorTextBox();
-            this.mgTextBox1 = new MNG.UI.Production.ColorTextBox();
-            this.mnTextBox1 = new MNG.UI.Production.ColorTextBox();
-            this.moTextBox1 = new MNG.UI.Production.ColorTextBox();
-            this.niTextBox1 = new MNG.UI.Production.ColorTextBox();
-            this.pTextBox1 = new MNG.UI.Production.ColorTextBox();
-            this.sTextBox1 = new MNG.UI.Production.ColorTextBox();
-            this.siTextBox1 = new MNG.UI.Production.ColorTextBox();
-            this.snTextBox1 = new MNG.UI.Production.ColorTextBox();
-            this.tiTextBox1 = new MNG.UI.Production.ColorTextBox();
             this.tiMinTextBox = new System.Windows.Forms.TextBox();
             this.tiMaxTextBox = new System.Windows.Forms.TextBox();
             this.snMinTextBox = new System.Windows.Forms.TextBox();
@@ -113,13 +94,10 @@
             this.cceMaxTextBox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.codeTextBox2 = new System.Windows.Forms.TextBox();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.controlPlanIdTextBox = new System.Windows.Forms.TextBox();
             this.revisionTextBox = new System.Windows.Forms.TextBox();
-            this.controlPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.codeTextBox1 = new System.Windows.Forms.TextBox();
-            this.tbProcessInd1 = new MNG.UI.Production.TbProcessInd();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnPrint = new System.Windows.Forms.Button();
             this.productIdTextBox = new System.Windows.Forms.TextBox();
@@ -140,6 +118,28 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.ResultTimer = new System.Windows.Forms.Timer(this.components);
+            this.vTextBox = new MNG.UI.Production.ColorTextBox();
+            this.testChemicalCompositionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.teTextBox = new MNG.UI.Production.ColorTextBox();
+            this.chemicalCompositionInFurnaceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alTextBox1 = new MNG.UI.Production.ColorTextBox();
+            this.cTextBox1 = new MNG.UI.Production.ColorTextBox();
+            this.cceTextBox1 = new MNG.UI.Production.ColorTextBox();
+            this.crTextBox1 = new MNG.UI.Production.ColorTextBox();
+            this.cuTextBox1 = new MNG.UI.Production.ColorTextBox();
+            this.mgTextBox1 = new MNG.UI.Production.ColorTextBox();
+            this.mnTextBox1 = new MNG.UI.Production.ColorTextBox();
+            this.moTextBox1 = new MNG.UI.Production.ColorTextBox();
+            this.niTextBox1 = new MNG.UI.Production.ColorTextBox();
+            this.pTextBox1 = new MNG.UI.Production.ColorTextBox();
+            this.sTextBox1 = new MNG.UI.Production.ColorTextBox();
+            this.siTextBox1 = new MNG.UI.Production.ColorTextBox();
+            this.snTextBox1 = new MNG.UI.Production.ColorTextBox();
+            this.tiTextBox1 = new MNG.UI.Production.ColorTextBox();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.controlPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbProcessInd1 = new MNG.UI.Production.TbProcessInd();
             this.chargingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             nameLabel = new System.Windows.Forms.Label();
             siMaxLabel = new System.Windows.Forms.Label();
@@ -166,16 +166,16 @@
             label4 = new System.Windows.Forms.Label();
             controlPlanIdLabel = new System.Windows.Forms.Label();
             this.pnTestChemComp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.testChemicalCompositionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testChemicalCompositionDataGridView)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.pnToolBar.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.testChemicalCompositionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -499,47 +499,6 @@
             this.pnTestChemComp.Size = new System.Drawing.Size(379, 657);
             this.pnTestChemComp.TabIndex = 187;
             // 
-            // vTextBox
-            // 
-            this.vTextBox.BackColor = System.Drawing.Color.White;
-            this.vTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.vTextBox.ColorNotOK = "Red";
-            this.vTextBox.ColorNull = "white";
-            this.vTextBox.ColorOK = "GreenYellow";
-            this.vTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.V", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
-            this.vTextBox.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_V", true));
-            this.vTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vTextBox.ForeColor = System.Drawing.Color.Black;
-            this.vTextBox.IsOK = null;
-            this.vTextBox.Location = new System.Drawing.Point(320, 488);
-            this.vTextBox.Name = "vTextBox";
-            this.vTextBox.Size = new System.Drawing.Size(45, 23);
-            this.vTextBox.TabIndex = 16;
-            this.vTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // testChemicalCompositionBindingSource
-            // 
-            this.testChemicalCompositionBindingSource.DataSource = typeof(MNG.UI.TestChemicalComposition);
-            this.testChemicalCompositionBindingSource.CurrentChanged += new System.EventHandler(this.testChemicalCompositionBindingSource_CurrentChanged);
-            // 
-            // teTextBox
-            // 
-            this.teTextBox.BackColor = System.Drawing.Color.White;
-            this.teTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.teTextBox.ColorNotOK = "Red";
-            this.teTextBox.ColorNull = "white";
-            this.teTextBox.ColorOK = "GreenYellow";
-            this.teTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Te", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
-            this.teTextBox.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_Te", true));
-            this.teTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teTextBox.ForeColor = System.Drawing.Color.Black;
-            this.teTextBox.IsOK = null;
-            this.teTextBox.Location = new System.Drawing.Point(320, 460);
-            this.teTextBox.Name = "teTextBox";
-            this.teTextBox.Size = new System.Drawing.Size(45, 23);
-            this.teTextBox.TabIndex = 15;
-            this.teTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // vMinTextBox
             // 
             this.vMinTextBox.BackColor = System.Drawing.Color.White;
@@ -553,10 +512,6 @@
             this.vMinTextBox.TabIndex = 294;
             this.vMinTextBox.TabStop = false;
             this.vMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // chemicalCompositionInFurnaceBindingSource
-            // 
-            this.chemicalCompositionInFurnaceBindingSource.DataSource = typeof(MNG.UI.ChemicalCompositionInFurnace);
             // 
             // vMaxTextBox
             // 
@@ -652,268 +607,6 @@
             this.testChemicalCompositionDataGridView.Size = new System.Drawing.Size(142, 550);
             this.testChemicalCompositionDataGridView.TabIndex = 0;
             this.testChemicalCompositionDataGridView.TabStop = false;
-            // 
-            // codeDataGridViewTextBoxColumn
-            // 
-            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
-            this.codeDataGridViewTextBoxColumn.HeaderText = "Test No.";
-            this.codeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
-            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // alTextBox1
-            // 
-            this.alTextBox1.BackColor = System.Drawing.Color.White;
-            this.alTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.alTextBox1.ColorNotOK = "Red";
-            this.alTextBox1.ColorNull = "white";
-            this.alTextBox1.ColorOK = "GreenYellow";
-            this.alTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Al", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
-            this.alTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_Al", true));
-            this.alTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.alTextBox1.IsOK = null;
-            this.alTextBox1.Location = new System.Drawing.Point(320, 264);
-            this.alTextBox1.Name = "alTextBox1";
-            this.alTextBox1.Size = new System.Drawing.Size(45, 23);
-            this.alTextBox1.TabIndex = 8;
-            this.alTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // cTextBox1
-            // 
-            this.cTextBox1.BackColor = System.Drawing.Color.White;
-            this.cTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cTextBox1.ColorNotOK = "Red";
-            this.cTextBox1.ColorNull = "white";
-            this.cTextBox1.ColorOK = "GreenYellow";
-            this.cTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.C", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
-            this.cTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_C", true));
-            this.cTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.cTextBox1.IsOK = null;
-            this.cTextBox1.Location = new System.Drawing.Point(320, 96);
-            this.cTextBox1.Name = "cTextBox1";
-            this.cTextBox1.Size = new System.Drawing.Size(45, 23);
-            this.cTextBox1.TabIndex = 2;
-            this.cTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // cceTextBox1
-            // 
-            this.cceTextBox1.BackColor = System.Drawing.Color.White;
-            this.cceTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cceTextBox1.ColorNotOK = "Red";
-            this.cceTextBox1.ColorNull = "white";
-            this.cceTextBox1.ColorOK = "GreenYellow";
-            this.cceTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Cce", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "#,##0.000"));
-            this.cceTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_CCE", true));
-            this.cceTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cceTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.cceTextBox1.IsOK = null;
-            this.cceTextBox1.Location = new System.Drawing.Point(320, 68);
-            this.cceTextBox1.Name = "cceTextBox1";
-            this.cceTextBox1.ReadOnly = true;
-            this.cceTextBox1.Size = new System.Drawing.Size(45, 23);
-            this.cceTextBox1.TabIndex = 1;
-            this.cceTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // crTextBox1
-            // 
-            this.crTextBox1.BackColor = System.Drawing.Color.White;
-            this.crTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crTextBox1.ColorNotOK = "Red";
-            this.crTextBox1.ColorNull = "white";
-            this.crTextBox1.ColorOK = "GreenYellow";
-            this.crTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Cr", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
-            this.crTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_Cr", true));
-            this.crTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.crTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.crTextBox1.IsOK = null;
-            this.crTextBox1.Location = new System.Drawing.Point(320, 376);
-            this.crTextBox1.Name = "crTextBox1";
-            this.crTextBox1.Size = new System.Drawing.Size(45, 23);
-            this.crTextBox1.TabIndex = 12;
-            this.crTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // cuTextBox1
-            // 
-            this.cuTextBox1.BackColor = System.Drawing.Color.White;
-            this.cuTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cuTextBox1.ColorNotOK = "Red";
-            this.cuTextBox1.ColorNull = "white";
-            this.cuTextBox1.ColorOK = "GreenYellow";
-            this.cuTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Cu", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
-            this.cuTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_Cu", true));
-            this.cuTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cuTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.cuTextBox1.IsOK = null;
-            this.cuTextBox1.Location = new System.Drawing.Point(320, 236);
-            this.cuTextBox1.Name = "cuTextBox1";
-            this.cuTextBox1.Size = new System.Drawing.Size(45, 23);
-            this.cuTextBox1.TabIndex = 7;
-            this.cuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // mgTextBox1
-            // 
-            this.mgTextBox1.BackColor = System.Drawing.Color.White;
-            this.mgTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mgTextBox1.ColorNotOK = "Red";
-            this.mgTextBox1.ColorNull = "white";
-            this.mgTextBox1.ColorOK = "GreenYellow";
-            this.mgTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Mg", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
-            this.mgTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_Mg", true));
-            this.mgTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mgTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.mgTextBox1.IsOK = null;
-            this.mgTextBox1.Location = new System.Drawing.Point(320, 180);
-            this.mgTextBox1.Name = "mgTextBox1";
-            this.mgTextBox1.Size = new System.Drawing.Size(45, 23);
-            this.mgTextBox1.TabIndex = 5;
-            this.mgTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // mnTextBox1
-            // 
-            this.mnTextBox1.BackColor = System.Drawing.Color.White;
-            this.mnTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mnTextBox1.ColorNotOK = "Red";
-            this.mnTextBox1.ColorNull = "white";
-            this.mnTextBox1.ColorOK = "GreenYellow";
-            this.mnTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Mn", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
-            this.mnTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_Mn", true));
-            this.mnTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.mnTextBox1.IsOK = null;
-            this.mnTextBox1.Location = new System.Drawing.Point(320, 152);
-            this.mnTextBox1.Name = "mnTextBox1";
-            this.mnTextBox1.Size = new System.Drawing.Size(45, 23);
-            this.mnTextBox1.TabIndex = 4;
-            this.mnTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // moTextBox1
-            // 
-            this.moTextBox1.BackColor = System.Drawing.Color.White;
-            this.moTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.moTextBox1.ColorNotOK = "Red";
-            this.moTextBox1.ColorNull = "white";
-            this.moTextBox1.ColorOK = "GreenYellow";
-            this.moTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Mo", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
-            this.moTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_Mo", true));
-            this.moTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.moTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.moTextBox1.IsOK = null;
-            this.moTextBox1.Location = new System.Drawing.Point(320, 348);
-            this.moTextBox1.Name = "moTextBox1";
-            this.moTextBox1.Size = new System.Drawing.Size(45, 23);
-            this.moTextBox1.TabIndex = 11;
-            this.moTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // niTextBox1
-            // 
-            this.niTextBox1.BackColor = System.Drawing.Color.White;
-            this.niTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.niTextBox1.ColorNotOK = "Red";
-            this.niTextBox1.ColorNull = "white";
-            this.niTextBox1.ColorOK = "GreenYellow";
-            this.niTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Ni", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
-            this.niTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_Ni", true));
-            this.niTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.niTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.niTextBox1.IsOK = null;
-            this.niTextBox1.Location = new System.Drawing.Point(320, 404);
-            this.niTextBox1.Name = "niTextBox1";
-            this.niTextBox1.Size = new System.Drawing.Size(45, 23);
-            this.niTextBox1.TabIndex = 13;
-            this.niTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // pTextBox1
-            // 
-            this.pTextBox1.BackColor = System.Drawing.Color.White;
-            this.pTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pTextBox1.ColorNotOK = "Red";
-            this.pTextBox1.ColorNull = "white";
-            this.pTextBox1.ColorOK = "GreenYellow";
-            this.pTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.P", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
-            this.pTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_P", true));
-            this.pTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.pTextBox1.IsOK = null;
-            this.pTextBox1.Location = new System.Drawing.Point(320, 320);
-            this.pTextBox1.Name = "pTextBox1";
-            this.pTextBox1.Size = new System.Drawing.Size(45, 23);
-            this.pTextBox1.TabIndex = 10;
-            this.pTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // sTextBox1
-            // 
-            this.sTextBox1.BackColor = System.Drawing.Color.White;
-            this.sTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sTextBox1.ColorNotOK = "Red";
-            this.sTextBox1.ColorNull = "white";
-            this.sTextBox1.ColorOK = "GreenYellow";
-            this.sTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.S", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
-            this.sTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_S", true));
-            this.sTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.sTextBox1.IsOK = null;
-            this.sTextBox1.Location = new System.Drawing.Point(320, 208);
-            this.sTextBox1.Name = "sTextBox1";
-            this.sTextBox1.Size = new System.Drawing.Size(45, 23);
-            this.sTextBox1.TabIndex = 6;
-            this.sTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // siTextBox1
-            // 
-            this.siTextBox1.BackColor = System.Drawing.Color.White;
-            this.siTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.siTextBox1.ColorNotOK = "Red";
-            this.siTextBox1.ColorNull = "white";
-            this.siTextBox1.ColorOK = "GreenYellow";
-            this.siTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Si", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
-            this.siTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_Si", true));
-            this.siTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.siTextBox1.IsOK = null;
-            this.siTextBox1.Location = new System.Drawing.Point(320, 124);
-            this.siTextBox1.Name = "siTextBox1";
-            this.siTextBox1.Size = new System.Drawing.Size(45, 23);
-            this.siTextBox1.TabIndex = 3;
-            this.siTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // snTextBox1
-            // 
-            this.snTextBox1.BackColor = System.Drawing.Color.White;
-            this.snTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.snTextBox1.ColorNotOK = "Red";
-            this.snTextBox1.ColorNull = "white";
-            this.snTextBox1.ColorOK = "GreenYellow";
-            this.snTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Sn", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
-            this.snTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_Sn", true));
-            this.snTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.snTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.snTextBox1.IsOK = null;
-            this.snTextBox1.Location = new System.Drawing.Point(320, 292);
-            this.snTextBox1.Name = "snTextBox1";
-            this.snTextBox1.Size = new System.Drawing.Size(45, 23);
-            this.snTextBox1.TabIndex = 9;
-            this.snTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // tiTextBox1
-            // 
-            this.tiTextBox1.BackColor = System.Drawing.Color.White;
-            this.tiTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tiTextBox1.ColorNotOK = "Red";
-            this.tiTextBox1.ColorNull = "white";
-            this.tiTextBox1.ColorOK = "GreenYellow";
-            this.tiTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Ti", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
-            this.tiTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_Ti", true));
-            this.tiTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tiTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.tiTextBox1.IsOK = null;
-            this.tiTextBox1.Location = new System.Drawing.Point(320, 432);
-            this.tiTextBox1.Name = "tiTextBox1";
-            this.tiTextBox1.Size = new System.Drawing.Size(45, 23);
-            this.tiTextBox1.TabIndex = 14;
-            this.tiTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tiMinTextBox
             // 
@@ -1343,10 +1036,6 @@
             this.codeTextBox2.Size = new System.Drawing.Size(100, 23);
             this.codeTextBox2.TabIndex = 300;
             // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(MNG.UI.Product);
-            // 
             // nameTextBox
             // 
             this.nameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1377,10 +1066,6 @@
             this.revisionTextBox.Size = new System.Drawing.Size(61, 23);
             this.revisionTextBox.TabIndex = 297;
             // 
-            // controlPlanBindingSource
-            // 
-            this.controlPlanBindingSource.DataSource = typeof(MNG.UI.ControlPlan);
-            // 
             // codeTextBox1
             // 
             this.codeTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1390,25 +1075,6 @@
             this.codeTextBox1.Name = "codeTextBox1";
             this.codeTextBox1.Size = new System.Drawing.Size(100, 23);
             this.codeTextBox1.TabIndex = 296;
-            // 
-            // tbProcessInd1
-            // 
-            this.tbProcessInd1.BackColor = System.Drawing.Color.White;
-            this.tbProcessInd1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbProcessInd1.Code = null;
-            this.tbProcessInd1.DataBindings.Add(new System.Windows.Forms.Binding("Code", this.testChemicalCompositionBindingSource, "Code", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-"));
-            this.tbProcessInd1.DataBindings.Add(new System.Windows.Forms.Binding("IsCompleted", this.testChemicalCompositionBindingSource, "IsCompleted", true));
-            this.tbProcessInd1.DataBindings.Add(new System.Windows.Forms.Binding("IsPass", this.testChemicalCompositionBindingSource, "IsPassed", true));
-            this.tbProcessInd1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbProcessInd1.ForeColor = System.Drawing.Color.Black;
-            this.tbProcessInd1.IsCompleted = false;
-            this.tbProcessInd1.IsPass = false;
-            this.tbProcessInd1.Location = new System.Drawing.Point(276, 50);
-            this.tbProcessInd1.Name = "tbProcessInd1";
-            this.tbProcessInd1.ReadOnly = true;
-            this.tbProcessInd1.Size = new System.Drawing.Size(83, 23);
-            this.tbProcessInd1.TabIndex = 294;
-            this.tbProcessInd1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox1
             // 
@@ -1624,6 +1290,340 @@
             this.ResultTimer.Interval = 5000;
             this.ResultTimer.Tick += new System.EventHandler(this.ResultTimer_Tick);
             // 
+            // vTextBox
+            // 
+            this.vTextBox.BackColor = System.Drawing.Color.White;
+            this.vTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.vTextBox.ColorNotOK = "Red";
+            this.vTextBox.ColorNull = "white";
+            this.vTextBox.ColorOK = "GreenYellow";
+            this.vTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.V", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
+            this.vTextBox.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_V", true));
+            this.vTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vTextBox.ForeColor = System.Drawing.Color.Black;
+            this.vTextBox.IsOK = null;
+            this.vTextBox.Location = new System.Drawing.Point(320, 488);
+            this.vTextBox.Name = "vTextBox";
+            this.vTextBox.Size = new System.Drawing.Size(45, 23);
+            this.vTextBox.TabIndex = 16;
+            this.vTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // testChemicalCompositionBindingSource
+            // 
+            this.testChemicalCompositionBindingSource.DataSource = typeof(MNG.UI.TestChemicalComposition);
+            this.testChemicalCompositionBindingSource.CurrentChanged += new System.EventHandler(this.testChemicalCompositionBindingSource_CurrentChanged);
+            // 
+            // teTextBox
+            // 
+            this.teTextBox.BackColor = System.Drawing.Color.White;
+            this.teTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.teTextBox.ColorNotOK = "Red";
+            this.teTextBox.ColorNull = "white";
+            this.teTextBox.ColorOK = "GreenYellow";
+            this.teTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Te", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
+            this.teTextBox.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_Te", true));
+            this.teTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teTextBox.ForeColor = System.Drawing.Color.Black;
+            this.teTextBox.IsOK = null;
+            this.teTextBox.Location = new System.Drawing.Point(320, 460);
+            this.teTextBox.Name = "teTextBox";
+            this.teTextBox.Size = new System.Drawing.Size(45, 23);
+            this.teTextBox.TabIndex = 15;
+            this.teTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // chemicalCompositionInFurnaceBindingSource
+            // 
+            this.chemicalCompositionInFurnaceBindingSource.DataSource = typeof(MNG.UI.ChemicalCompositionInFurnace);
+            // 
+            // codeDataGridViewTextBoxColumn
+            // 
+            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
+            this.codeDataGridViewTextBoxColumn.HeaderText = "Test No.";
+            this.codeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
+            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // alTextBox1
+            // 
+            this.alTextBox1.BackColor = System.Drawing.Color.White;
+            this.alTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.alTextBox1.ColorNotOK = "Red";
+            this.alTextBox1.ColorNull = "white";
+            this.alTextBox1.ColorOK = "GreenYellow";
+            this.alTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Al", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
+            this.alTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_Al", true));
+            this.alTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.alTextBox1.IsOK = null;
+            this.alTextBox1.Location = new System.Drawing.Point(320, 264);
+            this.alTextBox1.Name = "alTextBox1";
+            this.alTextBox1.Size = new System.Drawing.Size(45, 23);
+            this.alTextBox1.TabIndex = 8;
+            this.alTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // cTextBox1
+            // 
+            this.cTextBox1.BackColor = System.Drawing.Color.White;
+            this.cTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cTextBox1.ColorNotOK = "Red";
+            this.cTextBox1.ColorNull = "white";
+            this.cTextBox1.ColorOK = "GreenYellow";
+            this.cTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.C", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
+            this.cTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_C", true));
+            this.cTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.cTextBox1.IsOK = null;
+            this.cTextBox1.Location = new System.Drawing.Point(320, 96);
+            this.cTextBox1.Name = "cTextBox1";
+            this.cTextBox1.Size = new System.Drawing.Size(45, 23);
+            this.cTextBox1.TabIndex = 2;
+            this.cTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // cceTextBox1
+            // 
+            this.cceTextBox1.BackColor = System.Drawing.Color.White;
+            this.cceTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cceTextBox1.ColorNotOK = "Red";
+            this.cceTextBox1.ColorNull = "white";
+            this.cceTextBox1.ColorOK = "GreenYellow";
+            this.cceTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Cce", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "#,##0.000"));
+            this.cceTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_CCE", true));
+            this.cceTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cceTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.cceTextBox1.IsOK = null;
+            this.cceTextBox1.Location = new System.Drawing.Point(320, 68);
+            this.cceTextBox1.Name = "cceTextBox1";
+            this.cceTextBox1.ReadOnly = true;
+            this.cceTextBox1.Size = new System.Drawing.Size(45, 23);
+            this.cceTextBox1.TabIndex = 1;
+            this.cceTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // crTextBox1
+            // 
+            this.crTextBox1.BackColor = System.Drawing.Color.White;
+            this.crTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crTextBox1.ColorNotOK = "Red";
+            this.crTextBox1.ColorNull = "white";
+            this.crTextBox1.ColorOK = "GreenYellow";
+            this.crTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Cr", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
+            this.crTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_Cr", true));
+            this.crTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.crTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.crTextBox1.IsOK = null;
+            this.crTextBox1.Location = new System.Drawing.Point(320, 376);
+            this.crTextBox1.Name = "crTextBox1";
+            this.crTextBox1.Size = new System.Drawing.Size(45, 23);
+            this.crTextBox1.TabIndex = 12;
+            this.crTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // cuTextBox1
+            // 
+            this.cuTextBox1.BackColor = System.Drawing.Color.White;
+            this.cuTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cuTextBox1.ColorNotOK = "Red";
+            this.cuTextBox1.ColorNull = "white";
+            this.cuTextBox1.ColorOK = "GreenYellow";
+            this.cuTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Cu", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
+            this.cuTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_Cu", true));
+            this.cuTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cuTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.cuTextBox1.IsOK = null;
+            this.cuTextBox1.Location = new System.Drawing.Point(320, 236);
+            this.cuTextBox1.Name = "cuTextBox1";
+            this.cuTextBox1.Size = new System.Drawing.Size(45, 23);
+            this.cuTextBox1.TabIndex = 7;
+            this.cuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // mgTextBox1
+            // 
+            this.mgTextBox1.BackColor = System.Drawing.Color.White;
+            this.mgTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mgTextBox1.ColorNotOK = "Red";
+            this.mgTextBox1.ColorNull = "white";
+            this.mgTextBox1.ColorOK = "GreenYellow";
+            this.mgTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Mg", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
+            this.mgTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_Mg", true));
+            this.mgTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mgTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.mgTextBox1.IsOK = null;
+            this.mgTextBox1.Location = new System.Drawing.Point(320, 180);
+            this.mgTextBox1.Name = "mgTextBox1";
+            this.mgTextBox1.Size = new System.Drawing.Size(45, 23);
+            this.mgTextBox1.TabIndex = 5;
+            this.mgTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // mnTextBox1
+            // 
+            this.mnTextBox1.BackColor = System.Drawing.Color.White;
+            this.mnTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mnTextBox1.ColorNotOK = "Red";
+            this.mnTextBox1.ColorNull = "white";
+            this.mnTextBox1.ColorOK = "GreenYellow";
+            this.mnTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Mn", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
+            this.mnTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_Mn", true));
+            this.mnTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.mnTextBox1.IsOK = null;
+            this.mnTextBox1.Location = new System.Drawing.Point(320, 152);
+            this.mnTextBox1.Name = "mnTextBox1";
+            this.mnTextBox1.Size = new System.Drawing.Size(45, 23);
+            this.mnTextBox1.TabIndex = 4;
+            this.mnTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // moTextBox1
+            // 
+            this.moTextBox1.BackColor = System.Drawing.Color.White;
+            this.moTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.moTextBox1.ColorNotOK = "Red";
+            this.moTextBox1.ColorNull = "white";
+            this.moTextBox1.ColorOK = "GreenYellow";
+            this.moTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Mo", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
+            this.moTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_Mo", true));
+            this.moTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.moTextBox1.IsOK = null;
+            this.moTextBox1.Location = new System.Drawing.Point(320, 348);
+            this.moTextBox1.Name = "moTextBox1";
+            this.moTextBox1.Size = new System.Drawing.Size(45, 23);
+            this.moTextBox1.TabIndex = 11;
+            this.moTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // niTextBox1
+            // 
+            this.niTextBox1.BackColor = System.Drawing.Color.White;
+            this.niTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.niTextBox1.ColorNotOK = "Red";
+            this.niTextBox1.ColorNull = "white";
+            this.niTextBox1.ColorOK = "GreenYellow";
+            this.niTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Ni", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
+            this.niTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_Ni", true));
+            this.niTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.niTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.niTextBox1.IsOK = null;
+            this.niTextBox1.Location = new System.Drawing.Point(320, 404);
+            this.niTextBox1.Name = "niTextBox1";
+            this.niTextBox1.Size = new System.Drawing.Size(45, 23);
+            this.niTextBox1.TabIndex = 13;
+            this.niTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // pTextBox1
+            // 
+            this.pTextBox1.BackColor = System.Drawing.Color.White;
+            this.pTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pTextBox1.ColorNotOK = "Red";
+            this.pTextBox1.ColorNull = "white";
+            this.pTextBox1.ColorOK = "GreenYellow";
+            this.pTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.P", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
+            this.pTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_P", true));
+            this.pTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.pTextBox1.IsOK = null;
+            this.pTextBox1.Location = new System.Drawing.Point(320, 320);
+            this.pTextBox1.Name = "pTextBox1";
+            this.pTextBox1.Size = new System.Drawing.Size(45, 23);
+            this.pTextBox1.TabIndex = 10;
+            this.pTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // sTextBox1
+            // 
+            this.sTextBox1.BackColor = System.Drawing.Color.White;
+            this.sTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sTextBox1.ColorNotOK = "Red";
+            this.sTextBox1.ColorNull = "white";
+            this.sTextBox1.ColorOK = "GreenYellow";
+            this.sTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.S", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
+            this.sTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_S", true));
+            this.sTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.sTextBox1.IsOK = null;
+            this.sTextBox1.Location = new System.Drawing.Point(320, 208);
+            this.sTextBox1.Name = "sTextBox1";
+            this.sTextBox1.Size = new System.Drawing.Size(45, 23);
+            this.sTextBox1.TabIndex = 6;
+            this.sTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // siTextBox1
+            // 
+            this.siTextBox1.BackColor = System.Drawing.Color.White;
+            this.siTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.siTextBox1.ColorNotOK = "Red";
+            this.siTextBox1.ColorNull = "white";
+            this.siTextBox1.ColorOK = "GreenYellow";
+            this.siTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Si", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
+            this.siTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_Si", true));
+            this.siTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.siTextBox1.IsOK = null;
+            this.siTextBox1.Location = new System.Drawing.Point(320, 124);
+            this.siTextBox1.Name = "siTextBox1";
+            this.siTextBox1.Size = new System.Drawing.Size(45, 23);
+            this.siTextBox1.TabIndex = 3;
+            this.siTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // snTextBox1
+            // 
+            this.snTextBox1.BackColor = System.Drawing.Color.White;
+            this.snTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.snTextBox1.ColorNotOK = "Red";
+            this.snTextBox1.ColorNull = "white";
+            this.snTextBox1.ColorOK = "GreenYellow";
+            this.snTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Sn", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
+            this.snTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_Sn", true));
+            this.snTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.snTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.snTextBox1.IsOK = null;
+            this.snTextBox1.Location = new System.Drawing.Point(320, 292);
+            this.snTextBox1.Name = "snTextBox1";
+            this.snTextBox1.Size = new System.Drawing.Size(45, 23);
+            this.snTextBox1.TabIndex = 9;
+            this.snTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tiTextBox1
+            // 
+            this.tiTextBox1.BackColor = System.Drawing.Color.White;
+            this.tiTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tiTextBox1.ColorNotOK = "Red";
+            this.tiTextBox1.ColorNull = "white";
+            this.tiTextBox1.ColorOK = "GreenYellow";
+            this.tiTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "Result.Ti", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N3"));
+            this.tiTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsOK", this.testChemicalCompositionBindingSource, "Validation.IsOk_Ti", true));
+            this.tiTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tiTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.tiTextBox1.IsOK = null;
+            this.tiTextBox1.Location = new System.Drawing.Point(320, 432);
+            this.tiTextBox1.Name = "tiTextBox1";
+            this.tiTextBox1.Size = new System.Drawing.Size(45, 23);
+            this.tiTextBox1.TabIndex = 14;
+            this.tiTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(MNG.UI.Product);
+            // 
+            // controlPlanBindingSource
+            // 
+            this.controlPlanBindingSource.DataSource = typeof(MNG.UI.ControlPlan);
+            // 
+            // tbProcessInd1
+            // 
+            this.tbProcessInd1.BackColor = System.Drawing.Color.White;
+            this.tbProcessInd1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbProcessInd1.Code = null;
+            this.tbProcessInd1.DataBindings.Add(new System.Windows.Forms.Binding("Code", this.testChemicalCompositionBindingSource, "Code", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-"));
+            this.tbProcessInd1.DataBindings.Add(new System.Windows.Forms.Binding("IsCompleted", this.testChemicalCompositionBindingSource, "IsCompleted", true));
+            this.tbProcessInd1.DataBindings.Add(new System.Windows.Forms.Binding("IsPass", this.testChemicalCompositionBindingSource, "IsPassed", true));
+            this.tbProcessInd1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbProcessInd1.ForeColor = System.Drawing.Color.Black;
+            this.tbProcessInd1.IsCompleted = false;
+            this.tbProcessInd1.IsPass = false;
+            this.tbProcessInd1.Location = new System.Drawing.Point(276, 50);
+            this.tbProcessInd1.Name = "tbProcessInd1";
+            this.tbProcessInd1.ReadOnly = true;
+            this.tbProcessInd1.Size = new System.Drawing.Size(83, 23);
+            this.tbProcessInd1.TabIndex = 294;
+            this.tbProcessInd1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // chargingBindingSource
             // 
             this.chargingBindingSource.DataSource = typeof(MNG.UI.Charging);
@@ -1646,18 +1646,18 @@
             this.Load += new System.EventHandler(this.frmTestChem_Load);
             this.pnTestChemComp.ResumeLayout(false);
             this.pnTestChemComp.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.testChemicalCompositionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testChemicalCompositionDataGridView)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.pnToolBar.ResumeLayout(false);
             this.pnToolBar.PerformLayout();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.testChemicalCompositionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).EndInit();
             this.ResumeLayout(false);
 
