@@ -100,6 +100,11 @@ namespace MNG.UI.Production
             if (NewPouring.QInspect == null)
                 NewPouring.QInspect = new QAInspection();
 
+            if (NewPouring.Defect == null)
+                NewPouring.Defect = new DefectCause();
+            if (NewPouring.QInspect == null)
+                NewPouring.QInspect = new QAInspection();
+
             pouringBindingSource.DataSource = NewPouring;
         }
 
