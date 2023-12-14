@@ -15,10 +15,11 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
     <PublishUrl>\\192.168.2.3\wmw\Installers\NIPA_FMS\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
-    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateEnabled>false</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
@@ -26,14 +27,12 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <UpdateUrl>\\192.168.2.3\wmw\Installers\NIPA_FMS\</UpdateUrl>
-    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>39</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -71,6 +70,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>pouring-icon-MNG-2.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BarcodeStandard, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -188,6 +190,7 @@
     <Compile Include="frmStartup.Designer.cs">
       <DependentUpon>frmStartup.cs</DependentUpon>
     </Compile>
+    <Compile Include="LightTower_ChemicalInLader.cs" />
     <Compile Include="Master\frmMeltStd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -461,9 +464,11 @@
     </Compile>
     <Compile Include="Spectrometer.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="StatusUpdateEventArgs.cs" />
     <Compile Include="StreamManager.cs" />
     <EmbeddedResource Include="frmStartup.resx">
       <DependentUpon>frmStartup.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmMeltStd.resx">
       <DependentUpon>frmMeltStd.cs</DependentUpon>
@@ -512,6 +517,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmQA.resx">
       <DependentUpon>frmQA.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmQAPanel.resx">
       <DependentUpon>frmQAPanel.cs</DependentUpon>
@@ -542,9 +548,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmPouringProc.resx">
       <DependentUpon>frmPouringProc.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmMultiMelting.resx">
       <DependentUpon>frmMultiMelting.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmPouring.resx">
       <DependentUpon>frmPouring.cs</DependentUpon>
@@ -554,6 +562,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmTapping.resx">
       <DependentUpon>frmTapping.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmLotNo.resx">
       <DependentUpon>frmLotNo.cs</DependentUpon>
@@ -575,6 +584,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmTestChem.resx">
       <DependentUpon>frmTestChem.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmTimeRetrieval.resx">
       <DependentUpon>frmTimeRetrieval.cs</DependentUpon>
@@ -690,6 +700,16 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Note Update.txt" />
+    <None Include="Resources\add-image-photo-icon.png" />
+    <None Include="Resources\Screenshot 2023-11-29 111159.png" />
+    <None Include="Resources\Screenshot 2023-11-30 162753.png" />
+    <None Include="Resources\Screenshot 2023-11-30 163324.png" />
+    <None Include="Resources\Screenshot 2023-11-30 163640.png" />
+    <None Include="Resources\Screenshot 2023-11-30 163659.png" />
+    <None Include="Resources\pouring-icon-MNG.png" />
+    <Content Include="pouring-icon-MNG-2.ico" />
+    <Content Include="pouring-icon-MNG.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

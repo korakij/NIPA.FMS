@@ -57,10 +57,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnCharging = new System.Windows.Forms.Panel();
             this.moltenMetalTextBox = new System.Windows.Forms.TextBox();
-            this.chargingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.chargingDataGridView = new System.Windows.Forms.DataGridView();
-            this.chargeNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fe_NiTextBox1 = new System.Windows.Forms.TextBox();
             this.fe_MoTextBox1 = new System.Windows.Forms.TextBox();
             this.hC_CrTextBox1 = new System.Windows.Forms.TextBox();
@@ -73,7 +71,6 @@
             this.rsTextBox1 = new System.Windows.Forms.TextBox();
             this.ssTextBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.statusTextBox1 = new MNG.UI.Production.StatusTextBox();
             this.chargeNoTextBox = new System.Windows.Forms.TextBox();
             this.tbKwHrPerCharge = new System.Windows.Forms.TextBox();
             this.tbMinute = new System.Windows.Forms.TextBox();
@@ -87,6 +84,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnBorderBottom = new System.Windows.Forms.Panel();
             this.pnBorderTop = new System.Windows.Forms.Panel();
+            this.chargingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chargeNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusTextBox1 = new MNG.UI.Production.StatusTextBox();
             this.lotNoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             label51 = new System.Windows.Forms.Label();
             label50 = new System.Windows.Forms.Label();
@@ -112,9 +112,9 @@
             totalLabel = new System.Windows.Forms.Label();
             moltenMetalLabel = new System.Windows.Forms.Label();
             this.pnCharging.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chargingDataGridView)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lotNoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -396,7 +396,7 @@
             this.pnCharging.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnCharging.Location = new System.Drawing.Point(8, 363);
             this.pnCharging.Name = "pnCharging";
-            this.pnCharging.Size = new System.Drawing.Size(419, 271);
+            this.pnCharging.Size = new System.Drawing.Size(419, 652);
             this.pnCharging.TabIndex = 3;
             // 
             // moltenMetalTextBox
@@ -410,11 +410,6 @@
             this.moltenMetalTextBox.Size = new System.Drawing.Size(63, 23);
             this.moltenMetalTextBox.TabIndex = 213;
             this.moltenMetalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // chargingBindingSource
-            // 
-            this.chargingBindingSource.DataSource = typeof(MNG.UI.Charging);
-            this.chargingBindingSource.CurrentChanged += new System.EventHandler(this.chargingBindingSource_CurrentChanged);
             // 
             // totalTextBox
             // 
@@ -470,17 +465,8 @@
             this.chargingDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.chargingDataGridView.ShowCellErrors = false;
             this.chargingDataGridView.ShowCellToolTips = false;
-            this.chargingDataGridView.Size = new System.Drawing.Size(135, 540);
+            this.chargingDataGridView.Size = new System.Drawing.Size(135, 580);
             this.chargingDataGridView.TabIndex = 0;
-            // 
-            // chargeNoDataGridViewTextBoxColumn
-            // 
-            this.chargeNoDataGridViewTextBoxColumn.DataPropertyName = "ChargeNo";
-            this.chargeNoDataGridViewTextBoxColumn.HeaderText = "Charge No";
-            this.chargeNoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.chargeNoDataGridViewTextBoxColumn.Name = "chargeNoDataGridViewTextBoxColumn";
-            this.chargeNoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.chargeNoDataGridViewTextBoxColumn.Width = 150;
             // 
             // fe_NiTextBox1
             // 
@@ -655,23 +641,6 @@
             this.panel1.TabIndex = 210;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
             // 
-            // statusTextBox1
-            // 
-            this.statusTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.statusTextBox1.ColorCompleted = null;
-            this.statusTextBox1.ColorRunning = null;
-            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "Status", true));
-            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsCompleted", this.chargingBindingSource, "IsCompleted", true));
-            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("OnStatus", this.chargingBindingSource, "Status", true));
-            this.statusTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusTextBox1.IsCompleted = false;
-            this.statusTextBox1.Location = new System.Drawing.Point(248, 50);
-            this.statusTextBox1.Name = "statusTextBox1";
-            this.statusTextBox1.OnStatus = null;
-            this.statusTextBox1.Size = new System.Drawing.Size(91, 23);
-            this.statusTextBox1.TabIndex = 211;
-            this.statusTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // chargeNoTextBox
             // 
             this.chargeNoTextBox.BackColor = System.Drawing.Color.White;
@@ -807,14 +776,14 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(8, 639);
+            this.panel2.Size = new System.Drawing.Size(8, 1020);
             this.panel2.TabIndex = 211;
             // 
             // pnBorderBottom
             // 
             this.pnBorderBottom.BackColor = System.Drawing.Color.White;
             this.pnBorderBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnBorderBottom.Location = new System.Drawing.Point(8, 634);
+            this.pnBorderBottom.Location = new System.Drawing.Point(8, 1015);
             this.pnBorderBottom.Name = "pnBorderBottom";
             this.pnBorderBottom.Size = new System.Drawing.Size(419, 5);
             this.pnBorderBottom.TabIndex = 212;
@@ -828,6 +797,37 @@
             this.pnBorderTop.Size = new System.Drawing.Size(419, 3);
             this.pnBorderTop.TabIndex = 213;
             // 
+            // chargingBindingSource
+            // 
+            this.chargingBindingSource.DataSource = typeof(MNG.UI.Charging);
+            this.chargingBindingSource.CurrentChanged += new System.EventHandler(this.chargingBindingSource_CurrentChanged);
+            // 
+            // chargeNoDataGridViewTextBoxColumn
+            // 
+            this.chargeNoDataGridViewTextBoxColumn.DataPropertyName = "ChargeNo";
+            this.chargeNoDataGridViewTextBoxColumn.HeaderText = "Charge No";
+            this.chargeNoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.chargeNoDataGridViewTextBoxColumn.Name = "chargeNoDataGridViewTextBoxColumn";
+            this.chargeNoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.chargeNoDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // statusTextBox1
+            // 
+            this.statusTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.statusTextBox1.ColorCompleted = null;
+            this.statusTextBox1.ColorRunning = null;
+            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "Status", true));
+            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("IsCompleted", this.chargingBindingSource, "IsCompleted", true));
+            this.statusTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("OnStatus", this.chargingBindingSource, "Status", true));
+            this.statusTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusTextBox1.IsCompleted = false;
+            this.statusTextBox1.Location = new System.Drawing.Point(248, 50);
+            this.statusTextBox1.Name = "statusTextBox1";
+            this.statusTextBox1.OnStatus = null;
+            this.statusTextBox1.Size = new System.Drawing.Size(91, 23);
+            this.statusTextBox1.TabIndex = 211;
+            this.statusTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // lotNoBindingSource
             // 
             this.lotNoBindingSource.DataSource = typeof(MNG.UI.LotNo);
@@ -837,7 +837,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(427, 639);
+            this.ClientSize = new System.Drawing.Size(427, 1020);
             this.Controls.Add(this.pnCharging);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnBorderTop);
@@ -850,10 +850,10 @@
             this.Load += new System.EventHandler(this.frmAddMaterial_Load);
             this.pnCharging.ResumeLayout(false);
             this.pnCharging.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chargingDataGridView)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lotNoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

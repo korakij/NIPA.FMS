@@ -25,6 +25,7 @@ namespace MNG.UI.Production
         private PourStandard CurrentPourStandard;
         private Product CurrentProduct;
         private Tooling CurrentTooling;
+        private LightTower_ChemicalInLader lightChem;
 
         private string PLine;
 
@@ -56,6 +57,27 @@ namespace MNG.UI.Production
             //timer1.Start();
         }
 
+        public frmPouringIntoMold(string _line, bool connectLight)
+        {
+            InitializeComponent();
+
+            var url = Properties.Settings.Default.API_URL;
+            _client = new Client(url);
+
+            _pourings = new List<Pouring>();
+            MeltInfo = new MeltingEventArgs();
+            CurrentLotNo = new LotNo();
+            CurrentKanban = new Kanban();
+            CurrentControlPlan = new ControlPlan();
+            CurrentPouring = new Pouring();
+            CurrentPourStandard = new PourStandard();
+            CurrentProduct = new Product();
+            CurrentTooling = new Tooling();
+            PLine = _line;
+
+            //lightChem = new LightTower_ChemicalInLader();
+        }
+
         public frmPouringIntoMold(string _pouringCode, string _kanbanCode, string _pLine)
         {
             InitializeComponent();
@@ -73,6 +95,10 @@ namespace MNG.UI.Production
             NewPouring.Code = _pouringCode;
             NewPouring.KanbanCode = _kanbanCode;
             NewPouring.LineCode = _pLine;
+            if(NewPouring.Defect == null)
+                NewPouring.Defect = new DefectCause();
+            if (NewPouring.QInspect == null)
+                NewPouring.QInspect = new QAInspection();
 
             if (NewPouring.Defect == null)
                 NewPouring.Defect = new DefectCause();
@@ -170,6 +196,8 @@ namespace MNG.UI.Production
             {
                 try
                 {
+                    //if(lightChem != null)
+                    //    lightChem.ResultChem((bool)CurrentKanban.IsCompleted, (bool)CurrentKanban.IsPassed, CurrentKanban.Code);
                     await _client.PostPouringAsync(fPourIntoMold.NewPouring);
                 }
                 catch (Exception ex)
@@ -223,7 +251,7 @@ namespace MNG.UI.Production
                 {
                     if (ex.Message.Contains("201"))
                     {
-                        MessageBox.Show("Hi");
+                        
                     }
                     else
                     {

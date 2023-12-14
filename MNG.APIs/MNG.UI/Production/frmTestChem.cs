@@ -30,6 +30,8 @@ namespace MNG.UI.Production
 
         public event EventHandler<MeltingEventArgs> TestNoChanged;
         public event EventHandler<FormEventArgs> FormSelected;
+        public event EventHandler<StatusUpdateEventArgs> StatusUpdate;
+        StatusUpdateEventArgs statusUpdateEventArgs;
 
         public TestChemicalComposition SavedItem { get; set; }
 
@@ -48,6 +50,7 @@ namespace MNG.UI.Production
             _testChemicalCompositions = new List<TestChemicalComposition>();
             CurrentControlPlan = new ControlPlan();
             fileSystemWatcher1.Path = frmSetting.ResultPath;
+            statusUpdateEventArgs = new StatusUpdateEventArgs();
 
             //timer1.Interval = frmSetting.RefreshRate;
             TestTimer.Start();
@@ -135,7 +138,7 @@ namespace MNG.UI.Production
 
         private void frmTestChem_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         public async void LotNoChanged(object sender, MeltingEventArgs e)
@@ -201,7 +204,12 @@ namespace MNG.UI.Production
             }
             catch (Exception)
             {
-                MessageBox.Show("Unable to Load Data xxx", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string message = "Connection error.";
+                if(prod.ControlPlans.Count == 0)
+                {
+                    message = "not have ControlPlans.";
+                }
+                MessageBox.Show($"Unable to Load Data becuase {message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -566,6 +574,7 @@ namespace MNG.UI.Production
             fName.Name = FormName.frmTestChem;
 
             FormSelected?.Invoke(this, fName);
+            statusUpdateEventArgs.Status = "เลือกหน้าทดสอบค่าเคมี";
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -573,8 +582,14 @@ namespace MNG.UI.Production
             this.Close();
         }
 
-
+        private void SendStatusUpdate()
+        {
+            if (statusUpdateEventArgs.Status != "")
+            {
+                StatusUpdate?.Invoke(this, statusUpdateEventArgs);
+                statusUpdateEventArgs.Status = "";
+            }
+        }
     }
-
 }
 

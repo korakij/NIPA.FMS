@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +25,7 @@ namespace MNG.UI.Production
 
         private bool IsSaved;
         private bool IsLoaded = false;
+        private bool EditMode = false;
 
         private int? meltingDefect;
         private int? moldingDefect;
@@ -47,10 +51,10 @@ namespace MNG.UI.Production
             CurrentProduct = new Product();
             CurrentMatSpec = new MaterialSpecification();
 
-            ChangeMode(false);
+            ChangeMode(false, new Pouring());
         }
 
-        public frmQA(Pouring _pouring, Product _product)
+        public frmQA(Pouring _pouring, Product _product, MaterialSpecification _matSpec)
         {
             InitializeComponent();
 
@@ -61,8 +65,9 @@ namespace MNG.UI.Production
             CurrentProduct = _product;
 
             pouringBindingSource.DataSource = _pouring;
+            materialSpecificationBindingSource.DataSource = _matSpec;
 
-            ChangeMode(true);
+            ChangeMode(true, _pouring);
         }
 
         public void EnableToolBar() => pnToolBar.Show();
@@ -70,11 +75,39 @@ namespace MNG.UI.Production
 
         private async void frmEditQC_Load(object sender, EventArgs e)
         {
+            
         }
 
-        public void ChangeMode(bool isEdit)
+        public void ChangeMode(bool isEdit, Pouring _pouring)
         {
-            
+            var listTextBox = this.pnHeader.Controls.OfType<TextBox>().ToList();
+            for (int i = 0; i < listTextBox.Count(); i++)
+            {
+                listTextBox[i].ReadOnly = true;
+            }
+
+            EditMode = isEdit;
+            if(EditMode)
+            {
+                getImageCurrent(_pouring);
+                var defaultImg = MNG.UI.Properties.Resources.InsertImage;
+                if(_pouring.QInspect.GraphiteImg == null)
+                    GraphiteImg.Image = defaultImg;
+                if(_pouring.QInspect.MatrixImg == null)
+                    MatrixImg.Image = defaultImg;
+
+                graphiteATextBox1.ReadOnly = false;
+                nodularityTextBox.ReadOnly = false;
+                sizeTextBox.ReadOnly = false;
+                countTextBox.ReadOnly = false;
+                ferriteTextBox.ReadOnly = false;
+                pearliteTextBox.ReadOnly = false;
+                cementiteTextBox.ReadOnly = false;
+                hardnessTextBox.ReadOnly = false;
+                tensileTextBox1.ReadOnly = false;
+                yeildTextBox.ReadOnly = false;
+                elongationTextBox1.ReadOnly = false;
+            }
         }
 
         public async void PouringIntoMoldChanged(object sender, MeltingEventArgs e)
@@ -87,6 +120,8 @@ namespace MNG.UI.Production
 
             CurrentMatSpec = (await _client.GetMaterialSpecificationByIdAsync(CurrentControlPlan.MaterialSpecificationCode));
             materialSpecificationBindingSource.DataSource = CurrentMatSpec;
+
+            getImageCurrent(CurrentPouring);
         }
 
         public async void EditItem()
@@ -97,9 +132,9 @@ namespace MNG.UI.Production
                 return;
             }
 
-            frmQA fQA = new frmQA(CurrentPouring, CurrentProduct);
+            frmQA fQA = new frmQA(CurrentPouring, CurrentProduct, CurrentMatSpec);
 
-            fQA.Height = 950;
+            fQA.Height = 990;
             fQA.StartPosition = FormStartPosition.Manual;
             var y = Screen.PrimaryScreen.WorkingArea.Height;
             var x = Screen.PrimaryScreen.WorkingArea.Width;
@@ -108,31 +143,33 @@ namespace MNG.UI.Production
 
             if (fQA.ShowDialog() == DialogResult.OK)
             {
-                //try
-                //{
-                //    await _client.PutPouringInspectionAsync(fQA.PouringItem.Code, fQA.PouringItem);
-                //}
-                //catch (Exception ex)
-                //{
-                //    if (ex.Message.Contains("201"))
-                //    {
+                try
+                {
+                    await _client.PutPouringInspectionAsync(fQA.PouringItem.Code, fQA.PouringItem);
+                }
+                catch (Exception ex)
+                {
+                    if (ex.Message.Contains("201"))
+                    {
 
-                //    }
-                //    else
-                //    {
-                //        MessageBox.Show("ERROR " + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    }
-                //}
-                //finally
-                //{
-                //    CurrentPouring = await _client.GetPouringByIdAsync(CurrentPouring.Code);
-                //    pouringBindingSource.DataSource = CurrentPouring;
-                //}
+                    }
+                    else
+                    {
+                        MessageBox.Show("ERROR " + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                finally
+                {
+                    CurrentPouring = await _client.GetPouringByIdAsync(CurrentPouring.Code);
+                    pouringBindingSource.DataSource = CurrentPouring;
+                    getImageCurrent(CurrentPouring);
+                }
             }
             else
             {
 
             }
+            frmEditQC_Load(null, null);
         }
 
         public async void DeletedItem()
@@ -153,27 +190,6 @@ namespace MNG.UI.Production
             pnBorderBottom.BackColor = Color.MidnightBlue;
             lbHeader.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             lbHeader.ForeColor = System.Drawing.Color.Black;
-        }
-
-        private void panel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnOk_Click(object sender, EventArgs e)
-        {
-            pouringBindingSource.EndEdit();
-            PouringItem = pouringBindingSource.Current as Pouring;
-
-            this.Close();
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            pouringBindingSource.CancelEdit();
-
-            pouringBindingSource.ResetBindings(false);
-            this.Close();
         }
 
         private void pnHeader_Click(object sender, EventArgs e)
@@ -227,8 +243,140 @@ namespace MNG.UI.Production
         private void btnSave_Click_1(object sender, EventArgs e)
         {
             pouringBindingSource.EndEdit();
+
             PouringItem = pouringBindingSource.Current as Pouring;
+
+            if (GraphiteImg.Image.RawFormat != null)
+            {
+                ImageConverter converter = new ImageConverter();
+                PouringItem.QInspect.GraphiteImg = (byte[])converter.ConvertTo(GraphiteImg.Image, typeof(byte[]));
+            }
+            if (MatrixImg.Image.RawFormat != null)
+            {
+                ImageConverter converter = new ImageConverter();
+                PouringItem.QInspect.MatrixImg = (byte[])converter.ConvertTo(MatrixImg.Image, typeof(byte[]));
+            }
         }
 
+        private void GraphiteImg_DoubleClick(object sender, EventArgs e)
+        {
+            if(!EditMode) return;
+
+            OpenFileDialog openFileDialog1 = new OpenFileDialog
+            {
+                InitialDirectory = @"D:\",
+                Title = "Browse Image Files",
+
+                CheckFileExists = true,
+                CheckPathExists = true,
+
+                Filter = "Image files(*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png",
+                RestoreDirectory = true,
+
+                ReadOnlyChecked = true,
+                ShowReadOnly = true
+            };
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap bit = new Bitmap(openFileDialog1.FileName);
+                var destRect = new Rectangle(0, 0, 320, 240);
+                var destImage = new Bitmap(320, 240);
+
+                destImage.SetResolution(bit.HorizontalResolution, bit.VerticalResolution);
+
+                using (var graphics = Graphics.FromImage(destImage))
+                {
+                    graphics.CompositingMode = CompositingMode.SourceCopy;
+                    graphics.CompositingQuality = CompositingQuality.HighQuality;
+                    graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                    graphics.SmoothingMode = SmoothingMode.HighQuality;
+                    graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
+
+                    using (var wrapMode = new ImageAttributes())
+                    {
+                        wrapMode.SetWrapMode(WrapMode.TileFlipXY);
+                        graphics.DrawImage(bit, destRect, 0, 0, bit.Width, bit.Height, GraphicsUnit.Pixel, wrapMode);
+                    }
+                }
+
+                GraphiteImg.Image = destImage;
+            }
+        }
+
+        private void MatrixImg_DoubleClick(object sender, EventArgs e)
+        {
+            if(!EditMode) return;
+
+            OpenFileDialog openFileDialog1 = new OpenFileDialog
+            {
+                InitialDirectory = @"D:\",
+                Title = "Browse Image Files",
+
+                CheckFileExists = true,
+                CheckPathExists = true,
+
+                Filter = "Image files(*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png",
+                RestoreDirectory = true,
+
+                ReadOnlyChecked = true,
+                ShowReadOnly = true
+            };
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap bit = new Bitmap(openFileDialog1.FileName);
+                var destRect = new Rectangle(0, 0, 320, 240);
+                var destImage = new Bitmap(320, 240);
+
+                destImage.SetResolution(bit.HorizontalResolution, bit.VerticalResolution);
+
+                using (var graphics = Graphics.FromImage(destImage))
+                {
+                    graphics.CompositingMode = CompositingMode.SourceCopy;
+                    graphics.CompositingQuality = CompositingQuality.HighQuality;
+                    graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                    graphics.SmoothingMode = SmoothingMode.HighQuality;
+                    graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
+
+                    using (var wrapMode = new ImageAttributes())
+                    {
+                        wrapMode.SetWrapMode(WrapMode.TileFlipXY);
+                        graphics.DrawImage(bit, destRect, 0, 0, bit.Width, bit.Height, GraphicsUnit.Pixel, wrapMode);
+                    }
+                }
+
+                MatrixImg.Image = destImage;
+            }
+        }
+
+        private void getImageCurrent(Pouring _pouring)
+        {
+            if (_pouring.QInspect == null)  return;
+
+            if (_pouring.QInspect.GraphiteImg != null)
+            {
+                var graphiteImgCurrent = _pouring.QInspect.GraphiteImg;
+                using (var ms = new MemoryStream(graphiteImgCurrent))
+                {
+                    GraphiteImg.Image = Image.FromStream(ms);
+                }
+            }
+            else GraphiteImg.Image = null;
+            if (_pouring.QInspect.MatrixImg != null)
+            {
+                var matrixImgCurrent = _pouring.QInspect.MatrixImg;
+                using (var ms = new MemoryStream(matrixImgCurrent))
+                {
+                    MatrixImg.Image = Image.FromStream(ms);
+                }
+            }
+            else MatrixImg.Image = null;
+        }
+
+        private void QA_ColorTextBox(Pouring _pouring, MaterialSpecification _matSpec)
+        {
+            if (_pouring.QInspect.GraphiteA >= _matSpec.GraphiteA) ;
+        }
     }
 }

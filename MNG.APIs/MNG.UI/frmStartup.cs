@@ -13,7 +13,9 @@ using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace MNG.UI
 {
@@ -28,6 +30,7 @@ namespace MNG.UI
 
         private MNG.UI.Production.frmMultiMelting fMelting;
 
+        string toolTipText = "Text of toolTip";
         public frmStartup()
         {
             InitializeComponent();
@@ -52,7 +55,7 @@ namespace MNG.UI
             MNG.UI.Properties.Settings.Default.PMeter1 = configObj.PMeterIP1;
 
             //MNG.UI.Properties.Settings.Default.API_URL = "http://192.168.2.3/NIPA_FMS";
-            //MNG.UI.Properties.Settings.Default.API_URL = "https://localhost:44358/";
+            //MNG.UI.Properties.Settings.Default.API_URL = "https://localhost:56802/";
             //MNG.UI.Properties.Settings.Default.Result_Path = @"D:\Mango.Solutions\MNG.FMS\ChemResult\";
             //MNG.UI.Properties.Settings.Default.Refresh_Rate = 5000;
 
@@ -62,6 +65,7 @@ namespace MNG.UI
 
         private void frmStartup_Load(object sender, EventArgs e)
         {
+            settingToolTip();
         }
 
         private void tbClose_Click(object sender, EventArgs e)
@@ -362,6 +366,68 @@ namespace MNG.UI
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void settingToolTip()
+        {
+            toolTip1.OwnerDraw = true;
+            toolTip1.BackColor = Color.WhiteSmoke;
+            toolTip1.Draw += ToolTip1_Draw;
+            toolTip1.Popup += ToolTip1_Popup;
+            toolTip1.SetToolTip(btnMaterials, "Materials detail");
+            toolTip1.SetToolTip(btnMelting, "Melting report");
+            toolTip1.SetToolTip(btnMaterial, "Material of melt standart");
+            toolTip1.SetToolTip(btnProducts, "Products  ");
+            toolTip1.SetToolTip(btnClose, "Close  ");
+            toolTip1.SetToolTip(btnMaterialSpec, "Material standart");
+            toolTip1.SetToolTip(btnChemInFur, "Chem. in Furnace");
+            toolTip1.SetToolTip(btnChemInLad, "Chem. in ladle");
+            toolTip1.SetToolTip(btnPourStd, "Pour standart");
+            toolTip1.SetToolTip(btnMoldStd, "Mold standart");
+            toolTip1.SetToolTip(btnShotblast, "Shotblast report");
+            toolTip1.SetToolTip(btnTooling, "Tooling  ");
+            toolTip1.SetToolTip(btnSetting, "Setting program");
+            toolTip1.SetToolTip(btnSpectroMeter, "Spectro Meter");
+            toolTip1.SetToolTip(btnPouring, "Pouring report");
+            toolTip1.SetToolTip(btnInspection, "Inspection report");
+            toolTip1.SetToolTip(btnShowSetting, "Show setting");
+            toolTip1.SetToolTip(btnQA, "QA report");
+            toolTip1.SetToolTip(btnCTP, "Control plan");
+            toolTip1.SetToolTip(btnCustomers, "Customers detail");
+            /*btnMelting
+            btnSpectroMeter
+            btnPouring
+            btnInspection
+            btnQA
+            btnCTP
+            btnProducts
+            btnMaterials
+            btnSetting
+            btnCustomers
+            btnMaterialSpec
+            btnMaterial
+            btnChemInFur
+            btnChemInLad
+            btnMoldStd
+            btnTooling
+            btnShotblast
+            btnShowSetting
+            tbClose*/
+
+        }
+
+        private void ToolTip1_Popup(object sender, PopupEventArgs e)
+        {
+            e.ToolTipSize = TextRenderer.MeasureText(toolTip1.GetToolTip(e.AssociatedControl), new Font("calibri", 17.0f));
+        }
+
+        private void ToolTip1_Draw(object sender, DrawToolTipEventArgs e)
+        {
+            Font tooltipFont = new Font("calibri", 15.0f);
+            e.DrawBackground();
+            e.DrawBorder();
+            toolTipText = e.ToolTipText;
+            e.Graphics.DrawString(e.ToolTipText, tooltipFont, Brushes.Black, new PointF(10, 2));
         }
     }
 }

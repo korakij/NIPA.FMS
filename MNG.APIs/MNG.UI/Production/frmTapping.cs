@@ -431,7 +431,7 @@ namespace MNG.UI.Production
             }
             catch (Exception)
             {
-                MessageBox.Show("Unable to Load Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Unable to Load Kanban", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -471,7 +471,7 @@ namespace MNG.UI.Production
             }
             catch (Exception)
             {
-                MessageBox.Show("Unable to Load Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Unable to Load Kanban", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -503,7 +503,7 @@ namespace MNG.UI.Production
             }
             catch (Exception)
             {
-                MessageBox.Show("Unable to load Data xxx", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Unable to load Data KanbanBindingSource", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

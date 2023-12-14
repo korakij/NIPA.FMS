@@ -72,6 +72,13 @@ namespace MNG.UI.Production
 
                 var ctp = (await _client.GetControlPlanByIdAsync(fProduct.SelectedProduct.ActiveControlPlanId ?? 0));
 
+                if(ctp.ChemicalCompositionInFurnaceCode == null)
+                {
+                    MessageBox.Show("รายการที่คุณเลือกใน Control plan ไม่มีการระบุค่าเคมีการในเตาหลอม โปรดเลือกรายการอื่น", "Warning!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //MessageBox.Show("This product not have Chemical Composition In Furnace, plaese select another product.", "Warning!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 TestChem.ControlPlanId = ctp.Id;
                 productBindingSource.DataSource = fProduct.SelectedProduct;
                 productBindingSource.EndEdit();
