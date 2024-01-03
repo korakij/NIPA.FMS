@@ -54,8 +54,9 @@ namespace MNG.UI
             MNG.UI.Properties.Settings.Default.Refresh_Rate = configObj.RefreshRate;
             MNG.UI.Properties.Settings.Default.PMeter1 = configObj.PMeterIP1;
 
-            //MNG.UI.Properties.Settings.Default.API_URL = "http://192.168.2.3/NIPA_FMS";
+            MNG.UI.Properties.Settings.Default.API_URL = "http://192.168.2.3/NIPA_FMS";
             //MNG.UI.Properties.Settings.Default.API_URL = "https://localhost:56802/";
+            //MNG.UI.Properties.Settings.Default.API_URL = "https://localhost/NIPA_FMS";
             //MNG.UI.Properties.Settings.Default.Result_Path = @"D:\Mango.Solutions\MNG.FMS\ChemResult\";
             //MNG.UI.Properties.Settings.Default.Refresh_Rate = 5000;
 
@@ -375,24 +376,24 @@ namespace MNG.UI
             toolTip1.Draw += ToolTip1_Draw;
             toolTip1.Popup += ToolTip1_Popup;
             toolTip1.SetToolTip(btnMaterials, "Materials detail");
-            toolTip1.SetToolTip(btnMelting, "Melting report");
+            toolTip1.SetToolTip(btnMelting, "Melting  ");
             toolTip1.SetToolTip(btnMaterial, "Material of melt standart");
             toolTip1.SetToolTip(btnProducts, "Products  ");
             toolTip1.SetToolTip(btnClose, "Close  ");
             toolTip1.SetToolTip(btnMaterialSpec, "Material standart");
-            toolTip1.SetToolTip(btnChemInFur, "Chem. in Furnace");
-            toolTip1.SetToolTip(btnChemInLad, "Chem. in ladle");
+            toolTip1.SetToolTip(btnChemInFur, "Chemical in Furnace standart");
+            toolTip1.SetToolTip(btnChemInLad, "Chemical in ladle standart");
             toolTip1.SetToolTip(btnPourStd, "Pour standart");
             toolTip1.SetToolTip(btnMoldStd, "Mold standart");
-            toolTip1.SetToolTip(btnShotblast, "Shotblast report");
+            toolTip1.SetToolTip(btnShotblast, "Shotblast standart");
             toolTip1.SetToolTip(btnTooling, "Tooling  ");
             toolTip1.SetToolTip(btnSetting, "Setting program");
             toolTip1.SetToolTip(btnSpectroMeter, "Spectro Meter");
-            toolTip1.SetToolTip(btnPouring, "Pouring report");
-            toolTip1.SetToolTip(btnInspection, "Inspection report");
+            toolTip1.SetToolTip(btnPouring, "Pouring  ");
+            toolTip1.SetToolTip(btnInspection, "Inspection  ");
             toolTip1.SetToolTip(btnShowSetting, "Show setting");
-            toolTip1.SetToolTip(btnQA, "QA report");
-            toolTip1.SetToolTip(btnCTP, "Control plan");
+            toolTip1.SetToolTip(btnQA, "QA  ");
+            toolTip1.SetToolTip(btnCTP, "Control plan ");
             toolTip1.SetToolTip(btnCustomers, "Customers detail");
             /*btnMelting
             btnSpectroMeter

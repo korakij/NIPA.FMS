@@ -334,7 +334,7 @@
             // controlPlanIdTextBox
             // 
             this.controlPlanIdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.controlPlanIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testChemicalCompositionBindingSource, "ControlPlanId", true));
+            this.controlPlanIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.controlPlanBindingSource, "Id", true));
             this.controlPlanIdTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.controlPlanIdTextBox.Location = new System.Drawing.Point(122, 117);
             this.controlPlanIdTextBox.Name = "controlPlanIdTextBox";

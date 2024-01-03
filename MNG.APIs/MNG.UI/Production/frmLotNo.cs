@@ -76,7 +76,7 @@ namespace MNG.UI.Production
 
         public async void CreateItem()
         {
-            var fCreateLotNo = new frmLotNoInfo();
+            var fCreateLotNo = new frmLotNoInfo(Furnace.Name);
             var newLot = new LotNo();
 
             if (fCreateLotNo.ShowDialog() == DialogResult.OK)

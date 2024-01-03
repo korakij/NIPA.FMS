@@ -122,6 +122,7 @@ namespace MNG.UI.Production
             materialSpecificationBindingSource.DataSource = CurrentMatSpec;
 
             getImageCurrent(CurrentPouring);
+            QA_ColorTextBox(CurrentPouring, CurrentMatSpec);
         }
 
         public async void EditItem()
@@ -256,6 +257,8 @@ namespace MNG.UI.Production
                 ImageConverter converter = new ImageConverter();
                 PouringItem.QInspect.MatrixImg = (byte[])converter.ConvertTo(MatrixImg.Image, typeof(byte[]));
             }
+
+            QA_ColorTextBox(PouringItem, materialSpecificationBindingSource.DataSource as MaterialSpecification);
         }
 
         private void GraphiteImg_DoubleClick(object sender, EventArgs e)
@@ -376,7 +379,49 @@ namespace MNG.UI.Production
 
         private void QA_ColorTextBox(Pouring _pouring, MaterialSpecification _matSpec)
         {
-            if (_pouring.QInspect.GraphiteA >= _matSpec.GraphiteA) ;
+            if (_pouring.QInspect.GraphiteA >= _matSpec.GraphiteA) graphiteATextBox1.BackColor = Color.GreenYellow;
+            else if(_pouring.QInspect.GraphiteA < _matSpec.GraphiteA & _pouring.QInspect.GraphiteA > 0) graphiteATextBox1.BackColor = Color.Red;
+            else graphiteATextBox1.BackColor = Color.White;
+
+            if (_pouring.QInspect.Nodularity >= _matSpec.NodularityMin) nodularityTextBox.BackColor = Color.GreenYellow;
+            else if (_pouring.QInspect.Nodularity < _matSpec.NodularityMin & _pouring.QInspect.Nodularity > 0) nodularityTextBox.BackColor = Color.Red;
+            else nodularityTextBox.BackColor = Color.White;
+            
+            if(_pouring.QInspect.Size >= _matSpec.SizeMin & _pouring.QInspect.Size <= _matSpec.SizeMax) sizeTextBox.BackColor = Color.GreenYellow;
+            else if (_pouring.QInspect.Size < _matSpec.SizeMin || _pouring.QInspect.Size > _matSpec.SizeMax) sizeTextBox.BackColor = Color.Red;
+            else sizeTextBox.BackColor = Color.White;
+
+            if (_matSpec.NoduleCount == null || _pouring.QInspect.Count == 0) countTextBox.BackColor = Color.White;
+            else if(_pouring.QInspect.Count >= _matSpec.NoduleCount ) countTextBox.BackColor = Color.GreenYellow;
+            else countTextBox.BackColor = Color.Red;
+
+            if (_matSpec.FerriteMax == null || _matSpec.FerriteMin == null || _pouring.QInspect.Ferrite == 0) ferriteTextBox.BackColor = Color.White;
+            else if(_pouring.QInspect.Ferrite >= _matSpec.FerriteMin & _pouring.QInspect.Ferrite <= _matSpec.FerriteMax) ferriteTextBox.BackColor = Color.GreenYellow;
+            else ferriteTextBox.BackColor = Color.Red;
+
+            if (_matSpec.PearliteMin == null || _pouring.QInspect.Pearlite == 0) pearliteTextBox.BackColor = Color.White;
+            else if(_pouring.QInspect.Pearlite >= _matSpec.PearliteMin & _pouring.QInspect.Pearlite <= _matSpec.PearliteMax) pearliteTextBox.BackColor = Color.GreenYellow;
+            else pearliteTextBox.BackColor = Color.Red;
+
+            if (_matSpec.CementiteMin == null || _pouring.QInspect.Cementite == 0) cementiteTextBox.BackColor = Color.White;
+            else if(_pouring.QInspect.Cementite >= _matSpec.CementiteMin & _pouring.QInspect.Cementite <= _matSpec.CementiteMax) cementiteTextBox.BackColor = Color.GreenYellow;
+            else cementiteTextBox.BackColor = Color.Red;
+
+            if (_matSpec.HbMin == null || _pouring.QInspect.Hardness == 0) hardnessTextBox.BackColor = Color.White;
+            else if(_pouring.QInspect.Hardness >= _matSpec.HbMin & _pouring.QInspect.Hardness <= _matSpec.HbMax) hardnessTextBox.BackColor = Color.GreenYellow;
+            else hardnessTextBox.BackColor = Color.Red;
+
+            if (_matSpec.Tensile == null || _pouring.QInspect.Tensile == 0) tensileTextBox1.BackColor = Color.White;
+            else if(_pouring.QInspect.Tensile >= _matSpec.Tensile) tensileTextBox1.BackColor = Color.GreenYellow;
+            else tensileTextBox1.BackColor = Color.Red;
+
+            if (_matSpec.Yield == null || _pouring.QInspect.Yeild == 0) yeildTextBox.BackColor = Color.White;
+            else if(_pouring.QInspect.Yeild >= _matSpec.Yield) yeildTextBox.BackColor = Color.GreenYellow;
+            else yeildTextBox.BackColor = Color.Red;
+
+            if (_matSpec.Elongation == null || _pouring.QInspect.Elongation == 0) elongationTextBox1.BackColor = Color.White;
+            else if(_pouring.QInspect.Elongation >= _matSpec.Elongation) elongationTextBox1.BackColor = Color.GreenYellow;
+            else elongationTextBox1.BackColor = Color.Red;
         }
     }
 }

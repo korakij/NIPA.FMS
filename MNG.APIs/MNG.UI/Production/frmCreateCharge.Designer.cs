@@ -37,13 +37,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCreateCharge));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.chargeNoTextBox = new System.Windows.Forms.TextBox();
+            this.chargingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.chargeTimeTextBox = new System.Windows.Forms.TextBox();
             this.startKwHrTextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.codeTextBox1 = new System.Windows.Forms.TextBox();
+            this.controlPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.controlPlanIdTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.codeTextBox = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -57,21 +60,18 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.controlPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.chargingBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             chargeTimeLabel1 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             codeLabel = new System.Windows.Forms.Label();
             controlPlanIdLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // chargeTimeLabel1
@@ -141,6 +141,10 @@
             this.chargeNoTextBox.ReadOnly = true;
             this.chargeNoTextBox.Size = new System.Drawing.Size(115, 23);
             this.chargeNoTextBox.TabIndex = 52;
+            // 
+            // chargingBindingSource
+            // 
+            this.chargingBindingSource.DataSource = typeof(MNG.UI.Charging);
             // 
             // chargeTimeTextBox
             // 
@@ -213,6 +217,10 @@
             this.codeTextBox1.Size = new System.Drawing.Size(86, 23);
             this.codeTextBox1.TabIndex = 60;
             // 
+            // controlPlanBindingSource
+            // 
+            this.controlPlanBindingSource.DataSource = typeof(MNG.UI.ControlPlan);
+            // 
             // controlPlanIdTextBox
             // 
             this.controlPlanIdTextBox.BackColor = System.Drawing.Color.White;
@@ -236,6 +244,10 @@
             this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(41, 23);
             this.idTextBox.TabIndex = 58;
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(MNG.UI.Product);
             // 
             // nameTextBox
             // 
@@ -387,18 +399,6 @@
             this.panel7.Size = new System.Drawing.Size(637, 3);
             this.panel7.TabIndex = 78;
             // 
-            // controlPlanBindingSource
-            // 
-            this.controlPlanBindingSource.DataSource = typeof(MNG.UI.ControlPlan);
-            // 
-            // chargingBindingSource
-            // 
-            this.chargingBindingSource.DataSource = typeof(MNG.UI.Charging);
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(MNG.UI.Product);
-            // 
             // frmCreateCharge
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,15 +417,15 @@
             this.Name = "frmCreateCharge";
             this.Text = "frmCreateCharge";
             this.Load += new System.EventHandler(this.frmCreateCharge_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

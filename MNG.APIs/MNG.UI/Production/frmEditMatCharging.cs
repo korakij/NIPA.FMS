@@ -224,7 +224,7 @@ namespace MNG.UI.Production
 
             var power = stop - start;
 
-            if (power <= 0 || start == 0 || stop == 0)
+            if (power < 0 || start == 0 || stop == 0)
             {
                 powerCompTextBox.BackColor = Color.Red;
                 powerCompTextBox.ForeColor = Color.White;
@@ -232,6 +232,16 @@ namespace MNG.UI.Production
             }
             else
             {
+                if (power == 0)
+                {
+                    var result = MessageBox.Show("ค่า power เริ่มต้นเท่ากับสุดท้ายเท่ากัน ต้องการจะบันทึกเป็น Holding ใช่หรือไม่?", "บันทึกเป็น Holding", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                        CurrentCharge.Status = Status.Holding.ToString();
+                    else
+                    {
+                        return;
+                    }
+                }
                 powerCompTextBox.BackColor = Color.White;
                 powerCompTextBox.ForeColor = Color.Black;
                 IsPowerOk = true;
@@ -240,7 +250,6 @@ namespace MNG.UI.Production
             var p = Math.Round(power, 2);
             CurrentCharge.PowerComp = Convert.ToDouble(p);
         }
-
 
         private void maxTempNumericTextBox_TextChanged(object sender, EventArgs e)
         {

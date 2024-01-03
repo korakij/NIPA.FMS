@@ -67,6 +67,23 @@ namespace MNG.UI.Production
             cboFurnace.Items.Add("E");
         }
 
+        public frmLotNoInfo(string furnace)
+        {
+            InitializeComponent();
+
+            cboShift.Items.Add("A");
+            cboShift.Items.Add("B");
+            cboFurnace.Items.Add("A");
+            cboFurnace.Items.Add("B");
+            cboFurnace.Items.Add("C");
+            cboFurnace.Items.Add("D");
+            cboFurnace.Items.Add("E");
+
+            _furnace = furnace;
+            cboFurnace.Text = furnace;
+
+        }
+
         private void frmCreateLotNo_Load(object sender, EventArgs e)
         {
             tbLotNo.Text = dateTimePicker1.Value.ToString("yyMMdd");

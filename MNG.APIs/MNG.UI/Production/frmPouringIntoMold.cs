@@ -466,8 +466,10 @@ namespace MNG.UI.Production
         private async void btnProductBrowse_Click(object sender, EventArgs e)
         {
             var products = (await _client.GetProductAllAsync()).Where(x => x.ActiveControlPlanId != null).ToList();
+            var _currentKanban = (await _client.GetKanbanByIdAsync(NewPouring.KanbanCode));
+            var productInFur = products.Where(x => x.ActiveControlPlanId == _currentKanban.ControlPlanId).FirstOrDefault().Name;
 
-            frmProduct fProduct = new frmProduct(products);
+            frmProduct fProduct = new frmProduct(products, productInFur);
             fProduct.ProductBrowseDisable();
             fProduct.ToolDisable();
 

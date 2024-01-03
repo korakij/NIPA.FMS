@@ -404,7 +404,7 @@
             this.moltenMetalTextBox.BackColor = System.Drawing.Color.White;
             this.moltenMetalTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.moltenMetalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "MoltenMetal", true));
-            this.moltenMetalTextBox.Location = new System.Drawing.Point(271, 68);
+            this.moltenMetalTextBox.Location = new System.Drawing.Point(271, 64);
             this.moltenMetalTextBox.Name = "moltenMetalTextBox";
             this.moltenMetalTextBox.ReadOnly = true;
             this.moltenMetalTextBox.Size = new System.Drawing.Size(63, 23);

@@ -11,6 +11,7 @@ namespace MNG.UI.Production
         Created,
         Waiting,
         Running,
+        Holding,
         Completed
     }
 }

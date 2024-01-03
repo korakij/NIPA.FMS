@@ -120,6 +120,12 @@ namespace MNG.UI.Production
                 try
                 {
                     var _chargeItem = fCreateCharge.ChargeItem;
+                    var ctp = (await _client.GetControlPlanByIdAsync(_chargeItem.ControlPlanId ?? 0));
+                    if(ctp.ChemicalCompositionInFurnaceCode == null)
+                    {
+                        MessageBox.Show("รายการที่คุณเลือกใน Control plan ไม่มีการระบุค่าเคมีการในเตาหลอม โปรดเลือกรายการอื่น", "Warning!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
 
                     await _client.PostChargingAsync(_chargeItem);
                 }

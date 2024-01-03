@@ -332,3 +332,230 @@
                     statusUpdateEventArgs.Status = "";
                 }
             }
+--------------------------------------------------------------
+20240103    frmProduct.cs   
+            >>>add
+            public frmProduct(List<Product> _products, string productInFur)
+            {
+                InitializeComponent();
+
+                ProdList = _products;
+
+                var url = MNG.UI.Properties.Settings.Default.API_URL;
+                _client = new Client(url);
+
+                if (ProdList.Count != 0)
+                    productBindingSource.DataSource = ProdList.OrderByDescending(x => x.Code);
+
+                tbSearch.Text = productInFur;
+                tbSearch_TextChanged(null, null);
+            }
+
+            frmCreateNewTest.cs 
+            >>>add
+            private int productIdInFur;
+            private TestChemicalComposition _TestChem;
+            private void btnOk_Click(object sender, EventArgs e)    productBindingSource.EndEdit();
+            
+            >>>edit
+            public frmCreateNewTest(string newTest, int _productIdInFur)
+            _TestChem = new TestChemicalComposition();
+            productIdInFur = _productIdInFur;
+            --->TestChem = new TestChemicalComposition();   >>> _TestChem = _CCETest;
+            --->frmProduct fProduct = new frmProduct(products); >>>  string productInFur = "";
+            if (productIdInFur != 0) 
+               productInFur = products.Where(x => x.Id == productIdInFur).FirstOrDefault().Name;
+            frmProduct fProduct = new frmProduct(products, productInFur);
+            --->TestChem.ControlPlanId = ctp.Id;
+            productBindingSource.DataSource = fProduct.SelectedProduct;
+            productBindingSource.EndEdit();
+
+            controlPlanBindingSource.DataSource = ctp;
+            testChemicalCompositionBindingSource.DataSource = TestChem;
+
+            btnOk.Enabled = true;
+            PartNo = fProduct.SelectedProduct.Id ?? 0;  >>>
+            PartNo = fProduct.SelectedProduct.Id ?? 0;
+            _TestChem.ControlPlan = ctp;
+            _TestChem.ControlPlanId = ctp.Id;
+            _TestChem.Product = fProduct.SelectedProduct;
+            _TestChem.ProductId = fProduct.SelectedProduct.Id ?? 0;
+
+            productBindingSource.DataSource = _TestChem.Product;
+            controlPlanBindingSource.DataSource = ctp;
+            testChemicalCompositionBindingSource.DataSource = _TestChem;
+            btnOk.Enabled = true;
+
+            frmEditMatCharging.cs
+            >>>edit
+            private void GetPowerConsumtion()
+            if (power <= 0 || start == 0 || stop == 0)  >>>
+            if (power < 0 || start == 0 || stop == 0)
+            if (power == 0)
+                {
+                    var result = MessageBox.Show("ค่า power เริ่มต้นเท่ากับสุดท้ายเท่ากัน ต้องการจะบันทึกเป็น Holding ใช่หรือไม่?", "บันทึกเป็น Holding", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                        CurrentCharge.Status = Status.Holding.ToString();
+                    else
+                    {
+                        return;
+                    }
+                }
+
+            frmLotNo.cs
+            >>>edit
+            var fCreateLotNo = new frmLotNoInfo(Furnace.Name);
+            frmLotNoInfo.cs
+            >>>add
+            public frmLotNoInfo(string furnace)
+            {
+                InitializeComponent();
+                cboShift.Items.Add("A");
+                cboShift.Items.Add("B");
+                cboFurnace.Items.Add("A");
+                cboFurnace.Items.Add("B");
+                cboFurnace.Items.Add("C");
+                cboFurnace.Items.Add("D");
+                cboFurnace.Items.Add("E");
+
+                _furnace = furnace;
+                cboFurnace.Text = furnace;
+            }
+
+            frmMaterial.cs
+            >>>edit
+            public async void CreateItem()  >>>add
+            var ctp = (await _client.GetControlPlanByIdAsync(_chargeItem.ControlPlanId ?? 0));
+                    if(ctp.ChemicalCompositionInFurnaceCode == null)
+                    {
+                        MessageBox.Show("รายการที่คุณเลือกใน Control plan ไม่มีการระบุค่าเคมีการในเตาหลอม โปรดเลือกรายการอื่น", "Warning!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+            frmPouringInfoMold.cs
+            >>>edit
+            private async void btnProductBrowse_Click(object sender, EventArgs e)
+            var _currentKanban = (await _client.GetKanbanByIdAsync(NewPouring.KanbanCode));
+            var productInFur = products.Where(x => x.ActiveControlPlanId == _currentKanban.ControlPlanId).FirstOrDefault().Name;
+
+            frmProduct fProduct = new frmProduct(products, productInFur);
+            frmQA.cs
+            >>>edit
+            QA_ColorTextBox(CurrentPouring, CurrentMatSpec);
+            private void btnSave_Click_1(object sender, EventArgs e)
+            QA_ColorTextBox(PouringItem, materialSpecificationBindingSource.DataSource as MaterialSpecification);
+            private void QA_ColorTextBox(Pouring _pouring, MaterialSpecification _matSpec)
+            if (_pouring.QInspect.GraphiteA >= _matSpec.GraphiteA) graphiteATextBox1.BackColor = Color.GreenYellow;
+            else if(_pouring.QInspect.GraphiteA < _matSpec.GraphiteA & _pouring.QInspect.GraphiteA > 0) graphiteATextBox1.BackColor = Color.Red;
+            else graphiteATextBox1.BackColor = Color.White;
+
+            if (_pouring.QInspect.Nodularity >= _matSpec.NodularityMin) nodularityTextBox.BackColor = Color.GreenYellow;
+            else if (_pouring.QInspect.Nodularity < _matSpec.NodularityMin & _pouring.QInspect.Nodularity > 0) nodularityTextBox.BackColor = Color.Red;
+            else nodularityTextBox.BackColor = Color.White;
+            
+            if(_pouring.QInspect.Size >= _matSpec.SizeMin & _pouring.QInspect.Size <= _matSpec.SizeMax) sizeTextBox.BackColor = Color.GreenYellow;
+            else if (_pouring.QInspect.Size < _matSpec.SizeMin || _pouring.QInspect.Size > _matSpec.SizeMax) sizeTextBox.BackColor = Color.Red;
+            else sizeTextBox.BackColor = Color.White;
+
+            if (_matSpec.NoduleCount == null || _pouring.QInspect.Count == 0) countTextBox.BackColor = Color.White;
+            else if(_pouring.QInspect.Count >= _matSpec.NoduleCount ) countTextBox.BackColor = Color.GreenYellow;
+            else countTextBox.BackColor = Color.Red;
+
+            if (_matSpec.FerriteMax == null || _matSpec.FerriteMin == null || _pouring.QInspect.Ferrite == 0) ferriteTextBox.BackColor = Color.White;
+            else if(_pouring.QInspect.Ferrite >= _matSpec.FerriteMin & _pouring.QInspect.Ferrite <= _matSpec.FerriteMax) ferriteTextBox.BackColor = Color.GreenYellow;
+            else ferriteTextBox.BackColor = Color.Red;
+
+            if (_matSpec.PearliteMin == null || _pouring.QInspect.Pearlite == 0) pearliteTextBox.BackColor = Color.White;
+            else if(_pouring.QInspect.Pearlite >= _matSpec.PearliteMin & _pouring.QInspect.Pearlite <= _matSpec.PearliteMax) pearliteTextBox.BackColor = Color.GreenYellow;
+            else pearliteTextBox.BackColor = Color.Red;
+
+            if (_matSpec.CementiteMin == null || _pouring.QInspect.Cementite == 0) cementiteTextBox.BackColor = Color.White;
+            else if(_pouring.QInspect.Cementite >= _matSpec.CementiteMin & _pouring.QInspect.Cementite <= _matSpec.CementiteMax) cementiteTextBox.BackColor = Color.GreenYellow;
+            else cementiteTextBox.BackColor = Color.Red;
+
+            if (_matSpec.HbMin == null || _pouring.QInspect.Hardness == 0) hardnessTextBox.BackColor = Color.White;
+            else if(_pouring.QInspect.Hardness >= _matSpec.HbMin & _pouring.QInspect.Hardness <= _matSpec.HbMax) hardnessTextBox.BackColor = Color.GreenYellow;
+            else hardnessTextBox.BackColor = Color.Red;
+
+            if (_matSpec.Tensile == null || _pouring.QInspect.Tensile == 0) tensileTextBox1.BackColor = Color.White;
+            else if(_pouring.QInspect.Tensile >= _matSpec.Tensile) tensileTextBox1.BackColor = Color.GreenYellow;
+            else tensileTextBox1.BackColor = Color.Red;
+
+            if (_matSpec.Yield == null || _pouring.QInspect.Yeild == 0) yeildTextBox.BackColor = Color.White;
+            else if(_pouring.QInspect.Yeild >= _matSpec.Yield) yeildTextBox.BackColor = Color.GreenYellow;
+            else yeildTextBox.BackColor = Color.Red;
+
+            if (_matSpec.Elongation == null || _pouring.QInspect.Elongation == 0) elongationTextBox1.BackColor = Color.White;
+            else if(_pouring.QInspect.Elongation >= _matSpec.Elongation) elongationTextBox1.BackColor = Color.GreenYellow;
+            else elongationTextBox1.BackColor = Color.Red;
+
+            frmTestChem.cs
+            >>>edit
+            public async void CreateItem()
+            if (lastCharge.Total == null || lastCharge.Total == 0)
+            {
+                MessageBox.Show("Cannot Create New Test because of last charge not added Material", 
+                                "Material is Zero!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                var fCreateNewTest = new frmCreateNewTest(newTestNo, (int)lastCharge.ProductId);
+            public async void EditItemHeader()
+             var testResultSelected = testChemicalCompositionBindingSource.Current as TestChemicalComposition;
+
+            if (testResultSelected == null)
+            {
+                MessageBox.Show("Unable to Edit Current Test", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var prod = await _client.GetProductByIdAsync(testResultSelected.ProductId ?? 0);
+            int controlPlanId = prod.ActiveControlPlanId ?? default(int);
+            var ctp = (await _client.GetControlPlanByIdAsync(controlPlanId)) as ControlPlan;
+            var chemInFur = (await _client.GetChemicalCompositionInFurnaceByIdAsync(ctp.ChemicalCompositionInFurnaceCode));
+
+            frmCreateNewTest fTest = new frmCreateNewTest(testResultSelected.Code, prod, chemInFur, testResultSelected, ctp);
+            if (ctp.Id != fTest.TestChem.ControlPlanId)
+                {
+                    var _kanban = (await _client.GetKanbanByTestNoAsync(testResultSelected.Code)).LastOrDefault();
+                    if (_kanban != null)
+                    {
+                        var changeChemInTapping = MessageBox.Show("ต้องการเปลี่ยน Control plan ใน Tapping ด้วยใช่หรือไม่?", "เปลี่ยน Control plan ของ Tapping", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (changeChemInTapping == DialogResult.Yes)
+                        {
+                            var _ctp = (await _client.GetControlPlanByIdAsync((int)testResultSelected.ControlPlanId));
+                            _kanban.ControlPlanId = testResultSelected.ControlPlanId;
+                            _kanban.ControlPlan = _ctp;
+                            try
+                            {
+                                await _client.PutKanbanAsync(_kanban.Code, _kanban, _kanban.ControlPlan.ChemicalCompositionInLadleCode, _kanban.ControlPlan.PouringCode);
+                            }
+                            catch (Exception ex)
+                            {
+                                if (ex.Message.Contains("201"))
+                                {
+
+                                }
+                                else
+                                {
+                                    MessageBox.Show($"ERROR {ex}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                        }
+                    }
+                }
+            private void codeTextBox_DoubleClick(object sender, EventArgs e)
+            {
+                codeTextBox.SelectAll();
+                codeTextBox.Copy();
+            }
+
+            Status.cs
+            >>>add
+            Holding
+
+            StatusTextBox.cs
+            case "Holding":
+                        timer1.Stop();
+                        BackColor = Color.Orange;
+                        ForeColor = Color.FromName("black");
+                        break;
+
+--------------------------------------------------------------

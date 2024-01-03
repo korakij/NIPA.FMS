@@ -1647,6 +1647,11 @@
             0,
             0,
             0});
+            this.addNi.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
             this.addNi.Name = "addNi";
             this.addNi.Size = new System.Drawing.Size(70, 23);
             this.addNi.TabIndex = 11;
@@ -1669,6 +1674,11 @@
             0,
             0,
             0});
+            this.addMo.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
             this.addMo.Name = "addMo";
             this.addMo.Size = new System.Drawing.Size(70, 23);
             this.addMo.TabIndex = 10;
@@ -1691,6 +1701,11 @@
             0,
             0,
             0});
+            this.addCr.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
             this.addCr.Name = "addCr";
             this.addCr.Size = new System.Drawing.Size(70, 23);
             this.addCr.TabIndex = 9;
@@ -1713,6 +1728,11 @@
             0,
             0,
             0});
+            this.addPigFCD.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
             this.addPigFCD.Name = "addPigFCD";
             this.addPigFCD.Size = new System.Drawing.Size(70, 23);
             this.addPigFCD.TabIndex = 4;
@@ -1735,6 +1755,11 @@
             0,
             0,
             0});
+            this.addMn.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
             this.addMn.Name = "addMn";
             this.addMn.Size = new System.Drawing.Size(70, 23);
             this.addMn.TabIndex = 8;
@@ -1757,6 +1782,11 @@
             0,
             0,
             0});
+            this.addPigFC.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
             this.addPigFC.Name = "addPigFC";
             this.addPigFC.Size = new System.Drawing.Size(70, 23);
             this.addPigFC.TabIndex = 3;
@@ -1779,6 +1809,11 @@
             0,
             0,
             0});
+            this.addSi.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
             this.addSi.Name = "addSi";
             this.addSi.Size = new System.Drawing.Size(70, 23);
             this.addSi.TabIndex = 7;
@@ -1801,6 +1836,11 @@
             0,
             0,
             0});
+            this.addSS.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
             this.addSS.Name = "addSS";
             this.addSS.Size = new System.Drawing.Size(70, 23);
             this.addSS.TabIndex = 2;
@@ -1823,6 +1863,11 @@
             0,
             0,
             0});
+            this.addCFCD.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
             this.addCFCD.Name = "addCFCD";
             this.addCFCD.Size = new System.Drawing.Size(70, 23);
             this.addCFCD.TabIndex = 6;
@@ -1845,6 +1890,11 @@
             0,
             0,
             0});
+            this.addRS.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
             this.addRS.Name = "addRS";
             this.addRS.Size = new System.Drawing.Size(70, 23);
             this.addRS.TabIndex = 1;
@@ -1867,6 +1917,11 @@
             0,
             0,
             0});
+            this.addCFC.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
             this.addCFC.Name = "addCFC";
             this.addCFC.Size = new System.Drawing.Size(70, 23);
             this.addCFC.TabIndex = 5;
@@ -1889,6 +1944,11 @@
             0,
             0,
             0});
+            this.addMetal.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
             this.addMetal.Name = "addMetal";
             this.addMetal.Size = new System.Drawing.Size(70, 23);
             this.addMetal.TabIndex = 0;

@@ -41,6 +41,11 @@ namespace MNG.UI.Production
                         BackColor = Color.FromName("GreenYellow");
                         ForeColor = Color.FromName("black");
                         break;
+                    case "Holding":
+                        timer1.Stop();
+                        BackColor = Color.Orange;
+                        ForeColor = Color.FromName("black");
+                        break;
                 }
             }
         }

@@ -257,10 +257,11 @@ namespace MNG.UI.Production
 
             var lastTest = (await _client.GetTestChemicalCompositionAllAsync()).ToList().Where(x => x.ChargingCode == CurrentChargeNo.ChargeNo).LastOrDefault();
             var lastCharge = (await _client.GetChargingAllAsync()).ToList().Where(x => x.LotNoCode == CurrentLotNo.Code).LastOrDefault();
-
+            
             if (lastCharge.Total == null || lastCharge.Total == 0)
             {
-                MessageBox.Show("Cannot Create New Test because of last charge not added");
+                MessageBox.Show("Cannot Create New Test because of last charge not added Material", 
+                                "Material is Zero!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -281,7 +282,7 @@ namespace MNG.UI.Production
             count++;
             var newTestNo = $"T{lastCharge.ChargeNo}-{count.ToString("00")}";
 
-            var fCreateNewTest = new frmCreateNewTest(newTestNo);
+            var fCreateNewTest = new frmCreateNewTest(newTestNo, (int)lastCharge.ProductId);
             fCreateNewTest.StartPosition = FormStartPosition.Manual;
             fCreateNewTest.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width / 3, Screen.PrimaryScreen.WorkingArea.Height / 3);
 
@@ -400,21 +401,21 @@ namespace MNG.UI.Production
 
         public async void EditItemHeader()
         {
-            CurrentTestResult = testChemicalCompositionBindingSource.Current as TestChemicalComposition;
+            var testResultSelected = testChemicalCompositionBindingSource.Current as TestChemicalComposition;
 
-            if (CurrentTestResult == null)
+            if (testResultSelected == null)
             {
                 MessageBox.Show("Unable to Edit Current Test", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            var prod = await _client.GetProductByIdAsync(CurrentTestResult.ProductId ?? 0);
+            var prod = await _client.GetProductByIdAsync(testResultSelected.ProductId ?? 0);
             int controlPlanId = prod.ActiveControlPlanId ?? default(int);
             var ctp = (await _client.GetControlPlanByIdAsync(controlPlanId)) as ControlPlan;
             var chemInFur = (await _client.GetChemicalCompositionInFurnaceByIdAsync(ctp.ChemicalCompositionInFurnaceCode));
 
-            frmCreateNewTest fTest = new frmCreateNewTest(CurrentTestResult.Code, prod, chemInFur, CurrentTestResult, ctp);
-
+            frmCreateNewTest fTest = new frmCreateNewTest(testResultSelected.Code, prod, chemInFur, testResultSelected, ctp);
+            
             fTest.StartPosition = FormStartPosition.Manual;
             fTest.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width / 3, Screen.PrimaryScreen.WorkingArea.Height / 3);
 
@@ -440,13 +441,43 @@ namespace MNG.UI.Production
                     }
                     else
                     {
-                        MessageBox.Show("ERROR", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"ERROR {ex}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 finally
                 {
                     _testChemicalCompositions = (await _client.GetTestsByLotNoAsync(CurrentLotNo.Code)).OrderByDescending(x => x.Code).ToList();
                     testChemicalCompositionBindingSource.DataSource = _testChemicalCompositions;
+                }
+
+                if (ctp.Id != fTest.TestChem.ControlPlanId)
+                {
+                    var _kanban = (await _client.GetKanbanByTestNoAsync(testResultSelected.Code)).LastOrDefault();
+                    if (_kanban != null)
+                    {
+                        var changeChemInTapping = MessageBox.Show("ต้องการเปลี่ยน Control plan ใน Tapping ด้วยใช่หรือไม่?", "เปลี่ยน Control plan ของ Tapping", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (changeChemInTapping == DialogResult.Yes)
+                        {
+                            var _ctp = (await _client.GetControlPlanByIdAsync((int)testResultSelected.ControlPlanId));
+                            _kanban.ControlPlanId = testResultSelected.ControlPlanId;
+                            _kanban.ControlPlan = _ctp;
+                            try
+                            {
+                                await _client.PutKanbanAsync(_kanban.Code, _kanban, _kanban.ControlPlan.ChemicalCompositionInLadleCode, _kanban.ControlPlan.PouringCode);
+                            }
+                            catch (Exception ex)
+                            {
+                                if (ex.Message.Contains("201"))
+                                {
+
+                                }
+                                else
+                                {
+                                    MessageBox.Show($"ERROR {ex}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -589,6 +620,12 @@ namespace MNG.UI.Production
                 StatusUpdate?.Invoke(this, statusUpdateEventArgs);
                 statusUpdateEventArgs.Status = "";
             }
+        }
+
+        private void codeTextBox_DoubleClick(object sender, EventArgs e)
+        {
+            codeTextBox.SelectAll();
+            codeTextBox.Copy();
         }
     }
 }

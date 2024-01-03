@@ -107,6 +107,22 @@ namespace ASRS.UI
                 productBindingSource.DataSource = _product;
         }
 
+        public frmProduct(List<Product> _products, string productInFur)
+        {
+            InitializeComponent();
+
+            ProdList = _products;
+
+            var url = MNG.UI.Properties.Settings.Default.API_URL;
+            _client = new Client(url);
+
+            if (ProdList.Count != 0)
+                productBindingSource.DataSource = ProdList.OrderByDescending(x => x.Code);
+
+            tbSearch.Text = productInFur;
+            tbSearch_TextChanged(null, null);
+        }
+
         private void frmItem_Load(object sender, EventArgs e)
         {
 
