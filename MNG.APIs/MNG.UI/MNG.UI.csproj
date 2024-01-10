@@ -502,12 +502,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmMaterialType.resx">
       <DependentUpon>frmMaterialType.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmChemInFurnace.resx">
       <DependentUpon>frmChemInFurnace.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmMaterialSpec.resx">
       <DependentUpon>frmMaterialSpec.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmProduct.resx">
       <DependentUpon>frmProduct.cs</DependentUpon>
