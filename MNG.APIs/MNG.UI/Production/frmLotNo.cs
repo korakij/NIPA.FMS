@@ -148,7 +148,6 @@ namespace MNG.UI.Production
 
         internal void Export()
         {
-            throw new NotImplementedException();
         }
 
         private void lotNoBindingSource_CurrentChanged(object sender, EventArgs e)

@@ -75,10 +75,10 @@
             System.Windows.Forms.Label label16;
             System.Windows.Forms.Label tappingWgLabel;
             System.Windows.Forms.Label label20;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTapping));
             this.pnDetails = new System.Windows.Forms.Panel();
             this.pnChemDetail = new System.Windows.Forms.Panel();
@@ -756,7 +756,7 @@
             this.pnDetails.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnDetails.Location = new System.Drawing.Point(64, 363);
             this.pnDetails.Name = "pnDetails";
-            this.pnDetails.Size = new System.Drawing.Size(778, 657);
+            this.pnDetails.Size = new System.Drawing.Size(778, 617);
             this.pnDetails.TabIndex = 12;
             // 
             // pnChemDetail
@@ -831,7 +831,7 @@
             this.pnChemDetail.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnChemDetail.Location = new System.Drawing.Point(433, 0);
             this.pnChemDetail.Name = "pnChemDetail";
-            this.pnChemDetail.Size = new System.Drawing.Size(250, 654);
+            this.pnChemDetail.Size = new System.Drawing.Size(250, 614);
             this.pnChemDetail.TabIndex = 0;
             // 
             // alTextBox
@@ -1615,7 +1615,7 @@
             this.pnTreatDetail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnTreatDetail.Location = new System.Drawing.Point(163, 0);
             this.pnTreatDetail.Name = "pnTreatDetail";
-            this.pnTreatDetail.Size = new System.Drawing.Size(270, 654);
+            this.pnTreatDetail.Size = new System.Drawing.Size(270, 614);
             this.pnTreatDetail.TabIndex = 0;
             // 
             // tappingWgTextBox
@@ -1986,7 +1986,7 @@
             this.pnDgv.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnDgv.Location = new System.Drawing.Point(0, 0);
             this.pnDgv.Name = "pnDgv";
-            this.pnDgv.Size = new System.Drawing.Size(163, 654);
+            this.pnDgv.Size = new System.Drawing.Size(163, 614);
             this.pnDgv.TabIndex = 496;
             // 
             // chkTestNo
@@ -2009,47 +2009,47 @@
             this.kanbanDataGridView1.AllowUserToResizeRows = false;
             this.kanbanDataGridView1.AutoGenerateColumns = false;
             this.kanbanDataGridView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.kanbanDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kanbanDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.kanbanDataGridView1.ColumnHeadersHeight = 29;
             this.kanbanDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.kanbanDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1});
             this.kanbanDataGridView1.DataSource = this.kanbanBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.kanbanDataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.kanbanDataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.kanbanDataGridView1.EnableHeadersVisualStyles = false;
             this.kanbanDataGridView1.Location = new System.Drawing.Point(24, 68);
             this.kanbanDataGridView1.Name = "kanbanDataGridView1";
             this.kanbanDataGridView1.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.kanbanDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kanbanDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.kanbanDataGridView1.RowHeadersVisible = false;
             this.kanbanDataGridView1.RowHeadersWidth = 30;
             this.kanbanDataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            this.kanbanDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.kanbanDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.kanbanDataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.kanbanDataGridView1.Size = new System.Drawing.Size(133, 580);
             this.kanbanDataGridView1.TabIndex = 292;
@@ -2066,7 +2066,7 @@
             // pnBorderBottom
             // 
             this.pnBorderBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnBorderBottom.Location = new System.Drawing.Point(0, 654);
+            this.pnBorderBottom.Location = new System.Drawing.Point(0, 614);
             this.pnBorderBottom.Name = "pnBorderBottom";
             this.pnBorderBottom.Size = new System.Drawing.Size(778, 3);
             this.pnBorderBottom.TabIndex = 499;
@@ -2318,7 +2318,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(59, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(5, 1020);
+            this.panel2.Size = new System.Drawing.Size(5, 980);
             this.panel2.TabIndex = 194;
             // 
             // pnToolBar
@@ -2332,7 +2332,7 @@
             this.pnToolBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnToolBar.Location = new System.Drawing.Point(0, 0);
             this.pnToolBar.Name = "pnToolBar";
-            this.pnToolBar.Size = new System.Drawing.Size(59, 1020);
+            this.pnToolBar.Size = new System.Drawing.Size(59, 980);
             this.pnToolBar.TabIndex = 294;
             // 
             // btnSpark
@@ -2356,7 +2356,7 @@
             this.panel4.Controls.Add(this.btnSave);
             this.panel4.Controls.Add(this.btnExit);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 813);
+            this.panel4.Location = new System.Drawing.Point(0, 773);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(59, 186);
             this.panel4.TabIndex = 17;
@@ -2421,7 +2421,7 @@
             this.label27.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label27.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(0, 999);
+            this.label27.Location = new System.Drawing.Point(0, 959);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(58, 21);
             this.label27.TabIndex = 9;
@@ -2640,7 +2640,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(842, 1020);
+            this.ClientSize = new System.Drawing.Size(842, 980);
             this.Controls.Add(this.pnDetails);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnBorderTop);
