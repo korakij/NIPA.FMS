@@ -260,12 +260,6 @@
             // 
             this.cboYear.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboYear.FormattingEnabled = true;
-            this.cboYear.Items.AddRange(new object[] {
-            "2019",
-            "2020",
-            "2021",
-            "2022",
-            "2023"});
             this.cboYear.Location = new System.Drawing.Point(41, 252);
             this.cboYear.Name = "cboYear";
             this.cboYear.Size = new System.Drawing.Size(55, 25);

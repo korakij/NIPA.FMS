@@ -430,5 +430,10 @@ namespace MNG.UI
             toolTipText = e.ToolTipText;
             e.Graphics.DrawString(e.ToolTipText, tooltipFont, Brushes.Black, new PointF(10, 2));
         }
+        
+        private void Load_Setting()
+        {
+
+        }
     }
 }

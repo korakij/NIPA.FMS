@@ -497,7 +497,7 @@ namespace MNG.UI.Production
         {
             openFileDialog1.FileName = "";
             openFileDialog1.Filter = "Text Files(*.txt)|*.txt";
-            openFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();
+            openFileDialog1.InitialDirectory = @"D:\";
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {

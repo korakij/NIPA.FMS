@@ -180,6 +180,17 @@ namespace MNG.UI.Production
 
         public async void CreateItem()
         {
+            var lastPouring = (await _client.GetPouringsByLotNoAsync(CurrentLotNo.Code)).Where(x => x.LineCode == PLine).LastOrDefault();
+            if(lastPouring != null && (lastPouring.IsCompleted == false || lastPouring.IsCompleted == null))
+            {
+                MessageBox.Show($"Last Pouring is not complete ({lastPouring.Code}), Please edit last pouring.", "Last Pouring not complete!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            //else
+            //{
+            //    MessageBox.Show($"{lastPouring.Code}\n{lastPouring.IsCompleted}");
+            //}
+
             frmVerifyInput fVerify = new frmVerifyInput("Kanban Code", "Pouring Code");
             fVerify.EnableGenPouringCode();
             fVerify.DisableGenTestCode();

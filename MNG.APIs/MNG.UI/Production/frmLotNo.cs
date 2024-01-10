@@ -46,7 +46,12 @@ namespace MNG.UI.Production
             var url = Properties.Settings.Default.API_URL;
             _client = new Client(url);
 
-            cboYear.SelectedIndex = DateTime.Now.Year - 2019;
+            for(int i = 4; i >= 0; i--)
+            {
+                cboYear.Items.Add($"{DateTime.Now.Year - i}");
+            }
+
+            cboYear.SelectedIndex = 4;
             cboMonth.SelectedIndex = DateTime.Now.Month - 1;
 
             //if (Furnace.Code == null)
