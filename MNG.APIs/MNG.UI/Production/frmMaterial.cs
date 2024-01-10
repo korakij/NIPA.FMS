@@ -357,7 +357,7 @@ namespace MNG.UI.Production
                 });
                 
                 ExcelMapper mapper = new ExcelMapper();
-                var newfile = $@"D:\Mango.Solutions\MNG.FMS\Reports\DAT-{CurrentCharge.LotNoCode}.xlsx";
+                var newfile = $@"\\192.168.2.3\wmw\Department\Production\2023\Report\DAT-{CurrentCharge.LotNoCode}.xlsx";
 
                 mapper.Save(newfile, ctpFilter, "tbCTP", true);
                 mapper.Save(newfile, chargeFilter, "Charging",true);

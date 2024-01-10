@@ -93,7 +93,7 @@
             this.pnToolBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnToolBar.Location = new System.Drawing.Point(0, 0);
             this.pnToolBar.Name = "pnToolBar";
-            this.pnToolBar.Size = new System.Drawing.Size(59, 1028);
+            this.pnToolBar.Size = new System.Drawing.Size(59, 980);
             this.pnToolBar.TabIndex = 171;
             // 
             // label4
@@ -115,7 +115,7 @@
             this.pnSaveExit.Controls.Add(this.btnSave);
             this.pnSaveExit.Controls.Add(this.btnExit);
             this.pnSaveExit.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnSaveExit.Location = new System.Drawing.Point(0, 744);
+            this.pnSaveExit.Location = new System.Drawing.Point(0, 696);
             this.pnSaveExit.Name = "pnSaveExit";
             this.pnSaveExit.Size = new System.Drawing.Size(59, 127);
             this.pnSaveExit.TabIndex = 17;
@@ -224,7 +224,7 @@
             // 
             this.pnExit.Controls.Add(this.btnClose);
             this.pnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnExit.Location = new System.Drawing.Point(0, 871);
+            this.pnExit.Location = new System.Drawing.Point(0, 823);
             this.pnExit.Name = "pnExit";
             this.pnExit.Size = new System.Drawing.Size(59, 136);
             this.pnExit.TabIndex = 15;
@@ -265,7 +265,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(0, 1007);
+            this.label2.Location = new System.Drawing.Point(0, 959);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 21);
             this.label2.TabIndex = 9;
@@ -420,7 +420,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1900, 1028);
+            this.ClientSize = new System.Drawing.Size(1556, 980);
             this.Controls.Add(this.pnToolBar);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -523,6 +523,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmQA.resx">
       <DependentUpon>frmQA.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmQAPanel.resx">
       <DependentUpon>frmQAPanel.cs</DependentUpon>
@@ -567,6 +568,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmTapping.resx">
       <DependentUpon>frmTapping.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmLotNo.resx">
       <DependentUpon>frmLotNo.cs</DependentUpon>
@@ -588,6 +590,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmTestChem.resx">
       <DependentUpon>frmTestChem.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmTimeRetrieval.resx">
       <DependentUpon>frmTimeRetrieval.cs</DependentUpon>

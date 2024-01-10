@@ -756,7 +756,7 @@
             this.pnDetails.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnDetails.Location = new System.Drawing.Point(64, 363);
             this.pnDetails.Name = "pnDetails";
-            this.pnDetails.Size = new System.Drawing.Size(778, 657);
+            this.pnDetails.Size = new System.Drawing.Size(778, 617);
             this.pnDetails.TabIndex = 12;
             // 
             // pnChemDetail
@@ -831,7 +831,7 @@
             this.pnChemDetail.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnChemDetail.Location = new System.Drawing.Point(433, 0);
             this.pnChemDetail.Name = "pnChemDetail";
-            this.pnChemDetail.Size = new System.Drawing.Size(250, 654);
+            this.pnChemDetail.Size = new System.Drawing.Size(250, 614);
             this.pnChemDetail.TabIndex = 0;
             // 
             // alTextBox
@@ -1615,7 +1615,7 @@
             this.pnTreatDetail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnTreatDetail.Location = new System.Drawing.Point(163, 0);
             this.pnTreatDetail.Name = "pnTreatDetail";
-            this.pnTreatDetail.Size = new System.Drawing.Size(270, 654);
+            this.pnTreatDetail.Size = new System.Drawing.Size(270, 614);
             this.pnTreatDetail.TabIndex = 0;
             // 
             // tappingWgTextBox
@@ -1986,7 +1986,7 @@
             this.pnDgv.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnDgv.Location = new System.Drawing.Point(0, 0);
             this.pnDgv.Name = "pnDgv";
-            this.pnDgv.Size = new System.Drawing.Size(163, 654);
+            this.pnDgv.Size = new System.Drawing.Size(163, 614);
             this.pnDgv.TabIndex = 496;
             // 
             // chkTestNo
@@ -2066,7 +2066,7 @@
             // pnBorderBottom
             // 
             this.pnBorderBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnBorderBottom.Location = new System.Drawing.Point(0, 654);
+            this.pnBorderBottom.Location = new System.Drawing.Point(0, 614);
             this.pnBorderBottom.Name = "pnBorderBottom";
             this.pnBorderBottom.Size = new System.Drawing.Size(778, 3);
             this.pnBorderBottom.TabIndex = 499;
@@ -2318,7 +2318,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(59, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(5, 1020);
+            this.panel2.Size = new System.Drawing.Size(5, 980);
             this.panel2.TabIndex = 194;
             // 
             // pnToolBar
@@ -2332,7 +2332,7 @@
             this.pnToolBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnToolBar.Location = new System.Drawing.Point(0, 0);
             this.pnToolBar.Name = "pnToolBar";
-            this.pnToolBar.Size = new System.Drawing.Size(59, 1020);
+            this.pnToolBar.Size = new System.Drawing.Size(59, 980);
             this.pnToolBar.TabIndex = 294;
             // 
             // btnSpark
@@ -2356,7 +2356,7 @@
             this.panel4.Controls.Add(this.btnSave);
             this.panel4.Controls.Add(this.btnExit);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 813);
+            this.panel4.Location = new System.Drawing.Point(0, 773);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(59, 186);
             this.panel4.TabIndex = 17;
@@ -2421,7 +2421,7 @@
             this.label27.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label27.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(0, 999);
+            this.label27.Location = new System.Drawing.Point(0, 959);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(58, 21);
             this.label27.TabIndex = 9;
@@ -2640,7 +2640,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(842, 1020);
+            this.ClientSize = new System.Drawing.Size(842, 980);
             this.Controls.Add(this.pnDetails);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnBorderTop);
