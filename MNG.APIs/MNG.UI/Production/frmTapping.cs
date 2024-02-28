@@ -103,6 +103,8 @@ namespace MNG.UI.Production
 
         private void frmKanban_Load(object sender, EventArgs e)
         {
+            TestTimer.Interval = Properties.Settings.Default.Refresh_Rate;
+            TappingTimer.Interval = Properties.Settings.Default.Refresh_Rate;
         }
 
         private void EnableEditMode(bool IsEdit)
@@ -431,7 +433,7 @@ namespace MNG.UI.Production
             }
             catch (Exception)
             {
-                MessageBox.Show("Unable to Load Kanban", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Unable to Load Kanban", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -471,7 +473,7 @@ namespace MNG.UI.Production
             }
             catch (Exception)
             {
-                MessageBox.Show("Unable to Load Kanban", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Unable to Load Kanban", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -491,7 +493,7 @@ namespace MNG.UI.Production
 
             CurrentKanban = kanbanBindingSource.Current as Kanban;
 
-            if (CurrentKanban == null)
+            if (CurrentKanban == null || CurrentKanban is null)
                 return;
 
             try
@@ -503,7 +505,7 @@ namespace MNG.UI.Production
             }
             catch (Exception)
             {
-                MessageBox.Show("Unable to load Data KanbanBindingSource", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Unable to load Data KanbanBindingSource", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

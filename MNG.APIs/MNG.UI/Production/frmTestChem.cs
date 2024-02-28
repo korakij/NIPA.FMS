@@ -52,7 +52,8 @@ namespace MNG.UI.Production
             fileSystemWatcher1.Path = frmSetting.ResultPath;
             statusUpdateEventArgs = new StatusUpdateEventArgs();
 
-            //timer1.Interval = frmSetting.RefreshRate;
+            TestTimer.Interval = Properties.Settings.Default.Refresh_Rate;
+            ResultTimer.Interval = Properties.Settings.Default.Refresh_Rate;
             TestTimer.Start();
             ResultTimer.Start();
         }
@@ -296,6 +297,7 @@ namespace MNG.UI.Production
                 newTest.Code = newTestNo;
                 newTest.ProductId = fCreateNewTest.PartNo ?? default(int);
                 newTest.Time = DateTime.Now;
+                newTest.UpdatedTime = newTest.Time;
                 newTest.ChargingCode = CurrentChargeNo.ChargeNo;
                 newTest.ControlPlanId = fCreateNewTest.TestChem.ControlPlanId;
 

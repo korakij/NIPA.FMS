@@ -6,10 +6,14 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace MNG.UI.Production
 {
@@ -64,8 +68,41 @@ namespace MNG.UI.Production
             }
 
             CurrentLotNo = e.LotNos;
-            _chargings = (await _client.GetChargingsByLotNoAsync(e.LotNos.Code)).OrderByDescending(x => x.ChargeNo).ToList();
+
+            try
+            {
+                _chargings = (await _client.GetChargingsByLotNoAsync(e.LotNos.Code)).OrderByDescending(x => x.ChargeNo).ToList();
+            }
+            catch { }
+
             chargingBindingSource.DataSource = _chargings;
+
+            long size = 0;
+            if (_chargings.Count > 0)
+            {
+                PropertyInfo[] props = _chargings[0].GetType().GetProperties();
+                for (int i = 0; i < _chargings.Count; i++)
+                {
+                    foreach (var prop in props)
+                    {
+                        using (Stream s = new MemoryStream())
+                        {
+                            BinaryFormatter formatter = new BinaryFormatter();
+
+                            if (prop.GetValue(_chargings[i]) != null)
+                            {
+                                try
+                                {
+                                    formatter.Serialize(s, prop.GetValue(_chargings[i]));
+                                    size += s.Length;
+                                }
+                                catch (Exception ex) { }
+                            }
+                        }
+                    }
+                }
+                //MessageBox.Show("Size: " + size);
+            }
 
             if (_chargings.Count == 0)
                 CurrentCharge = null;
@@ -357,7 +394,7 @@ namespace MNG.UI.Production
                 });
                 
                 ExcelMapper mapper = new ExcelMapper();
-                var newfile = $@"\\192.168.2.3\wmw\Department\Production\2023\Report\DAT-{CurrentCharge.LotNoCode}.xlsx";
+                var newfile = $@"\\192.168.2.3\wmw\Department\Production\Report\DAT-{CurrentCharge.LotNoCode}.xlsx";
 
                 mapper.Save(newfile, ctpFilter, "tbCTP", true);
                 mapper.Save(newfile, chargeFilter, "Charging",true);

@@ -34,7 +34,7 @@ namespace MNG.APIs.Controllers.Production
         [HttpGet("{id}/testnos")]
         public ActionResult<IEnumerable<TestChemicalComposition>> GetTestNoByChargeNo([FromRoute] string id)
         {
-            return app.TestChemicalCompositions.Query(x => x.ChargingCode == id).ToList();
+            return app.TestChemicalCompositions.FindAllByChargingCode(id).ToList();
         }
 
         // GET: api/v1/Chargings/5

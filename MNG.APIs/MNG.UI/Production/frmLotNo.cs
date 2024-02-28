@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -61,6 +64,7 @@ namespace MNG.UI.Production
 
             //lotNoBindingSource.DataSource = _lotNos;
             //lotNoBindingSource.Position = 0;
+            timer1_Tick(null, null);
         }
 
         public void FormEnableSelection()
@@ -86,6 +90,12 @@ namespace MNG.UI.Production
 
             if (fCreateLotNo.ShowDialog() == DialogResult.OK)
             {
+                if(fCreateLotNo.LotNo.Length != 8 || fCreateLotNo.Date == null)
+                {
+                    fCreateLotNo.Close();
+                    CreateItem();
+                    return;
+                }
                 try
                 {
                     newLot.Code = fCreateLotNo.LotNo;
@@ -112,7 +122,6 @@ namespace MNG.UI.Production
                     }
                 }
             }
-
             fCreateLotNo.Close();
         }
 
@@ -221,11 +230,19 @@ namespace MNG.UI.Production
             if (Furnace.Code == "All")
             {
                 var dmd = $"{cboYear.Text.Substring(2, 2)}{cboMonth.Text}{cboDate.Text}";
-                dbLots = (await _client.GetLotNoByFilterAsync(dmd)).OrderByDescending(x => x.Code).ToList();
+                try
+                {
+                    dbLots = (await _client.GetLotNoByFilterAsync(dmd)).OrderByDescending(x => x.Code).ToList();
+                }
+                catch { return; }
             }
             else
             {
-                dbLots = (await _client.GetLotNoByFilterAsync(dm)).OrderByDescending(x => x.Code).Where(y => y.Code.Substring(7, 1) == Furnace.Code).ToList();
+                try
+                {
+                    dbLots = (await _client.GetLotNoByFilterAsync(dm)).OrderByDescending(x => x.Code).Where(y => y.Code.Substring(7, 1) == Furnace.Code).ToList();
+                }
+                catch { return;  }
             }
 
             if (currentLots.Count != dbLots.Count)
@@ -241,6 +258,11 @@ namespace MNG.UI.Production
             fName.Name = FormName.frmLotNo;
 
             FormSelected?.Invoke(this, fName);
+        }
+
+        private void lotNoDataGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            timer1_Tick(null, null);
         }
     }
 }

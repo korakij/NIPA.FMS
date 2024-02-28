@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.Json;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace MNG.UI
 {
@@ -22,7 +23,7 @@ namespace MNG.UI
         public static int RefreshRate { get; set; }
         public static string ResultPath { get; set; }
         public static string MeterIP { get; set; }
-
+        public string TempIP { get; set; }
         public frmSetting(List<Setting> settings)
         {
             InitializeComponent();
@@ -129,6 +130,7 @@ namespace MNG.UI
                 try
                 {
                     await _client.PutSettingAsync(fSetting.SavedItem.Code, fSetting.SavedItem);
+                    frmSetting_Load(null, null);
                 }
                 catch (Exception ex)
                 {
@@ -203,6 +205,7 @@ namespace MNG.UI
             result_PathTextBox.ReadOnly = _isRead;
             powerMeterIPTextBox.ReadOnly = _isRead;
             refreshRateTextBox.ReadOnly = _isRead;
+            TempIPTextbox.ReadOnly = _isRead;
         }
 
         private bool mouseDown = false;
@@ -251,6 +254,36 @@ namespace MNG.UI
             Config configObj = JsonSerializer.Deserialize<Config>(jsonString);
 
             MessageBox.Show(configObj.APIURL + "\n" + configObj.ChemResultPath + "\n" + configObj.RefreshRate + "\n" + configObj.PMeterIP1);
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                using (StreamWriter writer = new StreamWriter("Setting.txt"))
+                {
+                    if (TempIPTextbox.Text != "" && TempIPTextbox.Text.IndexOf('.') == 3)
+                    {
+                        writer.WriteLine(TempIPTextbox.Text);
+
+                        var path = System.IO.Path.GetDirectoryName(Application.ExecutablePath);
+                        MessageBox.Show($"Save to {path}");
+                    }
+                }
+            }
+        }
+
+        private void frmSetting_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                using (StreamReader reader = new StreamReader("Setting.txt"))
+                {
+                    TempIP = reader.ReadLine();
+                }
+                TempIPTextbox.Text = TempIP;
+            }
+            catch { }
         }
     }
 }

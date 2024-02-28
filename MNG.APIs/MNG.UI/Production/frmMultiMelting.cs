@@ -123,7 +123,6 @@ namespace MNG.UI.Production
             }
         }
 
-
         private void btnPrint_Click(object sender, EventArgs e)
         {
             var fm = ActiveMdiChild as frmSingleMelt;

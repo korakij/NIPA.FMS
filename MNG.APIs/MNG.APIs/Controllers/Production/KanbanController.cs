@@ -54,7 +54,8 @@ namespace MNG.APIs.Controllers.Production
         [HttpGet("{id}/Testno")]
         public ActionResult<IEnumerable<Kanban>> GetKanbanByTestNo([FromRoute] string id)
         {
-            var Kanbans = app.Kanbans.Query(x => x.TestChemicalCompositionCode == id).ToList();
+            //var Kanbans = app.Kanbans.Query(x => x.TestChemicalCompositionCode == id).ToList();
+            var Kanbans = app.Kanbans.FindAllByTestNo(id);
 
             return Ok(Kanbans);
         }
@@ -78,8 +79,9 @@ namespace MNG.APIs.Controllers.Production
         [HttpGet("{id}/KanbanByLotno")]
         public ActionResult<IEnumerable<Kanban>> GetKanbansByLotNo([FromRoute] string id)
         {
-            var Kanbans = app.Kanbans.Query(x => x.Code.Contains(id)).ToList();
-
+            //var Kanbans = app.Kanbans.Query(x => x.Code.Contains(id)).ToList();
+            var Kanbans = app.Kanbans.FindAllByCode(id);
+            
             return Ok(Kanbans);
         }
 

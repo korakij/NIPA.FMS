@@ -1,5 +1,6 @@
 ﻿using ASRS.UI;
 using MNG.UI.Production;
+using NPOI.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,8 +28,9 @@ namespace MNG.UI
         private frmPouringProc fPouring;
         private frmInspectionProc fInspection;
         private frmQAProc fQA;
-
         private MNG.UI.Production.frmMultiMelting fMelting;
+        private string TempIP = string.Empty;
+        private List<ButtonEnable> buttonEnables;
 
         string toolTipText = "Text of toolTip";
         public frmStartup()
@@ -49,10 +51,20 @@ namespace MNG.UI
                 this.Close();
             }
 
+            try
+            {
+                using (StreamReader reader = new StreamReader("Setting.txt"))
+                {
+                    TempIP = reader.ReadLine();
+                }
+            }
+            catch { }
+
             MNG.UI.Properties.Settings.Default.API_URL = configObj.APIURL;
             MNG.UI.Properties.Settings.Default.Result_Path = configObj.ChemResultPath;
             MNG.UI.Properties.Settings.Default.Refresh_Rate = configObj.RefreshRate;
             MNG.UI.Properties.Settings.Default.PMeter1 = configObj.PMeterIP1;
+            Properties.Settings.Default.TempIP = TempIP;
 
             MNG.UI.Properties.Settings.Default.API_URL = "http://192.168.2.3/NIPA_FMS";
             //MNG.UI.Properties.Settings.Default.API_URL = "https://localhost:56802/";
@@ -62,11 +74,13 @@ namespace MNG.UI
 
             var url = MNG.UI.Properties.Settings.Default.API_URL;
             _client = new Client(url);
+            buttonEnables = new List<ButtonEnable>();
         }
 
         private void frmStartup_Load(object sender, EventArgs e)
         {
             settingToolTip();
+            Load_AllButton();
         }
 
         private void tbClose_Click(object sender, EventArgs e)
@@ -133,7 +147,6 @@ namespace MNG.UI
             fMatSpec.Location = new Point(pnMaster.Location.X + pnMaster.Width + 20, pnMaster.Location.Y);
             fMatSpec.ShowDialog();
         }
-
 
         private async void btnMaterial_Click(object sender, EventArgs e)
         {
@@ -310,7 +323,6 @@ namespace MNG.UI
                 fPouring.WindowState = FormWindowState.Maximized;
                 fPouring.Show();
             }
-
         }
 
         private void btnInspection_Click(object sender, EventArgs e)
@@ -434,6 +446,68 @@ namespace MNG.UI
         private void Load_Setting()
         {
 
+        }
+        private void Load_AllButton()
+        {
+            var bt_grp1 = panel8.Controls;
+            var bt_grp2 = pnMaster.Controls;
+            var bt_grp3 = pnMain.Controls;
+            int[] departs = new int[] {4, 5, 2, 4, 1, 
+                                       3, 0, 3, 3, 3,
+                                       0, 3, 3, 3, 1, 
+                                       3, 3, 3, 3};
+            
+            for (int i = 0; i < 5; i++)
+            {
+                ButtonEnable bE = new ButtonEnable() { ButtonSet = (System.Windows.Forms.Button)bt_grp1[i], Department = departs[i], Level = 1 };
+                bE.Disable();
+                buttonEnables.Add(bE);
+            }
+            for (int i = 0;i < 5; i++)
+            {
+                ButtonEnable bE = new ButtonEnable() { ButtonSet = (System.Windows.Forms.Button)bt_grp2[i], Department = departs[i + 5], Level = 2 };
+                bE.Disable();
+                buttonEnables.Add(bE);
+            }
+            for(int i = 0; i < 9; i++)
+            {
+                ButtonEnable bE = new ButtonEnable() { ButtonSet = (System.Windows.Forms.Button)bt_grp3[i], Department = departs[i + 10], Level = 2 };
+                bE.Disable();
+                buttonEnables.Add(bE);
+            }
+            string ss = "";
+            foreach(var be in buttonEnables)
+            {
+                ss += be.ButtonSet.Name.ToString() + ", ";
+            }
+
+            //MessageBox.Show(ss);
+            frmLogIn _frmLogIn = new frmLogIn();
+            _frmLogIn.ShowDialog();
+
+            if (_frmLogIn.User != null)
+            {
+                EnableButtons(_frmLogIn.User);
+            }
+        }
+
+        private void EnableButtons(User userLogOn)
+        {
+            for (int i = 0; i < buttonEnables.Count; i++)
+            {
+                if (userLogOn.Position == 3)
+                {
+                    buttonEnables[i].Enable();
+                }
+                else if (userLogOn.Department == 3 && buttonEnables[i].Level == 2)
+                {
+                    buttonEnables[i].Enable();
+                }
+                else if (userLogOn.Position >= buttonEnables[i].Level && userLogOn.Department == buttonEnables[i].Department)
+                {
+                    buttonEnables[i].Enable();
+                }
+            }
         }
     }
 }

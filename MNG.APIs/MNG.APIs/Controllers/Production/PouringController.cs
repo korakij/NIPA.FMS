@@ -46,9 +46,19 @@ namespace MNG.APIs.Controllers.Production
         [HttpGet("{id}/PouringByKanban")]
         public ActionResult<IEnumerable<Pouring>> GetPouringByKanban([FromRoute] string id)
         {
-            var pourings = app.Pourings.Query(x => x.KanbanCode == id).ToList();
+            //var pourings = app.Pourings.Query(x => x.KanbanCode == id).ToList();
+            var pourings = app.Pourings.FindAllByKanban(id);
 
             return Ok(pourings);
+        }
+
+        [HttpGet("{id}/FirstPouringByKanban")]
+        public ActionResult<IEnumerable<Pouring>> GetFirstPouringByKanban([FromRoute] string id)
+        {
+            //var pourings = app.Pourings.Query(x => x.KanbanCode == id).FirstOrDefault();
+            var pouring = app.Pourings.FindByKanban(id)
+                ;
+            return Ok(pouring);
         }
 
         [HttpGet("{id}/DefectSummary")]

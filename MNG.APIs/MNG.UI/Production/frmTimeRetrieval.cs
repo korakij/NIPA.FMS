@@ -13,6 +13,7 @@ namespace MNG.UI.Production
     public partial class frmTimeRetrieval : Form
     {
         public DateTime time { get; set; }
+        public int temp {  get; set; }
 
         private DateTime Initialtime;
 
@@ -22,6 +23,27 @@ namespace MNG.UI.Production
             Initialtime = _initialTime ?? DateTime.Now;
 
             dateTimePicker1.Value = Initialtime;
+            TemptextBox.Text = temp.ToString();
+
+            TemptextBox.Visible = false;
+            TempLabel.Visible = false;
+            this.Size = new System.Drawing.Size(192, 79);
+            btnGetTime.Location = new Point(152, 8);
+        }
+
+        public frmTimeRetrieval(DateTime? _initialTime, int _temp)
+        {
+            InitializeComponent();
+            Initialtime = _initialTime ?? DateTime.Now;
+            temp = _temp;
+
+            dateTimePicker1.Value = Initialtime;
+            TemptextBox.Text = temp.ToString();
+
+            TemptextBox.Visible = true;
+            TempLabel.Visible = true;
+            this.Size = new System.Drawing.Size(155, 120);
+            btnGetTime.Location = new Point(120, 12);
         }
 
         private void btnGetTime_Click(object sender, EventArgs e)

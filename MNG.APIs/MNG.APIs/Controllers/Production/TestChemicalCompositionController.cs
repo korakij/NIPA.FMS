@@ -34,13 +34,13 @@ namespace MNG.APIs.Controllers.Production
         [HttpGet("{id}/TestCountByLotNo")]
         public int GetTestNoCountByLotNo([FromRoute] string id)
         {
-            return app.TestChemicalCompositions.Query(x => x.Code.Contains(id)).ToList().Count();
+            return app.TestChemicalCompositions.CountAllByCode(id);
         }
 
         [HttpGet("{id}/TestsByLotNoFilter")]
         public ActionResult<IEnumerable<TestChemicalComposition>> GetTestNoByLotNoFilter([FromRoute] string id)
         {
-            return app.TestChemicalCompositions.Query(x => x.Code.Contains(id)).ToList();
+            return app.TestChemicalCompositions.FindAllByCode(id);
         }
 
         // GET: api/v1/Chargings/5
@@ -65,9 +65,10 @@ namespace MNG.APIs.Controllers.Production
         [HttpGet("{id}/TestsByLotno")]
         public ActionResult<IEnumerable<TestChemicalComposition>> GetTestsByLotNo([FromRoute] string id)
         {
-            var Tests = app.TestChemicalCompositions.Query(x => x.Code.Contains(id)).ToList();
+            //var Tests = app.TestChemicalCompositions.Query(x => x.Code.Contains(id)).ToList();
+            var tests = app.TestChemicalCompositions.FindAllByCode(id);
 
-            return Ok(Tests);
+            return Ok(tests);
         }
 
         [HttpGet("{id}/Validate")]

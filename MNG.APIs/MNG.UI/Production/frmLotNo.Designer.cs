@@ -43,8 +43,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel12 = new System.Windows.Forms.Panel();
             this.lotNoDataGridView = new System.Windows.Forms.DataGridView();
-            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lotNoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cboMonth = new System.Windows.Forms.ComboBox();
             this.cboYear = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -58,6 +56,8 @@
             this.pnBorderTop = new System.Windows.Forms.Panel();
             this.pnBorderBottom = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lotNoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             label5 = new System.Windows.Forms.Label();
             label40 = new System.Windows.Forms.Label();
             label11 = new System.Windows.Forms.Label();
@@ -68,8 +68,8 @@
             label6 = new System.Windows.Forms.Label();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lotNoDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lotNoBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lotNoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -220,18 +220,7 @@
             this.lotNoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.lotNoDataGridView.Size = new System.Drawing.Size(101, 509);
             this.lotNoDataGridView.TabIndex = 188;
-            // 
-            // codeDataGridViewTextBoxColumn
-            // 
-            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
-            this.codeDataGridViewTextBoxColumn.HeaderText = "Lot No";
-            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
-            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lotNoBindingSource
-            // 
-            this.lotNoBindingSource.DataSource = typeof(MNG.UI.LotNo);
-            this.lotNoBindingSource.CurrentChanged += new System.EventHandler(this.lotNoBindingSource_CurrentChanged);
+            this.lotNoDataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.lotNoDataGridView_ColumnHeaderMouseClick);
             // 
             // cboMonth
             // 
@@ -423,6 +412,18 @@
             this.panel2.Size = new System.Drawing.Size(5, 961);
             this.panel2.TabIndex = 216;
             // 
+            // codeDataGridViewTextBoxColumn
+            // 
+            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
+            this.codeDataGridViewTextBoxColumn.HeaderText = "Lot No";
+            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
+            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lotNoBindingSource
+            // 
+            this.lotNoBindingSource.DataSource = typeof(MNG.UI.LotNo);
+            this.lotNoBindingSource.CurrentChanged += new System.EventHandler(this.lotNoBindingSource_CurrentChanged);
+            // 
             // frmLotNo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -440,9 +441,9 @@
             this.Load += new System.EventHandler(this.frmLotNo_Load);
             this.panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lotNoDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lotNoBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lotNoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

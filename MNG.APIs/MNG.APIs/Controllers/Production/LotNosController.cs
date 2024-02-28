@@ -40,13 +40,13 @@ namespace MNG.APIs.Controllers.Production
         [HttpGet("{id}/LotNoByFilter")]
         public ActionResult<IEnumerable<LotNo>> GetLotNoByFilter([FromRoute] string id)
         {
-            return app.LotNos.Query(x => x.Code.Substring(0, id.Length) == id).ToList();
+            return app.LotNos.FindAllByFilter(id);
         }
 
         [HttpGet("{id}/chargings")]
         public ActionResult<IEnumerable<Charging>> GetChargingsByLotNo([FromRoute] string id)
         {
-            return app.Chargings.Query(x => x.LotNoCode == id).ToList();
+            return app.Chargings.FindAllByLotNo(id);
         }
 
         [HttpGet("{id}/lotnos")]
@@ -58,12 +58,14 @@ namespace MNG.APIs.Controllers.Production
         [HttpGet("{id}/Testnos")]
         public ActionResult<IEnumerable<TestChemicalComposition>> GetTestsByLotNo([FromRoute] string id)
         {
-            var chargings = app.Chargings.Query(x => x.LotNoCode == id).ToList();
+            //var chargings = app.Chargings.Query(x => x.LotNoCode == id).ToList();
+            var chargings = app.Chargings.FindAllByLotNo(id);
             var TotalTest = new List<TestChemicalComposition>();
 
             foreach (var charge in chargings)
             {
-                var tests = app.TestChemicalCompositions.Query(x => x.ChargingCode == charge.ChargeNo).ToList();
+                //var tests = app.TestChemicalCompositions.Query(x => x.ChargingCode == charge.ChargeNo).ToList();
+                var tests = app.TestChemicalCompositions.FindAllByLotNo(charge);
                 TotalTest.AddRange(tests);
             }
 
@@ -73,7 +75,7 @@ namespace MNG.APIs.Controllers.Production
         [HttpGet("{id}/Pourings")]
         public ActionResult<IEnumerable<Pouring>> GetPouringsByLotNo([FromRoute] string id)
         {
-            var pourings = app.Pourings.Query(x => x.Code.Contains(id)).ToList();
+            var pourings = app.Pourings.FindAllByLotNo(id);
 
             return pourings;
         }

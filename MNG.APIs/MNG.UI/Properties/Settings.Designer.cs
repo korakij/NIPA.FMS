@@ -37,7 +37,7 @@ namespace MNG.UI.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("5000")]
+        [global::System.Configuration.DefaultSettingValueAttribute("15000")]
         public int Refresh_Rate {
             get {
                 return ((int)(this["Refresh_Rate"]));
@@ -176,6 +176,30 @@ namespace MNG.UI.Properties {
             }
             set {
                 this["PMeter10"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string TempIP {
+            get {
+                return ((string)(this["TempIP"]));
+            }
+            set {
+                this["TempIP"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool Department {
+            get {
+                return ((bool)(this["Department"]));
+            }
+            set {
+                this["Department"] = value;
             }
         }
     }

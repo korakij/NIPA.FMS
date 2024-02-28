@@ -27,5 +27,19 @@ namespace MNG.Services
 
             return kk;
         }
+
+        public List<Kanban> FindAllByCode(string code) 
+        {
+            var kanbans = db.Kanbans.Where(x => x.Code.Contains(code));
+
+            return kanbans.ToList();
+        }
+
+        public List<Kanban> FindAllByTestNo(string id)
+        {
+            var kanbans = db.Kanbans.Where(x => x.TestChemicalCompositionCode == id);
+
+            return kanbans.ToList();
+        }
     }
 }

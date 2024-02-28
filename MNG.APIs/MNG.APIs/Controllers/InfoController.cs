@@ -26,7 +26,7 @@ namespace MNG.APIs.Controllers
             {
                 Version = AppVersion(),
                 Environment = env.EnvironmentName,
-                Date = "2023/12/11"
+                Date = DateTime.Now,
             }; 
 
             return Ok(info);

@@ -26,13 +26,15 @@ namespace MNG.UI.Production
         private Product CurrentProduct;
         private Tooling CurrentTooling;
         private LightTower_ChemicalInLader lightChem;
+        private bool checkFirstTemp;
+        private bool checkLastTemp;
 
+        private EasyModbus.ModbusClient mbClient;
         private string PLine;
-
         public event EventHandler<MeltingEventArgs> PouringNoChanged;
         public event EventHandler<FormEventArgs> FormSelected;
         public event EventHandler<MeltingEventArgs> PouringIntoMoldChanged;
-
+        
         public FormMode Mode { get; set; }
 
         public frmPouringIntoMold(string _line)
@@ -120,6 +122,7 @@ namespace MNG.UI.Production
             NewPouring = _currentPouring;
             this.DisableNoProduct();
             pouringBindingSource.DataSource = NewPouring;
+            connectToTemperature();
         }
 
         public void EnableToolBar() => pnToolBar.Show();
@@ -176,11 +179,18 @@ namespace MNG.UI.Production
 
         private void frmPouringIntoMold_Load(object sender, EventArgs e)
         {
+            PouringTimer.Interval = Properties.Settings.Default.Refresh_Rate;
         }
 
         public async void CreateItem()
         {
-            var lastPouring = (await _client.GetPouringsByLotNoAsync(CurrentLotNo.Code)).Where(x => x.LineCode == PLine).LastOrDefault();
+            Pouring lastPouring = new Pouring();
+            try
+            {
+                lastPouring = (await _client.GetPouringsByLotNoAsync(CurrentLotNo.Code)).Where(x => x.LineCode == PLine).LastOrDefault();
+            }
+            catch (Exception) { }
+
             if(lastPouring != null && (lastPouring.IsCompleted == false || lastPouring.IsCompleted == null))
             {
                 MessageBox.Show($"Last Pouring is not complete ({lastPouring.Code}), Please edit last pouring.", "Last Pouring not complete!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -277,7 +287,12 @@ namespace MNG.UI.Production
             }
             else
             {
-                _pourings = (await _client.GetPouringsByLotNoAsync(CurrentLotNo.Code)).Where(x => x.LineCode == PLine).OrderByDescending(x => x.Code).ToList();
+                try
+                {
+                    _pourings = (await _client.GetPouringsByLotNoAsync(CurrentLotNo.Code)).Where(x => x.LineCode == PLine).OrderByDescending(x => x.Code).ToList();
+                }
+                catch { }
+
                 pouringBindingSource.DataSource = _pourings;
             }
         }
@@ -343,7 +358,11 @@ namespace MNG.UI.Production
 
             CurrentLotNo = e.LotNos;
 
-            _pourings = (await _client.GetPouringsByLotNoAsync(CurrentLotNo.Code)).Where(x => x.LineCode == PLine).OrderByDescending(x => x.Code).ToList();
+            try
+            {
+                _pourings = (await _client.GetPouringsByLotNoAsync(CurrentLotNo.Code)).Where(x => x.LineCode == PLine).OrderByDescending(x => x.Code).ToList();
+            }
+            catch { }
 
             if (_pourings.Count == 0)
             {
@@ -357,9 +376,18 @@ namespace MNG.UI.Production
 
         public async void KanbanNoChanged(object sender, MeltingEventArgs e)
         {
+            if(e.KanbanNo == null || e.KanbanNo is null)
+                return;
+
             CurrentKanban = e.KanbanNo;
 
-            var p = (await _client.GetPouringByKanbanAsync(CurrentKanban.Code)).Where(x => x.KanbanCode == CurrentKanban.Code).ToList();
+            List<Pouring> p = new List<Pouring>();
+            try
+            {
+                p = (await _client.GetPouringByKanbanAsync(CurrentKanban.Code)).Where(x => x.KanbanCode == CurrentKanban.Code).ToList();
+            }
+            catch { }
+
             for (int i = 0; i < pouringDataGridView.RowCount; i++)
             {
                 var index = p.Find(x => x.Code == pouringDataGridView.Rows[i].Cells[0].Value.ToString());
@@ -505,14 +533,28 @@ namespace MNG.UI.Production
         {
             var cp = pouringBindingSource.Current as Pouring;
 
-            frmTimeRetrieval fTimeRetrieval = new frmTimeRetrieval(cp.FirstMoldTime);
+            frmTimeRetrieval fTimeRetrieval;
+            if (temp_Temperature() > 0)
+                fTimeRetrieval = new frmTimeRetrieval(cp.FirstMoldTime, temp_Temperature());
+            else
+            {
+                if(firstTempTextBox.Text == "-")  firstTempTextBox.Text = "0";
+                fTimeRetrieval = new frmTimeRetrieval(cp.FirstMoldTime, Convert.ToInt16(firstTempTextBox.Text.Replace(",", "")));
+            }
+
             fTimeRetrieval.StartPosition = FormStartPosition.Manual;
             fTimeRetrieval.Location = this.PointToScreen(btnFirstTimeRetrieval.Location);
 
             if (fTimeRetrieval.ShowDialog() == DialogResult.OK)
             {
+                if(CurrentPouring.IsFirstTempOK == false)
+                {
+                    temp_Alarm();
+                }
                 CurrentPouring.FirstMoldTime = fTimeRetrieval.time;
+                CurrentPouring.FirstTemp = fTimeRetrieval.temp;
                 pouringBindingSource.ResetBindings(false);
+                mbClient.WriteSingleRegister(100, 0);
             }
         }
 
@@ -520,14 +562,28 @@ namespace MNG.UI.Production
         {
             var cp = pouringBindingSource.Current as Pouring;
 
-            frmTimeRetrieval fTimeRetrieval = new frmTimeRetrieval(cp.LastMoldTime);
+            frmTimeRetrieval fTimeRetrieval;
+            if (temp_Temperature() > 0)
+                fTimeRetrieval = new frmTimeRetrieval(cp.LastMoldTime, temp_Temperature());
+            else
+            {
+                if (lastTempTextBox.Text == "-") lastTempTextBox.Text = "0";
+                fTimeRetrieval = new frmTimeRetrieval(cp.LastMoldTime, Convert.ToInt16(lastTempTextBox.Text.Replace(",", "")));
+            }
+
             fTimeRetrieval.StartPosition = FormStartPosition.Manual;
             fTimeRetrieval.Location = this.PointToScreen(btnLastTimeRetrieval.Location);
 
             if (fTimeRetrieval.ShowDialog() == DialogResult.OK)
             {
+                if (CurrentPouring.IsLastTempOK == false)
+                {
+                    temp_Alarm();
+                }
                 CurrentPouring.LastMoldTime = fTimeRetrieval.time;
+                CurrentPouring.LastTemp = fTimeRetrieval.temp;
                 pouringBindingSource.ResetBindings(false);
+                mbClient.WriteSingleRegister(100, 0);
             }
         }
 
@@ -549,6 +605,42 @@ namespace MNG.UI.Production
             fPrintTag.Info[0] = CurrentPouring.Code;
             fPrintTag.Info[2] = CurrentPouring.FirstMoldTime.Value.ToString("dd/MM/yy  HH:mm");
             fPrintTag.ShowDialog();
+        }
+
+        private void connectToTemperature()
+        {
+            var ip = Properties.Settings.Default.TempIP;
+            mbClient = new EasyModbus.ModbusClient(ip, 502);
+            try
+            {
+                mbClient.Connect();
+                if(mbClient.Connected)
+                    MessageBox.Show($"Connected to {ip}");
+            }
+            catch
+            {
+                MessageBox.Show($"Can not connect to {ip}");
+            }
+        }
+
+        private int temp_Temperature()
+        {
+            if(mbClient.Connected)
+            {
+                return mbClient.ReadHoldingRegisters(100, 1).FirstOrDefault();
+            }
+
+            return 0;
+        }
+
+        private void temp_Alarm()
+        {
+            if (mbClient.Connected)
+            {
+                mbClient.WriteSingleCoil(110, true);
+                MessageBox.Show("Temperature is out of standart !!!", "Warning!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                mbClient.WriteSingleCoil(110, false);
+            }
         }
     }
 }

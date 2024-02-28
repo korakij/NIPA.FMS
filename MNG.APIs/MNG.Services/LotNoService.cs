@@ -16,5 +16,12 @@ namespace MNG.Services
         {
 
         }
+
+        public List<LotNo> FindAllByFilter(string id)
+        {
+            var lotNos = db.LotNos.Where(x => x.Code.Substring(0, id.Length) == id).ToList();
+
+            return lotNos;
+        }
     }
 }

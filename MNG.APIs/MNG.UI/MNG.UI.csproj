@@ -28,7 +28,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <UpdateUrl>\\192.168.2.3\wmw\Installers\NIPA_FMS\</UpdateUrl>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>13</ApplicationRevision>
     <ApplicationVersion>1.0.2.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -183,6 +183,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="APIClient.cs" />
+    <Compile Include="ButtonEnable.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="CTPEventArg.cs" />
     <Compile Include="FilterData.cs" />
@@ -190,6 +191,12 @@
     <Compile Include="FormEventArgs.cs" />
     <Compile Include="FormMode.cs" />
     <Compile Include="FormName.cs" />
+    <Compile Include="frmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogIn.Designer.cs">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmStartup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -472,6 +479,10 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="StatusUpdateEventArgs.cs" />
     <Compile Include="StreamManager.cs" />
+    <Compile Include="User.cs" />
+    <EmbeddedResource Include="frmLogIn.resx">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmStartup.resx">
       <DependentUpon>frmStartup.cs</DependentUpon>
       <SubType>Designer</SubType>
