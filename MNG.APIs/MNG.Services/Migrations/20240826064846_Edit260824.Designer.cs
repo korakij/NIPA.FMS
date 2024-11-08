@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MNG.Services.Migrations
 {
     [DbContext(typeof(AppDb))]
-    [Migration("20240228013210_UpdateUser")]
-    partial class UpdateUser
+    [Migration("20240826064846_Edit260824")]
+    partial class Edit260824
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -311,17 +311,23 @@ namespace MNG.Services.Migrations
                     b.Property<string>("Description")
                         .HasMaxLength(1024);
 
-                    b.Property<float?>("Elongation");
+                    b.Property<float?>("ElongationMax");
+
+                    b.Property<float?>("ElongationMin");
 
                     b.Property<float?>("FerriteMax");
 
                     b.Property<float?>("FerriteMin");
 
-                    b.Property<float?>("GraphiteA");
+                    b.Property<float?>("GraphiteAMax");
+
+                    b.Property<float?>("GraphiteAMin");
 
                     b.Property<int?>("HBMax");
 
                     b.Property<int?>("HBMin");
+
+                    b.Property<float?>("NodularityMax");
 
                     b.Property<float?>("NodularityMin");
 
@@ -335,9 +341,17 @@ namespace MNG.Services.Migrations
 
                     b.Property<float?>("SizeMin");
 
-                    b.Property<int?>("Tensile");
+                    b.Property<float?>("SizeTensileMax");
 
-                    b.Property<float?>("Yield");
+                    b.Property<float?>("SizeTensileMin");
+
+                    b.Property<int?>("TensileMax");
+
+                    b.Property<int?>("TensileMin");
+
+                    b.Property<float?>("YieldMax");
+
+                    b.Property<float?>("YieldMin");
 
                     b.HasKey("Code");
 
@@ -987,9 +1001,11 @@ namespace MNG.Services.Migrations
 
                     b.Property<bool>("Inactive");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
-                    b.Property<string>("Password");
+                    b.Property<string>("Password")
+                        .IsRequired();
 
                     b.Property<int>("Position");
 
@@ -1445,6 +1461,8 @@ namespace MNG.Services.Migrations
                             b1.Property<float>("Pearlite");
 
                             b1.Property<int>("Size");
+
+                            b1.Property<float>("SizeTensile");
 
                             b1.Property<int>("Tensile");
 

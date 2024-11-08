@@ -18,7 +18,7 @@ namespace MNG.UI.Production
         private ControlPlan CurrentControlPlan;
 
         public string[] Label { get; set; } = new string[3];
-        public string[] Info { get; set; } = new string[3];
+        public string[] Info { get; set; } = new string[5];
 
         public frmPrintTag()
         {
@@ -43,9 +43,11 @@ namespace MNG.UI.Production
         {
             Point loc = new Point(10, 0);
             e.Graphics.DrawImage(pictureBox2.Image, loc);
-            e.Graphics.DrawString(Info[0], new Font("Century Gothic", 11, FontStyle.Regular), new SolidBrush(Color.Black), new Point(10, 47));
+            e.Graphics.DrawString(Info[0], new Font("Century Gothic", 11, FontStyle.Regular), new SolidBrush(Color.Black), new Point(10, 32));
             e.Graphics.DrawString(Info[1], new Font("Century Gothic", 11, FontStyle.Regular), new SolidBrush(Color.Black), new Point(10, 67));
-            e.Graphics.DrawString(Info[2], new Font("Century Gothic", 11, FontStyle.Regular), new SolidBrush(Color.Black), new Point(10, 87));
+            e.Graphics.DrawString(Info[2], new Font("Century Gothic", 11, FontStyle.Regular), new SolidBrush(Color.Black), new Point(10, 90));
+            e.Graphics.DrawString(Info[3], new Font("Century Gothic", 11, FontStyle.Regular), new SolidBrush(Color.Black), new Point(10, 113));
+            e.Graphics.DrawString(Info[4], new Font("Century Gothic", 11, FontStyle.Regular), new SolidBrush(Color.Black), new Point(10, 136));
         }
 
         private void frmPrintTag_Load(object sender, EventArgs e)
@@ -55,6 +57,8 @@ namespace MNG.UI.Production
             Info1.Text = Info[0];
             Info2.Text = Info[1];
             Info3.Text = Info[2];
+            info4.Text = Info[3];
+            info5.Text = Info[4];
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -25,6 +26,12 @@ namespace MNG.APIs.Controllers.Production
             this.app = app;
         }
 
+        [HttpGet]
+        public IEnumerable<Pouring> GetPouringAll() 
+        {
+            return app.Pourings.All;
+        }
+
         [HttpGet("{id}")]
         public async Task<ActionResult<Pouring>> GetPouringById([FromRoute] string id)
         {
@@ -41,6 +48,14 @@ namespace MNG.APIs.Controllers.Production
             }
 
             return Ok(pouring);
+        }
+
+        [HttpGet("{id}/Last")]
+        public ActionResult<IEnumerable<Pouring>> GetLast([FromRoute] string id)
+        {
+            var pourings = app.Pourings.FindLast3000(id);
+
+            return Ok(pourings);
         }
 
         [HttpGet("{id}/PouringByKanban")]

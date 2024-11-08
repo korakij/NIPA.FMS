@@ -42,8 +42,8 @@
             this.btnMaterialSpec = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.pnMaster = new System.Windows.Forms.Panel();
-            this.btnCustomers = new System.Windows.Forms.Button();
             this.btnSetting = new System.Windows.Forms.Button();
+            this.btnCustomers = new System.Windows.Forms.Button();
             this.btnMaterials = new System.Windows.Forms.Button();
             this.btnProducts = new System.Windows.Forms.Button();
             this.btnCTP = new System.Windows.Forms.Button();
@@ -102,7 +102,7 @@
             this.btnShowSetting.Location = new System.Drawing.Point(0, 954);
             this.btnShowSetting.Name = "btnShowSetting";
             this.btnShowSetting.Size = new System.Drawing.Size(52, 50);
-            this.btnShowSetting.TabIndex = 23;
+            this.btnShowSetting.TabIndex = 25;
             this.btnShowSetting.UseVisualStyleBackColor = false;
             this.btnShowSetting.Click += new System.EventHandler(this.btnShowSetting_Click);
             // 
@@ -230,8 +230,8 @@
             // 
             // pnMaster
             // 
-            this.pnMaster.Controls.Add(this.btnCustomers);
             this.pnMaster.Controls.Add(this.btnSetting);
+            this.pnMaster.Controls.Add(this.btnCustomers);
             this.pnMaster.Controls.Add(this.btnMaterials);
             this.pnMaster.Controls.Add(this.btnProducts);
             this.pnMaster.Controls.Add(this.btnCTP);
@@ -241,20 +241,6 @@
             this.pnMaster.Size = new System.Drawing.Size(52, 264);
             this.pnMaster.TabIndex = 16;
             // 
-            // btnCustomers
-            // 
-            this.btnCustomers.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnCustomers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCustomers.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.btnCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomers.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomers.Image")));
-            this.btnCustomers.Location = new System.Drawing.Point(0, 208);
-            this.btnCustomers.Name = "btnCustomers";
-            this.btnCustomers.Size = new System.Drawing.Size(52, 50);
-            this.btnCustomers.TabIndex = 12;
-            this.btnCustomers.UseVisualStyleBackColor = false;
-            this.btnCustomers.Click += new System.EventHandler(this.btnCustomers_Click);
-            // 
             // btnSetting
             // 
             this.btnSetting.BackColor = System.Drawing.Color.MidnightBlue;
@@ -263,12 +249,26 @@
             this.btnSetting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
-            this.btnSetting.Location = new System.Drawing.Point(0, 156);
+            this.btnSetting.Location = new System.Drawing.Point(0, 206);
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Size = new System.Drawing.Size(52, 52);
             this.btnSetting.TabIndex = 10;
             this.btnSetting.UseVisualStyleBackColor = false;
             this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
+            // 
+            // btnCustomers
+            // 
+            this.btnCustomers.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnCustomers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCustomers.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.btnCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomers.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomers.Image")));
+            this.btnCustomers.Location = new System.Drawing.Point(0, 156);
+            this.btnCustomers.Name = "btnCustomers";
+            this.btnCustomers.Size = new System.Drawing.Size(52, 50);
+            this.btnCustomers.TabIndex = 12;
+            this.btnCustomers.UseVisualStyleBackColor = false;
+            this.btnCustomers.Click += new System.EventHandler(this.btnCustomers_Click);
             // 
             // btnMaterials
             // 
@@ -457,6 +457,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(743, 1080);
             this.panel2.TabIndex = 10;
+            this.panel2.DoubleClick += new System.EventHandler(this.panel2_DoubleClick);
             // 
             // panel3
             // 
@@ -488,6 +489,7 @@
             this.Controls.Add(this.pnMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmStartup";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frmStartup";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmStartup_Load);
@@ -529,11 +531,11 @@
         private System.Windows.Forms.Button btnSpectroMeter;
         private System.Windows.Forms.Button btnPouring;
         private System.Windows.Forms.Button btnInspection;
-        private System.Windows.Forms.Button btnShowSetting;
         private System.Windows.Forms.Button btnMaterial;
         private System.Windows.Forms.Button btnQA;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button btnShowSetting;
     }
 }

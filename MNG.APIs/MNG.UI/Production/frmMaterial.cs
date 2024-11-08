@@ -29,6 +29,8 @@ namespace MNG.UI.Production
         private bool _isKwHrCompleted;
         private ModbusClient modbusClient;
         private MaterialSummary MatSummary;
+        private int selectedScreen = 0;
+        private Point locNow;
         public event EventHandler<MeltingEventArgs> ChargeNoChanged;
         public event EventHandler<MeltingEventArgs> SummaryUpdate;
         public event EventHandler<FormEventArgs> FormSelected;
@@ -53,6 +55,11 @@ namespace MNG.UI.Production
         {
             var url = Properties.Settings.Default.API_URL;
             _client = new Client(url);
+
+            selectedScreen = Properties.Settings.Default.SelectedScreen;
+            var screens = Screen.AllScreens[selectedScreen];
+            StartPosition = FormStartPosition.Manual;
+            locNow = screens.WorkingArea.Location;
         }
 
         public async void E_LotNoChanged(object sender, MeltingEventArgs e)
@@ -194,7 +201,7 @@ namespace MNG.UI.Production
             frmEditMatCharging fMatCharging = new frmEditMatCharging(CurrentCharge);
 
             fMatCharging.StartPosition = FormStartPosition.Manual;
-            fMatCharging.Location = new Point(300, 10);
+            fMatCharging.Location = new Point(locNow.X + 300, locNow.Y + 10);
 
             DialogResult result = fMatCharging.ShowDialog();
 

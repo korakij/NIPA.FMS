@@ -19,6 +19,9 @@ namespace MNG.Models
         [StringLength(50)]
         public string CustomerCode { get; set; }
 
+        [StringLength(50)]
+        public string CustomerCodeAc { get; set; }
+
         public string Address { get; set; }
 
 

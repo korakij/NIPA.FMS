@@ -28,6 +28,8 @@ namespace MNG.UI.Production
         private LightTower_ChemicalInLader lightChem;
         private bool checkFirstTemp;
         private bool checkLastTemp;
+        private int selectedScreen = 0;
+        private Point locNow;
 
         private EasyModbus.ModbusClient mbClient;
         private string PLine;
@@ -180,6 +182,10 @@ namespace MNG.UI.Production
         private void frmPouringIntoMold_Load(object sender, EventArgs e)
         {
             PouringTimer.Interval = Properties.Settings.Default.Refresh_Rate;
+            selectedScreen = Properties.Settings.Default.SelectedScreen;
+            var screens = Screen.AllScreens[selectedScreen];
+            StartPosition = FormStartPosition.Manual;
+            locNow = screens.WorkingArea.Location;
         }
 
         public async void CreateItem()
@@ -187,7 +193,7 @@ namespace MNG.UI.Production
             Pouring lastPouring = new Pouring();
             try
             {
-                lastPouring = (await _client.GetPouringsByLotNoAsync(CurrentLotNo.Code)).Where(x => x.LineCode == PLine).LastOrDefault();
+                lastPouring = (await _client.GetPouringsByLotNoAsync((CurrentLotNo.Code).Substring(0, 7))).Where(x => x.LineCode == PLine & x.Code.Contains(CurrentLotNo.Code)).LastOrDefault();
             }
             catch (Exception) { }
 
@@ -201,7 +207,7 @@ namespace MNG.UI.Production
             //    MessageBox.Show($"{lastPouring.Code}\n{lastPouring.IsCompleted}");
             //}
 
-            frmVerifyInput fVerify = new frmVerifyInput("Kanban Code", "Pouring Code");
+            frmVerifyInput fVerify = new frmVerifyInput("Kanban Code", "Pouring Code", PLine);
             fVerify.EnableGenPouringCode();
             fVerify.DisableGenTestCode();
 
@@ -209,6 +215,8 @@ namespace MNG.UI.Production
                 return;
 
             frmPouringIntoMold fPourIntoMold = new frmPouringIntoMold(fVerify.Code, CurrentKanban.Code, PLine);
+            fPourIntoMold.StartPosition = FormStartPosition.Manual;
+            fPourIntoMold.Location = new Point(locNow.X + 300, locNow.Y + 10);
 
             fPourIntoMold.DisableDetails();
             fPourIntoMold.Height = 357;
@@ -225,7 +233,7 @@ namespace MNG.UI.Production
                 {
                     if (ex.Message.Contains("201"))
                     {
-                        _pourings = (await _client.GetPouringsByLotNoAsync(CurrentLotNo.Code)).Where(x => x.LineCode == PLine).OrderByDescending(x => x.Code).ToList();
+                        _pourings = (await _client.GetPouringsByLotNoAsync((CurrentLotNo.Code).Substring(0, 7))).Where(x => x.LineCode == PLine).OrderByDescending(x => x.Code).ToList();
                         pouringBindingSource.DataSource = _pourings;
                     }
                     else
@@ -251,6 +259,9 @@ namespace MNG.UI.Production
             }
 
             frmPouringIntoMold fPourIntoMold = new frmPouringIntoMold(CurrentPouring);
+            fPourIntoMold.StartPosition = FormStartPosition.Manual;
+            fPourIntoMold.Location = new Point(locNow.X + 300, locNow.Y + 10);
+
             fPourIntoMold.Height = 650;
 
             fPourIntoMold.EnableProductBrowse();
@@ -281,7 +292,7 @@ namespace MNG.UI.Production
                 }
                 finally
                 {
-                    _pourings = (await _client.GetPouringsByLotNoAsync(CurrentLotNo.Code)).Where(x => x.LineCode == PLine).OrderByDescending(x => x.Code).ToList();
+                    _pourings = (await _client.GetPouringsByLotNoAsync((CurrentLotNo.Code).Substring(0, 7))).Where(x => x.LineCode == PLine).OrderByDescending(x => x.Code).ToList();
                     pouringBindingSource.DataSource = _pourings;
                 }
             }
@@ -289,7 +300,7 @@ namespace MNG.UI.Production
             {
                 try
                 {
-                    _pourings = (await _client.GetPouringsByLotNoAsync(CurrentLotNo.Code)).Where(x => x.LineCode == PLine).OrderByDescending(x => x.Code).ToList();
+                    _pourings = (await _client.GetPouringsByLotNoAsync((CurrentLotNo.Code).Substring(0, 7))).Where(x => x.LineCode == PLine).OrderByDescending(x => x.Code).ToList();
                 }
                 catch { }
 
@@ -334,7 +345,7 @@ namespace MNG.UI.Production
                     await _client.DeletePouringAsync(CurrentPouring.Code);
                     MessageBox.Show($"{CurrentPouring.Code} has been delete", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    _pourings = (await _client.GetPouringsByLotNoAsync(CurrentLotNo.Code)).Where(x => x.LineCode == PLine).OrderByDescending(x => x.Code).ToList();
+                    _pourings = (await _client.GetPouringsByLotNoAsync((CurrentLotNo.Code).Substring(0, 7))).Where(x => x.LineCode == PLine).OrderByDescending(x => x.Code).ToList();
                     pouringBindingSource.DataSource = _pourings;
                 }
                 catch (Exception)
@@ -360,7 +371,7 @@ namespace MNG.UI.Production
 
             try
             {
-                _pourings = (await _client.GetPouringsByLotNoAsync(CurrentLotNo.Code)).Where(x => x.LineCode == PLine).OrderByDescending(x => x.Code).ToList();
+                _pourings = (await _client.GetPouringsByLotNoAsync((CurrentLotNo.Code).Substring(0, 7))).Where(x => x.LineCode == PLine).OrderByDescending(x => x.Code).ToList();
             }
             catch { }
 
@@ -387,6 +398,8 @@ namespace MNG.UI.Production
                 p = (await _client.GetPouringByKanbanAsync(CurrentKanban.Code)).Where(x => x.KanbanCode == CurrentKanban.Code).ToList();
             }
             catch { }
+
+            //pouringBindingSource.DataSource = p;
 
             for (int i = 0; i < pouringDataGridView.RowCount; i++)
             {
@@ -592,18 +605,26 @@ namespace MNG.UI.Production
             if (CurrentPouring == null || CurrentPouring.Code == null)
                 return;
 
-            _pourings = (await _client.GetPouringsByLotNoAsync(CurrentLotNo.Code)).Where(x => x.LineCode == PLine).OrderByDescending(x => x.Code).ToList();
+            _pourings = (await _client.GetPouringsByLotNoAsync((CurrentLotNo.Code).Substring(0, 7))).Where(x => x.LineCode == PLine).OrderByDescending(x => x.Code).ToList();
             pouringBindingSource.DataSource = _pourings;
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            if (CurrentPouring.Code == null)
-                return;
+            if (CurrentPouring == null || CurrentPouring.Code == null)
+            {
+                MessageBox.Show("ใส่รายละเอียดไม่ครบ โปรดใส่ข้อมูลเพิ่มให้ครบ");
+                return; 
+            }
 
+            string dateTime = CurrentPouring.FirstMoldTime.Value.ToString("dd/MM/yy  HH:mm");
+            string duration = CurrentPouring.Duration.Substring(0, 5);
             frmPrintTag fPrintTag = new frmPrintTag();
             fPrintTag.Info[0] = CurrentPouring.Code;
-            fPrintTag.Info[2] = CurrentPouring.FirstMoldTime.Value.ToString("dd/MM/yy  HH:mm");
+            fPrintTag.Info[1] = $"{CurrentProduct.Code}  {CurrentProduct.Name}";
+            fPrintTag.Info[2] = $"{dateTime}        duration: {duration} min.";
+            fPrintTag.Info[3] = $"Temp start: {CurrentPouring.FirstTemp}      last: {CurrentPouring.LastTemp}";
+            fPrintTag.Info[4] = $"No of Mold: {CurrentPouring.NoOfPouredMold}          Total pcs: {CurrentPouring.ProductNo}";
             fPrintTag.ShowDialog();
         }
 

@@ -4,6 +4,7 @@ using MNG.Models.Productions;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace MNG.Services.Data
 {
@@ -13,6 +14,12 @@ namespace MNG.Services.Data
         {
             //
         }
+
+        /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=localhost;Database=NIPA_FMS;Integrated Security=True;User ID=sa;Password=1;MultipleActiveResultSets=True;",
+                                        b => b.MigrationsAssembly("MNG.Services"));
+        }*/
 
         public virtual DbSet<ChemicalCompositionInFurnace> ChemicalCompositionsInFurnaces { get; set; }
         public virtual DbSet<ChemicalCompositionInLadle> ChemicalCompositionsInLadles { get; set; }
@@ -39,6 +46,8 @@ namespace MNG.Services.Data
         public virtual DbSet<Pouring> Pourings { get; set; }
         public virtual DbSet<Setting> Settings { get; set; }
         public virtual DbSet<RawMaterial> RawMaterials { get; set; }
+        public virtual DbSet<Plan> Plans { get; set; }
+        public virtual DbSet<PlanDetail> PlanDetails { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -39,6 +39,8 @@ namespace MNG.Services
             Notifications = new NotificationService(db);
             Settings = new SettingService(db);
             RawMaterials = new RawMaterialService(db);
+            Plans = new PlanService(db);
+            PlanDetails = new PlanDetailService(db);
         }
 
         public ChemicalCompositionInFurnaceService ChemicalCompositionInFurnaces { get; set; }
@@ -60,13 +62,14 @@ namespace MNG.Services
         public ToolingService Toolings { get; set; }
         public UserService Users { get; }
         public PouringService Pourings { get; set; }
-
         public ChargingService Chargings { get; set; }
         public TestNoByLotNoService TestNoByLotNo { get; set; }
         public TestLogService TestLogs { get; set; }
         public NotificationService Notifications { get; set; }
         public SettingService Settings { get; set; }
         public RawMaterialService RawMaterials { get; set; }
+        public PlanService Plans { get; set; }
+        public PlanDetailService PlanDetails { get; set; }
 
         public int SaveChanges() => db.SaveChanges();
         public async Task<int> SaveChangesAsync() => await db.SaveChangesAsync();

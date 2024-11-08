@@ -210,11 +210,14 @@
   <metadata name="productBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>195, 17</value>
   </metadata>
+  <metadata name="productBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>195, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnOk.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAIAAAC1eHXNAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAABKdJREFUWEftl21oU1cYx/dJaPN27zn33HsVC4p+q7i5Ovoyaaqmsy+ro04tiFt1
+        wQAADsEBuJFr7QAABKdJREFUWEftl21oU1cYx/dJaPN27zn33HsVC4p+q7i5Ovoyaaqmsy+ro04tiFt1
         0mULSs1L222MroWa0ZUOpA43B34IBceEgogUWd00MAJ1OKi4iUPQL8pgK5mC62uyv/cm4fa+pEmX4GA+
         /CnJybnn/O7zf85LX1i9+vh/Qc85lup/wyHLxyUpIIohSQris+7XjIrLoUD4eX63JL0iCPWC4Jdlv66P
         quJyMBZi7LULF75JJhfHx8c2barkuEOi2GVMTBE5ZDngcLQND/cnk8m5uTn8jcf/9HrbCXEjSTqUYnFg
@@ -240,7 +243,7 @@
   <data name="btnCancel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAB5RJREFUaEPtWGlsVFUUnpaZLtNhpnsL0Rh/qIggmAiKkqC4FGokaE0pRbCtLZ1O
+        wgAADsIBFShKgAAAB5RJREFUaEPtWGlsVFUUnpaZLtNhpnsL0Rh/qIggmAiKkqC4FGokaE0pRbCtLZ1O
         px1aum+2KFgVBBcoGJfYKhATjGhYSsAtRhSjgmUxsoNQUtkEFKTI5zn33dGZN+9N34AhMfIlXyYz757z
         vrn33O+e90wDBszAf41XRV8p/n9Fp6Z6BJOSS+FIICaX/UP6Hhfv/nuMVnyovCzRKSkeISoixgVTeB6u
         HehBwUg3suMfQnbiw+Iz97YijLu/FSZTjhjH4zlOK59RXpLoZJpRq92FKLsbU4YVoXPWYqD3GHCWqIUz
@@ -275,6 +278,9 @@
         G8lNu93hEk8c/Cm+yxIItQz0+K+IvtK8KvpK8T8oegb+AggK6ZewzGfhAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="chemicalCompositionInFurnaceBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>821, 17</value>
+  </metadata>
   <metadata name="chemicalCompositionInFurnaceBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>821, 17</value>
   </metadata>

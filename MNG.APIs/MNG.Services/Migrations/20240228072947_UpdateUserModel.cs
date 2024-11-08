@@ -2,7 +2,7 @@
 
 namespace MNG.Services.Migrations
 {
-    public partial class UpdateUser : Migration
+    public partial class UpdateUserModel : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

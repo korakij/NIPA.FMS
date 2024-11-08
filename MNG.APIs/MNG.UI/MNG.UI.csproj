@@ -28,7 +28,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <UpdateUrl>\\192.168.2.3\wmw\Installers\NIPA_FMS\</UpdateUrl>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>13</ApplicationRevision>
+    <ApplicationRevision>20</ApplicationRevision>
     <ApplicationVersion>1.0.2.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -93,6 +93,10 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -125,6 +129,9 @@
     </Reference>
     <Reference Include="NPOI.OpenXmlFormats, Version=2.5.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <HintPath>..\packages\NPOI.2.5.6\lib\net45\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="SkiaSharp, Version=2.88.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
       <HintPath>..\packages\SkiaSharp.2.88.6\lib\net462\SkiaSharp.dll</HintPath>
@@ -289,6 +296,12 @@
     </Compile>
     <Compile Include="LookupButton.Designer.cs">
       <DependentUpon>LookupButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MillSheetLotNoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MillSheetLotNoForm.Designer.cs">
+      <DependentUpon>MillSheetLotNoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PrintBarcode.cs" />
     <Compile Include="Production\Application.cs" />
@@ -479,7 +492,13 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="StatusUpdateEventArgs.cs" />
     <Compile Include="StreamManager.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="UserUI.cs" />
+    <Compile Include="WorkingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkingForm.Designer.cs">
+      <DependentUpon>WorkingForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -530,6 +549,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LookupButton.resx">
       <DependentUpon>LookupButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MillSheetLotNoForm.resx">
+      <DependentUpon>MillSheetLotNoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmCreateCharge.resx">
       <DependentUpon>frmCreateCharge.cs</DependentUpon>
@@ -629,6 +651,9 @@
     </Compile>
     <EmbeddedResource Include="Production\frmSpectrometer.resx">
       <DependentUpon>frmSpectrometer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingForm.resx">
+      <DependentUpon>WorkingForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="MNG.UI_TemporaryKey.pfx" />
     <None Include="packages.config" />

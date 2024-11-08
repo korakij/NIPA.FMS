@@ -177,7 +177,7 @@ namespace MNG.UI
             Properties.Settings.Default.API_URL = item.ApI_URL;
             Properties.Settings.Default.Refresh_Rate = Convert.ToInt32(item.RefreshRate);
             Properties.Settings.Default.Result_Path = item.Result_Path;
-            Properties.Settings.Default.PMeter1 = item.PowerMeterIP;
+            Properties.Settings.Default.PMeter_IP = item.PowerMeterIP;
 
             Properties.Settings.Default.Save();
         }

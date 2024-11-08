@@ -51,6 +51,24 @@ namespace MNG.APIs.Controllers
             return Ok(product);
         }
 
+        [HttpGet("WithoutPicture")]
+        public async Task<ActionResult<Product>> GetProductWithoutImage()
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var product = await app.Products.FindWithoutImage();
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(product);
+        }
+
         // PUT: api/v1/Products/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutProduct([FromRoute] int id, [FromBody] Product item)

@@ -49,6 +49,24 @@ namespace MNG.APIs.Controllers
             return Ok(customer);
         }
 
+        [HttpGet("byCode/{id}")]
+        public async Task<ActionResult<Customer>> GetCustomerByCode(string id)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var customer = await app.Customers.FindByCode(id);
+
+            if (customer == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(customer);
+        }
+
         // PUT: api/v1/Materials/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCustomer([FromRoute] int id, [FromBody] Customer item)

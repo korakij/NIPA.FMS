@@ -50,7 +50,7 @@ namespace MNG.UI.Production
         public int Count => chargingBindingSource.Count;
         public int Current => chargingBindingSource.Position;
 
-        private void frmCharging_Load(object sender, EventArgs e)
+        private void frmPouring_Load(object sender, EventArgs e)
         {
             var url = Properties.Settings.Default.API_URL;
             _client = new Client(url);

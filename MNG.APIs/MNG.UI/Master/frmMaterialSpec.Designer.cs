@@ -45,6 +45,7 @@
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label7;
             System.Windows.Forms.Label label8;
+            System.Windows.Forms.Label label9;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMaterialSpec));
@@ -54,16 +55,23 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.sizeTensileMaxTextBox = new System.Windows.Forms.TextBox();
+            this.materialSpecificationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sizeTensileMinTextBox = new System.Windows.Forms.TextBox();
+            this.yieldMaxTextBox = new System.Windows.Forms.TextBox();
+            this.elongationMaxTextBox = new System.Windows.Forms.TextBox();
+            this.nodularityMaxTextBox = new System.Windows.Forms.TextBox();
+            this.graphiteAMaxTextBox = new System.Windows.Forms.TextBox();
+            this.tensileMaxTextBox = new System.Windows.Forms.TextBox();
             this.btnItemBrowse = new System.Windows.Forms.Button();
             this.cementiteMaxTextBox = new System.Windows.Forms.TextBox();
-            this.materialSpecificationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cementiteMinTextBox = new System.Windows.Forms.TextBox();
             this.codeTextBox = new System.Windows.Forms.TextBox();
             this.descriptionTextBox = new System.Windows.Forms.TextBox();
-            this.elongationTextBox = new System.Windows.Forms.TextBox();
+            this.elongationMinTextBox = new System.Windows.Forms.TextBox();
             this.ferriteMaxTextBox = new System.Windows.Forms.TextBox();
             this.ferriteMinTextBox = new System.Windows.Forms.TextBox();
-            this.graphiteATextBox = new System.Windows.Forms.TextBox();
+            this.graphiteAMinTextBox = new System.Windows.Forms.TextBox();
             this.hbMaxTextBox = new System.Windows.Forms.TextBox();
             this.hbMinTextBox = new System.Windows.Forms.TextBox();
             this.nodularityMinTextBox = new System.Windows.Forms.TextBox();
@@ -72,8 +80,8 @@
             this.pearliteMinTextBox = new System.Windows.Forms.TextBox();
             this.sizeMaxTextBox = new System.Windows.Forms.TextBox();
             this.sizeMinTextBox = new System.Windows.Forms.TextBox();
-            this.tensileTextBox = new System.Windows.Forms.TextBox();
-            this.yieldTextBox = new System.Windows.Forms.TextBox();
+            this.tensileMinTextBox = new System.Windows.Forms.TextBox();
+            this.yieldMinTextBox = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pnGroupHeader = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -114,6 +122,7 @@
             label1 = new System.Windows.Forms.Label();
             label7 = new System.Windows.Forms.Label();
             label8 = new System.Windows.Forms.Label();
+            label9 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -135,7 +144,7 @@
             // 
             cementiteMaxLabel.AutoSize = true;
             cementiteMaxLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cementiteMaxLabel.Location = new System.Drawing.Point(26, 501);
+            cementiteMaxLabel.Location = new System.Drawing.Point(21, 529);
             cementiteMaxLabel.Name = "cementiteMaxLabel";
             cementiteMaxLabel.Size = new System.Drawing.Size(100, 17);
             cementiteMaxLabel.TabIndex = 18;
@@ -165,7 +174,7 @@
             // 
             elongationLabel.AutoSize = true;
             elongationLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            elongationLabel.Location = new System.Drawing.Point(24, 211);
+            elongationLabel.Location = new System.Drawing.Point(24, 240);
             elongationLabel.Name = "elongationLabel";
             elongationLabel.Size = new System.Drawing.Size(101, 17);
             elongationLabel.TabIndex = 26;
@@ -175,7 +184,7 @@
             // 
             ferriteMaxLabel.AutoSize = true;
             ferriteMaxLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ferriteMaxLabel.Location = new System.Drawing.Point(24, 443);
+            ferriteMaxLabel.Location = new System.Drawing.Point(24, 472);
             ferriteMaxLabel.Name = "ferriteMaxLabel";
             ferriteMaxLabel.Size = new System.Drawing.Size(69, 17);
             ferriteMaxLabel.TabIndex = 28;
@@ -185,7 +194,7 @@
             // 
             graphiteALabel.AutoSize = true;
             graphiteALabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            graphiteALabel.Location = new System.Drawing.Point(24, 298);
+            graphiteALabel.Location = new System.Drawing.Point(24, 327);
             graphiteALabel.Name = "graphiteALabel";
             graphiteALabel.Size = new System.Drawing.Size(101, 17);
             graphiteALabel.TabIndex = 32;
@@ -205,7 +214,7 @@
             // 
             nodularityMinLabel.AutoSize = true;
             nodularityMinLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nodularityMinLabel.Location = new System.Drawing.Point(24, 327);
+            nodularityMinLabel.Location = new System.Drawing.Point(24, 356);
             nodularityMinLabel.Name = "nodularityMinLabel";
             nodularityMinLabel.Size = new System.Drawing.Size(97, 17);
             nodularityMinLabel.TabIndex = 38;
@@ -215,7 +224,7 @@
             // 
             noduleCountLabel.AutoSize = true;
             noduleCountLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            noduleCountLabel.Location = new System.Drawing.Point(24, 356);
+            noduleCountLabel.Location = new System.Drawing.Point(24, 385);
             noduleCountLabel.Name = "noduleCountLabel";
             noduleCountLabel.Size = new System.Drawing.Size(100, 17);
             noduleCountLabel.TabIndex = 40;
@@ -225,7 +234,7 @@
             // 
             pearliteMaxLabel.AutoSize = true;
             pearliteMaxLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            pearliteMaxLabel.Location = new System.Drawing.Point(24, 472);
+            pearliteMaxLabel.Location = new System.Drawing.Point(24, 501);
             pearliteMaxLabel.Name = "pearliteMaxLabel";
             pearliteMaxLabel.Size = new System.Drawing.Size(79, 17);
             pearliteMaxLabel.TabIndex = 42;
@@ -235,7 +244,7 @@
             // 
             sizeMaxLabel.AutoSize = true;
             sizeMaxLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sizeMaxLabel.Location = new System.Drawing.Point(24, 385);
+            sizeMaxLabel.Location = new System.Drawing.Point(24, 414);
             sizeMaxLabel.Name = "sizeMaxLabel";
             sizeMaxLabel.Size = new System.Drawing.Size(31, 17);
             sizeMaxLabel.TabIndex = 46;
@@ -255,7 +264,7 @@
             // 
             yieldLabel.AutoSize = true;
             yieldLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            yieldLabel.Location = new System.Drawing.Point(24, 240);
+            yieldLabel.Location = new System.Drawing.Point(24, 269);
             yieldLabel.Name = "yieldLabel";
             yieldLabel.Size = new System.Drawing.Size(100, 17);
             yieldLabel.TabIndex = 52;
@@ -290,6 +299,16 @@
             label8.Size = new System.Drawing.Size(36, 17);
             label8.TabIndex = 18;
             label8.Text = "Type";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label9.Location = new System.Drawing.Point(24, 211);
+            label9.Name = "label9";
+            label9.Size = new System.Drawing.Size(114, 17);
+            label9.TabIndex = 76;
+            label9.Text = "Size Tensile (mm)";
             // 
             // tbSearch
             // 
@@ -345,6 +364,14 @@
             // panel11
             // 
             this.panel11.AutoScroll = true;
+            this.panel11.Controls.Add(this.sizeTensileMaxTextBox);
+            this.panel11.Controls.Add(label9);
+            this.panel11.Controls.Add(this.sizeTensileMinTextBox);
+            this.panel11.Controls.Add(this.yieldMaxTextBox);
+            this.panel11.Controls.Add(this.elongationMaxTextBox);
+            this.panel11.Controls.Add(this.nodularityMaxTextBox);
+            this.panel11.Controls.Add(this.graphiteAMaxTextBox);
+            this.panel11.Controls.Add(this.tensileMaxTextBox);
             this.panel11.Controls.Add(this.btnItemBrowse);
             this.panel11.Controls.Add(cementiteMaxLabel);
             this.panel11.Controls.Add(this.cementiteMaxTextBox);
@@ -356,12 +383,12 @@
             this.panel11.Controls.Add(descriptionLabel);
             this.panel11.Controls.Add(this.descriptionTextBox);
             this.panel11.Controls.Add(elongationLabel);
-            this.panel11.Controls.Add(this.elongationTextBox);
+            this.panel11.Controls.Add(this.elongationMinTextBox);
             this.panel11.Controls.Add(ferriteMaxLabel);
             this.panel11.Controls.Add(this.ferriteMaxTextBox);
             this.panel11.Controls.Add(this.ferriteMinTextBox);
             this.panel11.Controls.Add(graphiteALabel);
-            this.panel11.Controls.Add(this.graphiteATextBox);
+            this.panel11.Controls.Add(this.graphiteAMinTextBox);
             this.panel11.Controls.Add(hbMaxLabel);
             this.panel11.Controls.Add(this.hbMaxTextBox);
             this.panel11.Controls.Add(this.hbMinTextBox);
@@ -376,14 +403,110 @@
             this.panel11.Controls.Add(this.sizeMaxTextBox);
             this.panel11.Controls.Add(this.sizeMinTextBox);
             this.panel11.Controls.Add(tensileLabel);
-            this.panel11.Controls.Add(this.tensileTextBox);
+            this.panel11.Controls.Add(this.tensileMinTextBox);
             this.panel11.Controls.Add(yieldLabel);
-            this.panel11.Controls.Add(this.yieldTextBox);
+            this.panel11.Controls.Add(this.yieldMinTextBox);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(365, 627);
             this.panel11.TabIndex = 20;
+            // 
+            // sizeTensileMaxTextBox
+            // 
+            this.sizeTensileMaxTextBox.BackColor = System.Drawing.Color.White;
+            this.sizeTensileMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sizeTensileMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "SizeTensileMax", true));
+            this.sizeTensileMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sizeTensileMaxTextBox.Location = new System.Drawing.Point(152, 208);
+            this.sizeTensileMaxTextBox.Name = "sizeTensileMaxTextBox";
+            this.sizeTensileMaxTextBox.ReadOnly = true;
+            this.sizeTensileMaxTextBox.Size = new System.Drawing.Size(47, 23);
+            this.sizeTensileMaxTextBox.TabIndex = 78;
+            this.sizeTensileMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // materialSpecificationBindingSource
+            // 
+            this.materialSpecificationBindingSource.DataSource = typeof(MNG.UI.MaterialSpecification);
+            this.materialSpecificationBindingSource.CurrentChanged += new System.EventHandler(this.materialSpecificationBindingSource_CurrentChanged);
+            // 
+            // sizeTensileMinTextBox
+            // 
+            this.sizeTensileMinTextBox.BackColor = System.Drawing.Color.White;
+            this.sizeTensileMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sizeTensileMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "SizeTensileMin", true));
+            this.sizeTensileMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sizeTensileMinTextBox.Location = new System.Drawing.Point(205, 208);
+            this.sizeTensileMinTextBox.Name = "sizeTensileMinTextBox";
+            this.sizeTensileMinTextBox.ReadOnly = true;
+            this.sizeTensileMinTextBox.Size = new System.Drawing.Size(47, 23);
+            this.sizeTensileMinTextBox.TabIndex = 77;
+            this.sizeTensileMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // yieldMaxTextBox
+            // 
+            this.yieldMaxTextBox.BackColor = System.Drawing.Color.White;
+            this.yieldMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.yieldMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "YieldMax", true));
+            this.yieldMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yieldMaxTextBox.Location = new System.Drawing.Point(152, 267);
+            this.yieldMaxTextBox.Name = "yieldMaxTextBox";
+            this.yieldMaxTextBox.ReadOnly = true;
+            this.yieldMaxTextBox.Size = new System.Drawing.Size(47, 23);
+            this.yieldMaxTextBox.TabIndex = 75;
+            this.yieldMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // elongationMaxTextBox
+            // 
+            this.elongationMaxTextBox.BackColor = System.Drawing.Color.White;
+            this.elongationMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.elongationMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "ElongationMax", true));
+            this.elongationMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.elongationMaxTextBox.Location = new System.Drawing.Point(152, 237);
+            this.elongationMaxTextBox.Name = "elongationMaxTextBox";
+            this.elongationMaxTextBox.ReadOnly = true;
+            this.elongationMaxTextBox.Size = new System.Drawing.Size(47, 23);
+            this.elongationMaxTextBox.TabIndex = 74;
+            this.elongationMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // nodularityMaxTextBox
+            // 
+            this.nodularityMaxTextBox.BackColor = System.Drawing.Color.White;
+            this.nodularityMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nodularityMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "NodularityMax", true));
+            this.nodularityMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nodularityMaxTextBox.Location = new System.Drawing.Point(151, 353);
+            this.nodularityMaxTextBox.Name = "nodularityMaxTextBox";
+            this.nodularityMaxTextBox.ReadOnly = true;
+            this.nodularityMaxTextBox.Size = new System.Drawing.Size(47, 23);
+            this.nodularityMaxTextBox.TabIndex = 73;
+            this.nodularityMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // graphiteAMaxTextBox
+            // 
+            this.graphiteAMaxTextBox.BackColor = System.Drawing.Color.White;
+            this.graphiteAMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.graphiteAMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "GraphiteAMax", true));
+            this.graphiteAMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.graphiteAMaxTextBox.Location = new System.Drawing.Point(152, 324);
+            this.graphiteAMaxTextBox.Name = "graphiteAMaxTextBox";
+            this.graphiteAMaxTextBox.ReadOnly = true;
+            this.graphiteAMaxTextBox.Size = new System.Drawing.Size(47, 23);
+            this.graphiteAMaxTextBox.TabIndex = 72;
+            this.graphiteAMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tensileMaxTextBox
+            // 
+            this.tensileMaxTextBox.BackColor = System.Drawing.Color.White;
+            this.tensileMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tensileMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "TensileMax", true));
+            this.tensileMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tensileMaxTextBox.Location = new System.Drawing.Point(152, 179);
+            this.tensileMaxTextBox.Name = "tensileMaxTextBox";
+            this.tensileMaxTextBox.ReadOnly = true;
+            this.tensileMaxTextBox.Size = new System.Drawing.Size(47, 23);
+            this.tensileMaxTextBox.TabIndex = 71;
+            this.tensileMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnItemBrowse
             // 
@@ -404,17 +527,12 @@
             this.cementiteMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cementiteMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "CementiteMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
             this.cementiteMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cementiteMaxTextBox.Location = new System.Drawing.Point(152, 498);
+            this.cementiteMaxTextBox.Location = new System.Drawing.Point(152, 527);
             this.cementiteMaxTextBox.Name = "cementiteMaxTextBox";
             this.cementiteMaxTextBox.ReadOnly = true;
             this.cementiteMaxTextBox.Size = new System.Drawing.Size(47, 23);
             this.cementiteMaxTextBox.TabIndex = 19;
             this.cementiteMaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // materialSpecificationBindingSource
-            // 
-            this.materialSpecificationBindingSource.DataSource = typeof(MNG.UI.MaterialSpecification);
-            this.materialSpecificationBindingSource.CurrentChanged += new System.EventHandler(this.materialSpecificationBindingSource_CurrentChanged);
             // 
             // cementiteMinTextBox
             // 
@@ -422,7 +540,7 @@
             this.cementiteMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cementiteMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "CementiteMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
             this.cementiteMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cementiteMinTextBox.Location = new System.Drawing.Point(205, 498);
+            this.cementiteMinTextBox.Location = new System.Drawing.Point(205, 527);
             this.cementiteMinTextBox.Name = "cementiteMinTextBox";
             this.cementiteMinTextBox.ReadOnly = true;
             this.cementiteMinTextBox.Size = new System.Drawing.Size(47, 23);
@@ -455,18 +573,18 @@
             this.descriptionTextBox.Size = new System.Drawing.Size(200, 81);
             this.descriptionTextBox.TabIndex = 25;
             // 
-            // elongationTextBox
+            // elongationMinTextBox
             // 
-            this.elongationTextBox.BackColor = System.Drawing.Color.White;
-            this.elongationTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.elongationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "Elongation", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
-            this.elongationTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.elongationTextBox.Location = new System.Drawing.Point(205, 208);
-            this.elongationTextBox.Name = "elongationTextBox";
-            this.elongationTextBox.ReadOnly = true;
-            this.elongationTextBox.Size = new System.Drawing.Size(47, 23);
-            this.elongationTextBox.TabIndex = 27;
-            this.elongationTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.elongationMinTextBox.BackColor = System.Drawing.Color.White;
+            this.elongationMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.elongationMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "ElongationMin", true));
+            this.elongationMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.elongationMinTextBox.Location = new System.Drawing.Point(205, 237);
+            this.elongationMinTextBox.Name = "elongationMinTextBox";
+            this.elongationMinTextBox.ReadOnly = true;
+            this.elongationMinTextBox.Size = new System.Drawing.Size(47, 23);
+            this.elongationMinTextBox.TabIndex = 27;
+            this.elongationMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // ferriteMaxTextBox
             // 
@@ -474,7 +592,7 @@
             this.ferriteMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ferriteMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "FerriteMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
             this.ferriteMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ferriteMaxTextBox.Location = new System.Drawing.Point(152, 440);
+            this.ferriteMaxTextBox.Location = new System.Drawing.Point(152, 469);
             this.ferriteMaxTextBox.Name = "ferriteMaxTextBox";
             this.ferriteMaxTextBox.ReadOnly = true;
             this.ferriteMaxTextBox.Size = new System.Drawing.Size(47, 23);
@@ -487,25 +605,25 @@
             this.ferriteMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ferriteMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "FerriteMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
             this.ferriteMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ferriteMinTextBox.Location = new System.Drawing.Point(205, 440);
+            this.ferriteMinTextBox.Location = new System.Drawing.Point(205, 469);
             this.ferriteMinTextBox.Name = "ferriteMinTextBox";
             this.ferriteMinTextBox.ReadOnly = true;
             this.ferriteMinTextBox.Size = new System.Drawing.Size(47, 23);
             this.ferriteMinTextBox.TabIndex = 31;
             this.ferriteMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // graphiteATextBox
+            // graphiteAMinTextBox
             // 
-            this.graphiteATextBox.BackColor = System.Drawing.Color.White;
-            this.graphiteATextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.graphiteATextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "GraphiteA", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
-            this.graphiteATextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.graphiteATextBox.Location = new System.Drawing.Point(205, 295);
-            this.graphiteATextBox.Name = "graphiteATextBox";
-            this.graphiteATextBox.ReadOnly = true;
-            this.graphiteATextBox.Size = new System.Drawing.Size(47, 23);
-            this.graphiteATextBox.TabIndex = 33;
-            this.graphiteATextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.graphiteAMinTextBox.BackColor = System.Drawing.Color.White;
+            this.graphiteAMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.graphiteAMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "GraphiteAMin", true));
+            this.graphiteAMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.graphiteAMinTextBox.Location = new System.Drawing.Point(205, 324);
+            this.graphiteAMinTextBox.Name = "graphiteAMinTextBox";
+            this.graphiteAMinTextBox.ReadOnly = true;
+            this.graphiteAMinTextBox.Size = new System.Drawing.Size(47, 23);
+            this.graphiteAMinTextBox.TabIndex = 33;
+            this.graphiteAMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // hbMaxTextBox
             // 
@@ -537,9 +655,9 @@
             // 
             this.nodularityMinTextBox.BackColor = System.Drawing.Color.White;
             this.nodularityMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nodularityMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "NodularityMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
+            this.nodularityMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "NodularityMin", true));
             this.nodularityMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nodularityMinTextBox.Location = new System.Drawing.Point(205, 324);
+            this.nodularityMinTextBox.Location = new System.Drawing.Point(205, 353);
             this.nodularityMinTextBox.Name = "nodularityMinTextBox";
             this.nodularityMinTextBox.ReadOnly = true;
             this.nodularityMinTextBox.Size = new System.Drawing.Size(47, 23);
@@ -552,7 +670,7 @@
             this.noduleCountTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.noduleCountTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "NoduleCount", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
             this.noduleCountTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noduleCountTextBox.Location = new System.Drawing.Point(205, 353);
+            this.noduleCountTextBox.Location = new System.Drawing.Point(205, 382);
             this.noduleCountTextBox.Name = "noduleCountTextBox";
             this.noduleCountTextBox.ReadOnly = true;
             this.noduleCountTextBox.Size = new System.Drawing.Size(47, 23);
@@ -565,7 +683,7 @@
             this.pearliteMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pearliteMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "PearliteMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
             this.pearliteMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pearliteMaxTextBox.Location = new System.Drawing.Point(152, 469);
+            this.pearliteMaxTextBox.Location = new System.Drawing.Point(152, 498);
             this.pearliteMaxTextBox.Name = "pearliteMaxTextBox";
             this.pearliteMaxTextBox.ReadOnly = true;
             this.pearliteMaxTextBox.Size = new System.Drawing.Size(47, 23);
@@ -578,7 +696,7 @@
             this.pearliteMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pearliteMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "PearliteMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
             this.pearliteMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pearliteMinTextBox.Location = new System.Drawing.Point(205, 469);
+            this.pearliteMinTextBox.Location = new System.Drawing.Point(205, 498);
             this.pearliteMinTextBox.Name = "pearliteMinTextBox";
             this.pearliteMinTextBox.ReadOnly = true;
             this.pearliteMinTextBox.Size = new System.Drawing.Size(47, 23);
@@ -591,7 +709,7 @@
             this.sizeMaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sizeMaxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "SizeMax", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
             this.sizeMaxTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sizeMaxTextBox.Location = new System.Drawing.Point(152, 382);
+            this.sizeMaxTextBox.Location = new System.Drawing.Point(152, 411);
             this.sizeMaxTextBox.Name = "sizeMaxTextBox";
             this.sizeMaxTextBox.ReadOnly = true;
             this.sizeMaxTextBox.Size = new System.Drawing.Size(47, 23);
@@ -604,38 +722,38 @@
             this.sizeMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sizeMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "SizeMin", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
             this.sizeMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sizeMinTextBox.Location = new System.Drawing.Point(205, 382);
+            this.sizeMinTextBox.Location = new System.Drawing.Point(205, 411);
             this.sizeMinTextBox.Name = "sizeMinTextBox";
             this.sizeMinTextBox.ReadOnly = true;
             this.sizeMinTextBox.Size = new System.Drawing.Size(47, 23);
             this.sizeMinTextBox.TabIndex = 49;
             this.sizeMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // tensileTextBox
+            // tensileMinTextBox
             // 
-            this.tensileTextBox.BackColor = System.Drawing.Color.White;
-            this.tensileTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tensileTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "Tensile", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
-            this.tensileTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tensileTextBox.Location = new System.Drawing.Point(205, 179);
-            this.tensileTextBox.Name = "tensileTextBox";
-            this.tensileTextBox.ReadOnly = true;
-            this.tensileTextBox.Size = new System.Drawing.Size(47, 23);
-            this.tensileTextBox.TabIndex = 51;
-            this.tensileTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tensileMinTextBox.BackColor = System.Drawing.Color.White;
+            this.tensileMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tensileMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "TensileMin", true));
+            this.tensileMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tensileMinTextBox.Location = new System.Drawing.Point(205, 179);
+            this.tensileMinTextBox.Name = "tensileMinTextBox";
+            this.tensileMinTextBox.ReadOnly = true;
+            this.tensileMinTextBox.Size = new System.Drawing.Size(47, 23);
+            this.tensileMinTextBox.TabIndex = 51;
+            this.tensileMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // yieldTextBox
+            // yieldMinTextBox
             // 
-            this.yieldTextBox.BackColor = System.Drawing.Color.White;
-            this.yieldTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.yieldTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "Yield", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "-", "N0"));
-            this.yieldTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yieldTextBox.Location = new System.Drawing.Point(205, 237);
-            this.yieldTextBox.Name = "yieldTextBox";
-            this.yieldTextBox.ReadOnly = true;
-            this.yieldTextBox.Size = new System.Drawing.Size(47, 23);
-            this.yieldTextBox.TabIndex = 53;
-            this.yieldTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.yieldMinTextBox.BackColor = System.Drawing.Color.White;
+            this.yieldMinTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.yieldMinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.materialSpecificationBindingSource, "YieldMin", true));
+            this.yieldMinTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yieldMinTextBox.Location = new System.Drawing.Point(205, 266);
+            this.yieldMinTextBox.Name = "yieldMinTextBox";
+            this.yieldMinTextBox.ReadOnly = true;
+            this.yieldMinTextBox.Size = new System.Drawing.Size(47, 23);
+            this.yieldMinTextBox.TabIndex = 53;
+            this.yieldMinTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // panel9
             // 
@@ -1029,10 +1147,10 @@
         private System.Windows.Forms.TextBox cementiteMinTextBox;
         private System.Windows.Forms.TextBox codeTextBox;
         private System.Windows.Forms.TextBox descriptionTextBox;
-        private System.Windows.Forms.TextBox elongationTextBox;
+        private System.Windows.Forms.TextBox elongationMinTextBox;
         private System.Windows.Forms.TextBox ferriteMaxTextBox;
         private System.Windows.Forms.TextBox ferriteMinTextBox;
-        private System.Windows.Forms.TextBox graphiteATextBox;
+        private System.Windows.Forms.TextBox graphiteAMinTextBox;
         private System.Windows.Forms.TextBox hbMaxTextBox;
         private System.Windows.Forms.TextBox hbMinTextBox;
         private System.Windows.Forms.TextBox nodularityMinTextBox;
@@ -1041,12 +1159,19 @@
         private System.Windows.Forms.TextBox pearliteMinTextBox;
         private System.Windows.Forms.TextBox sizeMaxTextBox;
         private System.Windows.Forms.TextBox sizeMinTextBox;
-        private System.Windows.Forms.TextBox tensileTextBox;
-        private System.Windows.Forms.TextBox yieldTextBox;
+        private System.Windows.Forms.TextBox tensileMinTextBox;
+        private System.Windows.Forms.TextBox yieldMinTextBox;
         private System.Windows.Forms.DataGridView materialSpecificationDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.Panel pnGroupHeader;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnItemBrowse;
+        private System.Windows.Forms.TextBox tensileMaxTextBox;
+        private System.Windows.Forms.TextBox graphiteAMaxTextBox;
+        private System.Windows.Forms.TextBox nodularityMaxTextBox;
+        private System.Windows.Forms.TextBox elongationMaxTextBox;
+        private System.Windows.Forms.TextBox yieldMaxTextBox;
+        private System.Windows.Forms.TextBox sizeTensileMaxTextBox;
+        private System.Windows.Forms.TextBox sizeTensileMinTextBox;
     }
 }

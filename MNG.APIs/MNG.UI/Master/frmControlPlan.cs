@@ -773,5 +773,9 @@ namespace MNG.UI
 
         }
 
+        private void pnToolBar_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

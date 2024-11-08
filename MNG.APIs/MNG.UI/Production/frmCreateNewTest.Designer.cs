@@ -54,11 +54,11 @@
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.controlPlanIdTextBox = new System.Windows.Forms.TextBox();
-            this.testChemicalCompositionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.controlPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.codeTextBox1 = new System.Windows.Forms.TextBox();
             this.revisionTextBox = new System.Windows.Forms.TextBox();
-            this.controlPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.codeTextBox = new System.Windows.Forms.TextBox();
+            this.testChemicalCompositionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnCCE = new System.Windows.Forms.Panel();
             this.cceTextBox1 = new MNG.UI.Production.ColorTextBox();
             this.cceMinTextBox = new System.Windows.Forms.TextBox();
@@ -75,8 +75,8 @@
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.testChemicalCompositionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testChemicalCompositionBindingSource)).BeginInit();
             this.pnCCE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -341,9 +341,9 @@
             this.controlPlanIdTextBox.Size = new System.Drawing.Size(45, 23);
             this.controlPlanIdTextBox.TabIndex = 311;
             // 
-            // testChemicalCompositionBindingSource
+            // controlPlanBindingSource
             // 
-            this.testChemicalCompositionBindingSource.DataSource = typeof(MNG.UI.TestChemicalComposition);
+            this.controlPlanBindingSource.DataSource = typeof(MNG.UI.ControlPlan);
             // 
             // codeTextBox1
             // 
@@ -365,10 +365,6 @@
             this.revisionTextBox.Size = new System.Drawing.Size(29, 23);
             this.revisionTextBox.TabIndex = 309;
             // 
-            // controlPlanBindingSource
-            // 
-            this.controlPlanBindingSource.DataSource = typeof(MNG.UI.ControlPlan);
-            // 
             // codeTextBox
             // 
             this.codeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -378,6 +374,10 @@
             this.codeTextBox.Name = "codeTextBox";
             this.codeTextBox.Size = new System.Drawing.Size(92, 23);
             this.codeTextBox.TabIndex = 307;
+            // 
+            // testChemicalCompositionBindingSource
+            // 
+            this.testChemicalCompositionBindingSource.DataSource = typeof(MNG.UI.TestChemicalComposition);
             // 
             // pnCCE
             // 
@@ -458,6 +458,7 @@
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCreateNewTest";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmCreateNewTest";
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -465,8 +466,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.testChemicalCompositionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlPlanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testChemicalCompositionBindingSource)).EndInit();
             this.pnCCE.ResumeLayout(false);
             this.pnCCE.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chemicalCompositionInFurnaceBindingSource)).EndInit();

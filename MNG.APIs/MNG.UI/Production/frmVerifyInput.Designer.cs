@@ -45,8 +45,8 @@
             this.lbInput = new System.Windows.Forms.Label();
             this.lbOutput = new System.Windows.Forms.Label();
             this.btnGenPouringCode = new System.Windows.Forms.Button();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnGenTestCode = new System.Windows.Forms.Button();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel4.SuspendLayout();
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
@@ -221,10 +221,6 @@
             this.btnGenPouringCode.UseVisualStyleBackColor = true;
             this.btnGenPouringCode.Click += new System.EventHandler(this.btnGenPouringCode_Click);
             // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(MNG.UI.Product);
-            // 
             // btnGenTestCode
             // 
             this.btnGenTestCode.AutoSize = true;
@@ -238,6 +234,10 @@
             this.btnGenTestCode.TabIndex = 303;
             this.btnGenTestCode.UseVisualStyleBackColor = true;
             this.btnGenTestCode.Click += new System.EventHandler(this.btnGenTestCode_Click);
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(MNG.UI.Product);
             // 
             // frmVerifyInput
             // 
@@ -259,6 +259,7 @@
             this.Controls.Add(this.btnGenTestCode);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmVerifyInput";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmCreateNewTest";
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

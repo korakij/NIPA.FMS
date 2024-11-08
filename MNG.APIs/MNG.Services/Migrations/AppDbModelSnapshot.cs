@@ -254,6 +254,9 @@ namespace MNG.Services.Migrations
                         .IsRequired()
                         .HasMaxLength(50);
 
+                    b.Property<string>("CustomerCodeAc")
+                        .HasMaxLength(50);
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(50);
@@ -309,17 +312,23 @@ namespace MNG.Services.Migrations
                     b.Property<string>("Description")
                         .HasMaxLength(1024);
 
-                    b.Property<float?>("Elongation");
+                    b.Property<float?>("ElongationMax");
+
+                    b.Property<float?>("ElongationMin");
 
                     b.Property<float?>("FerriteMax");
 
                     b.Property<float?>("FerriteMin");
 
-                    b.Property<float?>("GraphiteA");
+                    b.Property<float?>("GraphiteAMax");
+
+                    b.Property<float?>("GraphiteAMin");
 
                     b.Property<int?>("HBMax");
 
                     b.Property<int?>("HBMin");
+
+                    b.Property<float?>("NodularityMax");
 
                     b.Property<float?>("NodularityMin");
 
@@ -333,9 +342,17 @@ namespace MNG.Services.Migrations
 
                     b.Property<float?>("SizeMin");
 
-                    b.Property<int?>("Tensile");
+                    b.Property<float?>("SizeTensileMax");
 
-                    b.Property<float?>("Yield");
+                    b.Property<float?>("SizeTensileMin");
+
+                    b.Property<int?>("TensileMax");
+
+                    b.Property<int?>("TensileMin");
+
+                    b.Property<float?>("YieldMax");
+
+                    b.Property<float?>("YieldMin");
 
                     b.HasKey("Code");
 
@@ -735,6 +752,49 @@ namespace MNG.Services.Migrations
                     b.ToTable("Notifications");
                 });
 
+            modelBuilder.Entity("MNG.Models.Productions.Plan", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Creator");
+
+                    b.Property<DateTime>("DateCreated");
+
+                    b.Property<int>("Factory");
+
+                    b.Property<string>("Shift")
+                        .HasMaxLength(1);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Plans");
+                });
+
+            modelBuilder.Entity("MNG.Models.Productions.PlanDetail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("NoOfLadle");
+
+                    b.Property<int>("PlanId");
+
+                    b.Property<int>("ProductId");
+
+                    b.Property<string>("Status");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PlanId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("PlanDetails");
+                });
+
             modelBuilder.Entity("MNG.Models.Productions.Pouring", b =>
                 {
                     b.Property<string>("Code")
@@ -773,7 +833,8 @@ namespace MNG.Services.Migrations
 
                     b.Property<int?>("NoOfPouredMold");
 
-                    b.Property<decimal>("PouredWeight");
+                    b.Property<decimal>("PouredWeight")
+                        .HasColumnType("decimal(18, 2)");
 
                     b.Property<int>("ProductCode");
 
@@ -970,6 +1031,8 @@ namespace MNG.Services.Migrations
 
                     b.Property<float?>("SPThickness");
 
+                    b.Property<double>("TotalWeight");
+
                     b.HasKey("Code");
 
                     b.ToTable("Toolings");
@@ -985,9 +1048,11 @@ namespace MNG.Services.Migrations
 
                     b.Property<bool>("Inactive");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
-                    b.Property<string>("Password");
+                    b.Property<string>("Password")
+                        .IsRequired();
 
                     b.Property<int>("Position");
 
@@ -1221,6 +1286,19 @@ namespace MNG.Services.Migrations
                         .HasForeignKey("LineCode");
                 });
 
+            modelBuilder.Entity("MNG.Models.Productions.PlanDetail", b =>
+                {
+                    b.HasOne("MNG.Models.Productions.Plan", "Plan")
+                        .WithMany("PlanDetails")
+                        .HasForeignKey("PlanId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("MNG.Models.Product", "Product")
+                        .WithMany("PlanDetails")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("MNG.Models.Productions.Pouring", b =>
                 {
                     b.HasOne("MNG.Models.Productions.Kanban", "Kanban")
@@ -1443,6 +1521,8 @@ namespace MNG.Services.Migrations
                             b1.Property<float>("Pearlite");
 
                             b1.Property<int>("Size");
+
+                            b1.Property<float>("SizeTensile");
 
                             b1.Property<int>("Tensile");
 

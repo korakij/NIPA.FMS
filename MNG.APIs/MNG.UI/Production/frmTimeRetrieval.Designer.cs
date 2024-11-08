@@ -118,6 +118,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTimeRetrieval";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmTimeRetrieval";
             this.Load += new System.EventHandler(this.frmTimeRetrieval_Load);
             this.ResumeLayout(false);

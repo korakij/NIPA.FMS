@@ -30,6 +30,8 @@ namespace MNG.UI.Production
         private int? finDefect;
         private int? engDefect;
         private int? coreDefect;
+        private int selectedScreen = 0;
+        private Point locNow;
 
         public event EventHandler<FormEventArgs> FormSelected;
 
@@ -72,6 +74,10 @@ namespace MNG.UI.Production
 
         private async void frmEditQC_Load(object sender, EventArgs e)
         {
+            selectedScreen = Properties.Settings.Default.SelectedScreen;
+            var screens = Screen.AllScreens[selectedScreen];
+            StartPosition = FormStartPosition.Manual;
+            locNow = screens.WorkingArea.Location;
         }
 
         public void ChangeMode(bool isEdit)
@@ -134,7 +140,7 @@ namespace MNG.UI.Production
             var y = Screen.PrimaryScreen.WorkingArea.Height;
             var x = Screen.PrimaryScreen.WorkingArea.Width;
 
-            fInspection.Location = new Point((x / 2) - (fInspection.Width / 2), (y / 2) - (fInspection.Height / 2));
+            fInspection.Location = new Point(locNow.X + (x / 2) - (fInspection.Width / 2), locNow.Y + (y / 2) - (fInspection.Height / 2));
 
             if (fInspection.ShowDialog() == DialogResult.OK)
             {
@@ -312,5 +318,9 @@ namespace MNG.UI.Production
             PouringItem = pouringBindingSource.Current as Pouring;
         }
 
+        private void pnHeader_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

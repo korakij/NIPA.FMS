@@ -42,6 +42,7 @@ namespace MNG.Models.Productions
         public bool? IsCompleted { get; set; }
 
         public int ProductNo { get; set; }
+        [Column(TypeName = "decimal(18, 2)")]
         public decimal PouredWeight { get; set; }
         public DefectCause Defect { get; set; }
         public QAInspection QInspect { get; set; }

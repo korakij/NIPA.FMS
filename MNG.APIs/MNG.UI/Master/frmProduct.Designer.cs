@@ -57,6 +57,7 @@
             this.btnImageBrowse = new System.Windows.Forms.Button();
             this.btnCustomer = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.lbImageSize = new System.Windows.Forms.Label();
             this.imagePictureBox = new System.Windows.Forms.PictureBox();
             this.customerCodeTextBox = new System.Windows.Forms.TextBox();
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -402,6 +403,7 @@
             // panel11
             // 
             this.panel11.AutoScroll = true;
+            this.panel11.Controls.Add(this.lbImageSize);
             this.panel11.Controls.Add(this.imagePictureBox);
             this.panel11.Controls.Add(this.customerCodeTextBox);
             this.panel11.Controls.Add(customerPartNoLabel);
@@ -429,6 +431,15 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(430, 650);
             this.panel11.TabIndex = 20;
+            // 
+            // lbImageSize
+            // 
+            this.lbImageSize.AutoSize = true;
+            this.lbImageSize.Location = new System.Drawing.Point(93, 629);
+            this.lbImageSize.Name = "lbImageSize";
+            this.lbImageSize.Size = new System.Drawing.Size(35, 13);
+            this.lbImageSize.TabIndex = 26;
+            this.lbImageSize.Text = "label1";
             // 
             // imagePictureBox
             // 
@@ -849,6 +860,7 @@
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmProduct";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmItem";
             this.Load += new System.EventHandler(this.frmItem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.itemDataGridView)).EndInit();
@@ -931,5 +943,6 @@
         private System.Windows.Forms.TextBox customerPartNoTextBox;
         private System.Windows.Forms.TextBox customerCodeTextBox;
         private System.Windows.Forms.PictureBox imagePictureBox;
+        private System.Windows.Forms.Label lbImageSize;
     }
 }

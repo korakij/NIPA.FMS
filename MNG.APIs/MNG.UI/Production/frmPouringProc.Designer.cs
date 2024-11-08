@@ -339,7 +339,7 @@
             this.IsMdiContainer = true;
             this.Name = "frmPouringProc";
             this.Text = "MELTING";
-            this.Load += new System.EventHandler(this.frmCharging_Load);
+            this.Load += new System.EventHandler(this.frmPouring_Load);
             this.pnToolBar.ResumeLayout(false);
             this.pnToolBar.PerformLayout();
             this.pnCRUD.ResumeLayout(false);

@@ -60,7 +60,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnDetails = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.TempIPTextbox = new System.Windows.Forms.TextBox();
             this.isSelectedCheckBox = new System.Windows.Forms.CheckBox();
+            this.settingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.apI_URLTextBox = new System.Windows.Forms.TextBox();
             this.codeTextBox = new System.Windows.Forms.TextBox();
             this.pathTextBox = new System.Windows.Forms.TextBox();
@@ -69,9 +72,6 @@
             this.refreshRateTextBox = new System.Windows.Forms.TextBox();
             this.pnDgv = new System.Windows.Forms.Panel();
             this.settingDataGridView = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.TempIPTextbox = new System.Windows.Forms.TextBox();
-            this.settingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             codeLabel = new System.Windows.Forms.Label();
             isSelectedLabel = new System.Windows.Forms.Label();
@@ -80,9 +80,9 @@
             this.pnCRUD.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.settingBindingSource)).BeginInit();
             this.pnDgv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.settingDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.settingBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // codeLabel
@@ -415,6 +415,28 @@
             this.pnDetails.Size = new System.Drawing.Size(542, 565);
             this.pnDetails.TabIndex = 28;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(263, 241);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(104, 17);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Temperature IP";
+            // 
+            // TempIPTextbox
+            // 
+            this.TempIPTextbox.BackColor = System.Drawing.Color.White;
+            this.TempIPTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TempIPTextbox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TempIPTextbox.Location = new System.Drawing.Point(373, 238);
+            this.TempIPTextbox.Name = "TempIPTextbox";
+            this.TempIPTextbox.ReadOnly = true;
+            this.TempIPTextbox.Size = new System.Drawing.Size(104, 23);
+            this.TempIPTextbox.TabIndex = 28;
+            this.TempIPTextbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            // 
             // isSelectedCheckBox
             // 
             this.isSelectedCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.settingBindingSource, "IsSelected", true));
@@ -425,6 +447,11 @@
             this.isSelectedCheckBox.Size = new System.Drawing.Size(104, 24);
             this.isSelectedCheckBox.TabIndex = 18;
             this.isSelectedCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // settingBindingSource
+            // 
+            this.settingBindingSource.DataSource = typeof(MNG.UI.Setting);
+            this.settingBindingSource.CurrentChanged += new System.EventHandler(this.settingBindingSource_CurrentChanged);
             // 
             // apI_URLTextBox
             // 
@@ -540,33 +567,6 @@
             this.settingDataGridView.Size = new System.Drawing.Size(112, 223);
             this.settingDataGridView.TabIndex = 13;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(263, 241);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 17);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "Temperature IP";
-            // 
-            // TempIPTextbox
-            // 
-            this.TempIPTextbox.BackColor = System.Drawing.Color.White;
-            this.TempIPTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TempIPTextbox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TempIPTextbox.Location = new System.Drawing.Point(373, 238);
-            this.TempIPTextbox.Name = "TempIPTextbox";
-            this.TempIPTextbox.ReadOnly = true;
-            this.TempIPTextbox.Size = new System.Drawing.Size(104, 23);
-            this.TempIPTextbox.TabIndex = 28;
-            this.TempIPTextbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
-            // 
-            // settingBindingSource
-            // 
-            this.settingBindingSource.DataSource = typeof(MNG.UI.Setting);
-            this.settingBindingSource.CurrentChanged += new System.EventHandler(this.settingBindingSource_CurrentChanged);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Code";
@@ -597,9 +597,9 @@
             this.panel3.ResumeLayout(false);
             this.pnDetails.ResumeLayout(false);
             this.pnDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.settingBindingSource)).EndInit();
             this.pnDgv.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.settingDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.settingBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

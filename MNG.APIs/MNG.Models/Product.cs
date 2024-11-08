@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MNG.Models.Productions;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -44,5 +45,7 @@ namespace MNG.Models
 
         public virtual ControlPlan ActiveControlPlan { get; set; }
         public int? ActiveControlPlanId { get; set; }
+
+        public ICollection<PlanDetail> PlanDetails { get; set; }
     }
 }

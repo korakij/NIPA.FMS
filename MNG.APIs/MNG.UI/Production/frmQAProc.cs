@@ -180,5 +180,16 @@ namespace MNG.UI.Production
         {
 
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            var fm = ActiveMdiChild as frmQAPanel;
+            switch (fm.fmName)
+            {
+                case FormName.frmQA:
+                    fm.fQA.Export();
+                    break;
+            }
+        }
     }
 }

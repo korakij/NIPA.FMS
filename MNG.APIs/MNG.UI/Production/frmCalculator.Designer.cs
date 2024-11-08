@@ -2464,6 +2464,7 @@
             this.Controls.Add(this.pnToolBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCalculator";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmEditMatCharging";
             this.Load += new System.EventHandler(this.frmEditMatCharging_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MnInPigFcd)).EndInit();

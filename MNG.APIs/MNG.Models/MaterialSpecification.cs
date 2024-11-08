@@ -33,11 +33,18 @@ namespace MNG.Models
         public float? SizeMin { get; set; }
 
         // Only Min value required
+        public float? NodularityMax { get; set; }
         public float? NodularityMin { get; set; }
-        public int? Tensile { get; set; }
-        public float? Elongation { get; set; }
-        public float? Yield { get; set; }
-        public float? GraphiteA { get; set; }
+        public int? TensileMax { get; set; }
+        public int? TensileMin { get; set; }
+        public float? SizeTensileMax { get; set; }
+        public float? SizeTensileMin { get; set; }
+        public float? ElongationMax { get; set; }
+        public float? ElongationMin { get; set; }
+        public float? YieldMax { get; set; }
+        public float? YieldMin { get; set; }
+        public float? GraphiteAMax { get; set; }
+        public float? GraphiteAMin { get; set; }
         public float? NoduleCount { get; set; }
 
         public ICollection<ControlPlan> ControlPlans { get; set; }

@@ -160,7 +160,7 @@
             this.inoculantTolTextBox = new System.Windows.Forms.TextBox();
             this.wiredMgTextBox = new System.Windows.Forms.TextBox();
             this.pnDgv = new System.Windows.Forms.Panel();
-            this.chkTestNo = new System.Windows.Forms.CheckBox();
+            this.btnSparkchkTestNo = new System.Windows.Forms.CheckBox();
             this.kanbanDataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnBorderBottom = new System.Windows.Forms.Panel();
@@ -1981,7 +1981,7 @@
             // 
             // pnDgv
             // 
-            this.pnDgv.Controls.Add(this.chkTestNo);
+            this.pnDgv.Controls.Add(this.btnSparkchkTestNo);
             this.pnDgv.Controls.Add(this.kanbanDataGridView1);
             this.pnDgv.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnDgv.Location = new System.Drawing.Point(0, 0);
@@ -1989,17 +1989,17 @@
             this.pnDgv.Size = new System.Drawing.Size(163, 614);
             this.pnDgv.TabIndex = 496;
             // 
-            // chkTestNo
+            // btnSparkchkTestNo
             // 
-            this.chkTestNo.AutoSize = true;
-            this.chkTestNo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkTestNo.Location = new System.Drawing.Point(28, 29);
-            this.chkTestNo.Name = "chkTestNo";
-            this.chkTestNo.Size = new System.Drawing.Size(86, 21);
-            this.chkTestNo.TabIndex = 293;
-            this.chkTestNo.Text = "By TestNo";
-            this.chkTestNo.UseVisualStyleBackColor = true;
-            this.chkTestNo.CheckedChanged += new System.EventHandler(this.chkTestNo_CheckedChanged);
+            this.btnSparkchkTestNo.AutoSize = true;
+            this.btnSparkchkTestNo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSparkchkTestNo.Location = new System.Drawing.Point(28, 29);
+            this.btnSparkchkTestNo.Name = "btnSparkchkTestNo";
+            this.btnSparkchkTestNo.Size = new System.Drawing.Size(86, 21);
+            this.btnSparkchkTestNo.TabIndex = 293;
+            this.btnSparkchkTestNo.Text = "By TestNo";
+            this.btnSparkchkTestNo.UseVisualStyleBackColor = true;
+            this.btnSparkchkTestNo.CheckedChanged += new System.EventHandler(this.chkTestNo_CheckedChanged);
             // 
             // kanbanDataGridView1
             // 
@@ -2031,7 +2031,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.kanbanDataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.kanbanDataGridView1.EnableHeadersVisualStyles = false;
-            this.kanbanDataGridView1.Location = new System.Drawing.Point(24, 68);
+            this.kanbanDataGridView1.Location = new System.Drawing.Point(9, 68);
             this.kanbanDataGridView1.Name = "kanbanDataGridView1";
             this.kanbanDataGridView1.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -2051,7 +2051,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             this.kanbanDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.kanbanDataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.kanbanDataGridView1.Size = new System.Drawing.Size(133, 580);
+            this.kanbanDataGridView1.Size = new System.Drawing.Size(140, 580);
             this.kanbanDataGridView1.TabIndex = 292;
             // 
             // dataGridViewTextBoxColumn1
@@ -2650,7 +2650,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTapping";
             this.Text = "`";
-            this.Load += new System.EventHandler(this.frmKanban_Load);
+            this.Load += new System.EventHandler(this.frmTapping_Load);
             this.pnDetails.ResumeLayout(false);
             this.pnChemDetail.ResumeLayout(false);
             this.pnChemDetail.PerformLayout();
@@ -2818,7 +2818,7 @@
         private System.Windows.Forms.BindingSource controlPlanBindingSource;
         private System.Windows.Forms.TextBox codeTextBox3;
         private System.Windows.Forms.TextBox controlPlanIdTextBox;
-        private System.Windows.Forms.CheckBox chkTestNo;
+        private System.Windows.Forms.CheckBox btnSparkchkTestNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     }
 }

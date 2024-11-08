@@ -20,5 +20,6 @@ namespace MNG.Models.Productions.QA
         public int Tensile { get; set; }
         public int Yeild { get; set; }
         public float Elongation { get; set; }
+        public float SizeTensile { get; set; }
     }
 }

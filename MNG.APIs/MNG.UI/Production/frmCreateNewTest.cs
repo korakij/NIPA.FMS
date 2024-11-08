@@ -67,8 +67,8 @@ namespace MNG.UI.Production
             fProduct.MainEnable();
             fProduct.BrowseDiable();
             fProduct.ProductBrowseDisable();
-            fProduct.StartPosition = FormStartPosition.Manual;
-            fProduct.Location = new Point(this.Location.X + this.Size.Width + 20, this.Location.Y);
+            //fProduct.StartPosition = FormStartPosition.Manual;
+            //fProduct.Location = new Point(this.Location.X + this.Size.Width + 20, this.Location.Y);
 
             var result = fProduct.ShowDialog();
 

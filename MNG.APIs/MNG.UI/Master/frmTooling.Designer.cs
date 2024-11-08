@@ -65,7 +65,6 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.btnItemBrowse = new System.Windows.Forms.Button();
             this.pouringTimeTextBox = new System.Windows.Forms.TextBox();
-            this.toolingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lastTempTextBox = new System.Windows.Forms.TextBox();
             this.firstTempTextBox = new System.Windows.Forms.TextBox();
             this.noOfMoldPerLadleTextBox = new System.Windows.Forms.TextBox();
@@ -88,7 +87,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.pnMain = new System.Windows.Forms.Panel();
             this.toolingDataGridView = new System.Windows.Forms.DataGridView();
-            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -105,6 +103,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             codeLabel = new System.Windows.Forms.Label();
             descriptionLabel = new System.Windows.Forms.Label();
             label10 = new System.Windows.Forms.Label();
@@ -135,7 +136,6 @@
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toolingBindingSource)).BeginInit();
             this.panel9.SuspendLayout();
             this.pnGroupHeader.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -145,6 +145,7 @@
             this.pnToolBar.SuspendLayout();
             this.pnTool.SuspendLayout();
             this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.toolingBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // codeLabel
@@ -413,7 +414,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 45);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(217, 45);
+            this.panel5.Size = new System.Drawing.Size(302, 45);
             this.panel5.TabIndex = 4;
             // 
             // panel3
@@ -425,7 +426,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(642, 760);
+            this.panel3.Size = new System.Drawing.Size(749, 760);
             this.panel3.TabIndex = 7;
             // 
             // panel7
@@ -434,9 +435,9 @@
             this.panel7.Controls.Add(this.panel9);
             this.panel7.Controls.Add(this.panel10);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(281, 0);
+            this.panel7.Location = new System.Drawing.Point(366, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(361, 760);
+            this.panel7.Size = new System.Drawing.Size(383, 760);
             this.panel7.TabIndex = 24;
             // 
             // panel6
@@ -445,7 +446,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 90);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(361, 670);
+            this.panel6.Size = new System.Drawing.Size(383, 670);
             this.panel6.TabIndex = 21;
             // 
             // panel11
@@ -494,7 +495,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(361, 670);
+            this.panel11.Size = new System.Drawing.Size(383, 670);
             this.panel11.TabIndex = 20;
             // 
             // btnItemBrowse
@@ -519,11 +520,6 @@
             this.pouringTimeTextBox.Name = "pouringTimeTextBox";
             this.pouringTimeTextBox.Size = new System.Drawing.Size(55, 23);
             this.pouringTimeTextBox.TabIndex = 73;
-            // 
-            // toolingBindingSource
-            // 
-            this.toolingBindingSource.DataSource = typeof(MNG.UI.Tooling);
-            this.toolingBindingSource.CurrentChanged += new System.EventHandler(this.toolingBindingSource_CurrentChanged);
             // 
             // lastTempTextBox
             // 
@@ -690,7 +686,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 45);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(361, 45);
+            this.panel9.Size = new System.Drawing.Size(383, 45);
             this.panel9.TabIndex = 4;
             // 
             // pnGroupHeader
@@ -701,7 +697,7 @@
             this.pnGroupHeader.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnGroupHeader.Location = new System.Drawing.Point(0, 0);
             this.pnGroupHeader.Name = "pnGroupHeader";
-            this.pnGroupHeader.Size = new System.Drawing.Size(361, 45);
+            this.pnGroupHeader.Size = new System.Drawing.Size(383, 45);
             this.pnGroupHeader.TabIndex = 3;
             // 
             // dateDateTimePicker
@@ -722,7 +718,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(361, 45);
+            this.panel10.Size = new System.Drawing.Size(383, 45);
             this.panel10.TabIndex = 0;
             // 
             // label6
@@ -733,7 +729,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(361, 45);
+            this.label6.Size = new System.Drawing.Size(383, 45);
             this.label6.TabIndex = 0;
             this.label6.Text = "Tooling Param.";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -748,7 +744,7 @@
             this.pnMain.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnMain.Location = new System.Drawing.Point(64, 0);
             this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(217, 760);
+            this.pnMain.Size = new System.Drawing.Size(302, 760);
             this.pnMain.TabIndex = 23;
             // 
             // toolingDataGridView
@@ -769,7 +765,8 @@
             this.toolingDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.toolingDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.toolingDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codeDataGridViewTextBoxColumn});
+            this.codeDataGridViewTextBoxColumn,
+            this.Description});
             this.toolingDataGridView.DataSource = this.toolingBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -785,15 +782,9 @@
             this.toolingDataGridView.Name = "toolingDataGridView";
             this.toolingDataGridView.ReadOnly = true;
             this.toolingDataGridView.RowHeadersVisible = false;
-            this.toolingDataGridView.Size = new System.Drawing.Size(217, 670);
+            this.toolingDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.toolingDataGridView.Size = new System.Drawing.Size(302, 670);
             this.toolingDataGridView.TabIndex = 4;
-            // 
-            // codeDataGridViewTextBoxColumn
-            // 
-            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
-            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
-            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
-            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // panel15
             // 
@@ -802,7 +793,7 @@
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel15.Location = new System.Drawing.Point(0, 0);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(217, 45);
+            this.panel15.Size = new System.Drawing.Size(302, 45);
             this.panel15.TabIndex = 0;
             // 
             // label5
@@ -812,7 +803,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(217, 45);
+            this.label5.Size = new System.Drawing.Size(302, 45);
             this.label5.TabIndex = 0;
             this.label5.Text = "Tooling";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -997,12 +988,32 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.Width = 75;
             // 
+            // Description
+            // 
+            this.Description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Description.DataPropertyName = "Description";
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
+            // 
+            // toolingBindingSource
+            // 
+            this.toolingBindingSource.DataSource = typeof(MNG.UI.Tooling);
+            this.toolingBindingSource.CurrentChanged += new System.EventHandler(this.toolingBindingSource_CurrentChanged);
+            // 
+            // codeDataGridViewTextBoxColumn
+            // 
+            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
+            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
+            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
+            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // frmTooling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(642, 760);
+            this.ClientSize = new System.Drawing.Size(749, 760);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTooling";
@@ -1015,7 +1026,6 @@
             this.panel6.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toolingBindingSource)).EndInit();
             this.panel9.ResumeLayout(false);
             this.pnGroupHeader.ResumeLayout(false);
             this.pnGroupHeader.PerformLayout();
@@ -1027,6 +1037,7 @@
             this.pnToolBar.PerformLayout();
             this.pnTool.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.toolingBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1076,7 +1087,6 @@
         private System.Windows.Forms.TextBox spHeightTextBox;
         private System.Windows.Forms.TextBox spIdTextBox;
         private System.Windows.Forms.TextBox spThicknessTextBox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnItemBrowse;
         private System.Windows.Forms.TextBox pouringTimeTextBox;
         private System.Windows.Forms.TextBox lastTempTextBox;
@@ -1084,5 +1094,7 @@
         private System.Windows.Forms.TextBox noOfMoldPerLadleTextBox;
         private System.Windows.Forms.Panel pnGroupHeader;
         private System.Windows.Forms.DateTimePicker dateDateTimePicker;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
     }
 }

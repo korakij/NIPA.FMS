@@ -1,5 +1,6 @@
 ﻿using ASRS.UI;
 using MNG.UI.Production;
+using Newtonsoft.Json;
 using NPOI.Util;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,9 @@ namespace MNG.UI
         private MNG.UI.Production.frmMultiMelting fMelting;
         private string TempIP = string.Empty;
         private List<ButtonEnable> buttonEnables;
+        private User user = null;
+        private Screen screens;
+        private int selectScreen;
 
         string toolTipText = "Text of toolTip";
         public frmStartup()
@@ -38,18 +42,23 @@ namespace MNG.UI
             InitializeComponent();
 
             string fileName = @"\\192.168.2.3\wmw\Installers\NIPA_FMS\config.json";
+            //string paraPath = @"C:\Users\Parameter.json";
+            string paraPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Parameter.json");
             string jsonString;
+            selectScreen = 0;
             Config configObj = new Config();
+            BasicSetting basicSetting = new BasicSetting(paraPath);
             try
             {
                 jsonString = File.ReadAllText(fileName);
-                configObj = JsonSerializer.Deserialize<Config>(jsonString);
+                configObj = System.Text.Json.JsonSerializer.Deserialize<Config>(jsonString);
             }
             catch (Exception)
             {
                 MessageBox.Show("Unable to Read Config.Json", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
+            selectScreen = basicSetting.SelectScreen();
 
             try
             {
@@ -59,15 +68,15 @@ namespace MNG.UI
                 }
             }
             catch { }
-
             MNG.UI.Properties.Settings.Default.API_URL = configObj.APIURL;
             MNG.UI.Properties.Settings.Default.Result_Path = configObj.ChemResultPath;
             MNG.UI.Properties.Settings.Default.Refresh_Rate = configObj.RefreshRate;
-            MNG.UI.Properties.Settings.Default.PMeter1 = configObj.PMeterIP1;
+            MNG.UI.Properties.Settings.Default.PMeter_IP = configObj.PMeterIP1;
             Properties.Settings.Default.TempIP = TempIP;
 
-            MNG.UI.Properties.Settings.Default.API_URL = "http://192.168.2.3/NIPA_FMS";
-            //MNG.UI.Properties.Settings.Default.API_URL = "https://localhost:56802/";
+            //MNG.UI.Properties.Settings.Default.API_URL = "http://192.168.2.3/NIPA_FMS";   
+            //MNG.UI.Properties.Settings.Default.API_URL = "https://wmw-api.azurewebsites.net";
+            MNG.UI.Properties.Settings.Default.API_URL = "https://localhost:56802/";
             //MNG.UI.Properties.Settings.Default.API_URL = "https://localhost/NIPA_FMS";
             //MNG.UI.Properties.Settings.Default.Result_Path = @"D:\Mango.Solutions\MNG.FMS\ChemResult\";
             //MNG.UI.Properties.Settings.Default.Refresh_Rate = 5000;
@@ -75,12 +84,19 @@ namespace MNG.UI
             var url = MNG.UI.Properties.Settings.Default.API_URL;
             _client = new Client(url);
             buttonEnables = new List<ButtonEnable>();
+            DisableButtons();
+            //Load_AllButton();
+
+            screens = Screen.AllScreens[selectScreen];
+            StartPosition = FormStartPosition.Manual;
+            Location = screens.WorkingArea.Location;
+            Properties.Settings.Default.SelectedScreen = selectScreen;
         }
 
         private void frmStartup_Load(object sender, EventArgs e)
         {
             settingToolTip();
-            Load_AllButton();
+            //Load_AllButton();
         }
 
         private void tbClose_Click(object sender, EventArgs e)
@@ -100,7 +116,8 @@ namespace MNG.UI
             fProduct.ProductBrowseDisable();
             fProduct.SetWidth(955);
             fProduct.StartPosition = FormStartPosition.Manual;
-            fProduct.Location = new Point(pnMaster.Location.X + pnMaster.Width + 20, pnMaster.Location.Y);
+            //fProduct.Location = new Point(pnMaster.Location.X + pnMaster.Width + 20, pnMaster.Location.Y);
+            fProduct.Location = new Point( Location.X + pnMaster.Location.X + pnMaster.Width + 20, Location.Y + pnMaster.Location.Y);
             fProduct.ShowDialog();
         }
 
@@ -115,7 +132,7 @@ namespace MNG.UI
             fMaterials.MainEnable();
             fMaterials.BrowseDiable();
             fMaterials.StartPosition = FormStartPosition.Manual;
-            fMaterials.Location = new Point(pnMaster.Location.X + pnMaster.Width + 20, pnMaster.Location.Y);
+            fMaterials.Location = new Point(Location.X + pnMaster.Location.X + pnMaster.Width + 20, Location.Y + pnMaster.Location.Y);
             fMaterials.ShowDialog();
         }
 
@@ -129,7 +146,7 @@ namespace MNG.UI
             fCustomers.MainEnable();
             fCustomers.BrowseDiable();
             fCustomers.StartPosition = FormStartPosition.Manual;
-            fCustomers.Location = new Point(pnMaster.Location.X + pnMaster.Width + 20, pnMaster.Location.Y);
+            fCustomers.Location = new Point(Location.X + pnMaster.Location.X + pnMaster.Width + 20, Location.Y + pnMaster.Location.Y);
             fCustomers.ShowDialog();
         }
 
@@ -144,7 +161,7 @@ namespace MNG.UI
             fMatSpec.MainEnable();
             fMatSpec.ItemBrowseDisable();
             fMatSpec.StartPosition = FormStartPosition.Manual;
-            fMatSpec.Location = new Point(pnMaster.Location.X + pnMaster.Width + 20, pnMaster.Location.Y);
+            fMatSpec.Location = new Point(Location.X + pnMaster.Location.X + pnMaster.Width + 20, Location.Y + pnMaster.Location.Y);
             fMatSpec.ShowDialog();
         }
 
@@ -159,7 +176,7 @@ namespace MNG.UI
             fMeltStd.DisableGroupHeader();
             fMeltStd.ItemBrowseDisable();
             fMeltStd.StartPosition = FormStartPosition.Manual;
-            fMeltStd.Location = new Point(pnMaster.Location.X + pnMaster.Width + 20, pnMaster.Location.Y);
+            fMeltStd.Location = new Point(Location.X + pnMaster.Location.X + pnMaster.Width + 20, Location.Y + pnMaster.Location.Y);
             fMeltStd.ShowDialog();
         }
 
@@ -174,7 +191,7 @@ namespace MNG.UI
             fMatSpec.ItemBrowseDisable();
             fMatSpec.DisableGroupHeader();
             fMatSpec.StartPosition = FormStartPosition.Manual;
-            fMatSpec.Location = new Point(pnMaster.Location.X + pnMaster.Width + 20, pnMaster.Location.Y);
+            fMatSpec.Location = new Point(Location.X + pnMaster.Location.X + pnMaster.Width + 20, Location.Y + pnMaster.Location.Y);
             fMatSpec.ShowDialog();
         }
 
@@ -189,7 +206,7 @@ namespace MNG.UI
             fChemInLadle.ItemBrowseDisable();
             fChemInLadle.DisableGroupHeader();
             fChemInLadle.StartPosition = FormStartPosition.Manual;
-            fChemInLadle.Location = new Point(pnMaster.Location.X + pnMaster.Width + 20, pnMaster.Location.Y);
+            fChemInLadle.Location = new Point(Location.X + pnMaster.Location.X + pnMaster.Width + 20, Location.Y + pnMaster.Location.Y);
             fChemInLadle.ShowDialog();
         }
 
@@ -204,7 +221,7 @@ namespace MNG.UI
             fPourStd.ItemBrowseDisable();
             fPourStd.DisableGroupHeader();
             fPourStd.StartPosition = FormStartPosition.Manual;
-            fPourStd.Location = new Point(pnMaster.Location.X + pnMaster.Width + 20, pnMaster.Location.Y);
+            fPourStd.Location = new Point(Location.X + pnMaster.Location.X + pnMaster.Width + 20, pnMaster.Location.Y);
             fPourStd.ShowDialog();
         }
 
@@ -218,7 +235,7 @@ namespace MNG.UI
             fMoldStd.MainEnable();
             fMoldStd.ItemBrowseDisable();
             fMoldStd.StartPosition = FormStartPosition.Manual;
-            fMoldStd.Location = new Point(pnMaster.Location.X + pnMaster.Width + 20, pnMaster.Location.Y);
+            fMoldStd.Location = new Point(Location.X + pnMaster.Location.X + pnMaster.Width + 20, pnMaster.Location.Y);
             fMoldStd.ShowDialog();
         }
 
@@ -232,7 +249,7 @@ namespace MNG.UI
             fShotBlastStd.MainEnable();
             fShotBlastStd.ItemBrowseDisable();
             fShotBlastStd.StartPosition = FormStartPosition.Manual;
-            fShotBlastStd.Location = new Point(pnMaster.Location.X + pnMaster.Width + 20, pnMaster.Location.Y);
+            fShotBlastStd.Location = new Point(Location.X + pnMaster.Location.X + pnMaster.Width + 20, pnMaster.Location.Y);
             fShotBlastStd.ShowDialog();
         }
 
@@ -247,7 +264,7 @@ namespace MNG.UI
             fTooling.ItemBrowseDisable();
             fTooling.DisableGroupHeader();
             fTooling.StartPosition = FormStartPosition.Manual;
-            fTooling.Location = new Point(pnMaster.Location.X + pnMaster.Width + 20, pnMaster.Location.Y);
+            fTooling.Location = new Point(Location.X + pnMaster.Location.X + pnMaster.Width + 20, pnMaster.Location.Y);
             fTooling.ShowDialog();
         }
 
@@ -257,7 +274,7 @@ namespace MNG.UI
             fControlPlan = new frmControlPlan(controlPlans);
 
             fControlPlan.StartPosition = FormStartPosition.Manual;
-            fControlPlan.Location = new Point(0, 0);
+            fControlPlan.Location = new Point(Location.X, Location.Y) ;
             fControlPlan.WindowState = FormWindowState.Maximized;
             fControlPlan.EnablePnList();
             fControlPlan.EnableNavigatorTool();
@@ -273,12 +290,14 @@ namespace MNG.UI
             {
                 fMelting = new MNG.UI.Production.frmMultiMelting();
 
+                fMelting.StartPosition = FormStartPosition.Manual;
+                fMelting.Location = new Point(Location.X, Location.Y);
                 fMelting.WindowState = FormWindowState.Maximized;
                 fMelting.EnableNavigatorTool();
                 fMelting.DisableToolbar();
                 fMelting.EnableExitTool();
                 fMelting.DisableSaveExitTool();
-                fMelting.Show();
+                fMelting.ShowDialog();
             }
         }
 
@@ -295,7 +314,7 @@ namespace MNG.UI
             fSetting.EnableBtnSelect();
             fSetting.SetReadOnly(true);
             fSetting.StartPosition = FormStartPosition.Manual;
-            fSetting.Location = new Point(pnMaster.Location.X + pnMaster.Width + 20, pnMaster.Location.Y);
+            fSetting.Location = new Point(Location.X + pnMaster.Location.X + pnMaster.Width + 20,Location.Y + pnMaster.Location.Y);
             fSetting.ShowDialog();
         }
 
@@ -306,7 +325,7 @@ namespace MNG.UI
                 fSpectroMeter = new frmSpectrometer();
 
                 fSpectroMeter.StartPosition = FormStartPosition.Manual;
-                fSpectroMeter.Location = new Point(0, 0);
+                fSpectroMeter.Location = new Point(Location.X, Location.Y);
                 fSpectroMeter.WindowState = FormWindowState.Maximized;
                 fSpectroMeter.Show();
             }
@@ -319,7 +338,7 @@ namespace MNG.UI
                 fPouring = new frmPouringProc();
 
                 fPouring.StartPosition = FormStartPosition.Manual;
-                fPouring.Location = new Point(0, 0);
+                fPouring.Location = new Point(Location.X, Location.Y);
                 fPouring.WindowState = FormWindowState.Maximized;
                 fPouring.Show();
             }
@@ -332,7 +351,7 @@ namespace MNG.UI
                 frmInspectionProc fInspection = new frmInspectionProc();
 
                 fInspection.StartPosition = FormStartPosition.Manual;
-                fInspection.Location = new Point(0, 0);
+                fInspection.Location = new Point(Location.X, Location.Y);
                 fInspection.WindowState = FormWindowState.Maximized;
                 fInspection.Show();
             }
@@ -345,7 +364,7 @@ namespace MNG.UI
                 frmQAProc fQA = new frmQAProc();
 
                 fQA.StartPosition = FormStartPosition.Manual;
-                fQA.Location = new Point(0, 0);
+                fQA.Location = new Point(Location.X, Location.Y);
                 fQA.WindowState = FormWindowState.Maximized;
                 fQA.Show();
             }
@@ -449,32 +468,6 @@ namespace MNG.UI
         }
         private void Load_AllButton()
         {
-            var bt_grp1 = panel8.Controls;
-            var bt_grp2 = pnMaster.Controls;
-            var bt_grp3 = pnMain.Controls;
-            int[] departs = new int[] {4, 5, 2, 4, 1, 
-                                       3, 0, 3, 3, 3,
-                                       0, 3, 3, 3, 1, 
-                                       3, 3, 3, 3};
-            
-            for (int i = 0; i < 5; i++)
-            {
-                ButtonEnable bE = new ButtonEnable() { ButtonSet = (System.Windows.Forms.Button)bt_grp1[i], Department = departs[i], Level = 1 };
-                bE.Disable();
-                buttonEnables.Add(bE);
-            }
-            for (int i = 0;i < 5; i++)
-            {
-                ButtonEnable bE = new ButtonEnable() { ButtonSet = (System.Windows.Forms.Button)bt_grp2[i], Department = departs[i + 5], Level = 2 };
-                bE.Disable();
-                buttonEnables.Add(bE);
-            }
-            for(int i = 0; i < 9; i++)
-            {
-                ButtonEnable bE = new ButtonEnable() { ButtonSet = (System.Windows.Forms.Button)bt_grp3[i], Department = departs[i + 10], Level = 2 };
-                bE.Disable();
-                buttonEnables.Add(bE);
-            }
             string ss = "";
             foreach(var be in buttonEnables)
             {
@@ -484,8 +477,9 @@ namespace MNG.UI
             //MessageBox.Show(ss);
             frmLogIn _frmLogIn = new frmLogIn();
             _frmLogIn.ShowDialog();
+            user = _frmLogIn.User;
 
-            if (_frmLogIn.User != null)
+            if (user != null)
             {
                 EnableButtons(_frmLogIn.User);
             }
@@ -509,5 +503,99 @@ namespace MNG.UI
                 }
             }
         }
+
+        private void DisableButtons()
+        {
+            var bt_grp1 = panel8.Controls;
+            var bt_grp2 = pnMaster.Controls;
+            var bt_grp3 = pnMain.Controls;
+            int[] departs = new int[] {3, 4, 2, 3, 1,
+                                       5, 5, 5, 5, 
+                                       5, 5, 5, 5, 5, 5, 5, 5, 5};
+
+            /*for (int i = 0; i < 5; i++)
+            {
+                ButtonEnable bE = new ButtonEnable() { ButtonSet = (System.Windows.Forms.Button)bt_grp1[i], Department = departs[i], Level = 1 };
+                bE.Disable();
+                buttonEnables.Add(bE);
+            }*/
+            for (int i = 1; i < 5; i++)
+            {
+                ButtonEnable bE = new ButtonEnable() { ButtonSet = (System.Windows.Forms.Button)bt_grp2[i], Department = departs[i + 5], Level = 2 };
+                bE.Disable();
+                buttonEnables.Add(bE);
+            }
+            for (int i = 1; i < 9; i++)
+            {
+                ButtonEnable bE = new ButtonEnable() { ButtonSet = (System.Windows.Forms.Button)bt_grp3[i], Department = departs[i + 9], Level = 2 };
+                bE.Disable();
+                buttonEnables.Add(bE);
+            }
+        }
+
+        private void panel2_DoubleClick(object sender, EventArgs e)
+        {
+            if (user == null)
+                Load_AllButton();
+            else
+            {
+                user = null;
+                DisableButtons();
+                Load_AllButton();
+            }
+        }
+    }
+
+    public class BasicSetting
+    {
+        private string path {  get; set; }
+        private string jsonString { get; set; }
+        private Parameter para;
+        public BasicSetting(string _path) 
+        { 
+            path = _path;
+            para = new Parameter() { SelectScreen = 0};
+        }
+
+        public int SelectScreen()
+        {
+            try
+            {
+                jsonString = File.ReadAllText(path);
+                para = System.Text.Json.JsonSerializer.Deserialize<Parameter>(jsonString);
+            }
+            catch (Exception)
+            {
+                CreateFileParameter();
+            }
+
+            return para.SelectScreen;
+        }
+
+        private void CreateFileParameter()
+        {
+            Parameter _para = new Parameter{SelectScreen = 0 };
+
+            try
+            {
+                string jsonstring = JsonConvert.SerializeObject(para);
+                using(StreamWriter sw = new StreamWriter(path))
+                {
+                    sw.WriteLine(jsonstring);
+                }
+                //MessageBox.Show("สร้างไฟล์สำเร็จ");
+                jsonString = File.ReadAllText(path);
+                para = System.Text.Json.JsonSerializer.Deserialize<Parameter>(jsonString);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("เกิดข้อผิดพลาด: " + ex.Message);
+            }
+        }
+    }
+
+    public class Parameter
+    {
+        public int SelectScreen { get; set; }
     }
 }

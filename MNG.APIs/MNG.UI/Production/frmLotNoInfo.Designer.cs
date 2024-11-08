@@ -291,6 +291,7 @@
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLotNoInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "LOT INFO.";
             this.Load += new System.EventHandler(this.frmCreateLotNo_Load);
             this.panel4.ResumeLayout(false);

@@ -25,7 +25,7 @@ namespace MNG.UI.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://localhost:44358/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://wmw-api.azurewebsites.net")]
         public string API_URL {
             get {
                 return ((string)(this["API_URL"]));
@@ -49,7 +49,7 @@ namespace MNG.UI.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("F:\\Mango.Solutions\\MNG.FMS\\ChemResult\\")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Result_Path {
             get {
                 return ((string)(this["Result_Path"]));
@@ -62,144 +62,36 @@ namespace MNG.UI.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("192.168.2.108")]
-        public string PMeter1 {
+        public string PMeter_IP {
             get {
-                return ((string)(this["PMeter1"]));
+                return ((string)(this["PMeter_IP"]));
             }
             set {
-                this["PMeter1"] = value;
+                this["PMeter_IP"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string PMeter2 {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int SelectedScreen {
             get {
-                return ((string)(this["PMeter2"]));
+                return ((int)(this["SelectedScreen"]));
             }
             set {
-                this["PMeter2"] = value;
+                this["SelectedScreen"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string PMeter3 {
-            get {
-                return ((string)(this["PMeter3"]));
-            }
-            set {
-                this["PMeter3"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string PMeter4 {
-            get {
-                return ((string)(this["PMeter4"]));
-            }
-            set {
-                this["PMeter4"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string PMeter5 {
-            get {
-                return ((string)(this["PMeter5"]));
-            }
-            set {
-                this["PMeter5"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string PMeter6 {
-            get {
-                return ((string)(this["PMeter6"]));
-            }
-            set {
-                this["PMeter6"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string PMeter7 {
-            get {
-                return ((string)(this["PMeter7"]));
-            }
-            set {
-                this["PMeter7"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string PMeter8 {
-            get {
-                return ((string)(this["PMeter8"]));
-            }
-            set {
-                this["PMeter8"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string PMeter9 {
-            get {
-                return ((string)(this["PMeter9"]));
-            }
-            set {
-                this["PMeter9"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string PMeter10 {
-            get {
-                return ((string)(this["PMeter10"]));
-            }
-            set {
-                this["PMeter10"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
         public string TempIP {
             get {
                 return ((string)(this["TempIP"]));
             }
             set {
                 this["TempIP"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool Department {
-            get {
-                return ((bool)(this["Department"]));
-            }
-            set {
-                this["Department"] = value;
             }
         }
     }

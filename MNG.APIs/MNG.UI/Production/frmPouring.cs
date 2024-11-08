@@ -49,7 +49,7 @@ namespace MNG.UI
             fLotNo.Dock = DockStyle.Fill;
             fLotNo.Show();
 
-            fTapping = new frmTapping();
+            fTapping = new frmTapping(Line);
             fTapping.DisablePrint();
             fTapping.DisableBtnTapTime();
             fTapping.DisableToolBar();

@@ -35,6 +35,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pnSaveExit = new System.Windows.Forms.Panel();
             this.pnCRUD = new System.Windows.Forms.Panel();
+            this.btnExport = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
@@ -97,7 +98,7 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Top;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(0, 458);
+            this.label4.Location = new System.Drawing.Point(0, 517);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 21);
             this.label4.TabIndex = 13;
@@ -114,14 +115,30 @@
             // 
             // pnCRUD
             // 
+            this.pnCRUD.Controls.Add(this.btnExport);
             this.pnCRUD.Controls.Add(this.btnDelete);
             this.pnCRUD.Controls.Add(this.btnEdit);
             this.pnCRUD.Controls.Add(this.btnCreate);
             this.pnCRUD.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnCRUD.Location = new System.Drawing.Point(0, 267);
             this.pnCRUD.Name = "pnCRUD";
-            this.pnCRUD.Size = new System.Drawing.Size(59, 191);
+            this.pnCRUD.Size = new System.Drawing.Size(59, 250);
             this.pnCRUD.TabIndex = 16;
+            // 
+            // btnExport
+            // 
+            this.btnExport.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnExport.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnExport.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.btnExport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
+            this.btnExport.Location = new System.Drawing.Point(0, 191);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(59, 59);
+            this.btnExport.TabIndex = 13;
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnDelete
             // 
@@ -393,5 +410,6 @@
         private System.Windows.Forms.Button btnL2;
         private System.Windows.Forms.Button btnL1;
         private System.Windows.Forms.Button btnL3;
+        private System.Windows.Forms.Button btnExport;
     }
 }

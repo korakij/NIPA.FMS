@@ -11,6 +11,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -143,8 +144,8 @@ namespace ASRS.UI
             fAddProduct.BrowseEnable();
             fAddProduct.ProductBrowseDisable();
             fAddProduct.SetWidth(545);
-            fAddProduct.StartPosition = FormStartPosition.Manual;
-            fAddProduct.Location = new Point(this.Location.X + this.Size.Width + 20, this.Location.Y);
+            //fAddProduct.StartPosition = FormStartPosition.Manual;
+            //fAddProduct.Location = new Point(this.Location.X + this.Size.Width + 20, this.Location.Y);
 
             var result = fAddProduct.ShowDialog();
 
@@ -246,10 +247,26 @@ namespace ASRS.UI
             Barcode barcode = new Barcode();
             Image imgId = barcode.Encode(TYPE.CODE128, SelectedProduct.Id.ToString(), foreColor, backColor, (int)(BarCodeBox.Width * 0.9), (int)(BarCodeBox.Height * 0.9));
             BarCodeBox.Image = imgId;
+
+            if (imagePictureBox.Image != null)
+            {
+                var img = imagePictureBox.Image;
+                byte[] imageBytes;
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    img.Save(ms, img.RawFormat);
+                    imageBytes = ms.ToArray();
+                }
+                long imageSize = imageBytes.Length;
+                lbImageSize.Text = imageSize.ToString();
+            }
+            else
+                lbImageSize.Text = "";
         }
 
         private bool mouseDown = false;
         private Point lastLocation;
+
 
         private void label5_MouseDown_1(object sender, MouseEventArgs e)
         {
@@ -292,8 +309,8 @@ namespace ASRS.UI
             fMaterial.MainEnable();
             fMaterial.BrowseDiable();
             fMaterial.SetWidth(620);
-            fMaterial.StartPosition = FormStartPosition.Manual;
-            fMaterial.Location = new Point(this.Location.X + this.Size.Width + 20, this.Location.Y);
+            //fMaterial.StartPosition = FormStartPosition.Manual;
+            //fMaterial.Location = new Point(this.Location.X + this.Size.Width + 20, this.Location.Y);
 
             var result = fMaterial.ShowDialog();
 
@@ -460,8 +477,8 @@ namespace ASRS.UI
             fProduct.MainEnable();
             fProduct.BrowseDiable();
             fProduct.ProductBrowseDisable();
-            fProduct.StartPosition = FormStartPosition.Manual;
-            fProduct.Location = new Point(this.Location.X + this.Size.Width + 20, this.Location.Y);
+            //fProduct.StartPosition = FormStartPosition.Manual;
+            //fProduct.Location = new Point(this.Location.X + this.Size.Width + 20, this.Location.Y);
 
             var result = fProduct.ShowDialog();
 

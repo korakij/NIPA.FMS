@@ -1,4 +1,5 @@
 ﻿using ASRS.UI;
+using NPOI.OpenXmlFormats.Dml.Chart;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,6 +25,10 @@ namespace MNG.UI.Production
         private TestChemicalComposition CurrentTestNo;
         private ChemicalCompositionInLadle CurrentChemInLadleSpec;
         private PourStandard CurrentPourStandard;
+        private string line;
+        private string myParent;
+        private int selectedScreen = 0;
+        private Point locNow;
 
         public event EventHandler<MeltingEventArgs> KanbanNoChanged;
         public event EventHandler<FormEventArgs> FormSelected;
@@ -32,29 +38,24 @@ namespace MNG.UI.Production
         {
             InitializeComponent();
 
-            var url = Properties.Settings.Default.API_URL;
-            _client = new Client(url);
+            createClient();
+            InitialProperties();
+        }
 
-            _kanbans = new List<Kanban>();
-            MeltInfo = new MeltingEventArgs();
-            CurrentKanban = new Kanban();
-            CurrentLotNo = new LotNo();
-            CurrentTestNo = new TestChemicalComposition();
-            CurrentChemInLadleSpec = new ChemicalCompositionInLadle();
-            CurrentPourStandard = new PourStandard();
+        public frmTapping(string _line)
+        {
+            InitializeComponent();
 
-            fileSystemWatcher1.Path = frmSetting.ResultPath;
-            //timer1.Interval = frmSetting.RefreshRate;
-            //timer1.Start();
+            createClient();
+            line = _line;
+            InitialProperties();
         }
 
         public frmTapping(Kanban _currentKanban)
         {
             InitializeComponent();
 
-            var url = Properties.Settings.Default.API_URL;
-            _client = new Client(url);
-
+            createClient();
             kanbanBindingSource.DataSource = _currentKanban;
             EnableEditMode(false);
         }
@@ -68,6 +69,27 @@ namespace MNG.UI.Production
 
             kanbanBindingSource.DataSource = kanbans;
             EnableEditMode(true);
+        }
+
+        private void createClient()
+        {
+            var url = Properties.Settings.Default.API_URL;
+            _client = new Client(url);
+        }
+
+        private void InitialProperties()
+        {
+            _kanbans = new List<Kanban>();
+            MeltInfo = new MeltingEventArgs();
+            CurrentKanban = new Kanban();
+            CurrentLotNo = new LotNo();
+            CurrentTestNo = new TestChemicalComposition();
+            CurrentChemInLadleSpec = new ChemicalCompositionInLadle();
+            CurrentPourStandard = new PourStandard();
+
+            fileSystemWatcher1.Path = frmSetting.ResultPath;
+            //timer1.Interval = frmSetting.RefreshRate;
+            //timer1.Start();
         }
 
         public void EnableToolBar() => pnToolBar.Show();
@@ -98,13 +120,19 @@ namespace MNG.UI.Production
         public void DisableTestTimer() => TestTimer.Enabled = false;
         public void EnableSpark() => btnSpark.Show();
         public void DisableSpark() => btnSpark.Hide();
-        public void EnableFilByTest() => chkTestNo.Show();
-        public void DisableFilByTest() => chkTestNo.Hide();
+        public void EnableFilByTest() => btnSparkchkTestNo.Show();
+        public void DisableFilByTest() => btnSparkchkTestNo.Hide();
 
-        private void frmKanban_Load(object sender, EventArgs e)
+        private void frmTapping_Load(object sender, EventArgs e)
         {
             TestTimer.Interval = Properties.Settings.Default.Refresh_Rate;
             TappingTimer.Interval = Properties.Settings.Default.Refresh_Rate;
+            DoubleBuffered = true;
+
+            selectedScreen = Properties.Settings.Default.SelectedScreen;
+            var screens = Screen.AllScreens[selectedScreen];
+            StartPosition = FormStartPosition.Manual;
+            locNow = screens.WorkingArea.Location;
         }
 
         private void EnableEditMode(bool IsEdit)
@@ -265,7 +293,7 @@ namespace MNG.UI.Production
             frmTapping fTapping = new frmTapping(CurrentKanban);
 
             fTapping.StartPosition = FormStartPosition.Manual;
-            fTapping.Location = new Point(340, 100);
+            fTapping.Location = new Point(locNow.X + 340, locNow.Y + 100);
             fTapping.Size = new Size(550, 900);
             fTapping.FormEnableSelection();
             fTapping.EnableToolBar();
@@ -324,7 +352,7 @@ namespace MNG.UI.Production
             frmTapping fTapping = new frmTapping(CurrentKanban);
 
             fTapping.StartPosition = FormStartPosition.Manual;
-            fTapping.Location = new Point(340, 100);
+            fTapping.Location = new Point(locNow.X + 340, locNow.Y + 100);
             fTapping.Size = new Size(550, 900);
             fTapping.FormEnableSelection();
             fTapping.EnableToolBar();
@@ -424,31 +452,12 @@ namespace MNG.UI.Production
 
         private async void chkTestNo_CheckedChanged(object sender, EventArgs e)
         {
-            try
-            {
-                if (chkTestNo.Checked)
-                    _kanbans = (await _client.GetKanbanByTestNoAsync(CurrentTestNo.Code)).OrderByDescending(x => x.Code).ToList();
-                else
-                    _kanbans = (await _client.GetKanbansByLotNoAsync(CurrentLotNo.Code)).OrderByDescending(x => x.Code).ToList();
-            }
-            catch (Exception)
-            {
-                //MessageBox.Show("Unable to Load Kanban", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (_kanbans.Count == 0)
-            {
-                kanbanBindingSource.Clear();
-                productBindingSource.Clear();
-                controlPlanBindingSource.Clear();
-                chemicalCompositionInLadleBindingSource.Clear();
-                testChemicalCompositionBindingSource.Clear();
-                pourStandardBindingSource.Clear();
-                return;
-            }
-
-            kanbanBindingSource.DataSource = _kanbans;
+            myParent = Parent.TopLevelControl.ToString();
+            GetKanbansByTestNo();
+            if (myParent.Contains("Pouring"))
+                setKanbanDGVFormat();
+            else
+                kanbanBindingSource.DataSource = _kanbans;
         }
 
         public async void LotNoChangedTapping(object sender, MeltingEventArgs e)
@@ -466,10 +475,12 @@ namespace MNG.UI.Production
 
             CurrentLotNo = e.LotNos;
 
+            string _lotNo;
             try
             {
                 var lotNo = CurrentLotNo.Code.Substring(0, 6);
                 _kanbans = (await _client.GetKanbansByLotNoAsync(lotNo)).OrderByDescending(x => x.Code).ToList();
+                _lotNo = lotNo;
             }
             catch (Exception)
             {
@@ -483,7 +494,10 @@ namespace MNG.UI.Production
                 return;
             }
 
+            myParent = Parent.TopLevelControl.ToString();
             kanbanBindingSource.DataSource = _kanbans;
+            if (myParent.Contains("Pouring"))
+                setKanbanDGVFormat();
         }
 
         private async void kanbanBindingSource_CurrentChanged(object sender, EventArgs e)
@@ -562,7 +576,12 @@ namespace MNG.UI.Production
             if (CurrentLotNo == null || CurrentLotNo.Code == null)
                 return;
 
-            chkTestNo_CheckedChanged(this, EventArgs.Empty);
+            myParent = Parent.TopLevelControl.ToString();
+            GetKanbansByTestNo();
+            if (myParent.Contains("Pouring"))
+                setKanbanDGVFormat();
+            else
+                kanbanBindingSource.DataSource = _kanbans;
         }
 
         private void panel1_Click(object sender, EventArgs e)
@@ -703,5 +722,71 @@ namespace MNG.UI.Production
             fPrintTag.ShowDialog();
         }
 
+        private async void GetKanbansByTestNo()
+        {
+            myParent = Parent.TopLevelControl.ToString();
+            string _lotNo = "";
+            try
+            {
+                string ss = Parent.TopLevelControl.ToString();
+                if (myParent.Contains("Melting"))
+                {
+                    if (btnSparkchkTestNo.Checked)
+                        _kanbans = (await _client.GetKanbanByTestNoAsync(CurrentTestNo.Code)).OrderByDescending(x => x.Code).ToList();
+                    else
+                        _kanbans = (await _client.GetKanbansByLotNoAsync(CurrentLotNo.Code)).OrderByDescending(x => x.Code).ToList();
+                }
+                else if (myParent.Contains("Pouring") || myParent.Contains("Spectro"))
+                {
+                    var lotNo = CurrentLotNo.Code.Substring(0, 6);
+                    _lotNo = lotNo;
+                    _kanbans = (await _client.GetKanbansByLotNoAsync(lotNo)).OrderByDescending(x => x.Code).ToList();
+                }
+            }
+            catch (Exception)
+            {
+                //MessageBox.Show("Unable to Load Kanban", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (_kanbans.Count == 0)
+            {
+                kanbanBindingSource.Clear();
+                productBindingSource.Clear();
+                controlPlanBindingSource.Clear();
+                chemicalCompositionInLadleBindingSource.Clear();
+                testChemicalCompositionBindingSource.Clear();
+                pourStandardBindingSource.Clear();
+                return;
+            }
+
+            //kanbanBindingSource.DataSource = _kanbans;
+        }
+
+        private async void setKanbanDGVFormat()
+        {
+            kanbanBindingSource.DataSource = _kanbans;
+            if (CurrentLotNo.Code.Length > 6)
+            {
+                var _lotNo = CurrentLotNo.Code.Substring(0, 6);
+                var pourList = (await _client.GetPouringsByLotNoAsync(_lotNo)).ToList();
+                var pourListLine = pourList.Where(x => x.LineCode == line).ToList();
+
+                for (int i = 0; i < _kanbans.Count; i++)
+                {
+                    var kCode = kanbanDataGridView1.Rows[i].Cells[0].Value.ToString();
+                    for (int j = 0; j < pourListLine.Count; j++)
+                    {
+                        if (kCode == pourListLine[j].KanbanCode)
+                        {
+                            kanbanDataGridView1.Rows[i].Cells[0].Style.Font = new Font(kanbanDataGridView1.RowsDefaultCellStyle.Font, FontStyle.Bold);
+                            pourListLine.RemoveAt(j);
+                        }
+                    }
+                    if (pourListLine.Count <= 0)
+                        break;
+                }
+            }
+        }
     }
 }

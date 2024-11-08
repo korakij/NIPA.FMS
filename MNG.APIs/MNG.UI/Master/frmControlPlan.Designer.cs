@@ -710,6 +710,7 @@
             this.pnToolBar.Name = "pnToolBar";
             this.pnToolBar.Size = new System.Drawing.Size(59, 1100);
             this.pnToolBar.TabIndex = 11;
+            this.pnToolBar.DoubleClick += new System.EventHandler(this.pnToolBar_DoubleClick);
             // 
             // pnSaveExit
             // 

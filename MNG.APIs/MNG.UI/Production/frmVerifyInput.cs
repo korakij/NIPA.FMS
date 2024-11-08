@@ -1,4 +1,5 @@
 ﻿using ASRS.UI;
+using NPOI.OpenXmlFormats.Vml;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace MNG.UI.Production
     public partial class frmVerifyInput : Form
     {
         private Client _client;
+        private string _line;
 
         public string Code { get; set; }
 
@@ -29,13 +31,30 @@ namespace MNG.UI.Production
             var url = Properties.Settings.Default.API_URL;
             _client = new Client(url);
 
-            var x = Screen.PrimaryScreen.Bounds.Width;
-            var y = Screen.PrimaryScreen.Bounds.Height;
-            this.Location = new Point(x, y);
+            //var x = Screen.PrimaryScreen.Bounds.Width;
+            //var y = Screen.PrimaryScreen.Bounds.Height;
+            //this.Location = new Point(x, y);
 
             tbInput.Select();
             lbInput.Text = _lbInput;
             lbOutput.Text = _lbOutput;
+        }
+
+        public frmVerifyInput(string _lbInput, string _lbOutput, string Line)
+        {
+            InitializeComponent();
+
+            var url = Properties.Settings.Default.API_URL;
+            _client = new Client(url);
+
+            //var x = Screen.PrimaryScreen.Bounds.Width;
+            //var y = Screen.PrimaryScreen.Bounds.Height;
+            //this.Location = new Point(x, y);
+
+            tbInput.Select();
+            lbInput.Text = _lbInput;
+            lbOutput.Text = _lbOutput;
+            _line = Line;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -93,7 +112,10 @@ namespace MNG.UI.Production
 
             cnt++;
 
-            tbOutput.Text = $"P-{tbInput.Text}-{cnt.ToString("00")}";
+            if(_line == "")
+                tbOutput.Text = $"P-{tbInput.Text}-{cnt.ToString("00")}";
+            else
+                tbOutput.Text = $"P{_line}-{tbInput.Text}-{cnt.ToString("00")}";
         }
     }
 }

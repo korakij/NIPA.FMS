@@ -37,6 +37,8 @@
             this.Info2 = new System.Windows.Forms.Label();
             this.Info3 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.info4 = new System.Windows.Forms.Label();
+            this.info5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TagBondary)).BeginInit();
             this.SuspendLayout();
@@ -46,7 +48,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(36, 36);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(208, 33);
+            this.pictureBox2.Size = new System.Drawing.Size(208, 35);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -57,14 +59,14 @@
             this.TagBondary.Location = new System.Drawing.Point(14, 15);
             this.TagBondary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TagBondary.Name = "TagBondary";
-            this.TagBondary.Size = new System.Drawing.Size(301, 212);
+            this.TagBondary.Size = new System.Drawing.Size(350, 250);
             this.TagBondary.TabIndex = 0;
             this.TagBondary.TabStop = false;
             // 
             // btnPrint
             // 
             this.btnPrint.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.Location = new System.Drawing.Point(14, 235);
+            this.btnPrint.Location = new System.Drawing.Point(14, 277);
             this.btnPrint.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(87, 44);
@@ -76,7 +78,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(107, 235);
+            this.btnCancel.Location = new System.Drawing.Point(107, 277);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(87, 44);
@@ -89,7 +91,7 @@
             // 
             this.Info1.AutoSize = true;
             this.Info1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Info1.Location = new System.Drawing.Point(32, 99);
+            this.Info1.Location = new System.Drawing.Point(32, 74);
             this.Info1.Name = "Info1";
             this.Info1.Size = new System.Drawing.Size(57, 21);
             this.Info1.TabIndex = 1;
@@ -99,21 +101,21 @@
             // 
             this.Info2.AutoSize = true;
             this.Info2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Info2.Location = new System.Drawing.Point(32, 130);
+            this.Info2.Location = new System.Drawing.Point(32, 125);
             this.Info2.Name = "Info2";
             this.Info2.Size = new System.Drawing.Size(57, 21);
             this.Info2.TabIndex = 1;
-            this.Info2.Text = "label1";
+            this.Info2.Text = "label2";
             // 
             // Info3
             // 
             this.Info3.AutoSize = true;
             this.Info3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Info3.Location = new System.Drawing.Point(32, 161);
+            this.Info3.Location = new System.Drawing.Point(32, 155);
             this.Info3.Name = "Info3";
             this.Info3.Size = new System.Drawing.Size(57, 21);
             this.Info3.TabIndex = 1;
-            this.Info3.Text = "label1";
+            this.Info3.Text = "label3";
             // 
             // imageList1
             // 
@@ -121,12 +123,34 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // info4
+            // 
+            this.info4.AutoSize = true;
+            this.info4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.info4.Location = new System.Drawing.Point(32, 185);
+            this.info4.Name = "info4";
+            this.info4.Size = new System.Drawing.Size(57, 21);
+            this.info4.TabIndex = 4;
+            this.info4.Text = "label4";
+            // 
+            // info5
+            // 
+            this.info5.AutoSize = true;
+            this.info5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.info5.Location = new System.Drawing.Point(32, 215);
+            this.info5.Name = "info5";
+            this.info5.Size = new System.Drawing.Size(57, 21);
+            this.info5.TabIndex = 5;
+            this.info5.Text = "label5";
+            // 
             // frmPrintTag
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(331, 295);
+            this.ClientSize = new System.Drawing.Size(380, 333);
+            this.Controls.Add(this.info5);
+            this.Controls.Add(this.info4);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.pictureBox2);
@@ -157,5 +181,7 @@
         private System.Windows.Forms.Label Info2;
         private System.Windows.Forms.Label Info3;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Label info4;
+        private System.Windows.Forms.Label info5;
     }
 }

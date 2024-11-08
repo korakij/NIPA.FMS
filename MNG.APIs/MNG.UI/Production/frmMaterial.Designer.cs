@@ -846,6 +846,7 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMaterial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAddMaterial";
             this.Load += new System.EventHandler(this.frmAddMaterial_Load);
             this.pnCharging.ResumeLayout(false);

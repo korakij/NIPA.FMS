@@ -27,6 +27,8 @@ namespace MNG.UI.Production
         private ChemicalCompositionInFurnace ChemInFurnaceSpec;
         private TestChemicalComposition CurrentTestResult;
         private ControlPlan CurrentControlPlan;
+        private int selectedScreen = 0;
+        private Point locNow;
 
         public event EventHandler<MeltingEventArgs> TestNoChanged;
         public event EventHandler<FormEventArgs> FormSelected;
@@ -139,7 +141,10 @@ namespace MNG.UI.Production
 
         private void frmTestChem_Load(object sender, EventArgs e)
         {
-            
+            selectedScreen = Properties.Settings.Default.SelectedScreen;
+            var screens = Screen.AllScreens[selectedScreen];
+            StartPosition = FormStartPosition.Manual;
+            locNow = screens.WorkingArea.Location;
         }
 
         public async void LotNoChanged(object sender, MeltingEventArgs e)
@@ -216,6 +221,7 @@ namespace MNG.UI.Production
 
             controlPlanBindingSource.DataSource = ctp;
             chemicalCompositionInFurnaceBindingSource.DataSource = ChemInFurnaceSpec;
+            var testChem = testChemicalCompositionBindingSource.DataSource;
             productBindingSource.DataSource = prod;
 
             var MeltInfo = new MeltingEventArgs();
@@ -256,19 +262,20 @@ namespace MNG.UI.Production
                 return;
             }
 
-            var lastTest = (await _client.GetTestChemicalCompositionAllAsync()).ToList().Where(x => x.ChargingCode == CurrentChargeNo.ChargeNo).LastOrDefault();
-            var lastCharge = (await _client.GetChargingAllAsync()).ToList().Where(x => x.LotNoCode == CurrentLotNo.Code).LastOrDefault();
-            
-            if (lastCharge.Total == null || lastCharge.Total == 0)
+            //var lastTest = (await _client.GetTestChemicalCompositionAllAsync()).ToList().Where(x => x.ChargingCode == CurrentChargeNo.ChargeNo).LastOrDefault();
+            var lastTestByCharge = (await _client.GetTestNoByChargeNoAsync(CurrentChargeNo.ChargeNo)).LastOrDefault();
+            //var chargeCurrent = (await _client.GetChargingAllAsync()).ToList().Where(x => x.LotNoCode == CurrentLotNo.Code).LastOrDefault();//get for new chemical in furnance test
+
+            if (CurrentChargeNo.Total == null || CurrentChargeNo.Total == 0)
             {
                 MessageBox.Show("Cannot Create New Test because of last charge not added Material", 
                                 "Material is Zero!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (lastTest != null)
+            if (lastTestByCharge != null)
             {
-                var cnt = (await _client.GetKanbanByTestNoAsync(lastTest.Code)).Count;
+                var cnt = (await _client.GetKanbanByTestNoAsync(lastTestByCharge.Code)).Count;
 
                 if (cnt == 0)
                 {
@@ -281,11 +288,13 @@ namespace MNG.UI.Production
             var count = testChemicalCompositionBindingSource.Count;
 
             count++;
-            var newTestNo = $"T{lastCharge.ChargeNo}-{count.ToString("00")}";
+            var newTestNo = $"T{CurrentChargeNo.ChargeNo}-{count.ToString("00")}";
 
-            var fCreateNewTest = new frmCreateNewTest(newTestNo, (int)lastCharge.ProductId);
+            var fCreateNewTest = new frmCreateNewTest(newTestNo, (int)CurrentChargeNo.ProductId);
+            var scnCurrent = Screen.FromControl(this).Bounds;
             fCreateNewTest.StartPosition = FormStartPosition.Manual;
-            fCreateNewTest.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width / 3, Screen.PrimaryScreen.WorkingArea.Height / 3);
+            //fCreateNewTest.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width / 3, Screen.PrimaryScreen.WorkingArea.Height / 3);
+            fCreateNewTest.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width / 3) + scnCurrent.X, (Screen.PrimaryScreen.WorkingArea.Height / 3) + scnCurrent.Y);
 
             if (fCreateNewTest.ShowDialog() == DialogResult.OK)
             {
@@ -381,7 +390,7 @@ namespace MNG.UI.Production
             fTest.EnableElement();
             fTest.DisableDGV();
             fTest.StartPosition = FormStartPosition.Manual;
-            fTest.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width / 3, 30);
+            fTest.Location = new Point(locNow.X + Screen.PrimaryScreen.WorkingArea.Width / 3,locNow.Y + 30);
 
             var result = fTest.ShowDialog();
 
@@ -419,7 +428,7 @@ namespace MNG.UI.Production
             frmCreateNewTest fTest = new frmCreateNewTest(testResultSelected.Code, prod, chemInFur, testResultSelected, ctp);
             
             fTest.StartPosition = FormStartPosition.Manual;
-            fTest.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width / 3, Screen.PrimaryScreen.WorkingArea.Height / 3);
+            fTest.Location = new Point(locNow.X + Screen.PrimaryScreen.WorkingArea.Width / 3,locNow.Y + Screen.PrimaryScreen.WorkingArea.Height / 3);
 
             var result = fTest.ShowDialog();
 

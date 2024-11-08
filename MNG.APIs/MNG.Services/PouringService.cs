@@ -16,6 +16,13 @@ namespace MNG.Services
             
         }
 
+        public List<Pouring> FindLast3000(string id)
+        {
+            var pourings = db.Pourings.Where(x => x.LineCode == id).OrderByDescending(x => x.KanbanCode).Take(3000);
+
+            return pourings.ToList();
+        }
+
         public List<Pouring> FindAllByKanban(string id)
         {
             var pourings = db.Pourings.Where(x => x.KanbanCode == id);

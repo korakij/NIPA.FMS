@@ -1493,6 +1493,7 @@
             this.pnHeader.Size = new System.Drawing.Size(1033, 946);
             this.pnHeader.TabIndex = 298;
             this.pnHeader.Click += new System.EventHandler(this.pnHeader_Click);
+            this.pnHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.pnHeader_Paint);
             // 
             // pnBorderBottom
             // 

@@ -41,6 +41,7 @@ namespace MNG.Models
         public int LastTemp { get; set; }
         public int PouringTime { get; set; }
         public int NoOfMoldPerLadle { get; set; }
+        public double TotalWeight {  get; set; } 
 
         public virtual ICollection<ControlPlan> ControlPlans { get; set; }
             = new HashSet<ControlPlan>();

@@ -415,6 +415,7 @@
             this.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.chargingBindingSource, "ProductId", true));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCreateCharge";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmCreateCharge";
             this.Load += new System.EventHandler(this.frmCreateCharge_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chargingBindingSource)).EndInit();
